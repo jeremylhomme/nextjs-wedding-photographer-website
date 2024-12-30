@@ -4,7 +4,10 @@ import React from 'react';
 import { Skeleton } from '@/src/components/ui/skeleton';
 
 // Helper function to determine image dimensions based on filename
-export function getImageDimensions(src: string): { width: number; height: number } {
+export function getImageDimensions(src: string): {
+  width: number;
+  height: number;
+} {
   const filename = src.toLowerCase();
   if (filename.includes('lscape')) {
     return { width: 1920, height: 1280 };
@@ -39,9 +42,10 @@ export const FadeInImage: React.FC<FadeInImageProps> = ({
   const imgRef = React.useRef<HTMLImageElement>(null);
 
   // Get dimensions from filename if not provided
-  const { width, height } = providedWidth && providedHeight 
-    ? { width: providedWidth, height: providedHeight }
-    : getImageDimensions(src);
+  const { width, height } =
+    providedWidth && providedHeight
+      ? { width: providedWidth, height: providedHeight }
+      : getImageDimensions(src);
 
   const handleLoad = () => {
     setLoaded(true);
@@ -65,9 +69,7 @@ export const FadeInImage: React.FC<FadeInImageProps> = ({
 
   return (
     <div className='relative h-full w-full'>
-      {!loaded && (
-        <Skeleton className={`h-full w-full ${className ?? ''}`} />
-      )}
+      {!loaded && <Skeleton className={`h-full w-full ${className ?? ''}`} />}
       <img
         ref={imgRef}
         src={src}

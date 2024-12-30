@@ -31,7 +31,7 @@
 
   "carousel-testimonials": {
     "title": "Testimonials",
-    "button-label": "Share Your Experience",
+    "button-label": "Share your experience",
     "name1": "Lucile & Antoine",
     "description1": "Jeremy captured all the important moments of our day. Thank you so much for your support, advice, and patience throughout the day.",
     "location1": "Sceaux, Hauts-de-Seine",
@@ -205,9 +205,9 @@
         "email-placeholder": "Your email address",
         "event_date-placeholder": "Your wedding date",
         "event_location-label": "Location(s)",
-        "event_location-placeholder": "The location(s) where your wedding will take place",
+        "event_location-placeholder": "The location(s) of your wedding",
         "guests_number-label": "Number of guests",
-        "guests_number-placeholder": "How many guests will attend?",
+        "guests_number-placeholder": "The number of guests",
         "fixed_date-label": "Can your wedding date change?",
         "fixed_date-placeholder": "Select an option",
         "fixed_date-option1": "Yes",

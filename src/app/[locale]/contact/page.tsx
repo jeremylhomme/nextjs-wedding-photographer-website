@@ -160,7 +160,7 @@ export default function ContactForm() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className='mx-4 my-16 max-w-3xl space-y-8 rounded-lg border bg-transparent px-12 py-10 shadow-sm lg:mx-auto'
+          className='mx-4 my-16 max-w-3xl space-y-8 rounded-lg border bg-transparent px-4 py-10 shadow-sm lg:mx-auto'
         >
           <div className='col-span-12'>
             <h2 className='mb-4 text-2xl'>{t('cf.title')}</h2>

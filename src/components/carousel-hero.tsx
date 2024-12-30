@@ -88,8 +88,6 @@ const CarouselHero: React.FC = () => {
               )}
               <FadeInImage
                 src={image.src}
-                width={1920}
-                height={1280}
                 alt={image.alt}
                 className='h-full overflow-hidden object-cover opacity-0 transition-opacity duration-300 data-[loaded=true]:opacity-100'
                 onImageLoad={path =>

@@ -44,7 +44,6 @@ const GridBlog: React.FC<GridBlogProps> = ({ blogPosts }) => {
                   styles.image,
                   'opacity-0 transition-opacity duration-300 data-[loaded=true]:opacity-100'
                 )}
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 onImageLoad={path =>
                   setLoadedImages(prev => ({ ...prev, [path]: true }))
                 }

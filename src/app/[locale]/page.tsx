@@ -51,22 +51,22 @@ const HomePage: React.FC = () => {
 
   return (
     <div className='mx-auto p-4'>
-      <div className='relative'>
+      <div className='relative sm:pb-16'>
         <CarouselHero />
       </div>
-      <div className='mx-auto flex max-w-4xl flex-col-reverse border-b pb-16 sm:flex-col md:flex-row md:gap-16 md:border-0 md:pb-24 md:pt-16'>
-        <div className='relative sm:w-[70%] md:mx-0'>
+      <div className='mx-auto flex max-w-4xl flex-col-reverse border-b md:flex-row md:gap-16 md:border-0 md:py-16'>
+        <div className='relative h-[50vh] pb-16 sm:h-[60vh] md:mx-0 md:w-[70%] md:pb-0'>
           <FadeInImage
             src='/home-page/subhero-jeremydan-wedding-photography-001-ptrait-optimized.webp'
             alt='Two people hanging upside down'
-            className='mx-auto h-auto w-full max-w-[720px] object-cover md:border md:p-8'
+            className='h-full w-full object-cover md:border md:p-4'
             onImageLoad={path =>
               setLoadedImages(prev => ({ ...prev, [path]: true }))
             }
           />
         </div>
-        <div className='flex flex-col text-center md:mx-auto md:w-1/2 md:max-w-xl md:text-left'>
-          <h2 className='mb-12 mt-8 font-serif text-5xl md:mx-0 md:mt-8 md:text-left'>
+        <div className='flex flex-col py-16 text-center md:mx-auto md:w-1/2 md:max-w-xl md:py-0 md:text-left'>
+          <h2 className='mb-8 font-serif text-5xl md:mx-0 md:mt-8 md:text-left'>
             {t('subtitle')}
           </h2>
           <p className='pb-8 text-muted-foreground md:mt-0'>
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
           <Button
             variant='default'
             size='default'
-            className='mx-auto mb-16 w-fit md:mx-0'
+            className='mx-auto w-fit md:mx-0'
           >
             <Link href='/blog'>{t('button-label')}</Link>
           </Button>
@@ -108,7 +108,7 @@ const HomePage: React.FC = () => {
         </Button>
       </div>
 
-      <div className='align-center my-16 flex flex-col items-center'>
+      <div className='align-center mb-16 flex flex-col items-center'>
         <CarouselTestimonials />
       </div>
     </div>
