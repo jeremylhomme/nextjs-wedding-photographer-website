@@ -19,7 +19,6 @@ practices and features.
   - Carousel functionality using Embla Carousel
 - **UI/UX**:
   - Clean and modern design
-  - Dark/Light mode support
   - Responsive layout for all devices
   - Smooth animations with Framer Motion
 - **Performance**:
