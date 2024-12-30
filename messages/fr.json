@@ -1,0 +1,229 @@
+{
+  "header": {
+    "home": "Accueil",
+    "blog": "Journal",
+    "about": "Mon histoire",
+    "portfolio": "Portfolio",
+    "contact": "Contactez-moi"
+  },
+
+  "footer": {
+    "description": "Photographe de Mariage basé dans les Hauts-de-Seine (92) en íle-de-France",
+    "links": {
+      "name2": "Contactez-moi",
+      "name3": "Journal",
+      "name4": "Mon histoire"
+    },
+    "copyright1": "2024 Jeremy Dan, designé & dévelopé par",
+    "copyright2": "moi-même"
+  },
+
+  "carousel-hero": {
+    "title": "À la folie.",
+    "alt1": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+    "alt2": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+    "alt3": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+    "alt4": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+    "alt5": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+    "alt6": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+    "alt7": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan"
+  },
+
+  "carousel-testimonials": {
+    "title": "Témoignages",
+    "button-label": "Partagez votre expérience",
+    "name1": "Lucile & Antoine",
+    "description1": "Jérémy a su capter tous les moments importants de cette journée. Merci mille fois pour ton accompagnement, tes conseils et ta patience sur cette journée.",
+    "location1": "Sceaux, Hauts-de-Seine",
+    "alt1": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+    "name2": "Florian & Iky",
+    "description2": "Ses idées créatives et le grain de l'édition des photos ont ajouté une touche magique. Nous recommandons vivement les services de Jeremy à tous les futurs mariés à la recherche d'un photographe talentueux et flexible !",
+    "location2": "Paris",
+    "alt2": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+    "name3": "Roxane & Thomas",
+    "description3": "Agréable, disponible à l’écoute des mariées comme des invités. Tous très content du travail fourni et du déroulement pendant la journée. À tous les futures mariés, je vous recommande chaleureusement Jeremy, pour son dynamisme, son travail sérieux, mais aussi pour sa gentillesse et sa bonne humeur.",
+    "location3": "Levallois-Perret, Hauts-de-Seine",
+    "alt3": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+    "name4": "Cyndie & Emile",
+    "description4": "Je ne peux que vous recommencer Jeremy pour sa discrétion, sa ponctualité, son efficacité, son talent mais surtout pour son côté humain. ",
+    "location4": "Montgreleix, Cantal",
+    "alt4": "Photo de mariage au Lac des Estives à Montgreleix par Jeremy Dan",
+    "name5": "Charlotte & Adrian",
+    "description5": "Nous avons sollicité Jérémy pour notre mariage suite à sa recommandation par l'une de nos amies et nous n'avons pas été déçus : professionel et impliqué le jour J, il a aussi été apprécié de tous les convives.",
+    "location5": "Montpellier",
+    "alt5": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+    "name6": "Emilie & Gaël",
+    "description6": "J'étais tombée par hasard sur son travail pour un autre mariage et ce fut une évidence : j'avais trouvé le photographe de mon évènement. Des clichés plein de spontanéité, des moments de bonheur et de joie immortalisés",
+    "location6": "Tarascon, Bouches-du-Rhône",
+    "alt6": "Photo de mariage au Domaine des Mylords à Tarascon par Jeremy Dan"
+  },
+
+  "photo-tiles": {
+    "title": "Capturer le Moment",
+    "description": "Chaque moment est unique, chaque histoire mérite d'être racontée comme elle l'est réellement. Mon rôle est de capturer l'essence de ces instants précieux qui composent les plus beaux chapitres de votre vie.",
+    "alt1": "Table de mariage élégante avec bougies",
+    "alt2": "Portrait de couple de mariés",
+    "alt3": "Portrait avec chapeau de cowboy",
+    "alt4": "Chemin bordé de cyprès"
+  },
+
+  "home-page": {
+    "subtitle": "Photos Authentiques pour Vrais Humains.",
+    "description": "Il n'y a rien de plus incroyable que de trouver la personne sans laquelle vous ne pouvez pas vivre. Votre véritable meilleur ami. Je veux photographier cette connexion. Que nous partions à l'aventure ensemble dans un endroit magnifique ou que nous explorions l'intimité de votre propre maison, je veux capturer vos vraies personnalités. Ne vous retenez pas. Vous n'avez qu'un seul moment comme celui-ci. Soyez vous même, je serai moi même. Créons quelque chose de réel.",
+    "button-label": "Voir mes photos",
+
+    "grid-blog-section": {
+      "title": "Journal",
+      "button-label": "Voir le journal"
+    }
+  },
+
+  "about-page": {
+    "hero-title": "Je capture vos histoires d'amour.",
+    "alt": "Photo de Jeremy Dan, photographe de mariage.",
+
+    "about-section": {
+      "title1": " En Quelques Mots",
+      "description1": "Se présenter peut être un exercice délicat, mais si important lorsque l'on confie sa confiance à un photographe. Voici donc ma petite histoire !",
+      "description2": "Je m'appelle Jérémy, j'ai 28 ans et j'ai la chance de partager mon quotidien avec celle qui donne un sens à ma vie. J'ai trois passions : la photographie, la musique et le skate. Dans la vie, je sauvegarde vos plus beaux moments et je réalise des sites internet. Le site sur lequel vous naviguez a d'ailleurs été conçu par moi. Le français est ma langue natale et je parle couramment l'anglais. J'apprends également le suédois et j'espère pouvoir y séjourner quelques années un jour. J'aime sortir de ma zone de confort, partager et apprendre ce que le monde a à offrir.",
+      "title2": " Mes Convictions",
+      "description3": "La photographie est le moyen le plus concret de me rapprocher des choses qui comptent le plus pour moi : les relations et les liens que nous établissons tout au long de notre vie. Je crois qu'on ne prête pas assez attention à ce qui se passe autour de nous en laissant passer ces instants éphémères. C'est la raison pour laquelle je fais ce que je fais.",
+      "description4": "Mon objectif est de capturer ces moments si importants avec la sincérité qui les caractérisent. Je veux que ces images soient belles et vraies, quelle que soir l'occasion. En fin de compte, c'est ce qui compte le plus pour moi."
+    }
+  },
+
+  "portfolio-page": {
+    "hero-title": "Moments Suspendus",
+    "subtitle": "Portfolio",
+    "description": "Une sélection de quelques-unes de mes photos préférées des mariages que j'ai couverts.",
+    "button-label": "Discutons de votre projet",
+    "images": {
+      "alt1": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt2": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt3": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt4": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt5": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt6": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt7": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt8": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt9": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt10": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt11": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt12": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt13": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt14": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt15": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt16": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt17": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt18": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt19": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt20": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+    }
+  },
+
+  "blog-page": {
+    "hero-title": "Votre Plus Belle Histoire",
+    "title": "Journal",
+    "description": "Quelques histoires d'amour que j'ai à coeur de vous raconter.",
+    "button-label": "Discutons de votre projet"
+  },
+
+  "blog-posts": {
+    "back": "Retour au journal",
+    "wedding-domaine-gillardiere": {
+      "title": "Mariage au Domaine de la Gillardière",
+      "date": "05 octobre 2024",
+      "category": "Mariage",
+      "excerpt": "Un mariage magnifique au coeur de Brie-Comte-Robert au Domaine de la Gillardière.",
+      "content": "Une centaine d'invités étaient présents pour célébrer le mariage de Roxane et Tanguy. Des discours émouvants, une décoration minimaliste et une soirée introduite par une danse majestueuse. Bravo à vous deux ! ",
+      "gridImage": {
+        "alt": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+      },
+      "coverImage": {
+        "alt": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+      },
+      "images": {
+        "alt1": "Vue extérieure du Chateau de Chambord pendant le mariage",
+        "alt2": "Les mariés devant le grand escalier",
+        "alt3": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt4": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt5": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt6": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt7": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt8": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt9": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt10": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt11": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt12": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt13": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt14": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt15": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt16": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt17": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt18": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt19": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt20": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt21": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt22": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt23": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt24": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt25": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt26": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt27": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt28": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt29": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt30": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt31": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt32": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt33": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt34": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt35": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+      }
+    }
+  },
+
+  "contact-page": {
+    "hero-title": "Découvrons-Nous",
+    "calendar": {
+      "select-language": "Sélectionnez la langue"
+    },
+    "cf": {
+      "title": "Formulaire de contact",
+      "project_type-label": "Type de projet",
+      "project_type-placeholder": "Sélectionnez une option",
+      "project_type-item1": "Mariage",
+      "project_type-desc": "Sélectionnez le type de projet que vous recherchez.",
+
+      "wedding": {
+        "title": "Mariage",
+        "desc": "J'ai hâte de discuter de votre projet et des opportunités que nous pouvons explorer ensemble. Afin que je puisse capturer votre histoire à travers mes photos (ou mes vidéos), il est important que j'en apprenne davantage sur vous et l'événement de vos rêves. Si nous sommes sur la même longueur d'onde, je vous proposerai une rencontrer autour d'un café ou via Google Meet pour les emplois du temps chargés ! Mes tarifs sont donnés uniquement sur rendez-vous et commencent à partir de 1200 euros pour les mariages.",
+        "first_name-label": "Prénom",
+        "first_name-placeholder": "Votre prénom",
+        "last_name-label": "Nom",
+        "last_name-placeholder": "Votre nom de famille",
+        "email-label": "Email",
+        "email-placeholder": "Votre adresse email",
+        "event_date-placeholder": "La date de votre mariage",
+        "event_location-label": "Lieu(x)",
+        "event_location-placeholder": "Le/les lieux où se déroulera votre mariage",
+        "guests_number-label": "Nombre d'invités",
+        "guests_number-placeholder": "Combien de personnes seront invitées ?",
+        "fixed_date-label": "Est-ce que la date de votre mariage peut changer ?",
+        "fixed_date-placeholder": "Sélectionnez une option",
+        "fixed_date-option1": "Oui",
+        "fixed_date-option2": "Non",
+        "message-label": "Dites-moi tout !",
+        "message-placeholder": "Des couleurs de votre thème aux moments spéciaux que vous voulez immortaliser, je veux tout savoir ! Partagez-moi vos idées, vos rêves et même les petits détails qui rendront votre évènement unique. Plus j'en saurai, mieux je pourrai capturzer l'évènement qui vous ressemble vraiment.",
+        "knowing_source-label": "Comment m'avez-vous connu ?",
+        "knowing_source-placeholder": "Sélectionnez une option",
+        "knowing_source-option2": "Google Search",
+        "knowing_source-option3": "Bouche à oreille",
+        "knowing_source-option4": "Autre",
+        "knowing_source-desc": "Cela m'aide beaucoup pour le développement mon activité !"
+      },
+
+      "submit": "Envoyer",
+      "submitting": "Envoi en cours..."
+    }
+  }
+}
