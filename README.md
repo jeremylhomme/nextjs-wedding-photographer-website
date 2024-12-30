@@ -7,7 +7,8 @@ practices and features.
 
 ## Features
 
-- **Modern Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Modern Stack**: Built with Next.js 14, TypeScript, Shadcn UI and Tailwind
+  CSS
 - **Internationalization**: Multi-language support using next-intl
 - **Contact Form**:
   - Secure form handling with react-hook-form and zod validation
