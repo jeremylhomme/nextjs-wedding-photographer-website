@@ -1,7 +1,7 @@
 {
   "header": {
     "home": "Accueil",
-    "blog": "Journal",
+    "blog": "Blog",
     "about": "Mon histoire",
     "portfolio": "Portfolio",
     "contact": "Contactez-moi"
@@ -11,7 +11,7 @@
     "description": "Photographe de Mariage basé dans les Hauts-de-Seine (92) en íle-de-France",
     "links": {
       "name2": "Contactez-moi",
-      "name3": "Journal",
+      "name3": "Blog",
       "name4": "Mon histoire"
     },
     "copyright1": "2024 Jeremy Dan, designé & dévelopé par",
@@ -70,11 +70,11 @@
   "home-page": {
     "subtitle": "Photos Authentiques pour Vrais Humains.",
     "description": "Il n'y a rien de plus incroyable que de trouver la personne sans laquelle vous ne pouvez pas vivre. Votre véritable meilleur ami. Je veux photographier cette connexion. Que nous partions à l'aventure ensemble dans un endroit magnifique ou que nous explorions l'intimité de votre propre maison, je veux capturer vos vraies personnalités. Ne vous retenez pas. Vous n'avez qu'un seul moment comme celui-ci. Soyez vous même, je serai moi même. Créons quelque chose de réel.",
-    "button-label": "Voir mes photos",
+    "button-label": "Mon histoire",
 
     "grid-blog-section": {
-      "title": "Journal",
-      "button-label": "Voir le journal"
+      "title": "Blog",
+      "button-label": "Voir le blog"
     }
   },
 
@@ -84,11 +84,13 @@
 
     "about-section": {
       "title1": " En Quelques Mots",
-      "description1": "Se présenter peut être un exercice délicat, mais si important lorsque l'on confie sa confiance à un photographe. Voici donc ma petite histoire !",
-      "description2": "Je m'appelle Jérémy, j'ai 28 ans et j'ai la chance de partager mon quotidien avec celle qui donne un sens à ma vie. J'ai trois passions : la photographie, la musique et le skate. Dans la vie, je sauvegarde vos plus beaux moments et je réalise des sites internet. Le site sur lequel vous naviguez a d'ailleurs été conçu par moi. Le français est ma langue natale et je parle couramment l'anglais. J'apprends également le suédois et j'espère pouvoir y séjourner quelques années un jour. J'aime sortir de ma zone de confort, partager et apprendre ce que le monde a à offrir.",
+      "description1": "Se présenter peut être un exercice délicat, mais si important lorsque l'on confie un moment si important entre les mains d'un photographe. Voici donc ma petite histoire !",
+      "description2": "Je m'appelle Jérémy, j'ai 28 ans et j'ai la chance de partager mon quotidien avec celle qui donne un sens à ma vie. J'ai trois passions : la photographie, la musique et le skate. Dans la vie, je sauvegarde vos plus beaux moments et je réalise des ",
+      "description2-link": "sites internet",
+      "description2-cont": ". Le site sur lequel vous naviguez a d'ailleurs été conçu par moi. Le français est ma langue natale et je parle couramment l'anglais. J'apprends également le suédois et j'espère pouvoir y séjourner quelques années un jour. J'aime sortir de ma zone de confort, partager et apprendre ce que le monde a à offrir.",
       "title2": " Mes Convictions",
       "description3": "La photographie est le moyen le plus concret de me rapprocher des choses qui comptent le plus pour moi : les relations et les liens que nous établissons tout au long de notre vie. Je crois qu'on ne prête pas assez attention à ce qui se passe autour de nous en laissant passer ces instants éphémères. C'est la raison pour laquelle je fais ce que je fais.",
-      "description4": "Mon objectif est de capturer ces moments si importants avec la sincérité qui les caractérisent. Je veux que ces images soient belles et vraies, quelle que soir l'occasion. En fin de compte, c'est ce qui compte le plus pour moi."
+      "description4": "Mon objectif est de capturer ces moments si importants avec la sincérité qui les caractérisent. Je veux que ces images soient belles et vraies, quelle que soit l'occasion. En fin de compte, c'est ce qui compte le plus pour moi."
     }
   },
 
@@ -123,19 +125,20 @@
 
   "blog-page": {
     "hero-title": "Votre Plus Belle Histoire",
-    "title": "Journal",
+    "title": "Blog",
     "description": "Quelques histoires d'amour que j'ai à coeur de vous raconter.",
     "button-label": "Discutons de votre projet"
   },
 
   "blog-posts": {
-    "back": "Retour au journal",
+    "back": "Retour au blog",
+
     "wedding-domaine-gillardiere": {
       "title": "Mariage au Domaine de la Gillardière",
       "date": "05 octobre 2024",
       "category": "Mariage",
       "excerpt": "Un mariage magnifique au coeur de Brie-Comte-Robert au Domaine de la Gillardière.",
-      "content": "Une centaine d'invités étaient présents pour célébrer le mariage de Roxane et Tanguy. Des discours émouvants, une décoration minimaliste et une soirée introduite par une danse majestueuse. Bravo à vous deux ! ",
+      "description": "Une centaine d'invités étaient présents pour célébrer le mariage de Roxane et Tanguy. Des discours émouvants, une décoration minimaliste et une soirée introduite par une danse majestueuse.",
       "gridImage": {
         "alt": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
       },
@@ -178,6 +181,122 @@
         "alt33": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
         "alt34": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
         "alt35": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+      }
+    },
+
+    "wedding-levallois-cityhall": {
+      "title": "Mariage Civil à Levallois-Perret",
+      "date": "06 aout 2022",
+      "category": "Mariage",
+      "excerpt": "Un mariage entre famille et proches célébré dans la belle mairie de Levallois-Perret.",
+      "description": "Deux humains que j'aime particulièrement pour leur intégrité et leur joie de vivre. On couronne le tout avec beaucoup d'humour, du DIY pour toute la déco et une bonne dose de simple mais juste, pour un moment vrai, tout simplement.",
+      "gridImage": {
+        "alt": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+      },
+      "coverImage": {
+        "alt": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+      },
+      "images": {
+        "alt1": "Vue extérieure du Chateau de Chambord pendant le mariage",
+        "alt2": "Les mariés devant le grand escalier",
+        "alt3": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt4": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt5": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt6": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt7": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt8": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt9": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt10": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt11": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt12": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt13": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt14": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt15": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt16": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt17": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt18": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt19": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt20": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt21": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt22": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt23": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt24": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt25": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt26": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt27": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt28": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt29": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt30": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt31": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt32": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt33": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt34": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt35": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt36": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt37": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt38": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt39": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt40": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt41": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt42": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt43": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt44": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt45": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt46": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt47": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt48": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt49": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt50": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt51": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt52": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt53": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt54": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt55": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt56": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt57": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt58": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt59": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt60": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+      }
+    },
+    "wedding-domaine-mylords": {
+      "title": "Mariage au Domaine des Mylords",
+      "date": "10 décembre 2022",
+      "category": "Mariage",
+      "excerpt": "Mon premier mariage d'hiver célébré à Tarascon près de Nîmes.",
+      "description": "Ce qui m'a le plus marqué dans ce mariage, c'est l'énergie et la bienveillance d'Emilie et Gaël. Ils m'ont permis qu'il peut faire très froid dans le sud, même avec un grand soleil... Longue vie à vous deux !",
+      "gridImage": {
+        "alt": "Photo de mariage au Domaine des Mylords par Jeremy Dan"
+      },
+      "coverImage": {
+        "alt": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+      },
+      "images": {
+        "alt1": "Vue extérieure du Chateau de Chambord pendant le mariage",
+        "alt2": "Les mariés devant le grand escalier",
+        "alt3": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt4": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt5": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt6": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt7": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt8": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt9": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt10": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt11": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt12": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt13": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt14": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt15": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt16": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt17": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt18": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt19": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt20": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt21": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt22": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt23": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt24": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt25": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
       }
     }
   },

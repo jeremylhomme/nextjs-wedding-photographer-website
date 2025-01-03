@@ -47,8 +47,6 @@ const PostPage = ({ params }: PostPageProps) => {
       <div className='relative h-[400px] w-full overflow-hidden'>
         <FadeInImage
           src={post.coverImage.src}
-          width={post.coverImage.width}
-          height={post.coverImage.height}
           alt={t(`${post.slug}.coverImage.alt`)}
           onImageLoad={path =>
             setLoadedImages(prev => ({ ...prev, [path]: true }))
@@ -68,15 +66,16 @@ const PostPage = ({ params }: PostPageProps) => {
             {t(`${post.slug}.date`)}
           </span>
         </div>
-        <p className='pt-8 text-muted-foreground'>
+        <p className='pt-4 italic text-muted-foreground'>
           {t(`${post.slug}.excerpt`)}
+        </p>
+        <p className='pt-4 text-muted-foreground'>
+          {t(`${post.slug}.description`)}
         </p>
       </div>
 
       <div className='mx-auto grid auto-rows-[500px] grid-cols-1 gap-2 pb-4 md:grid-cols-2 xl:grid-cols-3'>
         {post.images.map(image => {
-          const isPortrait = image.height > image.width;
-
           return (
             <motion.div
               key={image.src}
@@ -90,8 +89,6 @@ const PostPage = ({ params }: PostPageProps) => {
             >
               <FadeInImage
                 src={image.src}
-                width={image.width}
-                height={image.height}
                 alt={t(image.altKey)}
                 onImageLoad={path =>
                   setLoadedImages(prev => ({ ...prev, [path]: true }))

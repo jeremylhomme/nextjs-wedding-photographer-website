@@ -69,8 +69,8 @@
 
   "home-page": {
     "subtitle": "Authentic Photos for Real People.",
-    "description": "There is nothing more incredible than finding the person you can't live without. Your true best friend. I want to photograph that connection. Whether we go on an adventure to a beautiful place or explore the intimacy of your own home, I want to capture your true personalities. Don’t hold back. You only have this moment. Be yourself, and I’ll be myself. Let’s create something real.",
-    "button-label": "Browse my photos",
+    "description": "There is nothing more incredible than finding the person you can't live without. Your true best friend. I want to photograph that connection. Whether we go on an adventure to a beautiful place or explore the intimacy of your own home, I want to capture your true personalities. Don't hold back. You only have this moment. Be yourself, and I'll be myself. Let's create something real.",
+    "button-label": "My story",
 
     "grid-blog-section": {
       "title": "Journal",
@@ -85,7 +85,9 @@
     "about-section": {
       "title1": "In a Few Words",
       "description1": "Introducing oneself can be a delicate exercise but so important when entrusting a photographer. So, here's my little story!",
-      "description2": "My name is Jeremy, I am 28 years old, and I have the privilege of sharing my life with the person who gives it meaning. I have three passions: photography, music, and skateboarding. In life, I save your most beautiful moments and create websites. The website you are currently browsing was designed by me. French is my native language, and I am fluent in English. I am also learning Swedish and hope to live there for a few years someday. I love stepping out of my comfort zone, sharing, and learning what the world has to offer.",
+      "description2": "My name is Jeremy, I am 28 years old, and I have the privilege of sharing my life with the person who gives it meaning. I have three passions: photography, music, and skateboarding. In life, I save your most beautiful moments and create ",
+      "description2-link": "websites",
+      "description2-cont": ". The website you are currently browsing was designed by me. French is my native language, and I am fluent in English. I am also learning Swedish and hope to live there for a few years someday. I love stepping out of my comfort zone, sharing, and learning what the world has to offer.",
       "title2": "My Beliefs",
       "description3": "Photography is the most tangible way for me to connect with the things that matter most to me: the relationships and bonds we build throughout our lives. I believe we don't pay enough attention to what happens around us, letting fleeting moments slip by. This is why I do what I do.",
       "description4": "My goal is to capture these significant moments with the sincerity they deserve. I want these images to be beautiful and genuine, no matter the occasion. Ultimately, that's what matters most to me."
@@ -130,100 +132,109 @@
 
   "blog-posts": {
     "back": "Back to journal",
+
     "wedding-domaine-gillardiere": {
       "title": "Wedding at Domaine de la Gillardière",
       "date": "October 05, 2024",
       "category": "Wedding",
       "excerpt": "A beautiful wedding in the heart of Brie-Comte-Robert at Domaine de la Gillardière.",
-      "content": "A hundred guests were present to celebrate Roxane and Tanguy's wedding. Emotional speeches, minimalist decoration, and an evening introduced by a majestic dance. Congratulations to you both!",
+      "description": "A hundred guests were present to celebrate Roxane and Tanguy's wedding. Emotional speeches, minimalist decoration, and an evening introduced by a majestic dance.",
       "gridImage": {
-        "alt": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+        "alt": "Wedding photo at Domaine de la Gillardière by Jeremy Dan"
+      },
+      "coverImage": {
+        "alt": "Wedding photo at Domaine de la Gillardière by Jeremy Dan"
+      }
+    },
+
+    "civil-wedding-levallois": {
+      "title": "Civil Wedding in Levallois-Perret",
+      "date": "August 06, 2022",
+      "category": "Wedding",
+      "excerpt": "A wedding celebrated among family and close friends in the beautiful town hall of Levallois-Perret.",
+      "description": "Two humans I particularly love for their integrity and joy of life. We crown it all with lots of humor, DIY for all the decorations, and a good dose of simple but just right, for a moment that was simply genuine.",
+      "gridImage": {
+        "alt": "Wedding photo at Domaine de la Gillardière by Jeremy Dan"
       },
       "coverImage": {
         "alt": "Wedding photo at Domaine de la Gillardière by Jeremy Dan"
       },
       "images": {
-        "alt1": "Exterior view of Château de Chambord during the wedding",
-        "alt2": "The couple in front of the grand staircase",
-        "alt3": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt4": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt5": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt6": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt7": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt8": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt9": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt10": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt11": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt12": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt13": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt14": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt15": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt16": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt17": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt18": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt19": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt20": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt21": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt22": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt23": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt24": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt25": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt26": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt27": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt28": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt29": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt30": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt31": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt32": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt33": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt34": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-        "alt35": "Wedding photo at Domaine de la Gillardière by Jeremy Dan"
+        "alt1": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt2": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt3": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt4": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt5": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt6": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt7": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt8": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt9": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt10": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt11": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt12": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt13": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt14": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt15": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt16": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt17": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt18": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt19": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt20": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt21": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt22": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt23": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt24": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt25": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt26": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt27": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt28": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt29": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt30": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt31": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt32": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt33": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt34": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt35": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt36": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt37": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt38": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt39": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt40": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt41": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt42": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt43": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt44": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt45": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt46": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt47": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt48": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt49": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt50": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt51": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt52": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt53": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt54": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt55": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt56": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt57": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt58": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt59": "Civil wedding photography at Levallois-Perret by Jeremy Dan",
+        "alt60": "Civil wedding photography at Levallois-Perret by Jeremy Dan"
       }
     }
   },
-
   "contact-page": {
-    "hero-title": "Let's Get to Know Each Other",
+    "hero-title": "Let's Meet",
     "calendar": {
-      "select-language": "Select language"
+      "title": "Schedule a Call",
+      "description": "Let's take 15 minutes to discuss your project and see if we're a good match.",
+      "button-label": "Schedule a call"
     },
-    "cf": {
-      "title": "Contact Form",
-      "project_type-label": "Project type",
-      "project_type-placeholder": "Select an option",
-      "project_type-item1": "Wedding",
-      "project_type-desc": "Select the type of project you're looking for.",
-
-      "wedding": {
-        "title": "Wedding",
-        "desc": "I look forward to discussing your project and the opportunities we can explore together. To capture your story through my photos (or videos), it's important for me to learn more about you and your dream event. If we’re on the same wavelength, I'll suggest a meeting over coffee or via Google Meet for busy schedules! My pricing is shared during appointments and starts at 1200 euros for weddings.",
-        "first_name-label": "First name",
-        "first_name-placeholder": "Your first name",
-        "last_name-label": "Last name",
-        "last_name-placeholder": "Your last name",
-        "email-label": "Email",
-        "email-placeholder": "Your email address",
-        "event_date-placeholder": "Your wedding date",
-        "event_location-label": "Location(s)",
-        "event_location-placeholder": "The location(s) of your wedding",
-        "guests_number-label": "Number of guests",
-        "guests_number-placeholder": "The number of guests",
-        "fixed_date-label": "Can your wedding date change?",
-        "fixed_date-placeholder": "Select an option",
-        "fixed_date-option1": "Yes",
-        "fixed_date-option2": "No",
-        "message-label": "Tell me everything!",
-        "message-placeholder": "From the colors of your theme to the special moments you want to immortalize, I want to know it all! Share your ideas, dreams, and even the little details that will make your event unique. The more I know, the better I can capture the event that truly represents you.",
-        "knowing_source-label": "How did you hear about me?",
-        "knowing_source-placeholder": "Select an option",
-        "knowing_source-option2": "Google Search",
-        "knowing_source-option3": "Word of Mouth",
-        "knowing_source-option4": "Other",
-        "knowing_source-desc": "This helps me a lot in developing my business!"
-      },
-
-      "submit": "Submit",
-      "submitting": "Submitting..."
+    "contact": {
+      "title": "Contact",
+      "description": "Feel free to reach out to me directly by email or phone.",
+      "email": "Email",
+      "phone": "Phone"
     }
   }
 }

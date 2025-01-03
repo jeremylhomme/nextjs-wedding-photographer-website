@@ -31,33 +31,33 @@ const HomePage: React.FC = () => {
 
   const images: PhotoTileProps[] = [
     {
-      src: '/home-page/home-tiles-jeremydan-wedding-photography-001-lscape-optimized.webp',
+      src: '/home-page/home-tiles-jeremydan-wedding-photography-001-optimized.webp',
       alt: pt('alt1'),
       priority: true
     },
     {
-      src: '/home-page/home-tiles-jeremydan-wedding-photography-002-ptrait-optimized.webp',
+      src: '/home-page/home-tiles-jeremydan-wedding-photography-002-optimized.webp',
       alt: pt('alt2')
     },
     {
-      src: '/home-page/home-tiles-jeremydan-wedding-photography-003-ptrait-optimized.webp',
+      src: '/home-page/home-tiles-jeremydan-wedding-photography-003-optimized.webp',
       alt: pt('alt3')
     },
     {
-      src: '/home-page/home-tiles-jeremydan-wedding-photography-004-ptrait-optimized.webp',
+      src: '/home-page/home-tiles-jeremydan-wedding-photography-004-optimized.webp',
       alt: pt('alt4')
     }
   ];
 
   return (
     <div className='mx-auto p-4'>
-      <div className='relative sm:pb-16'>
+      <div className='relative'>
         <CarouselHero />
       </div>
       <div className='mx-auto flex max-w-4xl flex-col-reverse border-b md:flex-row md:gap-16 md:border-0 md:py-16'>
         <div className='relative h-[50vh] pb-16 sm:h-[60vh] md:mx-0 md:w-[70%] md:pb-0'>
           <FadeInImage
-            src='/home-page/subhero-jeremydan-wedding-photography-001-ptrait-optimized.webp'
+            src='/home-page/subhero-jeremydan-wedding-photography-001-optimized.webp'
             alt='Two people hanging upside down'
             className='h-full w-full object-cover md:border md:p-4'
             onImageLoad={path =>
@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
             size='default'
             className='mx-auto w-fit md:mx-0'
           >
-            <Link href='/blog'>{t('button-label')}</Link>
+            <Link href='/about'>{t('button-label')}</Link>
           </Button>
         </div>
       </div>

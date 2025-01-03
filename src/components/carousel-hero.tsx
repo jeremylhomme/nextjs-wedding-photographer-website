@@ -13,31 +13,31 @@ const CarouselHero: React.FC = () => {
 
   const heroImages = [
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-001-lscape-optimized.webp',
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-001-optimized.webp',
       alt: t('alt1')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-002-lscape-optimized.webp',
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-002-optimized.webp',
       alt: t('alt2')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-003-lscape-optimized.webp',
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-003-optimized.webp',
       alt: t('alt3')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-004-lscape-optimized.webp',
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-004-optimized.webp',
       alt: t('alt4')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-005-lscape-optimized.webp',
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-005-optimized.webp',
       alt: t('alt5')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-006-lscape-optimized.webp',
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-006-optimized.webp',
       alt: t('alt6')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-007-lscape-optimized.webp',
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-007-optimized.webp',
       alt: t('alt7')
     }
   ];
@@ -94,7 +94,6 @@ const CarouselHero: React.FC = () => {
                   setLoadedImages(prev => ({ ...prev, [path]: true }))
                 }
                 priority={index === 0 || index === 1}
-                sizes='(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px'
               />
             </div>
           </div>

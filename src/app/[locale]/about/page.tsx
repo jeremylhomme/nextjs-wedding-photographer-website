@@ -51,7 +51,7 @@ const AboutPage: React.FC = () => {
         {/* Right Column */}
         <div className='flex h-72 flex-col items-center'>
           <FadeInImage
-            src='/about-page/about-jeremydan-wedding-photographer-lscape-optimized.webp'
+            src='/about-page/about-jeremydan-wedding-photographer-optimized.webp'
             alt={`${t('alt')}`}
             onImageLoad={path =>
               setLoadedImages(prev => ({ ...prev, [path]: true }))
@@ -86,6 +86,14 @@ const AboutPage: React.FC = () => {
             </p>
             <p className='max-w-xl leading-relaxed text-muted-foreground'>
               {t('about-section.description2')}
+              <a
+                href='https://jeremylhomme.fr/'
+                target='_blank'
+                className='font-medium underline'
+              >
+                {t('about-section.description2-link')}
+              </a>
+              {t('about-section.description2-cont')}
             </p>
           </div>
 

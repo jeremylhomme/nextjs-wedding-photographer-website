@@ -14,6 +14,7 @@ const Header: React.FC = () => {
   const desktopMenuLinks = [
     { text: t('home'), href: '/' },
     { text: t('portfolio'), href: '/portfolio' },
+    { text: t('about'), href: '/about' },
     { text: t('blog'), href: '/blog' },
     { text: t('contact'), href: '/contact' }
   ];
@@ -37,7 +38,7 @@ const Header: React.FC = () => {
       <div className='container mx-auto flex w-[90%] items-center justify-between px-4'>
         <div className='flex'>
           <Link href='/'>
-            <h1 className='text-2xl font-semibold uppercase'>Jeremy Dan</h1>
+            <h1 className='text-lg font-semibold uppercase'>Jeremy Dan</h1>
           </Link>
         </div>
         <div className='flex items-center'>

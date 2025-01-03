@@ -22,101 +22,103 @@ const PortfolioPage: React.FC = () => {
 
   const images: ImageProps[] = [
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-001-ptrait-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-001-optimized.webp',
       alt: `${t('images.alt1')}`,
       priority: true
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-002-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-002-optimized.webp',
       alt: `${t('images.alt2')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-003-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-003-optimized.webp',
       alt: `${t('images.alt3')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-004-ptrait-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-004-optimized.webp',
       alt: `${t('images.alt4')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-005-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-005-optimized.webp',
       alt: `${t('images.alt5')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-006-ptrait-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-006-optimized.webp',
       alt: `${t('images.alt6')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-007-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-007-optimized.webp',
       alt: `${t('images.alt7')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-008-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-008-optimized.webp',
       alt: `${t('images.alt8')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-009-ptrait-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-009-optimized.webp',
       alt: `${t('images.alt9')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-010-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-010-optimized.webp',
       alt: `${t('images.alt10')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-011-ptrait-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-011-optimized.webp',
       alt: `${t('images.alt11')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-012-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-012-optimized.webp',
       alt: `${t('images.alt12')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-013-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-013-optimized.webp',
       alt: `${t('images.alt13')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-014-ptrait-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-014-optimized.webp',
       alt: `${t('images.alt14')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-015-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-015-optimized.webp',
       alt: `${t('images.alt15')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-016-ptrait-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-016-optimized.webp',
       alt: `${t('images.alt16')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-017-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-017-optimized.webp',
       alt: `${t('images.alt17')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-018-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-018-optimized.webp',
       alt: `${t('images.alt18')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-019-ptrait-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-019-optimized.webp',
       alt: `${t('images.alt19')}`
     },
     {
-      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-020-lscape-optimized.webp',
+      src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-020-optimized.webp',
       alt: `${t('images.alt20')}`
     }
   ];
 
   return (
     <div className='relative w-screen'>
-      <div className='relative h-screen w-full'>
+      <div className='relative h-[70vh] w-full'>
         <FadeInImage
-          src='/portfolio-page/portfolio-jeremydan-wedding-photography-lscape-001-optimized.webp'
+          src='/portfolio-page/portfolio-jeremydan-wedding-photography-001-optimized.webp'
           alt='Hero image for blog'
           onImageLoad={path =>
             setLoadedImages(prev => ({ ...prev, [path]: true }))
           }
-          className='h-screen w-full object-cover object-center'
+          className='h-[70vh] w-full object-cover object-center'
         />
         <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
-          <h1 className='font-serif text-5xl text-white'>{t('hero-title')}</h1>
+          <h1 className='font-serif text-4xl text-white md:text-5xl'>
+            {t('hero-title')}
+          </h1>
         </div>
       </div>
       <div className='mx-auto max-w-7xl'>

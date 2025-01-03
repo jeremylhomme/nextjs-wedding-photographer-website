@@ -143,17 +143,19 @@ export default function ContactForm() {
 
   return (
     <div className='relative w-screen'>
-      <div className='relative h-screen w-full'>
+      <div className='relative h-[70vh] w-full'>
         <FadeInImage
-          src='/contact-page/contact-jeremydan-wedding-photography-lscape-001-optimized.webp'
+          src='/contact-page/contact-jeremydan-wedding-photography-001-optimized.webp'
           alt='Hero image for blog'
           onImageLoad={path =>
             setLoadedImages(prev => ({ ...prev, [path]: true }))
           }
-          className='h-screen w-full object-cover object-center'
+          className='h-[70vh] w-full object-cover object-center'
         />
         <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
-          <h1 className='font-serif text-5xl text-white'>{t('hero-title')}</h1>
+          <h1 className='font-serif text-4xl text-white md:text-5xl'>
+            {t('hero-title')}
+          </h1>
         </div>
       </div>
 

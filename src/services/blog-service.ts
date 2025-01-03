@@ -2,14 +2,14 @@ import { blogPosts } from '@/src/data/blog-posts';
 
 export interface BlogImage {
   src: string;
-  width: number;
-  height: number;
   altKey: string;
 }
 
 export interface BlogPost {
   slug: string;
   titleKey: string;
+  descriptionKey: string;
+  excerptKey: string;
   dateKey: string;
   categoryKey: string;
   gridImage: BlogImage;

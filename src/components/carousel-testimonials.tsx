@@ -17,7 +17,7 @@ const CarouselTestimonials: React.FC = () => {
       description: t('description1'),
       location: t('location1'),
       image:
-        '/testimonials/testimony-jeremydan-wedding-photography-001-lscape-optimized.webp',
+        '/testimonials/testimony-jeremydan-wedding-photography-001-optimized.webp',
       alt: t('alt1')
     },
     {
@@ -25,7 +25,7 @@ const CarouselTestimonials: React.FC = () => {
       description: t('description2'),
       location: t('location2'),
       image:
-        '/testimonials/testimony-jeremydan-wedding-photography-002-lscape-optimized.webp',
+        '/testimonials/testimony-jeremydan-wedding-photography-002-optimized.webp',
       alt: t('alt2')
     },
     {
@@ -33,7 +33,7 @@ const CarouselTestimonials: React.FC = () => {
       description: t('description3'),
       location: t('location3'),
       image:
-        '/testimonials/testimony-jeremydan-wedding-photography-003-lscape-optimized.webp',
+        '/testimonials/testimony-jeremydan-wedding-photography-003-optimized.webp',
       alt: t('alt3')
     },
     {
@@ -41,7 +41,7 @@ const CarouselTestimonials: React.FC = () => {
       description: t('description4'),
       location: t('location4'),
       image:
-        '/testimonials/testimony-jeremydan-wedding-photography-004-lscape-optimized.webp',
+        '/testimonials/testimony-jeremydan-wedding-photography-004-optimized.webp',
       alt: t('alt4')
     },
     {
@@ -49,7 +49,7 @@ const CarouselTestimonials: React.FC = () => {
       description: t('description5'),
       location: t('location5'),
       image:
-        '/testimonials/testimony-jeremydan-wedding-photography-005-lscape-optimized.webp',
+        '/testimonials/testimony-jeremydan-wedding-photography-005-optimized.webp',
       alt: t('alt5')
     },
     {
@@ -57,7 +57,7 @@ const CarouselTestimonials: React.FC = () => {
       description: t('description6'),
       location: t('location6'),
       image:
-        '/testimonials/testimony-jeremydan-wedding-photography-006-lscape-optimized.webp',
+        '/testimonials/testimony-jeremydan-wedding-photography-006-optimized.webp',
       alt: t('alt6')
     }
   ];
@@ -97,8 +97,6 @@ const CarouselTestimonials: React.FC = () => {
                   <FadeInImage
                     src={testimony.image}
                     alt={testimony.alt}
-                    width={1920}
-                    height={1280}
                     className='h-full overflow-hidden object-cover opacity-0 transition-opacity duration-300 data-[loaded=true]:opacity-100'
                     onImageLoad={path =>
                       setLoadedImages(prev => ({ ...prev, [path]: true }))

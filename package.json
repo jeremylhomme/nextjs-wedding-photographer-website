@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start -p 3001",
     "lint": "next lint",
-    "optimize-images": "node scripts/optimize-landscape-images.mjs && node scripts/optimize-portrait-images.mjs"
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

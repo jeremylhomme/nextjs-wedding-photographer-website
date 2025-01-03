@@ -23,6 +23,17 @@ const ImageModal = ({
     return () => setMounted(false);
   }, []);
 
+  useEffect(() => {
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscKey);
+    return () => window.removeEventListener('keydown', handleEscKey);
+  }, [onClose]);
+
   if (!selectedImage || !mounted) return null;
 
   return createPortal(
@@ -32,7 +43,7 @@ const ImageModal = ({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className='fixed inset-0 z-50 flex items-center justify-center bg-black'
+        className='fixed inset-0 z-50 flex items-center justify-center bg-black/80'
         onClick={onClose}
       >
         <motion.div
@@ -49,19 +60,19 @@ const ImageModal = ({
               alt={selectedImage.alt}
               fill
               className='h-full w-full object-contain opacity-0 transition-opacity duration-300 data-[loaded=true]:opacity-100'
-              onLoad={e => {
-                const img = e.target as HTMLImageElement;
-                img.dataset.loaded = 'true';
-                setLoadedImages(prev => new Set([...prev, selectedImage.src]));
+              data-loaded={loadedImages.has(selectedImage.src)}
+              onLoad={() => {
+                setLoadedImages(prev => new Set(prev).add(selectedImage.src));
               }}
+              priority
             />
           </div>
           <button
             onClick={onClose}
-            className='absolute right-6 top-6 text-white/75 hover:text-white'
+            className='absolute right-6 top-6 rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70'
             aria-label='Close modal'
           >
-            <X size={24} />
+            <X className='h-6 w-6' />
           </button>
         </motion.div>
       </motion.div>

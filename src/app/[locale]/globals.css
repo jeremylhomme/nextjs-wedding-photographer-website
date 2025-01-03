@@ -4,7 +4,8 @@
 @tailwind utilities;
 
 @layer base {
-  html, body {
+  html,
+  body {
     min-width: 320px;
     overflow-x: hidden;
   }
