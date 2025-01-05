@@ -2,7 +2,7 @@
   "header": {
     "home": "Home",
     "blog": "Blog",
-    "about": "About me",
+    "about": "My story",
     "portfolio": "Portfolio",
     "contact": "Contact me"
   },
@@ -12,7 +12,7 @@
     "links": {
       "name2": "Contact me",
       "name3": "Blog",
-      "name4": "About me"
+      "name4": "My story"
     },
     "copyright1": "2024 Jeremy Dan, designed & developed by",
     "copyright2": "myself"
@@ -41,7 +41,7 @@
     "location2": "Paris",
     "alt2": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
     "name3": "Roxane & Thomas",
-    "description3": "Friendly, available, attentive to both the couple and the guests. Everyone was delighted with the work and the flow of the day. To all future couples, I warmly recommend Jeremy for his energy, professionalism, kindness, and great spirit.",
+    "description3": "Pleasant, available, and attentive to both the couple and guests. Everyone was delighted with the work and the flow of the day. To all future couples, I warmly recommend Jeremy for his energy, professionalism, kindness, and great spirit.",
     "location3": "Levallois-Perret, Hauts-de-Seine",
     "alt3": "Wedding photo in the North of Montpellier by Jeremy Dan",
     "name4": "Cyndie & Emile",
@@ -59,8 +59,8 @@
   },
 
   "photo-tiles": {
-    "title": "Capture the moment",
-    "description": "Each moment is unique, every story deserves to be told the way it really is. My role is to capture the essence of these precious moments that form the most beautiful chapters of your life.",
+    "title": "Capturing the Moment",
+    "description": "Each moment you live is a page of a greater story – your story. And every story deserves to be told with authenticity and sincerity. My role as a photographer is to capture the essence of these fleeting moments, so they remain forever etched in your memories.",
     "alt1": "Elegant wedding table with candles",
     "alt2": "Portrait of a married couple",
     "alt3": "Portrait with a cowboy hat",
@@ -69,12 +69,25 @@
 
   "home-page": {
     "subtitle": "Authentic Photos for Real People.",
-    "description": "There is nothing more incredible than finding the person you can't live without. Your true best friend. I want to photograph that connection. Whether we go on an adventure to a beautiful place or explore the intimacy of your own home, I want to capture your true personalities. Don't hold back. You only have this moment. Be yourself, and I'll be myself. Let's create something real.",
+    "description1": "There is nothing more incredible than finding the person you can't live without. Your true best friend, the one who makes your heart race every day. It's this unique connection that I want to photograph. Whether we go on an adventure to a spectacular place or explore the warm intimacy of your own home, my goal is to capture your true personalities, your raw emotions, and everything that makes you, you.",
+    "description2": "Don't hold back. This moment only happens once in a lifetime. Be yourself, and I'll be myself.",
     "button-label": "My story",
+    "description3": "My work reflects my commitment to staying true to you, to what you feel, and to what unites you. I want every shot to be a mirror of your love, full of nuance and depth.",
 
+    "title2": "Revealing the Essence",
+    "bullets-title": "I draw inspiration from simple and poetic details:",
+    "bullet1": "Natural, soft, and enveloping light that highlights every emotion.",
+    "bullet2": "A style evoking film photography, with warm, natural colors, and a touch of grain that brings a timeless and cinematic texture to your photos.",
+    "bullet3": "Candid moments, caught in the moment, that tell a truth that posed shots cannot capture.",
+    "description4": "My work reflects my commitment to staying true to you, to what you feel, and to what unites you. I want every shot to be a mirror of your love, full of nuance and depth.",
+    "title3": "Your Story, Your Visual Legacy",
+    "description5": "Memories are not just meant to be lived, but to be preserved and shared. Whether it's during an outdoor ceremony, in an intimate setting, or at the heart of a lively family celebration, my goal is to create images for you that tell more than just a moment – they tell your story.",
+    "description6": "It's not just about taking photos, but creating a visual legacy. Something that looks like you, that you can pass on and cherish forever.",
+    "description7": "Are you ready to create something real with me?",
+    "button-label2": "Contact me",
     "grid-blog-section": {
-      "title": "Journal",
-      "button-label": "View the blog"
+      "title": "Blog",
+      "button-label3": "View the blog"
     }
   },
 
@@ -84,13 +97,24 @@
 
     "about-section": {
       "title1": "In a Few Words",
-      "description1": "Introducing oneself can be a delicate exercise but so important when entrusting a photographer. So, here's my little story!",
-      "description2": "My name is Jeremy, I am 28 years old, and I have the privilege of sharing my life with the person who gives it meaning. I have three passions: photography, music, and skateboarding. In life, I save your most beautiful moments and create ",
+      "description1": "Introducing oneself can be a delicate exercise, but so important when entrusting such an important moment to a photographer. So here's my little story!",
+      "description2": "My name is Jeremy, I'm 28 years old, and I have the privilege of sharing my life with the person who gives it meaning. I have three passions: photography, music, and skateboarding. Each of these fuels my creativity and my vision of the world. When I'm not behind the lens capturing your precious moments, I'm in front of my screen coding ",
       "description2-link": "websites",
-      "description2-cont": ". The website you are currently browsing was designed by me. French is my native language, and I am fluent in English. I am also learning Swedish and hope to live there for a few years someday. I love stepping out of my comfort zone, sharing, and learning what the world has to offer.",
-      "title2": "My Beliefs",
-      "description3": "Photography is the most tangible way for me to connect with the things that matter most to me: the relationships and bonds we build throughout our lives. I believe we don't pay enough attention to what happens around us, letting fleeting moments slip by. This is why I do what I do.",
-      "description4": "My goal is to capture these significant moments with the sincerity they deserve. I want these images to be beautiful and genuine, no matter the occasion. Ultimately, that's what matters most to me."
+      "description2-cont": ". The website you're browsing was actually designed by me. French is my native language, and I'm fluent in English. In love with Sweden, I'm also learning Swedish and hope to spend a few years exploring the beauty and serenity of Scandinavian landscapes. I love stepping out of my comfort zone, discovering new perspectives, and learning from what the world has to offer. Each experience enriches my vision and, ultimately, my work as a wedding photographer.",
+      "title2": "My Vision of Photography",
+      "description3": "Photography is much more than a profession to me: it's a philosophy. It allows me to get closer to what really matters – human relationships, the bonds we build, and the emotions we share. I firmly believe that we don't always pay enough attention to the fleeting moments of our lives. These ephemeral moments, so precious, deserve to be captured with authenticity and sincerity. My goal is to offer you beautiful, true, and moving images that tell your story, just as it is. I strive to capture every detail, every smile, every knowing look, without artifice, but with all the sensitivity that characterizes these unique moments.",
+      "description4": "My goal is to capture these significant moments with the sincerity that characterizes them. I want these images to be beautiful and true, regardless of the occasion. In the end, that's what matters most to me.",
+      "title3": "What Inspires Me",
+      "bullet1-title": "The real, the simple, the spontaneous",
+      "bullet1": "A discreet tear, a burst of laughter, a sincere embrace.",
+      "bullet2-title": "The details",
+      "bullet2": "Those that tell your story and make it unique.",
+      "bullet3-title": "The timeless",
+      "bullet3": "Natural colors, the subtle grain of film combined with cinematic contrasts.",
+      "title4": "What Doesn't Inspire Me",
+      "bullet4": "Overly posed or artificial setups that don't reflect your authenticity.",
+      "bullet5": "Ephemeral trends that risk dating your memories instead of enhancing them.",
+      "bullet6": "Generic photos devoid of the emotion and context that make you unique."
     }
   },
 
@@ -227,14 +251,14 @@
     "hero-title": "Let's Meet",
     "calendar": {
       "title": "Schedule a Call",
-      "description": "Let's take 15 minutes to discuss your project and see if we're a good match.",
-      "button-label": "Schedule a call"
-    },
-    "contact": {
-      "title": "Contact",
-      "description": "Feel free to reach out to me directly by email or phone.",
-      "email": "Email",
-      "phone": "Phone"
+      "description": "Let's have a chat about your project! Choose a time that works for you.",
+      "button-label": "Schedule",
+      "form": {
+        "name": "Your name",
+        "email": "Your email",
+        "message": "Tell me about your project",
+        "submit": "Send"
+      }
     }
   }
 }

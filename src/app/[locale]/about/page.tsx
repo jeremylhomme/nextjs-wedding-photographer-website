@@ -77,7 +77,7 @@ const AboutPage: React.FC = () => {
       </div>
       <div className='mt-16 max-w-4xl'>
         <div className='flex flex-col'>
-          <div className='mb-16'>
+          <div className='mb-8'>
             <h2 className='mb-4 font-serif text-4xl text-secondary'>
               {t('about-section.title1')}
             </h2>
@@ -97,7 +97,7 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div>
+          <div className='mb-8'>
             <h2 className='mb-4 font-serif text-4xl text-secondary'>
               {t('about-section.title2')}
             </h2>
@@ -106,6 +106,58 @@ const AboutPage: React.FC = () => {
             </p>
             <p className='max-w-xl leading-relaxed text-muted-foreground'>
               {t('about-section.description4')}
+            </p>
+          </div>
+          <div className='mb-4'>
+            <h2 className='mb-4 font-serif text-2xl text-secondary'>
+              {t('about-section.title3')}
+            </h2>
+            <div className='mb-4 max-w-xl leading-relaxed'>
+              <h3>{t('about-section.bullet1-title')}</h3>
+              <p className='text-muted-foreground'>
+                {t('about-section.bullet1')}
+              </p>
+            </div>
+            <div className='mb-4 max-w-xl leading-relaxed'>
+              <h3>{t('about-section.bullet2-title')}</h3>
+              <p className='text-muted-foreground'>
+                {t('about-section.bullet2')}
+              </p>
+            </div>
+            <div className='mb-4 max-w-xl leading-relaxed'>
+              <h3>{t('about-section.bullet3-title')}</h3>
+              <p className='text-muted-foreground'>
+                {t('about-section.bullet3')}
+              </p>
+            </div>
+          </div>
+          <div className='mb-8'>
+            <h2 className='mb-4 font-serif text-2xl text-secondary'>
+              {t('about-section.title4')}
+            </h2>
+            <div className='mb-4 max-w-xl leading-relaxed'>
+              <ul>
+                <li className='mb-4 text-muted-foreground'>
+                  {t('about-section.bullet4')}
+                </li>
+                <li className='mb-4 text-muted-foreground'>
+                  {t('about-section.bullet5')}
+                </li>
+                <li className='text-muted-foreground'>
+                  {t('about-section.bullet6')}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h2 className='mb-4 font-serif text-4xl text-secondary'>
+              {t('about-section.title5')}
+            </h2>
+            <p className='mb-4 max-w-xl leading-relaxed text-muted-foreground'>
+              {t('about-section.description5')}
+            </p>
+            <p className='max-w-xl leading-relaxed text-muted-foreground'>
+              {t('about-section.description6')}
             </p>
           </div>
         </div>

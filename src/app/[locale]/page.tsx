@@ -66,12 +66,11 @@ const HomePage: React.FC = () => {
           />
         </div>
         <div className='flex flex-col py-16 text-center md:mx-auto md:w-1/2 md:max-w-xl md:py-0 md:text-left'>
-          <h2 className='mb-8 font-serif text-5xl md:mx-0 md:mt-8 md:text-left'>
+          <h2 className='mb-8 font-serif text-4xl md:mx-0 md:mt-8 md:text-left'>
             {t('subtitle')}
           </h2>
-          <p className='pb-8 text-muted-foreground md:mt-0'>
-            {t('description')}
-          </p>
+          <p className='text-muted-foreground md:mt-0'>{t('description1')}</p>
+          <p className='mt-4 pb-8 text-muted-foreground'>{t('description2')}</p>
 
           <Button
             variant='default'
@@ -84,6 +83,37 @@ const HomePage: React.FC = () => {
       </div>
 
       <PhotoTiles images={images} />
+      <div className='mx-auto flex max-w-4xl flex-col'>
+        <h2 className='mb-4 mt-12 font-serif text-4xl'>{t('title2')}</h2>
+        <p className='mt-4 text-muted-foreground'>{t('bullets-title')}</p>
+        <ul className='list-disc pl-8 text-muted-foreground'>
+          <li className='mt-4'>{t('bullet1')}</li>
+          <li>{t('bullet2')}</li>
+          <li>{t('bullet3')}</li>
+        </ul>
+        <p className='mt-4 text-muted-foreground'>{t('description4')}</p>
+        <h2 className='mb-4 mt-12 font-serif text-4xl'>{t('title3')}</h2>
+        <div className='relative my-8 h-[40vh]'>
+          <FadeInImage
+            src='/home-page/subhero-jeremydan-wedding-photography-002-optimized.webp'
+            alt={`${t('alt')}`}
+            onImageLoad={path =>
+              setLoadedImages(prev => ({ ...prev, [path]: true }))
+            }
+            className='rounded-lg object-cover shadow-md'
+          />
+        </div>
+        <p className='mt-4 text-muted-foreground'>{t('description5')}</p>
+        <p className='mt-4 text-muted-foreground'>{t('description6')}</p>
+        <p className='mt-4 text-muted-foreground'>{t('description7')}</p>
+        <Button
+          variant='default'
+          size='default'
+          className='mx-auto mt-8 w-fit md:mx-0'
+        >
+          <Link href='/contact'>{t('button-label2')}</Link>
+        </Button>
+      </div>
 
       <div className='mx-auto max-w-7xl'>
         <div className='my-16'>
@@ -104,7 +134,7 @@ const HomePage: React.FC = () => {
           size='default'
           className='mx-auto mt-16 flex w-fit'
         >
-          <Link href='/blog'>{t('grid-blog-section.button-label')}</Link>
+          <Link href='/blog'>{t('grid-blog-section.button-label3')}</Link>
         </Button>
       </div>
 

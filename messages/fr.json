@@ -59,8 +59,8 @@
   },
 
   "photo-tiles": {
-    "title": "Capturer le Moment",
-    "description": "Chaque moment est unique, chaque histoire mérite d'être racontée comme elle l'est réellement. Mon rôle est de capturer l'essence de ces instants précieux qui composent les plus beaux chapitres de votre vie.",
+    "title": "Capturer l’Instant",
+    "description": "Chaque moment que vous vivez est une page d’une histoire plus grande – votre histoire. Et chaque histoire mérite d’être racontée avec authenticité et sincérité. Mon rôle en tant que photographe est de saisir l’essence de ces instants éphémères, pour qu’ils restent gravés à jamais dans vos mémoires.",
     "alt1": "Table de mariage élégante avec bougies",
     "alt2": "Portrait de couple de mariés",
     "alt3": "Portrait avec chapeau de cowboy",
@@ -69,12 +69,25 @@
 
   "home-page": {
     "subtitle": "Photos Authentiques pour Vrais Humains.",
-    "description": "Il n'y a rien de plus incroyable que de trouver la personne sans laquelle vous ne pouvez pas vivre. Votre véritable meilleur ami. Je veux photographier cette connexion. Que nous partions à l'aventure ensemble dans un endroit magnifique ou que nous explorions l'intimité de votre propre maison, je veux capturer vos vraies personnalités. Ne vous retenez pas. Vous n'avez qu'un seul moment comme celui-ci. Soyez vous même, je serai moi même. Créons quelque chose de réel.",
+    "description1": "Il n’y a rien de plus incroyable que de trouver la personne sans laquelle vous ne pouvez pas vivre. Votre véritable meilleur ami, celui ou celle qui vous fait vibrer au quotidien. C’est cette connexion unique que je veux photographier. Que nous partions à l’aventure dans un endroit spectaculaire ou que nous explorions l’intimité chaleureuse de votre propre maison, mon objectif est de capturer vos vraies personnalités, vos émotions brutes, et tout ce qui vous rend, vous.",
+    "description2": "Ne vous retenez pas. Ce moment n’arrive qu’une fois dans une vie. Soyez vous-même, et je serai moi-même.",
     "button-label": "Mon histoire",
+    "description3": "Mon travail reflète mon engagement à rester fidèle à vous, à ce que vous ressentez, et à ce qui vous unit. Je veux que chaque cliché soit un miroir de votre amour, plein de nuances et de profondeur.",
 
+    "title2": "Révéler l'Essence",
+    "bullets-title": "Je m’inspire des détails simples et poétiques :",
+    "bullet1": "Les lumières naturelles, douces et enveloppantes, qui mettent en valeur chaque émotion.",
+    "bullet2": "Un style évoquant l’argentique, avec des couleurs chaudes, naturelles, et une touche de grain qui apporte cette texture intemporelle et cinématique à vos photos.",
+    "bullet3": "Les instants non posés, pris sur le vif, qui racontent une vérité que les mises en scène ne peuvent pas capturer.",
+    "description4": "Mon travail reflète mon engagement à rester fidèle à vous, à ce que vous ressentez, et à ce qui vous unit. Je veux que chaque cliché soit un miroir de votre amour, plein de nuances et de profondeur.",
+    "title3": "Votre Histoire, Votre Héritage Visuel",
+    "description5": "Les souvenirs ne sont pas seulement faits pour être vécus, mais pour être préservés et partagés. Que ce soit lors d’une cérémonie en plein air, dans un cadre intimiste, ou au cœur d’une célébration familiale animée, mon objectif est de créer pour vous des images qui racontent bien plus qu’un moment – elles racontent votre histoire.",
+    "description6": "Il ne s’agit pas de simplement faire des photos, mais de créer un héritage visuel. Quelque chose qui vous ressemble, que vous pourrez transmettre et chérir pour toujours.",
+    "description7": "Êtes-vous prêt à créer quelque chose de réel avec moi ?",
+    "button-label2": "Contactez-moi",
     "grid-blog-section": {
       "title": "Blog",
-      "button-label": "Voir le blog"
+      "button-label3": "Voir le blog"
     }
   },
 
@@ -85,12 +98,26 @@
     "about-section": {
       "title1": " En Quelques Mots",
       "description1": "Se présenter peut être un exercice délicat, mais si important lorsque l'on confie un moment si important entre les mains d'un photographe. Voici donc ma petite histoire !",
-      "description2": "Je m'appelle Jérémy, j'ai 28 ans et j'ai la chance de partager mon quotidien avec celle qui donne un sens à ma vie. J'ai trois passions : la photographie, la musique et le skate. Dans la vie, je sauvegarde vos plus beaux moments et je réalise des ",
+      "description2": "Je m'appelle Jérémy, j'ai 28 ans et j'ai la chance de partager mon quotidien avec celle qui donne un sens à ma vie. J'ai trois passions : la photographie, la musique et le skate. Chacune d’elles nourrit ma créativité et ma vision du monde. Quand je ne suis pas derrière l’objectif à capturer vos moments précieux, je suis devant mon écran à coder des ",
       "description2-link": "sites internet",
-      "description2-cont": ". Le site sur lequel vous naviguez a d'ailleurs été conçu par moi. Le français est ma langue natale et je parle couramment l'anglais. J'apprends également le suédois et j'espère pouvoir y séjourner quelques années un jour. J'aime sortir de ma zone de confort, partager et apprendre ce que le monde a à offrir.",
-      "title2": " Mes Convictions",
-      "description3": "La photographie est le moyen le plus concret de me rapprocher des choses qui comptent le plus pour moi : les relations et les liens que nous établissons tout au long de notre vie. Je crois qu'on ne prête pas assez attention à ce qui se passe autour de nous en laissant passer ces instants éphémères. C'est la raison pour laquelle je fais ce que je fais.",
-      "description4": "Mon objectif est de capturer ces moments si importants avec la sincérité qui les caractérisent. Je veux que ces images soient belles et vraies, quelle que soit l'occasion. En fin de compte, c'est ce qui compte le plus pour moi."
+      "description2-cont": ". Le site sur lequel vous naviguez a d'ailleurs été conçu par moi. Le français est ma langue natale et je parle couramment l'anglais. Amoureux de la Suède, j'apprends également le suédois et j'espère pouvoir passer quelques années à explorer la beauté et la sérénité des paysages scandinaves. J’aime sortir de ma zone de confort, découvrir de nouvelles perspectives et apprendre de ce que le monde a à offrir. Chaque expérience enrichit ma vision et, en fin de compte, mon travail en tant que photographe de mariage.",
+      "title2": "Ma Vision de la Photographie",
+      "description3": "La photographie est pour moi bien plus qu’un métier : c’est une philosophie. Elle me permet de me rapprocher de ce qui compte vraiment – les relations humaines, les liens que nous construisons et les émotions que nous partageons. Je crois fermement que nous ne prêtons pas toujours assez d’attention aux instants fugaces de notre vie. Ces moments éphémères, si précieux, méritent d’être capturés avec authenticité et sincérité. Mon objectif est de vous offrir des images belles, vraies, et émouvantes qui racontent votre histoire, telle qu’elle est. Je m’efforce de capturer chaque détail, chaque sourire, chaque regard complice, sans artifice, mais avec toute la sensibilité qui caractérise ces instants uniques.",
+      "description4": "Mon objectif est de capturer ces moments si importants avec la sincérité qui les caractérisent. Je veux que ces images soient belles et vraies, quelle que soit l'occasion. En fin de compte, c'est ce qui compte le plus pour moi.",
+      "title3": " Ce qui m'inspire",
+      "bullet1-title": "Le vrai, le simple, le spontané",
+      "bullet1": "Une larme discrète, un éclat de rire, une accolade sincère.",
+      "bullet2-title": "Les détails",
+      "bullet2": "Ceux qui racontent votre histoire et qui la rendent unique.",
+      "bullet3-title": "L'intemporel",
+      "bullet3": "Des couleurs naturelles, le grain subtil de l'argentique allié aux contrastes du cinéma.",
+      "title4": "Ce qui ne m’inspire pas",
+      "bullet4": "Les mises en scène trop posées ou artificielles, qui ne reflètent pas votre authenticité.",
+      "bullet5": "Les tendances éphémères qui risquent de dater vos souvenirs au lieu de les sublimer.",
+      "bullet6": "Les photos génériques dénuées de l'émotion et du contexte qui font votre unicité.",
+      "title5": "Mes Raisons d'être Photographe de Mariage",
+      "description5": "Ce qui me motive, c’est de vous offrir quelque chose de tangible, un héritage visuel que vous pourrez transmettre. Que vous puissiez revivre ces moments à travers des images vraies, touchantes et sincères – voilà ce qui me pousse à donner le meilleur de moi-même à chaque mariage.",
+      "description6": "Créons des souvenirs qui resteront intemporels."
     }
   },
 
