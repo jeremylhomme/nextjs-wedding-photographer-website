@@ -98,11 +98,11 @@
     "about-section": {
       "title1": " En Quelques Mots",
       "description1": "Se présenter peut être un exercice délicat, mais si important lorsque l'on confie un moment si important entre les mains d'un photographe. Voici donc ma petite histoire !",
-      "description2": "Je m'appelle Jérémy, j'ai 28 ans et j'ai la chance de partager mon quotidien avec celle qui donne un sens à ma vie. J'ai trois passions : la photographie, la musique et le skate. Chacune d’elles nourrit ma créativité et ma vision du monde. Quand je ne suis pas derrière l’objectif à capturer vos moments précieux, je suis devant mon écran à coder des ",
+      "description2": "Je m'appelle Jérémy, j'ai 28 ans et j'ai la chance de partager mon quotidien avec celle qui donne un sens à ma vie. J'ai trois passions : la photographie, la musique et le skate. Chacune d’elles nourrit ma créativité et ma vision du monde. Quand je ne suis pas derrière l’objectif à capturer des mariages, je suis devant mon écran à coder des ",
       "description2-link": "sites internet",
       "description2-cont": ". Le site sur lequel vous naviguez a d'ailleurs été conçu par moi. Le français est ma langue natale et je parle couramment l'anglais. Amoureux de la Suède, j'apprends également le suédois et j'espère pouvoir passer quelques années à explorer la beauté et la sérénité des paysages scandinaves. J’aime sortir de ma zone de confort, découvrir de nouvelles perspectives et apprendre de ce que le monde a à offrir. Chaque expérience enrichit ma vision et, en fin de compte, mon travail en tant que photographe de mariage.",
       "title2": "Ma Vision de la Photographie",
-      "description3": "La photographie est pour moi bien plus qu’un métier : c’est une philosophie. Elle me permet de me rapprocher de ce qui compte vraiment – les relations humaines, les liens que nous construisons et les émotions que nous partageons. Je crois fermement que nous ne prêtons pas toujours assez d’attention aux instants fugaces de notre vie. Ces moments éphémères, si précieux, méritent d’être capturés avec authenticité et sincérité. Mon objectif est de vous offrir des images belles, vraies, et émouvantes qui racontent votre histoire, telle qu’elle est. Je m’efforce de capturer chaque détail, chaque sourire, chaque regard complice, sans artifice, mais avec toute la sensibilité qui caractérise ces instants uniques.",
+      "description3": "La photographie est pour moi bien plus qu’un métier : c’est une philosophie. Elle me permet de me rapprocher de ce qui compte vraiment – les relations humaines, les liens que nous construisons et les émotions que nous partageons. Je crois fermement que nous ne prêtons pas toujours assez d’attention aux instants fugaces de notre vie. Ces fragments éphémères, si précieux, méritent d’être capturés avec authenticité et sincérité. Mon objectif est de vous offrir des images belles, vraies, et émouvantes qui racontent votre histoire, telle qu’elle est. Je m’efforce de capturer chaque détail, chaque sourire, chaque regard complice, sans artifice, mais avec toute la sensibilité qui caractérise ces instants uniques.",
       "description4": "Mon objectif est de capturer ces moments si importants avec la sincérité qui les caractérisent. Je veux que ces images soient belles et vraies, quelle que soit l'occasion. En fin de compte, c'est ce qui compte le plus pour moi.",
       "title3": " Ce qui m'inspire",
       "bullet1-title": "Le vrai, le simple, le spontané",
@@ -334,7 +334,7 @@
       "select-language": "Sélectionnez la langue"
     },
     "cf": {
-      "title": "Formulaire de contact",
+      "title": "Formulaire de Contact",
       "project_type-label": "Type de projet",
       "project_type-placeholder": "Sélectionnez une option",
       "project_type-item1": "Mariage",
@@ -342,7 +342,7 @@
 
       "wedding": {
         "title": "Mariage",
-        "desc": "J'ai hâte de discuter de votre projet et des opportunités que nous pouvons explorer ensemble. Afin que je puisse capturer votre histoire à travers mes photos (ou mes vidéos), il est important que j'en apprenne davantage sur vous et l'événement de vos rêves. Si nous sommes sur la même longueur d'onde, je vous proposerai une rencontrer autour d'un café ou via Google Meet pour les emplois du temps chargés ! Mes tarifs sont donnés uniquement sur rendez-vous et commencent à partir de 1200 euros pour les mariages.",
+        "desc": "J'ai hâte de discuter de votre projet et des opportunités que nous pouvons explorer ensemble. Afin que je puisse capturer votre histoire à travers mes photos (ou mes vidéos), il est important que j'en apprenne davantage sur vous et l'événement de vos rêves. Si nous sommes sur la même longueur d'onde, je vous proposerai une rencontrer autour d'un café ou via Google Meet pour les emplois du temps chargés ! Mes tarifs sont donnés uniquement sur rendez-vous et commencent à partir de 800 euros pour les mariages civils. Mes tarifs sont donnés uniquement sur rendez-vous et commencent à partir de 800 euros pour les mariages civils.",
         "first_name-label": "Prénom",
         "first_name-placeholder": "Votre prénom",
         "last_name-label": "Nom",
@@ -359,7 +359,7 @@
         "fixed_date-option1": "Oui",
         "fixed_date-option2": "Non",
         "message-label": "Dites-moi tout !",
-        "message-placeholder": "Des couleurs de votre thème aux moments spéciaux que vous voulez immortaliser, je veux tout savoir ! Partagez-moi vos idées, vos rêves et même les petits détails qui rendront votre évènement unique. Plus j'en saurai, mieux je pourrai capturzer l'évènement qui vous ressemble vraiment.",
+        "message-placeholder": "Des couleurs de votre thème aux moments spéciaux que vous voulez immortaliser, je veux tout savoir ! Partagez-moi vos idées, vos rêves et même les petits détails qui rendront votre évènement unique. Plus j'en saurai, mieux je pourrai capturer l'évènement qui vous ressemble vraiment.",
         "knowing_source-label": "Comment m'avez-vous connu ?",
         "knowing_source-placeholder": "Sélectionnez une option",
         "knowing_source-option2": "Google Search",
