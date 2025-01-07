@@ -54,6 +54,16 @@ const HomePage: React.FC = () => {
       <div className='relative'>
         <CarouselHero />
       </div>
+      <div className='container border-b py-16 text-center'>
+        <div className='mx-auto flex max-w-screen-lg flex-col gap-6'>
+          <h1 className='font-serif text-4xl font-semibold lg:text-5xl'>
+            {t('hero-title')}
+          </h1>
+          <p className='text-balance text-muted-foreground'>
+            {t('hero-description')}
+          </p>
+        </div>
+      </div>
       <div className='mx-auto flex max-w-4xl flex-col-reverse border-b md:flex-row md:gap-16 md:border-0 md:py-16'>
         <div className='relative h-[50vh] pb-16 sm:h-[60vh] md:mx-0 md:w-[70%] md:pb-0'>
           <FadeInImage
@@ -65,8 +75,8 @@ const HomePage: React.FC = () => {
             }
           />
         </div>
-        <div className='flex flex-col py-16 text-center md:mx-auto md:w-1/2 md:max-w-xl md:py-0 md:text-left'>
-          <h2 className='mb-8 font-serif text-4xl md:mx-0 md:mt-8 md:text-left'>
+        <div className='flex flex-col py-16 text-center md:mx-auto md:w-2/3 md:py-0 md:text-left'>
+          <h2 className='mb-8 font-serif text-3xl md:mx-0 md:text-left lg:text-4xl'>
             {t('subtitle')}
           </h2>
           <p className='text-muted-foreground md:mt-0'>{t('description1')}</p>
@@ -91,7 +101,7 @@ const HomePage: React.FC = () => {
           <li>{t('bullet2')}</li>
           <li>{t('bullet3')}</li>
         </ul>
-        <p className='mt-4 text-muted-foreground'>{t('description4')}</p>
+        <p className='mt-4 text-muted-foreground'>{t('description3')}</p>
         <h2 className='mb-4 mt-12 font-serif text-4xl'>{t('title3')}</h2>
         <div className='relative my-8 h-[40vh]'>
           <FadeInImage

@@ -68,18 +68,17 @@ const CarouselHero: React.FC = () => {
   }, [emblaApi]);
 
   return (
-    <div className='embla relative h-[90vh] w-full pb-4' ref={emblaRef}>
+    <div className='embla relative h-[90vh] w-full' ref={emblaRef}>
       <div className='embla__container h-full w-full'>
         {heroImages.map((image, index) => (
           <div
             key={image.src}
             className='embla__slide relative flex h-full w-full items-center justify-center'
           >
-            {/* Uncomment to add title */}
             <div className='absolute z-10 flex translate-y-[48%] justify-center'>
-              <h1 className='z-10 bg-black/20 px-4 py-2 font-serif text-5xl text-muted'>
+              <h2 className='z-10 bg-black/20 px-4 py-2 font-serif text-5xl text-muted'>
                 {t('title')}
-              </h1>
+              </h2>
             </div>
 
             <div className='relative h-full w-full'>

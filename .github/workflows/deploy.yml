@@ -12,6 +12,8 @@ jobs:
       CAPTCHA_SECRET_KEY: ${{ secrets.CAPTCHA_SECRET_KEY }}
       SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
       SENDGRID_TEMPLATE_ID: ${{ secrets.SENDGRID_TEMPLATE_ID }}
+      SITE_URL: 'https://jeremydan.fr'
+
     steps:
       - uses: actions/checkout@v3
 
@@ -28,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: Build and Generate Sitemap
         run: pnpm build
 
       - name: Deploy to VPS
@@ -42,5 +44,5 @@ jobs:
             cd /var/www/jeremydan.fr
             git pull origin main
             pnpm install
-            pnpm build
+            SITE_URL='https://jeremydan.fr' pnpm build
             pm2 restart jeremydan

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jeremydan.fr
+
+# Sitemaps
+Sitemap: https://jeremydan.fr/sitemap.xml

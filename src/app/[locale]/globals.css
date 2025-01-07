@@ -45,7 +45,7 @@
     color: hsl(var(--muted));
     background-image: url('/noisy-background-optimized.png');
   }
-  h2 {
+  h1 {
     font-weight: 600;
   }
 }
