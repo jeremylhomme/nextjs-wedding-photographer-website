@@ -41,6 +41,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.SITE_URL || 'https://jeremydan.fr' || 'https://localhost:3000'
   ),
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
   title: {
     template: '%s | Jeremy Dan - Photographe Mariage Sceaux (92)',
     default: 'Jeremy Dan | Photographe Mariage Sceaux (92) - Hauts-de-Seine'
