@@ -44,19 +44,14 @@ const formSchema = z.object({
   last_name: z.string().min(1, 'Last name is required').max(50),
   email: z.string().email('Please enter a valid email address'),
   event_date: z.coerce.date(),
-  event_location: z.string().min(1, 'Event location is required').max(50),
-  fixed_date: z.string().optional(),
-  guests_number: z.coerce.number().min(1).max(500).optional(),
-  knowing_source: z.string().optional(),
-  message: z.string().min(30),
-  project_type: z.string()
+  knowing_source: z.string().min(1, 'Please select an option'),
+  message: z.string().min(30)
 });
 
 export default function ContactForm() {
   const t = useTranslations('contact-page');
   const params = useParams();
   const locale = params?.locale as string;
-  const [selectedType, setSelectedType] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -65,12 +60,8 @@ export default function ContactForm() {
       last_name: '',
       email: '',
       event_date: undefined,
-      event_location: '',
-      fixed_date: '',
-      guests_number: undefined,
       knowing_source: '',
-      message: '',
-      project_type: ''
+      message: ''
     }
   });
   const [loadedImages, setLoadedImages] = React.useState<{
@@ -125,14 +116,9 @@ export default function ContactForm() {
         last_name: '',
         email: '',
         event_date: undefined,
-        event_location: '',
-        fixed_date: '',
-        guests_number: undefined,
         knowing_source: '',
-        message: '',
-        project_type: ''
+        message: ''
       });
-      setSelectedType('');
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('Failed to send the message. Please try again.');
@@ -143,14 +129,14 @@ export default function ContactForm() {
 
   return (
     <div className='relative w-screen'>
-      <div className='relative h-[70vh] w-full'>
+      <div className='relative h-[40vh] w-full'>
         <FadeInImage
           src='/contact-page/contact-jeremydan-wedding-photography-001-optimized.webp'
           alt='Hero image for blog'
           onImageLoad={path =>
             setLoadedImages(prev => ({ ...prev, [path]: true }))
           }
-          className='h-[70vh] w-full object-cover object-center'
+          className='h-[40vh] w-full object-cover object-center'
         />
         <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
           <h1 className='font-serif text-4xl text-white md:text-5xl'>
@@ -164,326 +150,209 @@ export default function ContactForm() {
           onSubmit={form.handleSubmit(onSubmit)}
           className='mx-4 my-16 max-w-3xl space-y-8 rounded-lg border bg-transparent px-4 py-10 shadow-sm lg:mx-auto'
         >
-          <div className='col-span-12'>
-            <h2 className='mb-4 text-2xl'>{t('cf.title')}</h2>
-            <FormField
-              control={form.control}
-              name='project_type'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('cf.project_type-label')}</FormLabel>
-                  <Select
-                    onValueChange={value => {
-                      field.onChange(value);
-                      setSelectedType(value);
-                    }}
-                    value={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue
-                          placeholder={t('cf.project_type-placeholder')}
-                        />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value='default' disabled>
-                        {t('cf.project_type-placeholder')}
-                      </SelectItem>
-                      <SelectItem value='wedding'>
-                        {t('cf.project_type-item1')}
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormDescription>{t('cf.project_type-desc')}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-
-          {selectedType === 'wedding' && (
-            <div className='gap-4'>
-              <div className='flex flex-col justify-center text-left'>
-                <h2 className='mb-4 text-2xl'>{t('cf.wedding.title')}</h2>
-                <p className='mb-8 text-sm leading-loose text-muted-foreground'>
-                  {t('cf.wedding.desc')}
-                </p>
-              </div>
-              <div className='grid grid-cols-12 gap-4'>
-                <div className='col-span-12 sm:col-span-6'>
-                  <FormField
-                    control={form.control}
-                    name='first_name'
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          {t('cf.wedding.first_name-label')}
-                        </FormLabel>
-                        <FormControl>
-                          <FloatingLabelInput
-                            id='first_name'
-                            type='text'
-                            label={t('cf.wedding.first_name-placeholder')}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <div className='col-span-12 sm:col-span-6'>
-                  <FormField
-                    control={form.control}
-                    name='last_name'
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t('cf.wedding.last_name-label')}</FormLabel>
-                        <FormControl>
-                          <FloatingLabelInput
-                            id='last_name'
-                            type='text'
-                            label={t('cf.wedding.last_name-placeholder')}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              </div>
-
-              <div className='mt-6 grid grid-cols-12 gap-4'>
-                <div className='col-span-12 sm:col-span-6'>
-                  <FormField
-                    control={form.control}
-                    name='email'
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t('cf.wedding.email-label')}</FormLabel>
-                        <FormControl>
-                          <FloatingLabelInput
-                            id='email'
-                            type='email'
-                            label={t('cf.wedding.email-placeholder')}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <div className='col-span-12 mt-1.5 sm:col-span-6'>
-                  <FormField
-                    control={form.control}
-                    name='event_date'
-                    render={({ field }) => (
-                      <FormItem className='flex flex-col'>
-                        <FormLabel>Date*</FormLabel>
-                        <Popover>
-                          <PopoverTrigger asChild>
-                            <FormControl>
-                              <Button
-                                variant={'outline'}
-                                className={cn(
-                                  '!mt-[20px] rounded-lg bg-input pl-3 text-left font-normal !text-card',
-                                  !field.value && 'text-muted-foreground'
-                                )}
-                              >
-                                {field.value ? (
-                                  format(field.value, 'PPP', {
-                                    locale: locale === 'fr' ? fr : enUS
-                                  })
-                                ) : (
-                                  <span>
-                                    {t('cf.wedding.event_date-placeholder')}
-                                  </span>
-                                )}
-                                <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
-                              </Button>
-                            </FormControl>
-                          </PopoverTrigger>
-                          <PopoverContent className='w-auto p-0' align='start'>
-                            <Calendar
-                              mode='single'
-                              selected={field.value}
-                              onSelect={field.onChange}
-                              initialFocus
-                            />
-                          </PopoverContent>
-                        </Popover>
-
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              </div>
-
-              <div className='col-span-12 mt-6'>
+          <div className='gap-4'>
+            <div className='flex flex-col justify-center text-left'>
+              <h2 className='mb-4 text-2xl'>{t('cf.title')}</h2>
+              <p className='text-sm leading-loose text-muted-foreground'>
+                {t('cf.wedding.desc')}
+              </p>
+              <p className='mb-8 mt-2 text-sm leading-loose text-muted-foreground'>
+                {t('cf.wedding.desc2')}{' '}
+                <span className='font-bold'>800 euros</span>{' '}
+                {t('cf.wedding.desc3')} {t('cf.wedding.desc4')}{' '}
+                <a
+                  className='font-bold underline'
+                  href='mailto:bonjour@jeremydan.fr'
+                >
+                  bonjour@jeremydan.fr
+                </a>
+              </p>
+            </div>
+            <div className='grid grid-cols-12 gap-4'>
+              <div className='col-span-12 sm:col-span-6'>
                 <FormField
                   control={form.control}
-                  name='event_location'
+                  name='first_name'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>
-                        {t('cf.wedding.event_location-label')}
-                      </FormLabel>
+                      <FormLabel>{t('cf.wedding.first_name-label')}</FormLabel>
                       <FormControl>
                         <FloatingLabelInput
-                          id='location'
+                          id='first_name'
                           type='text'
-                          label={t('cf.wedding.event_location-placeholder')}
+                          label={t('cf.wedding.first_name-placeholder')}
                           {...field}
                         />
                       </FormControl>
-
                       <FormMessage />
                     </FormItem>
                   )}
                 />
               </div>
 
-              <div className='col-span-12 mt-6'>
+              <div className='col-span-12 sm:col-span-6'>
                 <FormField
                   control={form.control}
-                  name='guests_number'
+                  name='last_name'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>
-                        {t('cf.wedding.guests_number-label')}
-                      </FormLabel>
+                      <FormLabel>{t('cf.wedding.last_name-label')}</FormLabel>
                       <FormControl>
                         <FloatingLabelInput
-                          id='guests_number'
-                          type='number'
-                          label={t('cf.wedding.guests_number-placeholder')}
-                          {...field}
-                          value={field.value || ''}
-                          onChange={e => {
-                            const value = e.target.value
-                              ? parseInt(e.target.value)
-                              : undefined;
-                            field.onChange(value);
-                          }}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <div className='col-span-12 mt-6'>
-                <FormField
-                  control={form.control}
-                  name='fixed_date'
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t('cf.wedding.fixed_date-label')}</FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                      >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue
-                              placeholder={t(
-                                'cf.wedding.fixed_date-placeholder'
-                              )}
-                            />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value='flexible_date'>
-                            {t('cf.wedding.fixed_date-option1')}
-                          </SelectItem>
-                          <SelectItem value='definitive_date'>
-                            {t('cf.wedding.fixed_date-option2')}
-                          </SelectItem>
-                        </SelectContent>
-                      </Select>
-
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <div className='col-span-12 mt-6'>
-                <FormField
-                  control={form.control}
-                  name='message'
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t('cf.wedding.message-label')}*</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder={t('cf.wedding.message-placeholder')}
-                          className='min-h-40 resize leading-loose'
+                          id='last_name'
+                          type='text'
+                          label={t('cf.wedding.last_name-placeholder')}
                           {...field}
                         />
                       </FormControl>
-                      {/* <FormDescription>
-                        En soumettant ce formulaire, vous acceptez les
-                        conditions générales d'utilisation de ce site.
-                      </FormDescription> */}
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <div className='col-span-12 mt-6'>
-                <FormField
-                  control={form.control}
-                  name='knowing_source'
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>
-                        {t('cf.wedding.knowing_source-label')}
-                      </FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                      >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue
-                              placeholder={t(
-                                'cf.wedding.knowing_source-placeholder'
-                              )}
-                            />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value='instagram'>Instagram</SelectItem>
-                          <SelectItem value='google-search'>
-                            {t('cf.wedding.knowing_source-option2')}
-                          </SelectItem>
-                          <SelectItem value='word-of-mouth'>
-                            {t('cf.wedding.knowing_source-option3')}
-                          </SelectItem>
-                          <SelectItem value='other'>
-                            {t('cf.wedding.knowing_source-option4')}
-                          </SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormDescription>
-                        {t('cf.wedding.knowing_source-desc')}
-                      </FormDescription>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
               </div>
             </div>
-          )}
+
+            <div className='mt-6 grid grid-cols-12 gap-4'>
+              <div className='col-span-12 sm:col-span-6'>
+                <FormField
+                  control={form.control}
+                  name='email'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{t('cf.wedding.email-label')}</FormLabel>
+                      <FormControl>
+                        <FloatingLabelInput
+                          id='email'
+                          type='email'
+                          label={t('cf.wedding.email-placeholder')}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <div className='col-span-12 mt-1.5 sm:col-span-6'>
+                <FormField
+                  control={form.control}
+                  name='event_date'
+                  render={({ field }) => (
+                    <FormItem className='flex flex-col'>
+                      <FormLabel>Date</FormLabel>
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <FormControl>
+                            <Button
+                              variant={'outline'}
+                              className={cn(
+                                '!mt-[20px] rounded-lg bg-input pl-3 text-left font-normal !text-card',
+                                !field.value && 'text-muted-foreground'
+                              )}
+                            >
+                              {field.value ? (
+                                format(field.value, 'PPP', {
+                                  locale: locale === 'fr' ? fr : enUS
+                                })
+                              ) : (
+                                <span>
+                                  {t('cf.wedding.event_date-placeholder')}
+                                </span>
+                              )}
+                              <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
+                            </Button>
+                          </FormControl>
+                        </PopoverTrigger>
+                        <PopoverContent className='w-auto p-0' align='start'>
+                          <Calendar
+                            mode='single'
+                            selected={field.value}
+                            onSelect={field.onChange}
+                            initialFocus
+                          />
+                        </PopoverContent>
+                      </Popover>
+
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </div>
+
+            <div className='col-span-12 mt-6'>
+              <FormField
+                control={form.control}
+                name='message'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>{t('cf.wedding.message-label')}</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder={t('cf.wedding.message-placeholder')}
+                        className='min-h-40 resize leading-loose'
+                        {...field}
+                      />
+                    </FormControl>
+                    {/* <FormDescription>
+                      En soumettant ce formulaire, vous acceptez les
+                      conditions générales d'utilisation de ce site.
+                    </FormDescription> */}
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <div className='col-span-12 mt-6'>
+              <FormField
+                control={form.control}
+                name='knowing_source'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>
+                      {t('cf.wedding.knowing_source-label')}
+                    </FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue
+                            placeholder={t(
+                              'cf.wedding.knowing_source-placeholder'
+                            )}
+                          />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value='instagram'>Instagram</SelectItem>
+                        <SelectItem value='google-search'>
+                          {t('cf.wedding.knowing_source-option2')}
+                        </SelectItem>
+                        <SelectItem
+                          value={t('cf.wedding.knowing_source-option3')}
+                        >
+                          {t('cf.wedding.knowing_source-option3')}
+                        </SelectItem>
+                        <SelectItem
+                          value={t('cf.wedding.knowing_source-option4')}
+                        >
+                          {t('cf.wedding.knowing_source-option4')}
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormDescription>
+                      {t('cf.wedding.knowing_source-desc')}
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+          </div>
           <Button type='submit' disabled={isSubmitting}>
             {isSubmitting ? (
               <div className='flex items-center gap-2'>
