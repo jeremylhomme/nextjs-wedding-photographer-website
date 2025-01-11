@@ -7,6 +7,12 @@
     "contact": "Contactez-moi"
   },
 
+  "notfound-page": {
+    "title": "Page Non Trouvée",
+    "description": "Désolé, nous n'avons pas trouvé la page que vous recherchez. Elle a peut être été déplacée ou n'existe plus.",
+    "return-home": "Retour à l'Accueil"
+  },
+
   "footer": {
     "description": "Photographe de Mariage basé dans les Hauts-de-Seine (92) en íle-de-France",
     "links": {
@@ -71,7 +77,7 @@
     "hero-title": "Photographe de Mariage basé à Sceaux",
     "hero-description": "Révéler vos personnalités et vos émotions les plus sincères, créant ainsi des souvenirs intemporels de votre engagement. Basé à Sceaux dans les Hauts-de-Seine (92), je sauvegarde ces merveilleux moments, que vous soyez en région parisienne, en France ou n'importe où dans le monde.",
     "subtitle": "Photos Authentiques pour Vrais Humains.",
-    "description1": "Il n’y a rien de plus incroyable que de trouver la personne sans laquelle vous ne pouvez pas vivre. Votre véritable complice, celui ou celle qui illumine votre quotidien. C'est cette connexion unique que je veux immortaliser.  Ma mission, en tant que photographe de mariage, est de révéler vos vraies personnalités et vos émotions les plus sincères, créant ainsi des souvenirs intemporels de votre engagement. Que nous partions à l’aventure dans un endroit spectaculaire ou que nous explorions l’intimité chaleureuse de votre propre maison, mon objectif est de capturer vos vraies personnalités, vos émotions brutes, et tout ce qui vous rend, vous.",
+    "description1": "Il n’y a rien de plus incroyable que de trouver la personne sans laquelle vous ne pouvez pas vivre. Votre véritable complice, celui ou celle qui illumine votre quotidien. C'est cette connexion unique que je veux immortaliser.   Ma mission, en tant que photographe de mariage, est de révéler vos vraies personnalités et vos émotions les plus sincères, créant ainsi des souvenirs intemporels de votre engagement. Que nous partions à l’aventure dans un endroit spectaculaire ou que nous explorions l’intimité chaleureuse de votre propre maison, mon objectif est de capturer vos vraies personnalités, vos émotions brutes, et tout ce qui vous rend, vous.",
     "description2": "Ne vous retenez pas. Votre mariage est unique, tout comme votre histoire d'amour. Soyez vous-même, et je serai moi-même. Créons des photos qui vous ressemblent vraiment.",
     "button-label": "Mon histoire",
 
