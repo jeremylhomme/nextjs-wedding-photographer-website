@@ -25,18 +25,29 @@ export const FadeInImage: React.FC<FadeInImageProps> = ({
 }) => {
   const [loaded, setLoaded] = React.useState(false);
   const imgRef = React.useRef<HTMLImageElement>(null);
+  const hasCalledOnLoad = React.useRef(false);
 
-  const handleLoad = () => {
-    setLoaded(true);
-    onImageLoad?.(src);
-  };
+  // Handle image load once
+  const handleLoad = React.useCallback(() => {
+    if (!hasCalledOnLoad.current) {
+      setLoaded(true);
+      onImageLoad?.(src);
+      hasCalledOnLoad.current = true;
+    }
+  }, [src, onImageLoad]);
+
+  // Reset load state when src changes
+  React.useEffect(() => {
+    setLoaded(false);
+    hasCalledOnLoad.current = false;
+  }, [src]);
 
   // Check if image is already cached
   React.useEffect(() => {
     if (imgRef.current?.complete) {
       handleLoad();
     }
-  }, [src]);
+  }, [handleLoad]);
 
   // Preload high priority images
   React.useEffect(() => {
