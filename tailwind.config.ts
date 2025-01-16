@@ -25,6 +25,56 @@ const config = {
       backgroundImage: {
         'body-pattern': "url('/noisy-background-optimized.png')"
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'max-width': 'none',
+            color: 'hsl(var(--foreground))',
+            p: {
+              marginTop: '1.5em',
+              marginBottom: '1.5em',
+              lineHeight: '1.75'
+            },
+            'h1, h2, h3': {
+              fontFamily: 'var(--font-crimson-text), serif',
+              color: 'hsl(var(--foreground))',
+              fontWeight: '600'
+            },
+            h1: {
+              fontSize: '2.25em',
+              marginTop: '2em'
+            },
+            h2: {
+              fontSize: '1.875em',
+              marginTop: '1.75em'
+            },
+            h3: {
+              fontSize: '1.5em',
+              marginTop: '1.5em'
+            },
+            'ul > li': {
+              paddingLeft: '1.5em',
+              '&::before': {
+                backgroundColor: 'hsl(var(--foreground))'
+              }
+            },
+            a: {
+              color: 'hsl(var(--primary))',
+              textDecoration: 'none',
+              '&:hover': {
+                color: 'hsl(var(--primary))',
+                textDecoration: 'underline'
+              }
+            }
+          }
+        },
+        lg: {
+          css: {
+            fontSize: '1.125rem',
+            lineHeight: '1.75'
+          }
+        }
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

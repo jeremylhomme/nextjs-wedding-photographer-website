@@ -158,7 +158,7 @@ export default function ContactForm() {
               </p>
               <p className='mb-8 mt-2 text-sm leading-loose text-muted-foreground'>
                 {t('cf.wedding.desc2')}{' '}
-                <span className='font-bold'>800 euros</span>{' '}
+                <span className='font-bold'>1600 euros</span>{' '}
                 {t('cf.wedding.desc3')} {t('cf.wedding.desc4')}{' '}
                 <a
                   className='font-bold underline'

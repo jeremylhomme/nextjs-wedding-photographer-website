@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Icon } from '@/src/components/ui/icon';
 import { Link } from '@/src/navigation';

@@ -1,6 +1,6 @@
 'use client';
 import { Icon } from '@/src/components/ui/icon';
-import FadeInImage from '@/src/components/fade-in-image';
+import ClientImageWrapper from '@/src/components/client-image-wrapper';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 
@@ -49,15 +49,14 @@ const AboutPage: React.FC = () => {
         </div>
 
         {/* Right Column */}
-        <div className='flex h-72 flex-col items-center'>
-          <FadeInImage
-            src='/about-page/about-jeremydan-wedding-photographer-optimized.webp'
-            alt={`${t('alt')}`}
-            onImageLoad={path =>
-              setLoadedImages(prev => ({ ...prev, [path]: true }))
-            }
-            className='rounded-lg object-cover shadow-md'
-          />
+        <div className='flex flex-col'>
+          <div className='relative aspect-square w-full overflow-hidden rounded-lg'>
+            <ClientImageWrapper
+              src='/about-page/about-jeremydan-wedding-photographer-optimized-square.webp'
+              alt='Jeremy Fiori - Wedding Photographer'
+              className='absolute inset-0 h-full w-full object-cover'
+            />
+          </div>
           <div className='mt-6 flex w-fit flex-col space-y-2 text-center md:text-left'>
             <div className='flex space-x-6 sm:justify-center'>
               {navigation.social.map(item => (

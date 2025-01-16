@@ -24,6 +24,12 @@
     "copyright2": "moi-même"
   },
 
+  "blog-footer": {
+    "title": "À propos de moi",
+    "description": "Je m'appelle Jérémy et je suis photographe de mariage à Sceaux (92 - Hauts-de-Seine). La photographie est pour moi bien plus qu’un métier : c’est une philosophie. Elle me permet de me rapprocher de ce qui compte vraiment – les relations humaines, les liens que nous construisons et les émotions que nous partageons. ",
+    "button-label": "Mon histoire"
+  },
+
   "carousel-hero": {
     "title": "À la folie.",
     "alt1": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
@@ -159,9 +165,25 @@
 
   "blog-page": {
     "hero-title": "Votre Plus Belle Histoire",
-    "title": "Blog",
-    "description": "Quelques histoires d'amour que j'ai à coeur de vous raconter.",
-    "button-label": "Discutons de votre projet"
+    "title1": "Blog",
+    "title2": "Histoires de Mariage",
+    "title3": "Articles",
+    "description": "Quelques histoires d'amour qui me tiennent à cœur et que je souhaite partager avec vous.",
+    "button-label": "Discutons de votre projet",
+    "articles": {
+      "meta": {
+        "title": "Articles & Conseils Photo | Jeremy Dan Photographie",
+        "description": "Découvrez des conseils, techniques et réflexions sur la photographie de mariage et plus encore.",
+        "image-alt": "Image de couverture d'article photo"
+      }
+    },
+    "weddings": {
+      "meta": {
+        "title": "Histoires de Mariage & Photographie | Jeremy Dan Photographie",
+        "description": "Explorez de belles histoires de mariage et photographies de vrais couples à travers la France.",
+        "image-alt": "Image de couverture de photographie de mariage"
+      }
+    }
   },
 
   "blog-posts": {
@@ -332,6 +354,12 @@
         "alt24": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
         "alt25": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
       }
+    },
+    "engagement-session-why-and-how-to-plan-it-before-your-wedding": {
+      "title": "Pourquoi et comment planifier une session d'engagement avant votre mariage ?",
+      "date": "7 avril 2022",
+      "category": "Article",
+      "excerpt": "Mon premier mariage d'hiver célébré à Tarascon pres de Nimes."
     }
   },
 
@@ -346,7 +374,7 @@
       "wedding": {
         "desc": "J'ai hâte de discuter de votre projet et des opportunités que nous pouvons explorer ensemble. Il est important que j'en apprenne davantage sur vous et l'évènement de vos rêves. Une fois le formulaire rempli, je vous proposerai une rencontre autour d'un café ou via Google Meet pour les emplois du temps chargés !",
         "desc2": "Mes tarifs sont donnés uniquement sur rendez-vous et commencent à partir de",
-        "desc3": "pour les mariages civils.",
+        "desc3": "pour les mariages.",
         "desc4": "Vous pouvez également m'envoyer un mail directement à ",
         "title": "Mariage",
         "first_name-label": "Prénom",

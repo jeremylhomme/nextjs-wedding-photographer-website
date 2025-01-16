@@ -97,7 +97,7 @@ const CarouselTestimonials: React.FC = () => {
                   <FadeInImage
                     src={testimony.image}
                     alt={testimony.alt}
-                    className='h-full overflow-hidden object-cover opacity-0 transition-opacity duration-300 data-[loaded=true]:opacity-100'
+                    className='h-full w-full overflow-hidden object-cover opacity-0 transition-opacity duration-300 data-[loaded=true]:opacity-100'
                     onImageLoad={path =>
                       setLoadedImages(prev => ({ ...prev, [path]: true }))
                     }

@@ -2,10 +2,13 @@
 
 import React from 'react';
 import { Skeleton } from '@/src/components/ui/skeleton';
+import cn from 'classnames';
 
 interface FadeInImageProps {
   src: string;
   alt: string;
+  width?: number;
+  height?: number;
   className?: string;
   priority?: boolean;
   onImageLoad?: (src: string) => void;
@@ -14,6 +17,8 @@ interface FadeInImageProps {
 export const FadeInImage: React.FC<FadeInImageProps> = ({
   src,
   alt,
+  width,
+  height,
   className,
   priority,
   onImageLoad
@@ -48,10 +53,15 @@ export const FadeInImage: React.FC<FadeInImageProps> = ({
         ref={imgRef}
         src={src}
         alt={alt}
+        width={width}
+        height={height}
+        loading={priority ? 'eager' : 'lazy'}
         onLoad={handleLoad}
-        className={`${
-          loaded ? 'opacity-100' : 'opacity-0'
-        } absolute left-0 top-0 h-full w-full object-cover transition-opacity duration-300 ${className ?? ''}`}
+        className={cn(
+          'transition-opacity duration-300',
+          loaded ? 'opacity-100' : 'opacity-0',
+          className
+        )}
       />
     </div>
   );

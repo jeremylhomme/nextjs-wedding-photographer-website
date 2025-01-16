@@ -24,6 +24,12 @@
     "copyright2": "myself"
   },
 
+  "blog-footer": {
+    "title": "About me",
+    "description": "My name is Jérémy and I'm a wedding photographer in Sceaux (92 - Hauts-de-Seine). For me, photography is much more than a profession: it's a philosophy. It brings me closer to what really matters - human relationships, the bonds we build and the emotions we share. ",
+    "button-label": "My story"
+  },
+
   "carousel-hero": {
     "title": "Madly in love.",
     "alt1": "Wedding photo at Domaine Ferme Sainte Anne by Jeremy Dan",
@@ -160,9 +166,25 @@
 
   "blog-page": {
     "hero-title": "Your Most Beautiful Story",
-    "title": "Journal",
+    "title1": "Blog",
+    "title2": "Wedding Stories",
+    "title3": "Articles",
     "description": "Some love stories close to my heart that I want to share with you.",
-    "button-label": "Let's discuss your project"
+    "button-label": "Let's discuss your project",
+    "articles": {
+      "meta": {
+        "title": "Photography Articles & Tips | Jeremy Dan Photography",
+        "description": "Discover photography tips, techniques, and insights about wedding photography and more.",
+        "image-alt": "Photography article cover image"
+      }
+    },
+    "weddings": {
+      "meta": {
+        "title": "Wedding Stories & Photography | Jeremy Dan Photography",
+        "description": "Explore beautiful wedding stories and photography from real couples across France.",
+        "image-alt": "Wedding photography cover image"
+      }
+    }
   },
 
   "blog-posts": {
@@ -310,7 +332,7 @@
       "wedding": {
         "desc": "I look forward to discussing your project and the opportunities we can explore together. It's important that I learn more about you and your dream event. Once you've filled in the form, I'll arrange to meet you over coffee or via Google Meet for busy schedules!",
         "desc2": "My rates are by appointment only and start from",
-        "desc3": "for civil weddings.",
+        "desc3": "for weddings.",
         "desc4": "You can also send me an email directly to",
         "title": "Wedding",
         "first_name-label": "First name",

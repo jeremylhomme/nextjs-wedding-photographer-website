@@ -1,114 +1,68 @@
-'use client';
-
-import React, { useState } from 'react';
-import ImageModal from '@/src/components/image-modal';
-import { getBlogPostBySlug } from '@/src/data/blog-posts';
+import { getBlogPost } from '@/src/lib/mdx';
+import ClientImageWrapper from '@/src/components/client-image-wrapper';
 import { notFound } from 'next/navigation';
-import { motion } from 'framer-motion';
-import FadeInImage from '@/src/components/fade-in-image';
-import FloatingButton from '@/src/components/ui/floating-button';
-import { ArrowLeft } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { Breadcrumbs } from '@/src/components/ui/breadcrumbs';
+import { BlogFooter } from '@/src/components/blog/BlogFooter';
+import { Link } from '@/src/navigation';
+import { translateCategory, normalizeCategory } from '@/src/lib/categories';
 
-interface PostPageProps {
+interface BlogPostParams {
   params: {
-    slug: string;
     locale: string;
+    slug: string;
   };
 }
 
-const PostPage = ({ params }: PostPageProps) => {
-  if (!params?.slug) {
-    notFound();
-  }
+export default async function BlogPost({ params }: BlogPostParams) {
+  // Remove any potential locale prefix from the slug
+  const cleanSlug = params.slug.split('/').pop() || params.slug;
 
-  const post = getBlogPostBySlug(params.slug);
-  const t = useTranslations('blog-posts');
+  try {
+    const { meta, content } = await getBlogPost(params.locale, cleanSlug);
 
-  const [loadedImages, setLoadedImages] = React.useState<{
-    [key: string]: boolean;
-  }>({});
-  const [selectedImage, setSelectedImage] = useState<{
-    src: string;
-    alt: string;
-  } | null>(null);
-
-  if (!post) {
-    notFound();
-  }
-
-  return (
-    <div className='container mx-auto p-4 md:p-8'>
-      <FloatingButton
-        icon={<ArrowLeft size={20} />}
-        href='/blog'
-        text={t('back')}
-      />
-      <div className='relative h-[400px] w-full overflow-hidden'>
-        <FadeInImage
-          src={post.coverImage.src}
-          alt={t(`${post.slug}.coverImage.alt`)}
-          onImageLoad={path =>
-            setLoadedImages(prev => ({ ...prev, [path]: true }))
-          }
-          className='absolute inset-0 h-full w-full object-cover'
-          data-loaded={loadedImages[post.coverImage.src]}
+    return (
+      <article className='container mx-auto px-6 py-16'>
+        <Breadcrumbs
+          items={[
+            { label: 'Blog', href: `/blog` },
+            {
+              label: translateCategory(meta.category, params.locale),
+              href: `/blog?category=${normalizeCategory(meta.category)}`
+            },
+            { label: meta.title, href: `/blog/${cleanSlug}` }
+          ]}
         />
-      </div>
 
-      <div className='py-16'>
-        <h1 className='font-serif text-4xl'>{t(`${post.slug}.title`)}</h1>
-        <div className='mt-4 flex gap-4'>
-          <span className='rounded-full bg-primary px-3 py-1 text-xs text-primary-foreground'>
-            {t(`${post.slug}.category`)}
-          </span>
+        <div className='relative h-[400px] w-full overflow-hidden'>
+          <ClientImageWrapper
+            src={meta.coverImage}
+            alt={meta.title}
+            className='absolute inset-0 h-full w-full object-cover'
+          />
+        </div>
+        <div className='my-8'>
+          <h1 className='mb-2 font-serif text-4xl'>{meta.title}</h1>
+          <Link
+            className='mr-2 rounded-full bg-primary px-3 py-1 text-xs text-primary-foreground'
+            href={`/blog?category=${normalizeCategory(meta.category)}`}
+          >
+            {translateCategory(meta.category, params.locale)}
+          </Link>
           <span className='rounded-full bg-secondary px-3 py-1 text-xs text-secondary-foreground'>
-            {t(`${post.slug}.date`)}
+            {meta.date}
           </span>
         </div>
-        <p className='pt-4 italic text-muted-foreground'>
-          {t(`${post.slug}.excerpt`)}
-        </p>
-        <p className='pt-4 text-muted-foreground'>
-          {t(`${post.slug}.description`)}
-        </p>
-      </div>
+        <p className='mb-4'>{meta.excerpt}</p>
 
-      <div className='mx-auto grid auto-rows-[500px] grid-cols-1 gap-2 pb-4 md:grid-cols-2 xl:grid-cols-3'>
-        {post.images.map(image => {
-          return (
-            <motion.div
-              key={image.src}
-              onClick={() =>
-                setSelectedImage({
-                  src: image.src,
-                  alt: t(image.altKey)
-                })
-              }
-              className='relative cursor-pointer'
-            >
-              <FadeInImage
-                src={image.src}
-                alt={t(image.altKey)}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
-                data-loaded={loadedImages[image.src]}
-              />
-            </motion.div>
-          );
-        })}
-      </div>
+        <div className='space-y-6 text-base leading-relaxed text-muted-foreground'>
+          {content}
+        </div>
 
-      {selectedImage && (
-        <ImageModal
-          selectedImage={selectedImage}
-          onClose={() => setSelectedImage(null)}
-        />
-      )}
-    </div>
-  );
-};
-
-export default PostPage;
+        <BlogFooter />
+      </article>
+    );
+  } catch (error) {
+    console.error('Blog post error:', error);
+    notFound();
+  }
+}

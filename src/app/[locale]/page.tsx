@@ -1,16 +1,16 @@
-'use client';
+'use server';
 
 import React from 'react';
 import CarouselHero from '@/src/components/carousel-hero';
 import CarouselTestimonials from '@/src/components/carousel-testimonials';
-import GridBlog from '@/src/components/grid-blog';
 import { Button } from '@/src/components/ui/button';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/src/i18n/routing';
 import { PhotoTiles } from '@/src/components/photo-tiles';
 import VerticalLine from '@/src/components/vertical-line';
-import FadeInImage from '@/src/components/fade-in-image';
-import { blogPosts } from '@/src/data/blog-posts';
+import ClientImageWrapper from '@/src/components/client-image-wrapper';
+import { getBlogPosts } from '@/src/lib/mdx';
+import GridBlog from '@/src/components/grid-blog';
 
 interface PhotoTileProps {
   src: string;
@@ -18,16 +18,19 @@ interface PhotoTileProps {
   priority?: boolean;
 }
 
-const HomePage: React.FC = () => {
-  const t = useTranslations('home-page');
-  const pt = useTranslations('photo-tiles');
-  const [loadedImages, setLoadedImages] = React.useState<{
-    [key: string]: boolean;
-  }>({});
+interface HomePageProps {
+  params: {
+    locale: string;
+  };
+}
 
-  const filteredBlogPosts = blogPosts
-    .filter(post => post.slug !== 'seance-couple-paris')
-    .slice(0, 3);
+const HomePage = async ({ params }: HomePageProps) => {
+  const t = await getTranslations('home-page');
+  const pt = await getTranslations('photo-tiles');
+  const posts = await getBlogPosts(params.locale);
+
+  // Get the latest 3 blog posts
+  const latestPosts = posts.slice(0, 3);
 
   const images: PhotoTileProps[] = [
     {
@@ -65,14 +68,11 @@ const HomePage: React.FC = () => {
         </div>
       </div>
       <div className='mx-auto flex max-w-4xl flex-col-reverse border-b md:flex-row md:gap-16 md:border-0 md:py-16'>
-        <div className='relative h-[50vh] pb-16 sm:h-[60vh] md:mx-0 md:w-[70%] md:pb-0'>
-          <FadeInImage
+        <div className='relative h-[50vh] pb-16 sm:h-[60vh] md:mx-0 md:w-[80%] md:pb-0'>
+          <ClientImageWrapper
             src='/home-page/subhero-jeremydan-wedding-photography-001-optimized.webp'
             alt='Two people hanging upside down'
             className='h-full w-full object-cover md:border md:p-4'
-            onImageLoad={path =>
-              setLoadedImages(prev => ({ ...prev, [path]: true }))
-            }
           />
         </div>
         <div className='flex flex-col py-16 text-center md:mx-auto md:w-2/3 md:py-0 md:text-left'>
@@ -104,13 +104,10 @@ const HomePage: React.FC = () => {
         <p className='mt-4 text-muted-foreground'>{t('description3')}</p>
         <h2 className='mb-4 mt-12 font-serif text-4xl'>{t('title3')}</h2>
         <div className='relative my-8 h-[40vh]'>
-          <FadeInImage
+          <ClientImageWrapper
             src='/home-page/subhero-jeremydan-wedding-photography-002-optimized.webp'
-            alt={`${t('alt')}`}
-            onImageLoad={path =>
-              setLoadedImages(prev => ({ ...prev, [path]: true }))
-            }
-            className='rounded-lg object-cover shadow-md'
+            alt='Two people hanging upside down'
+            className='h-full w-full object-cover'
           />
         </div>
         <p className='mt-4 text-muted-foreground'>{t('description5')}</p>
@@ -138,7 +135,8 @@ const HomePage: React.FC = () => {
           </div>
         </div>
 
-        <GridBlog blogPosts={filteredBlogPosts} />
+        <GridBlog blogPosts={latestPosts} />
+
         <Button
           variant='default'
           size='default'

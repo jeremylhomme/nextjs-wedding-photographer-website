@@ -3,9 +3,10 @@ import React from 'react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/src/components/ui/button';
+import ClientImageWrapper from '@/src/components/client-image-wrapper';
 import ImageModal from '@/src/components/image-modal';
-import FadeInImage from '@/src/components/fade-in-image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/src/navigation';
 
 interface ImageProps {
   src: string;
@@ -15,9 +16,6 @@ interface ImageProps {
 
 const PortfolioPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<ImageProps | null>(null);
-  const [loadedImages, setLoadedImages] = React.useState<{
-    [key: string]: boolean;
-  }>({});
   const t = useTranslations('portfolio-page');
 
   const images: ImageProps[] = [
@@ -107,12 +105,9 @@ const PortfolioPage: React.FC = () => {
   return (
     <div className='relative w-screen'>
       <div className='relative h-[70vh] w-full'>
-        <FadeInImage
+        <ClientImageWrapper
           src='/portfolio-page/portfolio-jeremydan-wedding-photography-001-optimized.webp'
           alt='Hero image for blog'
-          onImageLoad={path =>
-            setLoadedImages(prev => ({ ...prev, [path]: true }))
-          }
           className='h-[70vh] w-full object-cover object-center'
         />
         <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
@@ -125,9 +120,9 @@ const PortfolioPage: React.FC = () => {
         <div className='my-16 flex flex-col justify-center px-8 text-center md:w-1/2 md:max-w-lg md:text-left'>
           <h2 className='mb-8 font-serif text-3xl'>{t('subtitle')}</h2>
           <p className='mb-8 text-muted-foreground'>{t('description')}</p>
-          <div className='default'>
+          <Link href='/contact'>
             <Button>{t('button-label')}</Button>
-          </div>
+          </Link>
         </div>
 
         <div className='mx-auto grid grid-cols-2 gap-2 px-4 pb-4 lg:grid-cols-3'>
@@ -140,13 +135,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '2/3' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[0].src}
                 alt={images[0].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -158,13 +150,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[1].src}
                 alt={images[1].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -178,13 +167,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[2].src}
                 alt={images[2].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -196,13 +182,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '2/3' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[3].src}
                 alt={images[3].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -216,13 +199,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[4].src}
                 alt={images[4].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -236,13 +216,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '2/3' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[5].src}
                 alt={images[5].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -254,13 +231,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[6].src}
                 alt={images[6].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -274,13 +248,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[7].src}
                 alt={images[7].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -292,13 +263,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '2/3' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[8].src}
                 alt={images[8].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -312,13 +280,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[9].src}
                 alt={images[9].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -332,13 +297,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '2/3' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[10].src}
                 alt={images[10].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -350,13 +312,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[11].src}
                 alt={images[11].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -370,13 +329,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[12].src}
                 alt={images[12].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -388,13 +344,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '2/3' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[13].src}
                 alt={images[13].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -408,13 +361,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[14].src}
                 alt={images[14].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -427,13 +377,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '2/3' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[15].src}
                 alt={images[15].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -445,13 +392,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[16].src}
                 alt={images[16].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -465,13 +409,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[17].src}
                 alt={images[17].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -483,13 +424,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '2/3' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[18].src}
                 alt={images[18].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
@@ -503,13 +441,10 @@ const PortfolioPage: React.FC = () => {
               className='relative h-full w-full'
               style={{ aspectRatio: '3/2' }}
             >
-              <FadeInImage
+              <ClientImageWrapper
                 src={images[19].src}
                 alt={images[19].alt}
-                onImageLoad={path =>
-                  setLoadedImages(prev => ({ ...prev, [path]: true }))
-                }
-                className='absolute inset-0 h-full w-full object-cover'
+                className='absolute inset-0 h-full w-full object-cover object-center'
               />
             </div>
           </motion.div>
