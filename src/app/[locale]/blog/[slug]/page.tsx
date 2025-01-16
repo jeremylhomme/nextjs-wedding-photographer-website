@@ -5,15 +5,13 @@ import { Breadcrumbs } from '@/src/components/ui/breadcrumbs';
 import { BlogFooter } from '@/src/components/blog/BlogFooter';
 import { Link } from '@/src/navigation';
 import { translateCategory, normalizeCategory } from '@/src/lib/categories';
+import { Locale } from '@/src/i18n/routing';
 
-interface BlogPostParams {
-  params: {
-    locale: string;
-    slug: string;
-  };
-}
+type Props = {
+  params: { locale: Locale; slug: string };
+};
 
-export default async function BlogPost({ params }: BlogPostParams) {
+export default async function BlogPost({ params }: Props) {
   // Remove any potential locale prefix from the slug
   const cleanSlug = params.slug.split('/').pop() || params.slug;
 
