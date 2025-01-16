@@ -7,11 +7,11 @@ import { Link } from '@/src/navigation';
 import { translateCategory, normalizeCategory } from '@/src/lib/categories';
 import { Locale } from '@/src/i18n/routing';
 
-interface PageProps {
-  params: { locale: Locale; slug: string };
-}
-
-export default async function BlogPost({ params }: PageProps) {
+export default async function BlogPost({
+  params
+}: {
+  params: { locale: Locale; slug: string }
+}) {
   // Remove any potential locale prefix from the slug
   const cleanSlug = params.slug.split('/').pop() || params.slug;
 
