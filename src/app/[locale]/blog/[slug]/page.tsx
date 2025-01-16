@@ -7,11 +7,12 @@ import { Link } from '@/src/navigation';
 import { translateCategory, normalizeCategory } from '@/src/lib/categories';
 import { Locale } from '@/src/i18n/routing';
 
-export default async function BlogPost({
-  params
-}: {
-  params: { locale: Locale; slug: string }
-}) {
+interface PageProps {
+  params: { locale: Locale; slug: string };
+  searchParams: Record<string, string | string[] | undefined>;
+}
+
+const BlogPost = async ({ params }: PageProps) => {
   // Remove any potential locale prefix from the slug
   const cleanSlug = params.slug.split('/').pop() || params.slug;
 
@@ -64,3 +65,5 @@ export default async function BlogPost({
     notFound();
   }
 }
+
+export default BlogPost;
