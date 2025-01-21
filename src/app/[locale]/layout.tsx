@@ -42,7 +42,10 @@ export const metadata: Metadata = {
     process.env.SITE_URL || 'https://jeremydan.fr' || 'https://localhost:3000'
   ),
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    other: {
+      'p:domain_verify': '35da5f61346d0219f5a2173361e47cc4'
+    }
   },
   title: {
     template: '%s | Jeremy Dan - Photographe Mariage Sceaux (92)',
@@ -138,10 +141,6 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${crimsonText.variable}`}
     >
       <head>
-        <meta
-          name='p:domain_verify'
-          content='35da5f61346d0219f5a2173361e47cc4'
-        />
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}`}
           strategy='beforeInteractive'
