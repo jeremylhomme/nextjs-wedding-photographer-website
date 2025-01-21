@@ -18,10 +18,7 @@ const crimsonText = Crimson_Text({
 
 export const metadata: Metadata = {
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-    other: {
-      'p:domain_verify': '35da5f61346d0219f5a2173361e47cc4'
-    }
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
   }
 };
 
@@ -43,7 +40,7 @@ export default function RootLayout({
         <Script
           defer
           src='https://cloud.umami.is/script.js'
-          data-website-id='39f306ab-46f5-46b8-897b-49c7326f92ad'
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
           strategy='afterInteractive'
         />
       </head>
