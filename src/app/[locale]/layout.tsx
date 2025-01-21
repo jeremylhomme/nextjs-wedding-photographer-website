@@ -138,9 +138,19 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${crimsonText.variable}`}
     >
       <head>
+        <meta
+          name='p:domain_verify'
+          content='35da5f61346d0219f5a2173361e47cc4'
+        />
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}`}
           strategy='beforeInteractive'
+        />
+        <Script
+          defer
+          src='https://cloud.umami.is/script.js'
+          data-website-id='39f306ab-46f5-46b8-897b-49c7326f92ad'
+          strategy='afterInteractive'
         />
         <StructuredData />
       </head>

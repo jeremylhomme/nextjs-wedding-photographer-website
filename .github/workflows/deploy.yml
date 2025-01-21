@@ -47,4 +47,5 @@ jobs:
             git pull origin main
             pnpm install
             SITE_URL='https://jeremydan.fr' pnpm build
+            SITE_URL='https://jeremydan.fr' pnpm generate-sitemap
             pm2 restart jeremydan
