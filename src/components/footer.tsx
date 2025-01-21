@@ -3,6 +3,7 @@ import React from 'react';
 import { Icon } from '@/src/components/ui/icon';
 import { Link } from '@/src/navigation';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 interface NavigationItem {
   name: string;
@@ -13,12 +14,17 @@ interface SocialItem extends NavigationItem {
   icon: string;
 }
 
+interface Labels extends NavigationItem {
+  src: string;
+}
+
 export default function Footer() {
   const t = useTranslations('footer');
 
   const navigation: {
     main: NavigationItem[];
     social: SocialItem[];
+    labels: Labels[];
   } = {
     main: [
       { name: 'Portfolio', href: '/portfolio' },
@@ -36,6 +42,13 @@ export default function Footer() {
         name: 'Pinterest',
         href: 'https://www.pinterest.fr/jeremydanphoto/',
         icon: 'pinterest'
+      }
+    ],
+    labels: [
+      {
+        name: 'Fearless Photography',
+        href: 'http://www.fearlessphotographers.com/photographer/7174/jeremy-dan',
+        src: '/fearless-logo-white-transparent.svg'
       }
     ]
   };
@@ -72,7 +85,20 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className='mt-10 text-xs leading-5 text-border sm:text-center'>
+        <div className='mt-4 flex space-x-6 sm:justify-center'>
+          {navigation.labels.map(item => (
+            <a
+              key={item.name}
+              href={item.href}
+              target='_blank'
+              className='mt-4'
+            >
+              <span className='sr-only'>{item.name}</span>
+              <Image src={item.src} alt={item.name} width={100} height={100} />
+            </a>
+          ))}
+        </div>
+        <p className='mt-8 text-xs leading-5 text-border sm:text-center'>
           &copy; {t('copyright1')}{' '}
           <a
             href='https://jeremylhomme.fr'
