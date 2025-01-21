@@ -188,7 +188,9 @@
   },
 
   "blog-posts": {
-    "back": "Back to journal",
+    "wedding-date": "Wedding date: ",
+    "last-modified": "Last modified: ",
+    "creation-date": "Creation date: ",
 
     "wedding-domaine-gillardiere": {
       "title": "Wedding at Domaine de la Gillardière",

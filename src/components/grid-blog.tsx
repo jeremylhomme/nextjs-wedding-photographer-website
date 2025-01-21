@@ -21,6 +21,14 @@ const GridBlog: React.FC<GridBlogProps> = ({ blogPosts }) => {
   const params = useParams();
   const locale = (params?.locale as string) ?? 'fr';
 
+  const formatDate = (date: string) => {
+    return new Date(date).toLocaleDateString(locale, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
   return (
     <div className={styles.grid}>
       {blogPosts.map(post => {
@@ -59,7 +67,16 @@ const GridBlog: React.FC<GridBlogProps> = ({ blogPosts }) => {
                   <p className='mt-2 font-serif text-xl font-bold text-primary-foreground'>
                     {post.title}
                   </p>
-                  <p className='mt-2 text-xs text-popover'>{post.date}</p>
+                  <p className='mt-2 text-xs text-popover'>
+                    {post.category.toLowerCase() === 'wedding' &&
+                    post.weddingDate ? (
+                      <>
+                        <span>{formatDate(post.weddingDate)} </span>
+                      </>
+                    ) : (
+                      formatDate(post.date)
+                    )}
+                  </p>
                 </div>
               </div>
             </motion.div>

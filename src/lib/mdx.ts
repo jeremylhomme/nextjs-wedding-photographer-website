@@ -17,6 +17,8 @@ export interface BlogPost {
   locale: string;
   title: string;
   date: string;
+  lastModified?: string;
+  weddingDate?: string;
   category: string;
   gridImage: string;
   coverImage: string;
@@ -50,6 +52,10 @@ export async function getBlogPosts(locale: string = 'en'): Promise<BlogPost[]> {
         const { data } = matter(fileContent);
         console.log(`Parsed frontmatter for ${file}:`, data);
 
+        // Get file stats for last modified date
+        const stats = fs.statSync(filePath);
+        const lastModified = stats.mtime.toISOString().split('T')[0];
+
         if (!data || typeof data !== 'object') {
           console.error(`Invalid frontmatter in MDX file: ${file}`);
           return null;
@@ -60,6 +66,8 @@ export async function getBlogPosts(locale: string = 'en'): Promise<BlogPost[]> {
           locale: finalLocale,
           title: data.title,
           date: data.date,
+          lastModified: data.lastModified || lastModified,
+          weddingDate: data.weddingDate,
           category: data.category,
           gridImage: data.gridImage,
           coverImage: data.coverImage,
@@ -103,6 +111,8 @@ export async function getBlogPost(locale: string, slug: string) {
       locale: finalLocale,
       title: data.title,
       date: data.date,
+      lastModified: data.lastModified,
+      weddingDate: data.weddingDate,
       category: data.category,
       coverImage: data.coverImage,
       gridImage: data.gridImage,
