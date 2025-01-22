@@ -32,13 +32,13 @@
 
   "carousel-hero": {
     "title": "À la folie.",
-    "alt1": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
-    "alt2": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
-    "alt3": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
-    "alt4": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
-    "alt5": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
-    "alt6": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
-    "alt7": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan"
+    "alt1": "Une main tient élégamment plusieurs cierges en métal en forme de cœur sur un fond sombre, capturant ce moment enchanteur à travers l'objectif de Jeremy Dan, un photographe de mariage renommé basé à Sceaux, dans les Hauts-de-Seine.",
+    "alt2": "Une mariée portant des talons dorés se tient sur une marche en bois près d'une couverture blanche texturée, parfaitement capturée par Jeremy Dan, photographe de mariage basé à Sceaux, dans les Hauts-de-Seine.",
+    "alt3": "Un couple se tient côte à côte devant une vieille maison en pierre aux volets jaunes, entourée de verdure et de plantes en pot. Capturé par Jeremy Dan, photographe de mariage basé à Sceaux.",
+    "alt4": "Un groupe de personnes en tenue traditionnelle célébrant une cérémonie de mariage. Jeremy Dan, photographe de mariage basé à Sceaux, capture la scène festive mise en valeur par des guirlandes lumineuses.",
+    "alt5": "Le marié et la mariée s'embrassent dans une salle de l'hôtel de ville décorée et remplie d'invités assis. Alors que les gens applaudissent et que certains prennent des photos, de grands tableaux et des lustres plantent le décor. Capturé magnifiquement par Jeremy Dan, un photographe de mariage basé à Sceaux, ce moment résonne avec des échos d'amour.",
+    "alt6": "Le marié et la mariée se tiennent sous un parapluie, entourés de lumières colorées et de confettis, créant une atmosphère festive lors de la première danse de leur mariage. Capturé par Jeremy Dan, un talentueux photographe de mariage basé à Sceaux, dans les Hauts-de-Seine.",
+    "alt7": "Dans une forêt ensoleillée, les mariés sont proches et se sourient l'un à l'autre, entourés de grands arbres, capturés de manière intemporelle par Jeremy Dan, photographe de mariage basé à Sceaux."
   },
 
   "carousel-testimonials": {
@@ -47,36 +47,36 @@
     "name1": "Lucile & Antoine",
     "description1": "Jérémy a su capter tous les moments importants de cette journée. Merci mille fois pour ton accompagnement, tes conseils et ta patience sur cette journée.",
     "location1": "Sceaux, Hauts-de-Seine",
-    "alt1": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+    "alt1": "Un couple en tenue de mariage se tient la main dans une chapelle, face à un autel sous des vitraux, magnifiquement capturé par Jeremy Dan, photographe de mariage basé à Sceaux, dans les Hauts-de-Seine.",
     "name2": "Florian & Iky",
     "description2": "Ses idées créatives et le grain de l'édition des photos ont ajouté une touche magique. Nous recommandons vivement les services de Jeremy à tous les futurs mariés à la recherche d'un photographe talentueux et flexible !",
     "location2": "Paris",
-    "alt2": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+    "alt2": "Au cours d'une charmante cérémonie à Paris, les mariés échangent leurs anneaux. La mariée tient un bouquet de tulipes blanches, chaque moment étant capturé de manière experte par Jeremy Dan, un photographe de mariage renommé basé à Sceaux.",
     "name3": "Roxane & Thomas",
     "description3": "Agréable, disponible à l’écoute des mariées comme des invités. Tous très content du travail fourni et du déroulement pendant la journée. À tous les futures mariés, je vous recommande chaleureusement Jeremy, pour son dynamisme, son travail sérieux, mais aussi pour sa gentillesse et sa bonne humeur.",
     "location3": "Levallois-Perret, Hauts-de-Seine",
-    "alt3": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+    "alt3": "Bride and groom stand before seated guests in an town hall room with chandeliers and patterned walls. Captured by Jeremy Dan, a talented wedding photographer based in Sceaux, Hauts-de-Seine, this moment beautifully encapsulates the elegance of the day.",
     "name4": "Cyndie & Emile",
     "description4": "Je ne peux que vous recommander Jeremy pour sa discrétion, sa ponctualité, son efficacité, son talent mais surtout pour son côté humain.",
     "location4": "Montgreleix, Cantal",
-    "alt4": "Photo de mariage au Lac des Estives à Montgreleix par Jeremy Dan",
+    "alt4": "Lors d'une cérémonie de mariage traditionnelle, les mariés en tenue traditionnelle s'inclinent gracieusement sur le sol en bois. Au premier plan, une troisième personne tient une tasse. Ce cliché a été réalisé par Jeremy Dan, un talentueux photographe de mariage basé à Sceaux.",
     "name5": "Charlotte & Adrian",
     "description5": "Nous avons sollicité Jérémy pour notre mariage suite à sa recommandation par l'une de nos amies et nous n'avons pas été déçus : professionnel et impliqué le jour J, il a aussi été apprécié de tous les convives.",
     "location5": "Montpellier",
-    "alt5": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+    "alt5": "A wedding couple strolls down a path, the bride in a white dress and the groom in a red suit, embraced by trees and stone walls. Captured artfully by Jeremy Dan, a wedding photographer based in Sceaux.",
     "name6": "Emilie & Gaël",
     "description6": "J'étais tombée par hasard sur son travail pour un autre mariage et ce fut une évidence : j'avais trouvé le photographe de mon évènement. Des clichés plein de spontanéité, des moments de bonheur et de joie immortalisés.",
     "location6": "Tarascon, Bouches-du-Rhône",
-    "alt6": "Photo de mariage au Domaine des Mylords à Tarascon par Jeremy Dan"
+    "alt6": "Captured by Jeremy Dan, a wedding photographer based in Sceaux, Hauts-de-Seine, a bride and groom in formal attire walk indoors among seated guests. The bride holds a bouquet and wears a white fur stole and veil, while the bride's father dons a dark suit."
   },
 
   "photo-tiles": {
     "title": "Capturer l’Instant",
     "description": "Chaque moment que vous vivez est une page d’une histoire plus grande – votre histoire. Et chaque histoire mérite d’être racontée avec authenticité et sincérité. Mon rôle en tant que photographe est de saisir l’essence de ces instants éphémères dans les photos que je réalise afin qu’ils restent gravés à jamais dans vos mémoires.",
-    "alt1": "Table de mariage élégante avec bougies",
-    "alt2": "Portrait de couple de mariés",
-    "alt3": "Portrait avec chapeau de cowboy",
-    "alt4": "Chemin bordé de cyprès"
+    "alt1": "Les mariés s'embrassent à l'extérieur de l'église tandis que les invités les entourent, font des bulles et prennent des photos. Capturé par Jeremy Dan, un talentueux photographe de mariage basé à Sceaux, dans les Hauts-de-Seine, ce moment de joie est préservé à jamais.",
+    "alt2": "A wedding couple dancing, with the groom lifting the bride in a white dress, is beautifully captured by Jeremy Dan, a wedding photographer based in Sceaux, against a dimly lit background.",
+    "alt3": "Un couple de mariés, en tenue de mariage, se sourit en plein air. La mariée porte une robe en dentelle et le marié un costume rouge. Ils se tiennent la main, entourés de verdure et d'un mur de pierre, comme l'a capturé Jeremy Dan, le photographe de mariage basé à Sceaux.",
+    "alt4": "A bride in a white dress holds a bouquet, facing a group of women standing outdoors in Hauts-de-Seine, ready for a bouquet toss. Captured by Jeremy Dan, wedding photographer based in Sceaux."
   },
 
   "home-page": {
@@ -165,25 +165,12 @@
 
   "blog-page": {
     "hero-title": "Votre Plus Belle Histoire",
+    "alt": "Un couple se tient à côté d'un grand gâteau à plusieurs étages orné de cierges magiques, capturé dans les moindres détails par le photographe de mariage Jeremy Dan, basé à Sceaux. L'homme porte un gilet et un nœud papillon, tandis que la femme est éblouissante dans une robe en dentelle.",
     "title1": "Blog",
     "title2": "Histoires de Mariage",
     "title3": "Articles",
     "description": "Quelques histoires d'amour qui me tiennent à cœur et que je souhaite partager avec vous.",
-    "button-label": "Discutons de votre projet",
-    "articles": {
-      "meta": {
-        "title": "Articles & Conseils Photo | Jeremy Dan Photographie",
-        "description": "Découvrez des conseils, techniques et réflexions sur la photographie de mariage et plus encore.",
-        "image-alt": "Image de couverture d'article photo"
-      }
-    },
-    "weddings": {
-      "meta": {
-        "title": "Histoires de Mariage & Photographie | Jeremy Dan Photographie",
-        "description": "Explorez de belles histoires de mariage et photographies de vrais couples à travers la France.",
-        "image-alt": "Image de couverture de photographie de mariage"
-      }
-    }
+    "button-label": "Discutons de votre projet"
   },
 
   "blog-posts": {

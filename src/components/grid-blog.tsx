@@ -49,7 +49,7 @@ const GridBlog: React.FC<GridBlogProps> = ({ blogPosts }) => {
                 )}
                 <FadeInImage
                   src={post.gridImage}
-                  alt={post.title}
+                  alt={post.altGridImage}
                   className={cn(
                     styles.image,
                     'opacity-0 transition-opacity duration-300 data-[loaded=true]:opacity-100'

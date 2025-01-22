@@ -16,6 +16,7 @@ export interface BlogPost {
   slug: string;
   locale: string;
   title: string;
+  altGridImage: string;
   date: string;
   lastModified?: string;
   weddingDate?: string;
@@ -65,6 +66,7 @@ export async function getBlogPosts(locale: string = 'en'): Promise<BlogPost[]> {
           slug: path.basename(file, '.mdx'),
           locale: finalLocale,
           title: data.title,
+          altGridImage: data.altGridImage,
           date: data.date,
           lastModified: data.lastModified || lastModified,
           weddingDate: data.weddingDate,
@@ -110,6 +112,7 @@ export async function getBlogPost(locale: string, slug: string) {
       slug,
       locale: finalLocale,
       title: data.title,
+      altGridImage: data.altGridImage,
       date: data.date,
       lastModified: data.lastModified,
       weddingDate: data.weddingDate,

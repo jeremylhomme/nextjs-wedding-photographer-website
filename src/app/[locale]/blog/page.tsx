@@ -29,12 +29,12 @@ export default async function BlogPage({
     : posts;
 
   // Separate posts by category for the default view
-  const weddingPosts = posts.filter(post => 
-    normalizeCategory(post.category) === 'wedding'
+  const weddingPosts = posts.filter(
+    post => normalizeCategory(post.category) === 'wedding'
   );
 
-  const articlePosts = posts.filter(post => 
-    normalizeCategory(post.category) === 'article'
+  const articlePosts = posts.filter(
+    post => normalizeCategory(post.category) === 'article'
   );
 
   return (
@@ -42,7 +42,7 @@ export default async function BlogPage({
       <div className='relative h-[70vh] w-full'>
         <ClientImageWrapper
           src='/blog-page/blog-jeremydan-wedding-photography-001-optimized.webp'
-          alt='Hero image for blog'
+          alt={t('alt')}
           className='h-[70vh] w-full object-cover object-center'
         />
         <div className='absolute inset-0 flex items-center justify-center bg-black/30'>

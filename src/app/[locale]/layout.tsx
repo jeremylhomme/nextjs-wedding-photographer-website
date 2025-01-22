@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     default: 'Jeremy Dan | Photographe Mariage Sceaux (92) - Hauts-de-Seine'
   },
   description:
-    'Photographe de Mariage à Sceaux basé dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
+    'Photographe de Mariage basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
   keywords: [
     'photographe mariage sceaux',
     'photographe mariage 92',
