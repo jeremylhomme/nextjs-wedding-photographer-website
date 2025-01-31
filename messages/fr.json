@@ -14,14 +14,37 @@
   },
 
   "footer": {
-    "description": "Photographe de Mariage basé dans les Hauts-de-Seine (92) en íle-de-France",
-    "links": {
-      "name2": "Contactez-moi",
-      "name3": "Blog",
-      "name4": "Mon histoire"
-    },
-    "copyright1": "2024 Jeremy Dan, designé & dévelopé par",
-    "copyright2": "moi-même"
+    "description": "Photographe et vidéaste professionnel basé à Sceaux dans les Hauts-de-Seine (92) en íle-de-France.",
+    "rights": "Tous droits réservés.",
+    "dev1": "Site réalisé par",
+    "dev2": "moi-même.",
+    "columns": {
+      "information": {
+        "title": "Informations",
+        "contact": "Contactez-moi",
+        "portfolio": "Portfolio",
+        "story": "Mon histoire",
+        "blog": "Blog"
+      },
+      "services": {
+        "title": "Prestations",
+        "wedding": "Mariage",
+        "event": "Photographe Événement | Vidéaste Événement",
+        "lifestyle": "Photographe Lifestyle | Vidéaste Lifestyle",
+        "corporate": "Photographe Entreprise | Vidéaste Entreprise"
+      },
+      "locations": {
+        "title": "Zones géographiques",
+        "sceaux": "Photographe Sceaux",
+        "hauts-de-seine": "Photographe Hauts-de-Seine",
+        "paris": "Photographe Paris",
+        "ile-de-france": "Photographe île-de-France"
+      },
+      "legal": {
+        "sitemap": "Plan de site",
+        "legal": "Mentions légales"
+      }
+    }
   },
 
   "blog-footer": {
@@ -79,11 +102,96 @@
     "alt4": "A bride in a white dress holds a bouquet, facing a group of women standing outdoors in Hauts-de-Seine, ready for a bouquet toss. Captured by Jeremy Dan, wedding photographer based in Sceaux."
   },
 
+  "faq-section": {
+    "title": "Questions Fréquentes",
+    "categories": {
+      "all": "Tout",
+      "wedding": "Mariage",
+      "event": "Événement",
+      "company": "Entreprise & Corporate",
+      "lifestyle": "Lifestyle",
+      "general": "Général"
+    },
+    "see-more": "Voir plus",
+    "see-less": "Voir moins",
+    "wd": {
+      "types": "Quels sont les types de reportages que vous proposez pour les mariages ?",
+      "types-answer": "Je propose des reportages photo ou vidéo de mariage, selon votre préférence.",
+      "rates": "Quels sont vos tarifs pour un reportage photo/vidéo de mariage ?",
+      "rates-answer": "Mes tarifs commencent à partir de 800€ pour un mariage civil, 1600€ pour une demi-journée et 2500€ pour une journée complète. Ces tarifs peuvent varier en fonction de la localisation, du nombre d’invités et de la durée de votre mariage.",
+      "defrayal": "Les frais de déplacement pour un reportage photo/vidéo de mariage sont-ils inclus dans vos tarifs ?",
+      "defrayal-answer": "Les frais de déplacement sont inclus si votre mariage se situe à 50 km maximum de Sceaux (92 - Hauts-de-Seine). Au-delà, un défraiement sera demandé (billets de train/avion ou trajet en voiture).",
+      "included-services": "Quels sont les services inclus dans vos tarifs ?",
+      "included-services-answer": "Pour une journée complète, mes prestations incluent la couverture des préparatifs, de la cérémonie, du cocktail, de la soirée, ainsi que les photos de groupe et de couple. La post-production et les ajustements sont également inclus, ainsi qu’une galerie privée en ligne pour accéder à vos images.",
+      "additional-services": "Proposez-vous des options supplémentaires (albums, séances engagement, after-day) ?",
+      "additional-services-answer": "Oui, en complément du reportage photo ou vidéo, je propose des albums photos haut de gamme, des séances engagement avant le mariage et des séances after-day après le mariage pour capturer des souvenirs dans un cadre plus détendu.",
+      "photos-number": "Combien de photos livrez-vous à la suite d'un mariage ?",
+      "photos-number-answer": "Chaque mariage est unique et je privilégie la qualité à la quantité. Je ne fixe pas de nombre précis, mais vous recevrez une sélection complète et soignée des plus belles images de votre journée.",
+      "when-to-book": "Quand réserver mes services ?",
+      "when-to-book-answer": "Il est recommandé de réserver au minimum un mois à l'avance pour garantir ma disponibilité, en particulier pendant la haute saison des mariages."
+    },
+    "ev": {
+      "types": "Quels types d’événements couvrez-vous",
+      "types-answer": "Je réalise des reportages photo et vidéo pour divers événements, notamment les concerts, festivals, EVG, anniversaires et autres moments festifs. Mon approche vise à capturer l’énergie et l’ambiance unique de chaque événement.",
+      "how": "Comment travaillez-vous lors d’un concert ou d’un festival ?",
+      "how-answer": "J’adopte une approche immersive pour capturer à la fois les artistes sur scène et l’ambiance du public. Je m’adapte aux conditions de lumière et aux contraintes techniques pour livrer des images dynamiques et percutantes.",
+      "bachelor-party": "Faites-vous des reportages photo/vidéo pour les EVG et anniversaires ?",
+      "bachelor-party-answer": "Oui ! Que ce soit pour un EVG, un EVJF ou un anniversaire, je capture vos souvenirs avec une approche fun et naturelle, loin des poses figées. Mon objectif est de retranscrire l’émotion et l’ambiance de votre événement.",
+      "delivery-times": "Quels sont vos délais de livraison pour un événement ?",
+      "delivery-times-answer": "Le délai dépend du type d’événement et du volume de photos/vidéos à traiter. En général, comptez 5 à 10 jours pour les photos et 10 à 15 jours pour une vidéo montée."
+    },
+    "cp": {
+      "types": "Quels sont les types de services que vous proposez pour les entreprises ?",
+      "types-answer": "Je propose des reportages photo et vidéo pour vos événements professionnels : séminaires, soirées d'entreprise, conférences, lancements de produits et tout ce qui touche à l'événementiel. Je réalise également des portraits corporate naturels pour mettre en valeur vos équipes. Mon objectif est le même qu'avec les mariages : capturer des images qui respirent la vraie vie, loin des poses forcées et des sourires crispés.",
+      "delivery-times": "Quels sont les délais de livraison de vos photos ?",
+      "delivery-times-answer": "Je m'engage à livrer vos photos sous 5 à 10 jours ouvrés, selon le volume du projet. Pour la vidéo, comptez entre 10 et 15 jours. Besoin d’un rendu express ? Parlons-en, je peux m’adapter à vos impératifs.",
+      "behavior": "Comment garantissez-vous la discrétion lors des événements d’entreprise ?",
+      "behavior-answer": "Je privilégie une approche discrète et immersive pour capturer des moments authentiques sans perturber le déroulement de votre événement.",
+      "itw": "Faites-vous des interviews vidéo pour les entreprises ?",
+      "itw-answer": "Oui, je peux réaliser des interviews professionnelles avec un éclairage et un son de qualité pour vos besoins en communication.",
+      "size": "Proposez-vous des formules adaptées aux startups ou petites entreprises ?",
+      "size-answer": "Oui, je peux adapter mes prestations en fonction de votre budget et de vos besoins spécifiques."
+    },
+    "ls": {
+      "types": "Quels sont les types de services Lifestyle que vous proposez ?",
+      "types-answer": "Je propose des reportages photo naturels et authentiques. Que ce soit pour une séance en famille, en couple, ou simplement un portrait, je crée des images belles, spontanées et pleines d’émotion, loin des poses figées.",
+      "where": "Où se déroulent les séances lifestyle ?",
+      "where-answer": "Je réalise les séances en extérieur, à domicile ou dans un lieu de votre choix, selon l’ambiance souhaitée.",
+      "how": "Comment se déroule une séance photo lifestyle ?",
+      "how-answer": "Je vous guide tout en laissant place à la spontanéité pour capturer des moments naturels et sincères.",
+      "clothes": "Quels vêtements recommandez-vous pour une séance photo ?",
+      "clothes-answer": "Des tenues simples, dans des tons neutres ou pastel, fonctionnent généralement très bien pour un rendu harmonieux."
+    },
+    "gn": {
+      "payments": "Quels moyens de paiement acceptez-vous ?",
+      "payments-answer": "J'accepte tous types de paiement : virement bancaire, carte bancaire, PayPal et même la cryptomonnaie (non, ce n'est pas une blague). À vous de choisir le moyen qui vous convient le mieux !",
+      "registered": "Votre activité est-elle déclarée officiellement ?",
+      "registered-answer": "Oui, mon activité est entièrement déclarée. Voici mes informations légales : MONSIEUR JEREMY L'HOMME - SIREN : 822 048 575 - CODE APE : 7420Z - Activités photographiques.",
+      "book": "Comment réserver une séance ou une prestation ?",
+      "book-answer": "Il suffit de me contacter via mon site, par e-mail ou téléphone pour fixer un rendez-vous et discuter de votre projet.",
+      "steps": "Quelles sont les étapes après la réservation ?",
+      "steps-answer": "Une fois la date réservée, nous échangeons sur vos attentes, puis je vous envoie un contrat et un acompte est demandé pour valider la prestation.",
+      "gift-cards": "Proposez-vous des cartes cadeaux pour offrir une séance photo ?",
+      "gift-cards-answer": "Oui, vous pouvez offrir une séance photo à un proche sous forme de bon cadeau valable un an."
+    }
+  },
+
+  "sitemap-page": {
+    "title": "Plan du site",
+    "description": "Retrouvez toutes les pages de mon site organisées par catégorie.",
+    "categories": {
+      "main": "Pages Principales",
+      "services": "Services",
+      "locations": "Lieux",
+      "legal": "Mentions Légales"
+    }
+  },
+
   "home-page": {
     "hero-title": "Photographe de Mariage basé à Sceaux",
     "hero-description": "Révéler vos personnalités et vos émotions les plus sincères, créant ainsi des souvenirs intemporels de votre engagement. Basé à Sceaux dans les Hauts-de-Seine (92), je sauvegarde ces merveilleux moments, que vous soyez en région parisienne, en France ou n'importe où dans le monde.",
     "subtitle": "Photos Authentiques pour Vrais Humains.",
-    "description1": "Il n’y a rien de plus incroyable que de trouver la personne sans laquelle vous ne pouvez pas vivre. Votre véritable complice, celui ou celle qui illumine votre quotidien. C'est cette connexion unique que je veux immortaliser.   Ma mission, en tant que photographe de mariage, est de révéler vos vraies personnalités et vos émotions les plus sincères, créant ainsi des souvenirs intemporels de votre engagement. Que nous partions à l’aventure dans un endroit spectaculaire ou que nous explorions l’intimité chaleureuse de votre propre maison, mon objectif est de capturer vos vraies personnalités, vos émotions brutes, et tout ce qui vous rend, vous.",
+    "description1": "Il n’y a rien de plus incroyable que de trouver la personne sans laquelle vous ne pouvez pas vivre. Votre véritable complice, celui ou celle qui illumine votre quotidien. C'est cette connexion unique que je veux immortaliser. Ma mission, en tant que photographe de mariage, est de révéler vos vraies personnalités et vos émotions les plus sincères, créant ainsi des souvenirs intemporels de votre engagement. Que nous partions à l’aventure dans un endroit spectaculaire ou que nous explorions l’intimité chaleureuse de votre propre maison, mon objectif est de capturer vos vraies personnalités, vos émotions brutes, et tout ce qui vous rend, vous.",
     "description2": "Ne vous retenez pas. Votre mariage est unique, tout comme votre histoire d'amour. Soyez vous-même, et je serai moi-même. Créons des photos qui vous ressemblent vraiment.",
     "button-label": "Mon histoire",
 
@@ -385,6 +493,42 @@
 
       "submit": "Envoyer",
       "submitting": "Envoi en cours..."
+    }
+  },
+
+  "location-page": {
+    "key-locations": "Lieux Clés",
+    "services": "Services Disponibles",
+    "nearby-areas": "Zones à Proximité"
+  },
+
+  "ServicePage": {
+    "photography-services": "Services de Photographie",
+    "videography-services": "Services de Vidéographie",
+    "packages": "Nos Forfaits",
+    "faq": "Questions Fréquentes",
+    "location-info": "Informations sur la Région",
+    "nearby-areas": "Nous Intervenons Aussi À"
+  },
+
+  "services": {
+    "title": "{service} à {location}",
+    "description": "Services de photographie et vidéo pour {service} à {location}",
+    "wedding": {
+      "title": "Photographe & Vidéaste Mariage",
+      "description": "Capturez les moments magiques de votre mariage"
+    },
+    "event": {
+      "title": "Photographe & Vidéaste Événementiel",
+      "description": "Immortalisez vos événements spéciaux"
+    },
+    "lifestyle": {
+      "title": "Photographe & Vidéaste Lifestyle",
+      "description": "Des photos naturelles qui racontent votre histoire"
+    },
+    "corporate": {
+      "title": "Photographe & Vidéaste Entreprise",
+      "description": "Des images professionnelles pour votre entreprise"
     }
   }
 }

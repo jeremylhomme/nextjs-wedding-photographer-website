@@ -14,14 +14,36 @@
   },
 
   "footer": {
-    "description": "Wedding Photographer based in Hauts-de-Seine (92) near Paris, France",
-    "links": {
-      "name2": "Contact me",
-      "name3": "Blog",
-      "name4": "My story"
-    },
-    "copyright1": "2024 Jeremy Dan, designed & developed by",
-    "copyright2": "myself"
+    "description": "Wedding Photographer based in Sceaux Hauts-de-Seine (92) near Paris, France",
+    "rights": "All rights reserved.",
+    "dev1": "Website developed by",
+    "dev2": "myself.",
+    "columns": {
+      "information": {
+        "title": "Information",
+        "contact": "Contact me",
+        "portfolio": "Portfolio",
+        "story": "My story",
+        "blog": "Blog"
+      },
+      "services": {
+        "title": "Services",
+        "wedding": "Wedding Photographer",
+        "event": "Event Photographer",
+        "business": "Business Photographer"
+      },
+      "locations": {
+        "title": "Locations",
+        "sceaux": "Photographer in Sceaux",
+        "hauts-de-seine": "Photographer in Hauts-de-Seine",
+        "paris": "Photographer in Paris",
+        "ile-de-france": "Photographer in île-de-France"
+      },
+      "legal": {
+        "sitemap": "Sitemap",
+        "legal": "Legal notice"
+      }
+    }
   },
 
   "blog-footer": {
@@ -36,7 +58,7 @@
     "alt2": "A bride wearing gold heels stands on a wooden step near a white textured blanket, captured perfectly by Jeremy Dan, a wedding photographer based in Sceaux, Hauts-de-Seine.",
     "alt3": "A couple stands closely together outside an old stone house with yellow shutters, surrounded by greenery and potted plants. Captured by Jeremy Dan, a wedding photographer based in Sceaux.",
     "alt4": "A group of people in traditional attire celebrating a wedding ceremony. Jeremy Dan, a wedding photographer based in Sceaux, is capturing the festive scene enhanced by string lights overhead.",
-    "alt5": "The bride and groom embrace in a decorated town hall room filled with seated guests. As people clap and some take photos, large paintings and chandeliers set the scene. Captured beautifully by Jeremy Dan, a wedding photographer based in Sceaux, this moment resonates with echoes of love.",
+    "alt5": "The bride and groom embrace in a decorated town hall room filled with seated guests. As people clap and some take photos, large paintings and chandeliers set the scene. Captured beautifully by Jeremy Dan, a talented wedding photographer based in Sceaux, this moment resonates with echoes of love.",
     "alt6": "The bride and groom stand close under an umbrella, surrounded by colorful lights and confetti, creating a festive atmosphere during the first dance ceremony of their wedding. Captured by Jeremy Dan, a talented wedding photographer based in Sceaux, Hauts-de-Seine.",
     "alt7": "In a sunlit forest, the bride and groom are standing close and smiles at each other, surrounded by tall trees, captured timelessly by Jeremy Dan, a wedding photographer based in Sceaux."
   },
@@ -78,6 +100,79 @@
     "alt3": "A wedding couple, dressed in wedding attire, smiles at each other outdoors. The bride wears a lace dress and the groom a red suit. They stand holding hands, surrounded by greenery and a stone wall, as captured by Jeremy Dan, the wedding photographer based in Sceaux.",
     "alt4": "Une mariée en robe blanche tient un bouquet, face à un groupe de femmes en plein air dans les Hauts-de-Seine, prêtes pour un lancer de bouquet. Capturé par Jeremy Dan, photographe de mariage basé à Sceaux."
   },
+  "faq-section": {
+    "title": "Frequently Asked Questions",
+    "categories": {
+      "all": "All",
+      "wedding": "Wedding",
+      "event": "Event",
+      "company": "Company & Corporate",
+      "lifestyle": "Lifestyle",
+      "general": "General"
+    },
+    "see-more": "See more",
+    "see-less": "See less",
+    "wd": {
+      "types": "What types of wedding photography and videography do you offer?",
+      "types-answer": "I offer wedding photo or video reportage, depending on your preference.",
+      "rates": "What are your rates for wedding photography/video reportages?",
+      "rates-answer": "My rates start from €800 for a civil wedding, €1600 for a half-day, and €2500 for a full day. These rates may vary depending on the location, number of guests, and the duration of your wedding.",
+      "defrayal": "Are travel expenses included in your wedding photography/video rates?",
+      "defrayal-answer": "Travel expenses are included if your wedding is within 50 km of Sceaux (92 - Hauts-de-Seine). Beyond that, additional fees may apply (train/plane tickets or car travel).",
+      "included-services": "What services are included in your rates?",
+      "included-services-answer": "For a full day, my services include coverage of the preparations, ceremony, cocktail, party, group and couple photos. Post-production and adjustments are included, along with a private online gallery for accessing your images.",
+      "additional-services": "Do you offer additional services (albums, engagement sessions, after-day sessions)?",
+      "additional-services-answer": "Yes, in addition to the photo or video reportage, I offer high-end photo albums, engagement sessions before the wedding, and after-day sessions after the wedding to capture relaxed memories in a more informal setting.",
+      "photos-number": "How many photos will you deliver after the wedding?",
+      "photos-number-answer": "Every wedding is unique, and I prioritize quality over quantity. I don’t set a specific number, but you will receive a carefully curated selection of the best moments from your day.",
+      "when-to-book": "When should I book your services?",
+      "when-to-book-answer": "It is recommended to book at least one month in advance to ensure my availability, especially during the high wedding season."
+    },
+    "ev": {
+      "types": "What types of events do you cover?",
+      "types-answer": "I provide photo and video reportage for various events, including concerts, festivals, bachelor parties, birthdays, and other festive moments. My approach is to capture the energy and unique atmosphere of each event.",
+      "how": "How do you work during a concert or festival?",
+      "how-answer": "I take an immersive approach to capture both the artists on stage and the atmosphere of the crowd. I adapt to lighting conditions and technical constraints to deliver dynamic and impactful images.",
+      "bachelor-party": "Do you offer photo/video reportage for bachelor parties and birthdays?",
+      "bachelor-party-answer": "Yes! Whether it’s a bachelor party, bachelorette party, or a birthday, I capture your memories with a fun and natural approach, far from stiff poses. My goal is to convey the emotion and atmosphere of your event.",
+      "delivery-times": "What are your delivery times for an event?",
+      "delivery-times-answer": "Delivery times depend on the type of event and the volume of photos/videos to process. Generally, you can expect 5 to 10 days for photos and 10 to 15 days for a video edit."
+    },
+    "cp": {
+      "types": "What types of services do you offer for businesses?",
+      "types-answer": "I offer photo and video reportage for your professional events: seminars, corporate parties, conferences, product launches, and anything related to corporate events. I also create natural corporate portraits to showcase your teams. My goal is the same as with weddings: capturing images that breathe real life, far from forced poses and stiff smiles.",
+      "delivery-times": "What are the delivery times for your photos?",
+      "delivery-times-answer": "I commit to delivering your photos within 5 to 10 working days, depending on the project volume. For video, expect 10 to 15 days. Need an express turnaround? Let’s talk about it, I can adapt to your needs.",
+      "behavior": "How do you guarantee discretion during corporate events?",
+      "behavior-answer": "I prioritize a discreet and immersive approach to capture authentic moments without disrupting the flow of your event.",
+      "itw": "Do you conduct video interviews for businesses?",
+      "itw-answer": "Yes, I can conduct professional video interviews with quality lighting and sound for your communication needs.",
+      "size": "Do you offer packages tailored to startups or small businesses?",
+      "size-answer": "Yes, I can tailor my services based on your budget and specific needs."
+    },
+    "ls": {
+      "types": "What types of lifestyle services do you offer?",
+      "types-answer": "I offer natural and authentic photo reportages. Whether it’s a family session, a couple shoot, or just a portrait, I create beautiful, spontaneous images full of emotion, far from stiff poses.",
+      "where": "Where do lifestyle photo sessions take place?",
+      "where-answer": "I conduct sessions outdoors, at your home, or at a location of your choice, depending on the desired ambiance.",
+      "how": "How does a lifestyle photo session unfold?",
+      "how-answer": "I guide you while allowing spontaneity to capture natural and sincere moments.",
+      "clothes": "What clothes do you recommend for a lifestyle photo session?",
+      "clothes-answer": "Simple outfits in neutral or pastel tones usually work very well for a harmonious look."
+    },
+    "gn": {
+      "payments": "What payment methods do you accept?",
+      "payments-answer": "I accept all types of payments: bank transfer, credit card, PayPal, and even cryptocurrency (no, it's not a joke). Feel free to choose the method that works best for you!",
+      "registered": "Is your business officially registered?",
+      "registered-answer": "Yes, my business is fully registered. Here are my legal details: MONSIEUR JEREMY L'HOMME - SIREN: 822 048 575 - APE CODE: 7420Z - Photography Activities.",
+      "book": "How do I book a session or service?",
+      "book-answer": "Simply contact me via my website, email, or phone to schedule a meeting and discuss your project.",
+      "steps": "What are the steps after booking?",
+      "steps-answer": "Once the date is booked, we’ll discuss your expectations, then I’ll send you a contract, and a deposit will be required to confirm the booking.",
+      "gift-cards": "Do you offer gift cards for photo sessions?",
+      "gift-cards-answer": "Yes, you can gift a photo session to a loved one in the form of a voucher valid for one year."
+    }
+  },
 
   "home-page": {
     "hero-title": "Wedding Photographer based in Sceaux",
@@ -102,6 +197,18 @@
     "grid-blog-section": {
       "title": "Blog",
       "button-label3": "View the blog"
+    },
+
+    "faq-section": {
+      "title": "Frequently Asked Questions",
+      "categories": {
+        "all": "All",
+        "wedding": "Wedding",
+        "event": "Event",
+        "corporate": "Corporate",
+        "lifestyle": "Lifestyle"
+      },
+      "button-label": "View all questions"
     }
   },
 
@@ -310,6 +417,21 @@
       }
     }
   },
+  "location-page": {
+    "key-locations": "Key Locations",
+    "services": "Services Available",
+    "nearby-areas": "Nearby Areas"
+  },
+  "sitemap-page": {
+    "title": "Sitemap",
+    "description": "Find all the pages of my website organized by category.",
+    "categories": {
+      "main": "Main Pages",
+      "services": "Services",
+      "locations": "Locations",
+      "legal": "Legal"
+    }
+  },
   "contact-page": {
     "hero-title": "Let's Meet",
     "calendar": {
@@ -344,5 +466,13 @@
       "submit": "Send",
       "submitting": "Sending..."
     }
+  },
+  "ServicePage": {
+    "photography-services": "Photography Services",
+    "videography-services": "Videography Services",
+    "packages": "Our Packages",
+    "faq": "Frequently Asked Questions",
+    "location-info": "Location Information",
+    "nearby-areas": "We Also Serve"
   }
 }

@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
 interface WordsGridProps {
   label: string;
@@ -14,32 +14,32 @@ interface WordsGridProps {
 const WordsGrid: React.FC<WordsGridProps> = ({
   label,
   sections,
-  description,
+  description
 }) => {
   return (
-    <section className="container mx-auto px-6 md:px-12 text-center">
+    <section className='container mx-auto px-6 text-center md:px-12'>
       {/* Top Label */}
-      <h3 className="text-sm uppercase tracking-widest text-muted-foreground mb-6">
+      <h3 className='mb-6 text-sm uppercase tracking-widest text-muted-foreground'>
         {label}
       </h3>
 
       {/* Words Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-0">
+      <div className='grid grid-cols-1 gap-y-6 md:grid-cols-3 md:gap-0'>
         {/* Left Column */}
-        <div className="flex flex-col justify-between text-left md:text-right">
+        <div className='flex flex-col justify-between text-left md:text-right'>
           {sections.left.map((text, index) => (
-            <p key={index} className="text-xs md:text-sm text-muted-foreground">
+            <p key={index} className='text-xs text-muted-foreground md:text-sm'>
               {text}
             </p>
           ))}
         </div>
 
         {/* Center Column */}
-        <div className="flex flex-col gap-y-6 items-center">
+        <div className='flex flex-col items-center gap-y-6'>
           {sections.center.map((text, index) => (
             <h1
               key={index}
-              className="text-5xl md:text-6xl font-serif leading-tight"
+              className='font-serif text-5xl leading-tight md:text-6xl'
             >
               {text}
             </h1>
@@ -47,9 +47,9 @@ const WordsGrid: React.FC<WordsGridProps> = ({
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-col justify-between text-left md:text-left">
+        <div className='flex flex-col justify-between text-left md:text-left'>
           {sections.right.map((text, index) => (
-            <p key={index} className="text-xs md:text-sm text-muted-foreground">
+            <p key={index} className='text-xs text-muted-foreground md:text-sm'>
               {text}
             </p>
           ))}
@@ -57,7 +57,7 @@ const WordsGrid: React.FC<WordsGridProps> = ({
       </div>
 
       {/* Bottom Text */}
-      <p className="mt-12 text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
+      <p className='mx-auto mt-12 max-w-3xl text-sm text-muted-foreground md:text-base'>
         {description}
       </p>
     </section>

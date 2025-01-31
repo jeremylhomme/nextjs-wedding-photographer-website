@@ -11,6 +11,7 @@ import VerticalLine from '@/src/components/vertical-line';
 import ClientImageWrapper from '@/src/components/client-image-wrapper';
 import { getBlogPosts } from '@/src/lib/mdx';
 import GridBlog from '@/src/components/grid-blog';
+import FAQ from '@/src/components/faq';
 
 interface PhotoTileProps {
   src: string;
@@ -27,6 +28,7 @@ interface HomePageProps {
 const HomePage = async ({ params }: HomePageProps) => {
   const t = await getTranslations('home-page');
   const pt = await getTranslations('photo-tiles');
+  const fs = await getTranslations('faq-section');
   const posts = await getBlogPosts(params.locale);
 
   // Get the latest 3 blog posts
@@ -148,6 +150,12 @@ const HomePage = async ({ params }: HomePageProps) => {
 
       <div className='align-center mb-16 flex flex-col items-center'>
         <CarouselTestimonials />
+      </div>
+      <div className='mx-auto max-w-7xl'>
+        <div className='mb-12'>
+          <h2 className='text-center font-serif text-4xl'>{fs('title')}</h2>
+        </div>
+        <FAQ />
       </div>
     </div>
   );
