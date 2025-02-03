@@ -42,9 +42,9 @@ jobs:
           port: 22
           script: |
             cd /var/www/jeremydan.fr
-            git reset --hard HEAD
+            git fetch origin main
+            git reset --hard origin/main
             git clean -fd
-            git pull origin main
             pnpm install
             pnpm build
             pnpm next-sitemap
