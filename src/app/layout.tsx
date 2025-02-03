@@ -6,14 +6,20 @@ import cn from 'classnames';
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'swap'
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true
 });
 
 const crimsonText = Crimson_Text({
   weight: ['400', '600', '700'],
   subsets: ['latin'],
   variable: '--font-crimson-text',
-  display: 'swap'
+  display: 'swap',
+  preload: true,
+  fallback: ['Georgia', 'serif'],
+  adjustFontFallback: true
 });
 
 export const metadata: Metadata = {

@@ -45,7 +45,11 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
-            pnpm install
-            pnpm build
+            # Ensure network connectivity to Google services
+            until ping -c1 fonts.googleapis.com >/dev/null 2>&1; do sleep 2; done
+            # Install dependencies with network retry
+            for i in {1..3}; do pnpm install && break || sleep 15; done
+            # Build with network retry
+            for i in {1..3}; do pnpm build && break || sleep 15; done
             pnpm next-sitemap
             pm2 restart jeremydan
