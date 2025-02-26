@@ -1,30 +1,54 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Mon Histoire',
-  description:
-    'Découvrez mon parcours en tant que photographe de mariage à Sceaux dans les Hauts-de-Seine. Disponible région parisienne, France et international.',
-  alternates: {
-    canonical: '/about',
-    languages: {
-      fr:
-        `${process.env.SITE_URL}/fr/about` ||
-        'https://jeremydan.fr/fr/about' ||
-        'https://localhost:3000/fr/about',
-      en:
-        `${process.env.SITE_URL}/en/about` ||
-        'https://jeremydan.fr/en/about' ||
-        'https://localhost:3000/en/about'
-    }
+// Define locale-based metadata for the About page
+const aboutMetadata = {
+  fr: {
+    title: 'Mon Histoire | Jeremy Dan',
+    description: 'Découvrez mon parcours en tant que photographe de mariage à Sceaux dans les Hauts-de-Seine. Disponible région parisienne, France et international.',
+    keywords: [
+      'photographe histoire',
+      'parcours photographe',
+      'photographe mariage sceaux',
+      'photographe professionnel',
+      'jeremy dan photographe'
+    ]
   },
-  openGraph: {
-    title: 'Mon Histoire | Jeremy Dan Photographe de mariage',
-    description:
-      'Photographe de mariage passionné basé à Sceaux dans les Hauts-de-Seine. Découvrez mon approche naturelle et authentique du reportage de mariage.',
-    url: `${process.env.SITE_URL}/about` || 'https://jeremydan.fr/about',
-    type: 'website'
+  en: {
+    title: 'My Story | Jeremy Dan',
+    description: 'Discover my journey as a wedding photographer in Sceaux, Hauts-de-Seine. Available in Paris region, France and internationally.',
+    keywords: [
+      'photographer story',
+      'photographer journey',
+      'wedding photographer sceaux',
+      'professional photographer',
+      'jeremy dan photographer'
+    ]
   }
 };
+
+// Generate metadata based on locale parameter
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const locale = params.locale as 'fr' | 'en';
+  
+  return {
+    title: aboutMetadata[locale].title,
+    description: aboutMetadata[locale].description,
+    keywords: aboutMetadata[locale].keywords,
+    alternates: {
+      canonical: `/${locale}/about`,
+      languages: {
+        fr: '/fr/about',
+        en: '/en/about'
+      }
+    },
+    openGraph: {
+      title: aboutMetadata[locale].title,
+      description: aboutMetadata[locale].description,
+      url: `/${locale}/about`,
+      type: 'website'
+    }
+  };
+}
 
 export default function AboutLayout({
   children

@@ -22,6 +22,7 @@ import {
 import { format } from 'date-fns';
 import { fr, enUS } from 'date-fns/locale';
 import { useParams } from 'next/navigation';
+import { Link } from '@/src/i18n/routing';
 import {
   Popover,
   PopoverContent,
@@ -44,8 +45,13 @@ const formSchema = z.object({
   last_name: z.string().min(1, 'Last name is required').max(50),
   email: z.string().email('Please enter a valid email address'),
   event_date: z.coerce.date(),
+  work_type: z.string().min(1, 'Please select a work type'),
+  work_category: z.string().min(1, 'Please select a category'),
   knowing_source: z.string().min(1, 'Please select an option'),
-  message: z.string().min(30)
+  message: z.string().min(30),
+  terms_accepted: z.boolean().refine(val => val === true, {
+    message: 'You must accept the terms and conditions'
+  })
 });
 
 export default function ContactForm() {
@@ -60,8 +66,11 @@ export default function ContactForm() {
       last_name: '',
       email: '',
       event_date: undefined,
+      work_type: '',
+      work_category: '',
       knowing_source: '',
-      message: ''
+      message: '',
+      terms_accepted: false
     }
   });
   const [loadedImages, setLoadedImages] = React.useState<{
@@ -116,8 +125,11 @@ export default function ContactForm() {
         last_name: '',
         email: '',
         event_date: undefined,
+        work_type: '',
+        work_category: '',
         knowing_source: '',
-        message: ''
+        message: '',
+        terms_accepted: false
       });
     } catch (error) {
       console.error('Form submission error:', error);
@@ -158,8 +170,6 @@ export default function ContactForm() {
               </p>
               <p className='mb-8 mt-2 text-sm leading-loose text-muted-foreground'>
                 {t('cf.wedding.desc2')}{' '}
-                <span className='font-bold'>1600 euros</span>{' '}
-                {t('cf.wedding.desc3')} {t('cf.wedding.desc4')}{' '}
                 <a
                   className='font-bold underline'
                   href='mailto:bonjour@jeremydan.fr'
@@ -281,6 +291,84 @@ export default function ContactForm() {
               </div>
             </div>
 
+            <div className='mt-6 grid grid-cols-12 gap-4'>
+              <div className='col-span-12 sm:col-span-6'>
+                <FormField
+                  control={form.control}
+                  name='work_type'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Type de prestation</FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue
+                              placeholder={t(
+                                'cf.wedding.work_type-placeholder'
+                              )}
+                            />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value='photography'>
+                            {t('cf.wedding.work_type-photography')}
+                          </SelectItem>
+                          <SelectItem value='videography'>
+                            {t('cf.wedding.work_type-videography')}
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <div className='col-span-12 sm:col-span-6'>
+                <FormField
+                  control={form.control}
+                  name='work_category'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Catégorie</FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue
+                              placeholder={t(
+                                'cf.wedding.work_category-placeholder'
+                              )}
+                            />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value='wedding'>
+                            {t('cf.wedding.work_category-wedding')}
+                          </SelectItem>
+                          <SelectItem value='event'>
+                            {t('cf.wedding.work_category-event')}
+                          </SelectItem>
+                          <SelectItem value='lifestyle'>
+                            {t('cf.wedding.work_category-lifestyle')}
+                          </SelectItem>
+                          <SelectItem value='company'>
+                            {t('cf.wedding.work_category-company')}
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </div>
+
             <div className='col-span-12 mt-6'>
               <FormField
                 control={form.control}
@@ -295,10 +383,7 @@ export default function ContactForm() {
                         {...field}
                       />
                     </FormControl>
-                    {/* <FormDescription>
-                      En soumettant ce formulaire, vous acceptez les
-                      conditions générales d'utilisation de ce site.
-                    </FormDescription> */}
+
                     <FormMessage />
                   </FormItem>
                 )}
@@ -353,6 +438,42 @@ export default function ContactForm() {
               />
             </div>
           </div>
+          <FormField
+            control={form.control}
+            name='terms_accepted'
+            render={({ field }) => (
+              <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
+                <FormControl>
+                  <input
+                    type='checkbox'
+                    checked={field.value}
+                    onChange={field.onChange}
+                    className='mt-1 h-4 w-4 rounded border text-primary focus:ring-primary'
+                  />
+                </FormControl>
+                <div className='space-y-1 leading-none'>
+                  <FormLabel className='text-sm text-muted-foreground'>
+                    {t('cf.wedding.terms-label')}{' '}
+                    <Link
+                      href='/legal/terms'
+                      className='text-primary-foreground hover:underline'
+                    >
+                      {t('cf.wedding.terms-link')}
+                    </Link>{' '}
+                    {t('cf.wedding.terms-and')}{' '}
+                    <Link
+                      href='/legal/privacy'
+                      className='text-primary-foreground hover:underline'
+                    >
+                      {t('cf.wedding.privacy-link')}
+                    </Link>
+                  </FormLabel>
+                  <FormMessage />
+                </div>
+              </FormItem>
+            )}
+          />
+
           <Button type='submit' disabled={isSubmitting}>
             {isSubmitting ? (
               <div className='flex items-center gap-2'>

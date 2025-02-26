@@ -2,7 +2,9 @@
 import { Icon } from '@/src/components/ui/icon';
 import ClientImageWrapper from '@/src/components/client-image-wrapper';
 import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
+import React from 'react';
+import { Button } from '@/src/components/ui/button';
+import { Link } from '@/src/i18n/routing';
 
 interface NavigationItem {
   name: string;
@@ -27,6 +29,11 @@ const navigation: {
       name: 'Pinterest',
       href: 'https://www.pinterest.fr/jeremydanphoto/',
       icon: 'pinterest'
+    },
+    {
+      name: 'TikTok',
+      href: 'https://www.tiktok.com/@jeremydanphoto',
+      icon: 'tiktok'
     }
   ]
 };
@@ -43,7 +50,7 @@ const AboutPage: React.FC = () => {
       <div className='grid max-w-4xl grid-cols-1 items-center gap-8 border-b pb-16 md:grid-cols-2'>
         {/* Left Column */}
         <div>
-          <h1 className='mb-4 text-center font-serif text-4xl leading-tight md:text-left md:text-5xl'>
+          <h1 className='mb-4 text-center font-serif text-4xl leading-tight md:text-left'>
             {t('hero-title')}
           </h1>
         </div>
@@ -74,90 +81,82 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='mt-16 max-w-4xl'>
+      <div className='mx-auto mt-12 max-w-4xl'>
         <div className='flex flex-col'>
           <div className='mb-8'>
-            <h2 className='mb-4 font-serif text-4xl text-secondary'>
-              {t('about-section.title1')}
-            </h2>
-            <p className='mb-4 max-w-xl leading-relaxed text-muted-foreground'>
-              {t('about-section.description1')}
+            <h2 className='mb-4 font-serif text-3xl'>{t('title1')}</h2>
+            <p className='mb-4 leading-relaxed text-muted-foreground'>
+              {t('description1')}
             </p>
-            <p className='max-w-xl leading-relaxed text-muted-foreground'>
-              {t('about-section.description2')}
+            <p className='leading-relaxed text-muted-foreground'>
+              {t('description2')}
               <a
                 href='https://jeremylhomme.fr/'
                 target='_blank'
                 className='font-medium underline'
               >
-                {t('about-section.description2-link')}
+                {t('description2-link')}
               </a>
-              {t('about-section.description2-cont')}
+              {t('description2-cont')}
             </p>
           </div>
 
           <div className='mb-8'>
-            <h2 className='mb-4 font-serif text-4xl text-secondary'>
-              {t('about-section.title2')}
-            </h2>
-            <p className='mb-4 max-w-xl leading-relaxed text-muted-foreground'>
-              {t('about-section.description3')}
+            <h2 className='mb-4 font-serif text-3xl'>{t('title2')}</h2>
+            <p className='mb-4 leading-relaxed text-muted-foreground'>
+              {t('description3')}
             </p>
-            <p className='max-w-xl leading-relaxed text-muted-foreground'>
-              {t('about-section.description4')}
+            <p className='leading-relaxed text-muted-foreground'>
+              {t('description4')}
             </p>
           </div>
           <div className='mb-4'>
             <h2 className='mb-4 font-serif text-2xl text-secondary'>
-              {t('about-section.title3')}
+              {t('title3')}
             </h2>
-            <div className='mb-4 max-w-xl leading-relaxed'>
-              <h3>{t('about-section.bullet1-title')}</h3>
-              <p className='text-muted-foreground'>
-                {t('about-section.bullet1')}
-              </p>
+            <div className='mb-4 leading-relaxed'>
+              <h3>{t('bullet1-title')}</h3>
+              <p className='text-muted-foreground'>{t('bullet1')}</p>
             </div>
-            <div className='mb-4 max-w-xl leading-relaxed'>
-              <h3>{t('about-section.bullet2-title')}</h3>
-              <p className='text-muted-foreground'>
-                {t('about-section.bullet2')}
-              </p>
+            <div className='mb-4 leading-relaxed'>
+              <h3>{t('bullet2-title')}</h3>
+              <p className='text-muted-foreground'>{t('bullet2')}</p>
             </div>
-            <div className='mb-4 max-w-xl leading-relaxed'>
-              <h3>{t('about-section.bullet3-title')}</h3>
-              <p className='text-muted-foreground'>
-                {t('about-section.bullet3')}
-              </p>
+            <div className='mb-4 leading-relaxed'>
+              <h3>{t('bullet3-title')}</h3>
+              <p className='text-muted-foreground'>{t('bullet3')}</p>
             </div>
           </div>
           <div className='mb-8'>
             <h2 className='mb-4 font-serif text-2xl text-secondary'>
-              {t('about-section.title4')}
+              {t('title4')}
             </h2>
-            <div className='mb-4 max-w-xl leading-relaxed'>
-              <ul>
-                <li className='mb-4 text-muted-foreground'>
-                  {t('about-section.bullet4')}
-                </li>
-                <li className='mb-4 text-muted-foreground'>
-                  {t('about-section.bullet5')}
-                </li>
-                <li className='text-muted-foreground'>
-                  {t('about-section.bullet6')}
-                </li>
-              </ul>
+            <div className='mb-4 leading-relaxed'>
+              <div className='mb-4 leading-relaxed'>
+                <h3>{t('bullet4-title')}</h3>
+                <p className='text-muted-foreground'>{t('bullet4')}</p>
+              </div>
+              <div className='leading-relaxed'>
+                <h3>{t('bullet5-title')}</h3>
+                <p className='text-muted-foreground'>{t('bullet5')}</p>
+              </div>
             </div>
           </div>
           <div>
-            <h2 className='mb-4 font-serif text-4xl text-secondary'>
-              {t('about-section.title5')}
-            </h2>
-            <p className='mb-4 max-w-xl leading-relaxed text-muted-foreground'>
-              {t('about-section.description5')}
+            <h2 className='mb-4 font-serif text-3xl'>{t('title5')}</h2>
+            <p className='mb-4 leading-relaxed text-muted-foreground'>
+              {t('description5')}
             </p>
-            <p className='max-w-xl leading-relaxed text-muted-foreground'>
-              {t('about-section.description6')}
+            <p className='leading-relaxed text-muted-foreground'>
+              {t('description6')}
             </p>
+            <Button
+              variant='default'
+              size='default'
+              className='mt-8 w-fit md:mx-0'
+            >
+              <Link href='/contact'>{t('button-label')}</Link>
+            </Button>
           </div>
         </div>
       </div>

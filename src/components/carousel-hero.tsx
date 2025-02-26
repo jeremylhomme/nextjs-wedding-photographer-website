@@ -39,6 +39,18 @@ const CarouselHero: React.FC = () => {
     {
       src: '/carousel-hero/hero-jeremydan-wedding-photography-007-optimized.webp',
       alt: t('alt7')
+    },
+    {
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-008-optimized.webp',
+      alt: t('alt8')
+    },
+    {
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-009-optimized.webp',
+      alt: t('alt9')
+    },
+    {
+      src: '/carousel-hero/hero-jeremydan-wedding-photography-010-optimized.webp',
+      alt: t('alt10')
     }
   ];
 
@@ -68,7 +80,10 @@ const CarouselHero: React.FC = () => {
   }, [emblaApi]);
 
   return (
-    <div className='embla relative h-[90vh] w-full' ref={emblaRef}>
+    <div
+      className='embla relative mx-auto h-[70vh] w-full shadow-lg shadow-card md:h-[90vh] lg:max-w-[80vw]'
+      ref={emblaRef}
+    >
       <div className='embla__container h-full w-full'>
         {heroImages.map((image, index) => (
           <div

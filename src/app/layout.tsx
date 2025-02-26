@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { Inter, Crimson_Text } from 'next/font/google';
+import { Inter, Crimson_Text, Quattrocento } from 'next/font/google';
 import cn from 'classnames';
 
 const inter = Inter({
@@ -9,6 +9,16 @@ const inter = Inter({
   display: 'swap',
   preload: true,
   fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true
+});
+
+const quattrocento = Quattrocento({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-quattrocento',
+  display: 'swap',
+  preload: true,
+  fallback: ['Georgia', 'serif'],
   adjustFontFallback: true
 });
 
@@ -36,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       suppressHydrationWarning
-      className={`${inter.variable} ${crimsonText.variable}`}
+      className={`${inter.variable} ${quattrocento.variable} ${crimsonText.variable}`}
     >
       <head>
         <Script
@@ -54,6 +64,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={cn(
           inter.variable,
+          quattrocento.variable,
           crimsonText.variable,
           'min-h-screen font-sans antialiased'
         )}

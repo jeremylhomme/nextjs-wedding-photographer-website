@@ -11,7 +11,11 @@ interface FAQItem {
 
 type Category = 'all' | FAQItem['category'];
 
-export default function FAQ() {
+interface FAQProps {
+  categories?: FAQItem['category'][];
+}
+
+export default function FAQ({ categories }: FAQProps = {}) {
   const t = useTranslations('faq-section');
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [visibleItems, setVisibleItems] = useState<number>(4);
@@ -144,19 +148,32 @@ export default function FAQ() {
     }
   ];
 
-  const categories: Category[] = [
-    'all',
+  // Determine which categories to show in the filter buttons
+  const defaultCategories: FAQItem['category'][] = [
     'general',
     'wedding',
     'company',
     'lifestyle',
     'event'
   ];
+  const availableCategories =
+    categories && categories.length > 0 ? categories : defaultCategories;
 
-  const filteredFaqs =
-    activeCategory === 'all'
-      ? faqs
-      : faqs.filter(faq => faq.category === activeCategory);
+  const categoryOptions: Category[] = [
+    'all',
+    ...(availableCategories as FAQItem['category'][])
+  ];
+
+  // Filter FAQs based on selected categories and active category
+  const filteredFaqs = faqs.filter(faq => {
+    if (categories && categories.length > 0) {
+      return (
+        categories.includes(faq.category) &&
+        (activeCategory === 'all' || faq.category === activeCategory)
+      );
+    }
+    return activeCategory === 'all' || faq.category === activeCategory;
+  });
 
   const displayedFaqs = filteredFaqs.slice(0, visibleItems);
   const hasMoreItems = visibleItems < filteredFaqs.length;
@@ -170,10 +187,10 @@ export default function FAQ() {
   };
 
   return (
-    <section className='w-full pb-16'>
+    <section className='w-full'>
       <div className='container mx-auto'>
         <div className='mb-8 flex flex-wrap justify-center gap-2'>
-          {categories.map(category => (
+          {categoryOptions.map(category => (
             <button
               key={category}
               onClick={() => {

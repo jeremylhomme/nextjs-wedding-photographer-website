@@ -1,21 +1,22 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://jeremydan.fr',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr',
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,
   exclude: ['/api/*', '/fr/api/*', '/en/api/*'],
   alternateRefs: [
     {
-      href: process.env.SITE_URL || 'https://jeremydan.fr',
+      href: process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr',
       hreflang: 'fr'
     },
     {
-      href: (process.env.SITE_URL || 'https://jeremydan.fr') + '/en',
+      href:
+        (process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr') + '/en',
       hreflang: 'en'
     }
   ],
-  additionalPaths: async (config) => {
+  additionalPaths: async config => {
     const paths = [
       { loc: '/' },
       { loc: '/fr' },
@@ -30,20 +31,21 @@ module.exports = {
       { loc: '/en/contact' }
     ];
 
-    return paths.map((path) => {
-      const priority = {
-        '/': 1.0,
-        '/fr': 1.0,
-        '/en': 1.0,
-        '/fr/portfolio': 0.9,
-        '/en/portfolio': 0.9,
-        '/fr/blog': 0.8,
-        '/en/blog': 0.8,
-        '/fr/contact': 0.8,
-        '/en/contact': 0.8,
-        '/fr/about': 0.7,
-        '/en/about': 0.7
-      }[path.loc] || config.priority;
+    return paths.map(path => {
+      const priority =
+        {
+          '/': 1.0,
+          '/fr': 1.0,
+          '/en': 1.0,
+          '/fr/portfolio': 0.9,
+          '/en/portfolio': 0.9,
+          '/fr/blog': 0.8,
+          '/en/blog': 0.8,
+          '/fr/contact': 0.8,
+          '/en/contact': 0.8,
+          '/fr/about': 0.7,
+          '/en/about': 0.7
+        }[path.loc] || config.priority;
 
       return {
         loc: path.loc,
@@ -63,4 +65,4 @@ module.exports = {
       }
     ]
   }
-}
+};

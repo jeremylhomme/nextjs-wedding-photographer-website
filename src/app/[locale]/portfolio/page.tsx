@@ -12,95 +12,138 @@ interface ImageProps {
   src: string;
   alt: string;
   priority?: boolean;
+  category: 'wedding' | 'lifestyle' | 'event' | 'company';
 }
+
+type Category = 'all' | ImageProps['category'];
 
 const PortfolioPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<ImageProps | null>(null);
+  const [activeCategory, setActiveCategory] = useState<Category>('all');
   const t = useTranslations('portfolio-page');
+
+  const categories: Category[] = [
+    'all',
+    'wedding',
+    'lifestyle',
+    'event',
+    'company'
+  ];
 
   const images: ImageProps[] = [
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-001-optimized.webp',
       alt: `${t('images.alt1')}`,
-      priority: true
+      priority: true,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-002-optimized.webp',
-      alt: `${t('images.alt2')}`
+      alt: `${t('images.alt2')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-003-optimized.webp',
-      alt: `${t('images.alt3')}`
+      alt: `${t('images.alt3')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-004-optimized.webp',
-      alt: `${t('images.alt4')}`
+      alt: `${t('images.alt4')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-005-optimized.webp',
-      alt: `${t('images.alt5')}`
+      alt: `${t('images.alt5')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-006-optimized.webp',
-      alt: `${t('images.alt6')}`
+      alt: `${t('images.alt6')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-007-optimized.webp',
-      alt: `${t('images.alt7')}`
+      alt: `${t('images.alt7')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-008-optimized.webp',
-      alt: `${t('images.alt8')}`
+      alt: `${t('images.alt8')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-009-optimized.webp',
-      alt: `${t('images.alt9')}`
+      alt: `${t('images.alt9')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-010-optimized.webp',
-      alt: `${t('images.alt10')}`
+      alt: `${t('images.alt10')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-011-optimized.webp',
-      alt: `${t('images.alt11')}`
+      alt: `${t('images.alt11')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-012-optimized.webp',
-      alt: `${t('images.alt12')}`
+      alt: `${t('images.alt12')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-013-optimized.webp',
-      alt: `${t('images.alt13')}`
+      alt: `${t('images.alt13')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-014-optimized.webp',
-      alt: `${t('images.alt14')}`
+      alt: `${t('images.alt14')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-015-optimized.webp',
-      alt: `${t('images.alt15')}`
+      alt: `${t('images.alt15')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-016-optimized.webp',
-      alt: `${t('images.alt16')}`
+      alt: `${t('images.alt16')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-017-optimized.webp',
-      alt: `${t('images.alt17')}`
+      alt: `${t('images.alt17')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-018-optimized.webp',
-      alt: `${t('images.alt18')}`
+      alt: `${t('images.alt18')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-019-optimized.webp',
-      alt: `${t('images.alt19')}`
+      alt: `${t('images.alt19')}`,
+      category: 'wedding'
     },
     {
       src: '/portfolio-page/portfolio-tiles-jeremydan-wedding-photography-020-optimized.webp',
-      alt: `${t('images.alt20')}`
+      alt: `${t('images.alt20')}`,
+      category: 'wedding'
     }
   ];
+
+  const filteredImages =
+    activeCategory === 'all'
+      ? images
+      : images.filter(image => image.category === activeCategory);
+
+  // Ensure we have enough images for the grid layout
+  const displayedImages = filteredImages.slice(
+    0,
+    Math.min(filteredImages.length, 20)
+  );
 
   return (
     <div className='relative w-screen'>
@@ -125,337 +168,54 @@ const PortfolioPage: React.FC = () => {
           </Link>
         </div>
 
-        <div className='mx-auto grid grid-cols-2 gap-2 px-4 pb-4 lg:grid-cols-3'>
-          {/* Row 1: portrait left, landscape right */}
-          <motion.div
-            onClick={() => setSelectedImage(images[0])}
-            className='cursor-pointer'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '2/3' }}
+        <div className='my-8 flex flex-wrap justify-center gap-2'>
+          {categories.map(category => (
+            <button
+              key={category}
+              onClick={() => {
+                setActiveCategory(category);
+              }}
+              className={`rounded-full px-4 py-2 text-sm transition-colors ${
+                activeCategory === category
+                  ? 'bg-primary text-primary-foreground'
+                  : 'border text-muted-foreground hover:bg-secondary hover:text-secondary-foreground'
+              }`}
             >
-              <ClientImageWrapper
-                src={images[0].src}
-                alt={images[0].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            onClick={() => setSelectedImage(images[1])}
-            className='cursor-pointer lg:col-span-2'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[1].src}
-                alt={images[1].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 2: landscape left, portrait right */}
-          <motion.div
-            onClick={() => setSelectedImage(images[2])}
-            className='cursor-pointer lg:col-span-2'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[2].src}
-                alt={images[2].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            onClick={() => setSelectedImage(images[3])}
-            className='cursor-pointer'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '2/3' }}
-            >
-              <ClientImageWrapper
-                src={images[3].src}
-                alt={images[3].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 3: single landscape */}
-          <motion.div
-            onClick={() => setSelectedImage(images[4])}
-            className='col-span-2 cursor-pointer lg:col-span-3'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[4].src}
-                alt={images[4].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 4: portrait left, landscape right */}
-          <motion.div
-            onClick={() => setSelectedImage(images[5])}
-            className='cursor-pointer'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '2/3' }}
-            >
-              <ClientImageWrapper
-                src={images[5].src}
-                alt={images[5].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            onClick={() => setSelectedImage(images[6])}
-            className='cursor-pointer lg:col-span-2'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[6].src}
-                alt={images[6].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 5: landscape left, portrait right */}
-          <motion.div
-            onClick={() => setSelectedImage(images[7])}
-            className='cursor-pointer lg:col-span-2'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[7].src}
-                alt={images[7].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            onClick={() => setSelectedImage(images[8])}
-            className='cursor-pointer'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '2/3' }}
-            >
-              <ClientImageWrapper
-                src={images[8].src}
-                alt={images[8].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 6: single landscape */}
-          <motion.div
-            onClick={() => setSelectedImage(images[9])}
-            className='col-span-2 cursor-pointer lg:col-span-3'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[9].src}
-                alt={images[9].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 7: portrait left, landscape right */}
-          <motion.div
-            onClick={() => setSelectedImage(images[10])}
-            className='cursor-pointer'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '2/3' }}
-            >
-              <ClientImageWrapper
-                src={images[10].src}
-                alt={images[10].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            onClick={() => setSelectedImage(images[11])}
-            className='cursor-pointer lg:col-span-2'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[11].src}
-                alt={images[11].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 8: landscape left, portrait right */}
-          <motion.div
-            onClick={() => setSelectedImage(images[12])}
-            className='cursor-pointer lg:col-span-2'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[12].src}
-                alt={images[12].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            onClick={() => setSelectedImage(images[13])}
-            className='cursor-pointer'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '2/3' }}
-            >
-              <ClientImageWrapper
-                src={images[13].src}
-                alt={images[13].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 9: single landscape */}
-          <motion.div
-            onClick={() => setSelectedImage(images[14])}
-            className='col-span-2 cursor-pointer lg:col-span-3'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[14].src}
-                alt={images[14].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          {/* Row 10: portrait left, landscape right */}
-          <motion.div
-            onClick={() => setSelectedImage(images[15])}
-            className='cursor-pointer'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '2/3' }}
-            >
-              <ClientImageWrapper
-                src={images[15].src}
-                alt={images[15].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            onClick={() => setSelectedImage(images[16])}
-            className='cursor-pointer lg:col-span-2'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[16].src}
-                alt={images[16].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 11: landscape left, portrait right */}
-          <motion.div
-            onClick={() => setSelectedImage(images[17])}
-            className='cursor-pointer lg:col-span-2'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[17].src}
-                alt={images[17].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            onClick={() => setSelectedImage(images[18])}
-            className='cursor-pointer'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '2/3' }}
-            >
-              <ClientImageWrapper
-                src={images[18].src}
-                alt={images[18].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
-
-          {/* Row 12: single landscape */}
-          <motion.div
-            onClick={() => setSelectedImage(images[19])}
-            className='col-span-2 cursor-pointer lg:col-span-3'
-          >
-            <div
-              className='relative h-full w-full'
-              style={{ aspectRatio: '3/2' }}
-            >
-              <ClientImageWrapper
-                src={images[19].src}
-                alt={images[19].alt}
-                className='absolute inset-0 h-full w-full object-cover object-center'
-              />
-            </div>
-          </motion.div>
+              {t(`categories.${category}`)}
+            </button>
+          ))}
         </div>
-
-        {/* Use the reusable ImageModal */}
-        <ImageModal
-          selectedImage={selectedImage}
-          onClose={() => setSelectedImage(null)}
-        />
       </div>
+      {filteredImages.length === 0 ? (
+        <div className='flex items-center justify-center py-12'>
+          <p className='text-lg text-muted-foreground'>
+            {t('no-images-message')}
+          </p>
+        </div>
+      ) : (
+        <div className='mx-auto grid grid-cols-1 gap-4 px-4 pb-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+          {displayedImages.map(image => (
+            <motion.div
+              key={image.src}
+              onClick={() => setSelectedImage(image)}
+              className='group relative cursor-pointer overflow-hidden'
+            >
+              <div className='relative aspect-[3/4] w-full'>
+                <ClientImageWrapper
+                  src={image.src}
+                  alt={image.alt}
+                  className='absolute inset-0 h-full w-full object-cover object-center'
+                />
+                <div className='absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100' />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      )}
+      <ImageModal
+        selectedImage={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
     </div>
   );
 };

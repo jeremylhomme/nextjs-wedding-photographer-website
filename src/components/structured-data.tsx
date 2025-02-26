@@ -4,12 +4,12 @@ export default function StructuredData() {
   const businessData = {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'ProfessionalService', 'PhotographyBusiness'],
-    '@id': process.env.SITE_URL || 'https://jeremydan.fr',
+    '@id': process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr',
     name: 'Jeremy Dan Photography',
-    image: `${process.env.SITE_URL || 'https://jeremydan.fr'}/og-image.jpg`,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}/og-image.jpg`,
     description:
       "Photographe de mariage professionnel à Sceaux et dans les Hauts-de-Seine (92). Capturant des moments authentiques dans toute l'Île-de-France.",
-    url: process.env.SITE_URL || 'https://jeremydan.fr',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr',
     telephone: '+33650056891',
     address: {
       '@type': 'PostalAddress',
@@ -58,30 +58,31 @@ export default function StructuredData() {
   const personData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': `${process.env.SITE_URL || 'https://jeremydan.fr'}#jeremy`,
+    '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}#jeremy`,
     name: 'Jeremy Dan',
     jobTitle: 'Photographe de Mariage',
-    image: `${process.env.SITE_URL || 'https://jeremydan.fr'}/about-page/about-jeremydan-wedding-photographer-optimized.webp`,
-    url: process.env.SITE_URL || 'https://jeremydan.fr',
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}/about-page/about-jeremydan-wedding-photographer-optimized.webp`,
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr',
     sameAs: [
       'https://www.instagram.com/jeremydan.fr/',
       'https://www.pinterest.fr/jeremydanphoto/'
     ],
     worksFor: {
-      '@id': process.env.SITE_URL || 'https://jeremydan.fr'
+      '@id': process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'
     }
   };
 
   const portfolioData = {
     '@context': 'https://schema.org',
     '@type': 'ImageGallery',
-    '@id': `${process.env.SITE_URL || 'https://jeremydan.fr'}/portfolio`,
+    '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}/portfolio`,
     name: 'Portfolio de Photographie de Mariage',
-    description: 'Galerie de photos de mariage par Jeremy Dan, photographe professionnel',
+    description:
+      'Galerie de photos de mariage par Jeremy Dan, photographe professionnel',
     creator: {
-      '@id': `${process.env.SITE_URL || 'https://jeremydan.fr'}#jeremy`
+      '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}#jeremy`
     },
-    url: `${process.env.SITE_URL || 'https://jeremydan.fr'}/portfolio`
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}/portfolio`
   };
 
   return (

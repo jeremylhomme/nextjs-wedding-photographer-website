@@ -76,12 +76,12 @@ const CarouselTestimonials: React.FC = () => {
 
   return (
     <div className='relative w-full max-w-[1080px]'>
-      <div className='my-16'>
-        <div className='my-8 flex justify-center'>
+      <div className='py-8 md:py-16'>
+        <div className='flex justify-center pb-8'>
           <VerticalLine />
         </div>
         <h2 className='text-center font-serif text-4xl'>{t('title')}</h2>
-        <div className='my-8 flex justify-center'>
+        <div className='flex justify-center pt-8'>
           <VerticalLine />
         </div>
       </div>

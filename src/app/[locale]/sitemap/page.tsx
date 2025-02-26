@@ -1,5 +1,10 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/src/navigation';
+import { getLocalizedService } from '@/src/config/services';
+import { locations, getLocalizedLocation } from '@/src/config/locations';
+import { getLocalizedCategory } from '@/src/config/categories';
+import React from 'react';
 
 interface SitemapLink {
   name: string;
@@ -24,49 +29,52 @@ export async function generateMetadata({
   };
 }
 
-export default function Sitemap() {
-  const t = useTranslations('sitemap-page');
+export default function Sitemap({
+  params: { locale }
+}: {
+  params: { locale: string };
+}) {
   const f = useTranslations('footer');
+  const t = useTranslations('sitemap-page');
 
   const sitemapCategories: SitemapCategory[] = [
     {
-      title: t('categories.main'),
+      title: f('columns.main.title'),
       links: [
-        { name: f('columns.information.contact'), href: '/contact' },
-        { name: f('columns.information.portfolio'), href: '/portfolio' },
-        { name: f('columns.information.story'), href: '/about' },
-        { name: f('columns.information.blog'), href: '/blog' }
+        { name: f('columns.main.contact'), href: '/contact' },
+        { name: f('columns.main.portfolio'), href: '/portfolio' },
+        { name: f('columns.main.story'), href: '/about' },
+        { name: f('columns.main.blog'), href: '/blog' }
       ]
     },
     {
-      title: t('categories.services'),
+      title: f('columns.legal.title'),
       links: [
-        { name: f('columns.services.wedding'), href: '/mariage' },
-        { name: f('columns.services.event'), href: '/evenement' },
-        { name: f('columns.services.business'), href: '/entreprise' }
+        { name: f('columns.legal.sitemap'), href: '/sitemap' },
+        { name: f('columns.legal.legal'), href: '/legal' },
+        { name: f('columns.legal.terms'), href: '/legal/terms' },
+        { name: f('columns.legal.privacy'), href: '/legal/privacy' }
       ]
     },
     {
-      title: t('categories.locations'),
+      title: f('columns.services.title'),
       links: [
-        { name: f('columns.locations.sceaux'), href: '/photographe-sceaux' },
-        {
-          name: f('columns.locations.hauts-de-seine'),
-          href: '/photographe-hauts-de-seine'
+        { 
+          name: f('columns.services.wedding-photographer'), 
+          href: `/${getLocalizedService('photography', locale)}/${getLocalizedCategory('wedding', locale)}` 
         },
-        { name: f('columns.locations.paris'), href: '/photographe-paris' },
         {
-          name: f('columns.locations.ile-de-france'),
-          href: '/photographe-ile-de-france'
+          name: f('columns.services.corporate-photographer'),
+          href: `/${getLocalizedService('photography', locale)}/${getLocalizedCategory('corporate', locale)}`
         }
       ]
     },
     {
-      title: t('categories.legal'),
-      links: [
-        { name: f('columns.legal.sitemap'), href: '/sitemap' },
-        { name: f('columns.legal.legal'), href: '/mentions-legales' }
-      ]
+      title: f('columns.locations.title'),
+      links: locations.map(location => ({
+        name: f(`columns.locations.${location}-photography`),
+        href: `/${getLocalizedService('photography', locale)}/${getLocalizedLocation(location, locale)}`
+      }))
     }
   ];
 
@@ -82,12 +90,12 @@ export default function Sitemap() {
               <ul className='space-y-2'>
                 {category.links.map(link => (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       className='text-sm text-muted-foreground transition-colors hover:text-primary-foreground'
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

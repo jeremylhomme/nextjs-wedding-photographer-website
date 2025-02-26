@@ -9,7 +9,6 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/src/i18n/routing';
 import { LoadingProvider } from '@/src/components/providers/loading-provider';
 import StructuredData from '@/src/components/structured-data';
-import cn from 'classnames';
 
 if (!process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY) {
   throw new Error('NEXT_PUBLIC_CAPTCHA_SITE_KEY is not configured');
@@ -22,83 +21,100 @@ export const viewport: Viewport = {
   userScalable: false
 };
 
-export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.SITE_URL || 'https://jeremydan.fr' || 'https://localhost:3000'
-  ),
-  title: {
-    template: '%s | Jeremy Dan - Photographe Mariage Sceaux (92)',
-    default: 'Jeremy Dan | Photographe Mariage Sceaux (92) - Hauts-de-Seine'
-  },
-  description:
-    'Photographe de Mariage basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
-  keywords: [
-    'photographe mariage sceaux',
-    'photographe mariage 92',
-    'photographe mariage hauts-de-seine'
-  ],
-  authors: [{ name: 'Jeremy Dan' }],
-  creator: 'Jeremy Dan',
-  publisher: 'Jeremy Dan',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false
-  },
-  alternates: {
-    canonical: '/',
-    languages: {
-      fr:
-        `${process.env.SITE_URL}/fr` ||
-        'https://jeremydan.fr' ||
-        'https://localhost:3000',
-      en:
-        `${process.env.SITE_URL}/en` ||
-        'https://jeremydan.fr' ||
-        'https://localhost:3000/en'
-    }
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'fr_FR',
-    alternateLocale: 'en_US',
+// Define locale-based metadata for the home page
+const localeMetadata = {
+  fr: {
     title:
-      'Jeremy Dan | Photographe de Mariage à Sceaux et dans les Hauts-de-Seine (92)',
+      'Jeremy Dan | Photographe et Vidéaste à Sceaux (92) - Hauts-de-Seine',
     description:
-      'Photographe de mariage professionnel à Sceaux. Spécialiste du reportage photo de mariage naturel et authentique dans les Hauts-de-Seine.',
-    url:
-      process.env.SITE_URL ||
-      'https://jeremydan.fr' ||
-      'https://localhost:3000',
-    siteName: 'Jeremy Dan Photography',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Jeremy Dan - Photographe de Mariage à Sceaux'
-      }
+      'Photographe de Mariage basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
+    keywords: [
+      'photographe sceaux',
+      'photographe mariage sceaux',
+      'photographe entreprise sceaux',
+      'photographe lifestyle sceaux',
+      'photographe événementiel sceaux',
+      'photographe 92',
+      'photographe hauts-de-seine'
     ]
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Jeremy Dan | Photographe de Mariage à Sceaux',
+  en: {
+    title:
+      'Jeremy Dan | Photographer and Videographer in Sceaux (92) - Hauts-de-Seine',
     description:
-      'Photographe de mariage professionnel dans les Hauts-de-Seine (92). Reportages photo authentiques et intemporels.',
-    images: ['/og-image.jpg']
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
-    }
+      'Wedding Photographer based in Sceaux, Hauts-de-Seine (92). For timeless photos in Paris region, France, and internationally.',
+    keywords: [
+      'photographer sceaux',
+      'wedding photographer sceaux',
+      'corporate photographer sceaux',
+      'lifestyle photographer sceaux',
+      'event photographer sceaux',
+      'photographer 92',
+      'photographer hauts-de-seine'
+    ]
   }
 };
+
+// Generate metadata based on locale parameter
+export async function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const locale = params.locale as 'fr' | 'en';
+
+  return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_NEXT_PUBLIC_SITE_URL ||
+        'https://jeremydan.fr' ||
+        'https://localhost:3000'
+    ),
+    title: localeMetadata[locale].title,
+    description: localeMetadata[locale].description,
+    keywords: localeMetadata[locale].keywords,
+    authors: [{ name: 'Jeremy Dan' }],
+    creator: 'Jeremy Dan',
+    publisher: 'Jeremy Dan',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false
+    },
+    alternates: {
+      canonical: '/',
+      languages: {
+        fr: '/fr',
+        en: '/en'
+      }
+    },
+    openGraph: {
+      type: 'website',
+      locale: locale,
+      url: '/',
+      siteName: 'Jeremy Dan Photography',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Jeremy Dan Photography'
+        }
+      ]
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large' as const,
+        'max-snippet': -1
+      }
+    }
+  };
+}
 
 export default async function LocaleLayout({
   children,

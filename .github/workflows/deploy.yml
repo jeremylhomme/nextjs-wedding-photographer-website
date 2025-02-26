@@ -12,7 +12,7 @@ jobs:
       CAPTCHA_SECRET_KEY: ${{ secrets.CAPTCHA_SECRET_KEY }}
       SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
       SENDGRID_TEMPLATE_ID: ${{ secrets.SENDGRID_TEMPLATE_ID }}
-      SITE_URL: 'https://jeremydan.fr'
+      NEXT_PUBLIC_SITE_URL: 'https://jeremydan.fr'
 
     steps:
       - uses: actions/checkout@v3

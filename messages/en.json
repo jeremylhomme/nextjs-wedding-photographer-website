@@ -14,13 +14,13 @@
   },
 
   "footer": {
-    "description": "Wedding Photographer based in Sceaux Hauts-de-Seine (92) near Paris, France",
+    "description": "Professional photographer and videographer based in Sceaux, Hauts-de-Seine (92), available throughout France and internationally.",
     "rights": "All rights reserved.",
     "dev1": "Website developed by",
     "dev2": "myself.",
     "columns": {
-      "information": {
-        "title": "Information",
+      "main": {
+        "title": "Main pages",
         "contact": "Contact me",
         "portfolio": "Portfolio",
         "story": "My story",
@@ -28,39 +28,45 @@
       },
       "services": {
         "title": "Services",
-        "wedding": "Wedding Photographer",
-        "event": "Event Photographer",
-        "business": "Business Photographer"
+        "wedding-photographer": "Wedding Photographer",
+        "wedding-videographer": "Wedding Videographer",
+        "event-photographer": "Event Photographer",
+        "corporate-photographer": "Business Photographer",
+        "corporate-videographer": "Business Videographer",
+        "lifestyle-photographer": "Lifestyle Photographer"
       },
       "locations": {
         "title": "Locations",
-        "sceaux": "Photographer in Sceaux",
-        "hauts-de-seine": "Photographer in Hauts-de-Seine",
-        "paris": "Photographer in Paris",
-        "ile-de-france": "Photographer in île-de-France"
+        "sceaux-photography": "Photographer in Sceaux"
       },
       "legal": {
+        "title": "Legal",
         "sitemap": "Sitemap",
-        "legal": "Legal notice"
+        "legal": "Legal notice",
+        "terms": "Terms of use",
+        "privacy": "Privacy policy"
       }
     }
   },
 
   "blog-footer": {
     "title": "About me",
-    "description": "My name is Jérémy and I'm a wedding photographer in Sceaux (92 - Hauts-de-Seine). For me, photography is much more than a profession: it's a philosophy. It brings me closer to what really matters - human relationships, the bonds we build and the emotions we share. ",
+    "description": "My name is Jérémy and I'm a professional photographer and videographer based in Sceaux (92 - Hauts-de-Seine). For me, photography and videography are much more than a profession: they're a philosophy. It allows me to get closer to what really matters - human relationships, the bonds we build and the stories we live together.",
     "button-label": "My story"
   },
 
   "carousel-hero": {
-    "title": "Madly in love.",
-    "alt1": "A hand elegantly holds several metal heart-shaped sparklers against a dark background, capturing the enchanting moment through the lens of Jeremy Dan, a renowned wedding photographer based in Sceaux, Hauts-de-Seine.",
-    "alt2": "A bride wearing gold heels stands on a wooden step near a white textured blanket, captured perfectly by Jeremy Dan, a wedding photographer based in Sceaux, Hauts-de-Seine.",
-    "alt3": "A couple stands closely together outside an old stone house with yellow shutters, surrounded by greenery and potted plants. Captured by Jeremy Dan, a wedding photographer based in Sceaux.",
-    "alt4": "A group of people in traditional attire celebrating a wedding ceremony. Jeremy Dan, a wedding photographer based in Sceaux, is capturing the festive scene enhanced by string lights overhead.",
-    "alt5": "The bride and groom embrace in a decorated town hall room filled with seated guests. As people clap and some take photos, large paintings and chandeliers set the scene. Captured beautifully by Jeremy Dan, a talented wedding photographer based in Sceaux, this moment resonates with echoes of love.",
-    "alt6": "The bride and groom stand close under an umbrella, surrounded by colorful lights and confetti, creating a festive atmosphere during the first dance ceremony of their wedding. Captured by Jeremy Dan, a talented wedding photographer based in Sceaux, Hauts-de-Seine.",
-    "alt7": "In a sunlit forest, the bride and groom are standing close and smiles at each other, surrounded by tall trees, captured timelessly by Jeremy Dan, a wedding photographer based in Sceaux."
+    "title": "Madly.",
+    "alt1": "The bride and groom stand under an umbrella, surrounded by colored lights and confetti, creating a festive atmosphere during their first wedding dance. Captured by Jeremy Dan, a talented wedding photographer based in Sceaux, Hauts-de-Seine.",
+    "alt2": "A man carries a can in a chicken coop in work clothes. Photographed by Jeremy Dan, a corporate photographer based in Sceaux.",
+    "alt3": "A mother holds her child in her arms. Both are happy and laughing together. Photographed by Jeremy Dan, a family photographer based in Sceaux.",
+    "alt4": "Artist Nordine Ganso performs on stage in a colorful outfit. Photographed by Jeremy Dan, an event photographer based in Sceaux.",
+    "alt5": "A couple walks hand in hand among the trees during their couple photo session covered by Jeremy Dan, a couple photographer based in Sceaux.",
+    "alt6": "A woman speaks at the microphone with a bandana during the corporate evening covered by Jeremy Dan, a corporate photographer based in Sceaux.",
+    "alt7": "The newlyweds kiss in a decorated town hall room filled with seated guests. As people applaud and some take photos, large paintings and chandeliers set the scene. Beautifully captured by Jeremy Dan, a talented wedding photographer based in Sceaux, this moment resonates with echoes of love.",
+    "alt8": "A couple sits facing a lake in a park. The woman rests her head on the man's shoulder and they gaze at the horizon. Photo taken during a couple photo session covered by Jeremy Dan, a couple photographer based in Sceaux.",
+    "alt9": "A couple stands side by side in front of an old stone house with yellow shutters, surrounded by greenery and potted plants. Captured by Jeremy Dan, a wedding photographer based in Sceaux.",
+    "alt10": "A group of people in traditional attire celebrating a wedding ceremony. Jeremy Dan, a wedding photographer based in Sceaux, captures the festive scene highlighted by strings of lights."
   },
 
   "carousel-testimonials": {
@@ -100,6 +106,7 @@
     "alt3": "A wedding couple, dressed in wedding attire, smiles at each other outdoors. The bride wears a lace dress and the groom a red suit. They stand holding hands, surrounded by greenery and a stone wall, as captured by Jeremy Dan, the wedding photographer based in Sceaux.",
     "alt4": "Une mariée en robe blanche tient un bouquet, face à un groupe de femmes en plein air dans les Hauts-de-Seine, prêtes pour un lancer de bouquet. Capturé par Jeremy Dan, photographe de mariage basé à Sceaux."
   },
+
   "faq-section": {
     "title": "Frequently Asked Questions",
     "categories": {
@@ -174,101 +181,123 @@
     }
   },
 
-  "home-page": {
-    "hero-title": "Wedding Photographer based in Sceaux",
-    "hero-description": "Revealing your personalities and most sincere emotions, creating timeless memories of your commitment. Based in Sceaux in the Hauts-de-Seine (92), I preserve these wonderful moments, whether you're in the Paris region, in France, or anywhere in the world.",
-    "subtitle": "Authentic Photos for Real Humans.",
-    "description1": "There's nothing more incredible than finding the person you can't live without. Your true partner, the one who brightens your everyday life. It's this unique connection that I want to immortalize. My mission, as a wedding photographer, is to reveal your true personalities and most sincere emotions, creating timeless memories of your commitment.",
-    "description2": "Don't hold back. This moment only happens once in a lifetime. Be yourself, and I'll be myself.",
-    "button-label": "My story",
-    "description3": "My work reflects my commitment to staying true to you, to what you feel, and to what unites you. I want every shot to be a mirror of your love, full of nuance and depth.",
+  "sitemap-page": {
+    "title": "Sitemap",
+    "description": "Find all the pages of my site organized by category.",
+    "categories": {
+      "main": "Main Pages",
+      "services": "Services",
+      "locations": "Locations",
+      "legal": "Legal Notices"
+    }
+  },
 
-    "title2": "Revealing the Essence",
-    "bullets-title": "I draw inspiration from simple and poetic details:",
-    "bullet1": "Natural, soft, and enveloping light that highlights every emotion.",
-    "bullet2": "A style evoking film photography, with warm, natural colors, and a touch of grain that brings a timeless and cinematic texture to your photos.",
-    "bullet3": "Candid moments, caught in the moment, that tell a truth that posed shots cannot capture.",
-    "description4": "My work reflects my commitment to staying true to you, to what you feel, and to what unites you. I want every shot to be a mirror of your love, full of nuance and depth.",
+  "home-page": {
+    "hero-title": "Photographer & Videographer in Sceaux",
+    "hero-description1": "Capture the authenticity of every moment, reveal your most sincere emotions, and create timeless memories.",
+    "hero-description2": "Photographer and videographer in Sceaux, Hauts-de-Seine (92), I immortalize your special moments in images, whether it's for a wedding, a corporate event, a business photoshoot, or a lifestyle session with family or couples.",
+    "hero-bullet1-title": "Wedding",
+    "hero-bullet1": " – Natural and luminous images in photos and videos to tell your story with authenticity.",
+    "hero-bullet2-title": "Corporate",
+    "hero-bullet2": " – Professional portraits, corporate reports, corporate videos, and brand content.",
+    "hero-bullet3-title": "Lifestyle & Family",
+    "hero-bullet3": " – Natural photos for couples, families, and individual portraits.",
+    "hero-bullet4-title": "Events",
+    "hero-bullet4": " – Concerts, festivals, seminars... Capture the emotion and energy of your events.",
+    "hero-description3": "Based in the Paris region, I travel throughout France and internationally.",
+    "subtitle": "Authentic Photos and Videos for Real People.",
+    "description1": "There is nothing more incredible than finding the person you cannot live without. Your true partner, the one who brightens your daily life. It is this unique connection that I want to immortalize.",
+    "description2": "As a photographer and videographer, I use my vision to serve your stories, whether it's an emotional wedding, a professional portrait that reflects your image, a simple lifestyle session, or a vibrant event you want to remember forever. No matter the location – a spectacular setting or the intimacy of your daily life – my goal is to reveal your authenticity, your raw emotions, and everything that makes you, you.",
+    "description3": "Don't hold back. Your story is unique. Let's create photos or videos that truly represent you.",
+    "button-label": "My story",
+    "photo-title2": "My Approach to Photography",
+    "photo-bullets-title": "From start to finish of a report, I draw inspiration from every simple and poetic detail:",
+    "photo-bullet1": "Natural, soft, and enveloping lights that enhance every emotion.",
+    "photo-bullet2": "A style reminiscent of film, with warm, natural colors, and a touch of grain that gives your photos a timeless and cinematic texture.",
+    "photo-bullet3": "Unposed moments, captured in the moment, that tell a truth that staged scenes cannot capture.",
+    "photo-description4": "My work reflects my commitment to staying true to you, to what you feel, and to what binds you. I want every shot to be a mirror of your love, full of nuances and depth.",
+    "video-title2": "My Approach to Video",
+    "video-bullets-title": "For me, filming is much more than capturing moving images. It's about telling a story, conveying an atmosphere, an emotion, a moment that resonates far beyond the present.",
+    "video-bullet1": "I draw a lot of inspiration from cinema, with warm tones, subtle contrasts, and an organic texture.",
+    "video-bullet2": "I don't seek to freeze poses, but to capture authenticity, the poetry of the moment as it is lived.",
+    "video-description4": "Every film I create is designed as a living memory, faithful to you and your story. I want every movement, every sound, every emotion to instantly transport you back to that moment, as if you were there again.",
     "title3": "Your Story, Your Visual Legacy",
-    "description5": "Memories are not just meant to be lived, but to be preserved and shared. Whether it's during an outdoor ceremony, in an intimate setting, or at the heart of a lively family celebration, my goal is to create images for you that tell more than just a moment – they tell your story.",
-    "description6": "It's not just about taking photos, but creating a visual legacy. Something that looks like you, that you can pass on and cherish forever.",
-    "description7": "Are you ready to create something real with me?",
+    "description5": "Memories are not just meant to be lived, but to be preserved and shared. Whether it's an intimate moment, a vibrant celebration, or a project close to your heart, my goal is to capture more than just a moment – I want to tell your story.",
+    "description6": "It's not just about making images, but about creating a visual legacy, something that represents you, that you can pass on and cherish forever. Every photo, every video is designed to stand the test of time and awaken emotions, again and again.",
+    "description7": "Ready to create something real together?",
     "button-label2": "Contact me",
     "grid-blog-section": {
       "title": "Blog",
-      "button-label3": "View the blog"
-    },
-
-    "faq-section": {
-      "title": "Frequently Asked Questions",
-      "categories": {
-        "all": "All",
-        "wedding": "Wedding",
-        "event": "Event",
-        "corporate": "Corporate",
-        "lifestyle": "Lifestyle"
-      },
-      "button-label": "View all questions"
+      "button-label3": "View blog"
     }
   },
 
   "about-page": {
-    "hero-title": "I capture your love stories.",
-    "alt": "Photo of Jeremy Dan, wedding photographer.",
-
-    "about-section": {
-      "title1": "In a Few Words",
-      "description1": "Introducing oneself can be a delicate exercise, but so important when entrusting such an important moment to a photographer. So here's my little story!",
-      "description2": "My name is Jeremy, I'm 28 years old, and I have the privilege of sharing my life with the person who gives it meaning. I have three passions: photography, music, and skateboarding. Each of these fuels my creativity and my vision of the world. When I'm not behind the lens capturing weddings, I'm in front of my screen coding ",
-      "description2-link": "websites",
-      "description2-cont": ". The website you're browsing was actually designed by me. French is my native language, and I'm fluent in English. In love with Sweden, I'm also learning Swedish and hope to spend a few years exploring the beauty and serenity of Scandinavian landscapes. I love stepping out of my comfort zone, discovering new perspectives, and learning from what the world has to offer. Each experience enriches my vision and, ultimately, my work as a wedding photographer.",
-      "title2": "My Vision of Photography",
-      "description3": "Photography is much more than a profession to me: it's a philosophy. It allows me to get closer to what really matters – human relationships, the bonds we build, and the emotions we share. I firmly believe that we don't always pay enough attention to the fleeting moments of our lives. These ephemeral fragments, so precious, deserve to be captured with authenticity and sincerity. My goal is to offer you beautiful, true, and moving images that tell your story, just as it is. I strive to capture every detail, every smile, every knowing look, without artifice, but with all the sensitivity that characterizes these unique moments.",
-      "description4": "My goal is to capture these significant moments with the sincerity that characterizes them. I want these images to be beautiful and true, regardless of the occasion. In the end, that's what matters most to me.",
-      "title3": "What Inspires Me",
-      "bullet1-title": "The real, the simple, the spontaneous",
-      "bullet1": "A discreet tear, a burst of laughter, a sincere embrace.",
-      "bullet2-title": "The details",
-      "bullet2": "Those that tell your story and make it unique.",
-      "bullet3-title": "The timeless",
-      "bullet3": "Natural colors, the subtle grain of film combined with cinematic contrasts.",
-      "title4": "What Doesn't Inspire Me",
-      "bullet4": "Overly posed or artificial setups that don't reflect your authenticity.",
-      "bullet5": "Ephemeral trends that risk dating your memories instead of enhancing them.",
-      "bullet6": "Generic photos devoid of the emotion and context that make you unique.",
-      "title5": "My Reasons to Be a Wedding Photographer",
-      "description5": "My motivation is to offer you something tangible, an heritage visual that you can pass on and cherish forever. That you can relive these moments through the photos that truly represent you.",
-      "description6": "Let's create memories that last forever."
-    }
+    "hero-title": "I capture your story, the one which represents you.",
+    "alt": "Photo of Jeremy Dan, wedding photographer based in Sceaux.",
+    "title1": "In a Few Words",
+    "description1": "Introducing oneself can be a delicate exercise, but it is so important when entrusting such an important moment to a photographer/videographer. Here is my little story!",
+    "description2": "My name is Jeremy, I am 28 years old and I live in Sceaux in the Hauts-de-Seine (south of 92). A professional photographer and videographer for 5 years, I am fortunate to share my daily life with the one who gives rhythm and meaning to my life. I have three passions: photography, music, and skateboarding. Each of them nourishes my creativity and my vision of the world. When I'm not behind the lens capturing moments of life, I'm in front of my screen coding",
+    "description2-link": "websites",
+    "description2-cont": ". The site you are browsing was designed by me. French is my native language and I am fluent in English. In love with Sweden, I am also learning Swedish and hope to spend a few years exploring the beauty and serenity of the Scandinavian landscapes. I love stepping out of my comfort zone, discovering new perspectives, and learning from what the world has to offer. Each experience enriches my vision and, ultimately, my work as a photographer and videographer.",
+    "title2": "My Vision of Photography and Video",
+    "description3": "Photography and videography are more than just a job for me: they are a philosophy. They allow me to get closer to what really matters – human relationships, the bonds we build, and the stories we live. I firmly believe that we do not always pay enough attention to the fleeting moments of our lives. These precious, ephemeral fragments deserve to be captured with authenticity and sincerity. My goal is to provide you with beautiful, true, and moving images, whether it's a wedding, a corporate event, or a simple moment of life. I strive to capture every detail, every smile, every glance, without artifice, but with all the sensitivity that characterizes these unique moments.",
+    "description4": "My goal is to capture these important moments with the sincerity that characterizes them. I want these images to be beautiful and true, no matter the occasion. In the end, that's what matters most to me.",
+    "title3": "What Inspires Me",
+    "bullet1-title": "The Real, the Simple, the Spontaneous",
+    "bullet1": "A discreet tear, a burst of laughter, a sincere hug.",
+    "bullet2-title": "The Details",
+    "bullet2": "Those that tell your story and make it unique.",
+    "bullet3-title": "The Timeless",
+    "bullet3": "Natural colors, the subtle grain of film combined with the contrasts of cinema.",
+    "title4": "What Doesn’t Inspire Me",
+    "bullet4-title": "Overly Posed or Artificial Scenes",
+    "bullet4": "I want to capture your authenticity, not make you play a role.",
+    "bullet5-title": "Ephemeral Trends",
+    "bullet5": "Your memories should stand the test of time, not go out of style in a few years.",
+    "bullet6-title": "Soulless Images",
+    "bullet6": "Generic photos lacking the emotion and context that make you unique.",
+    "title5": "Why I Do This Job",
+    "description5": "What motivates me is to offer you something tangible, a visual legacy that you can pass on. That you can relive these moments through true, touching, and sincere images – that's what drives me to give my best at every event.",
+    "description6": "Let's create memories that will stand the test of time.",
+    "button-label": "Let's discuss your project"
   },
 
   "portfolio-page": {
     "hero-title": "Suspended Moments",
     "subtitle": "Portfolio",
-    "description": "A selection of some of my favorite photos from the weddings I've covered.",
+    "description": "A selection of some of my favorite photos from the weddings I have covered.",
     "button-label": "Let's discuss your project",
     "images": {
-      "alt1": "Wedding photo at Domaine Ferme Sainte Anne by Jeremy Dan",
-      "alt2": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-      "alt3": "Wedding photo in the North of Montpellier by Jeremy Dan",
-      "alt4": "Wedding photo at Domaine Ferme Sainte Anne by Jeremy Dan",
-      "alt5": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-      "alt6": "Wedding photo in the North of Montpellier by Jeremy Dan",
-      "alt7": "Wedding photo at Domaine Ferme Sainte Anne by Jeremy Dan",
-      "alt8": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-      "alt9": "Wedding photo in the North of Montpellier by Jeremy Dan",
-      "alt10": "Wedding photo at Domaine Ferme Sainte Anne by Jeremy Dan",
-      "alt11": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-      "alt12": "Wedding photo in the North of Montpellier by Jeremy Dan",
-      "alt13": "Wedding photo at Domaine Ferme Sainte Anne by Jeremy Dan",
-      "alt14": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-      "alt15": "Wedding photo in the North of Montpellier by Jeremy Dan",
-      "alt16": "Wedding photo at Domaine Ferme Sainte Anne by Jeremy Dan",
-      "alt17": "Wedding photo at Domaine de la Gillardière by Jeremy Dan",
-      "alt18": "Wedding photo in the North of Montpellier by Jeremy Dan",
-      "alt19": "Wedding photo at Domaine Ferme Sainte Anne by Jeremy Dan",
-      "alt20": "Wedding photo at Domaine de la Gillardière by Jeremy Dan"
-    }
+      "alt1": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt2": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt3": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt4": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt5": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt6": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt7": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt8": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt9": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt10": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt11": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt12": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt13": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt14": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt15": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt16": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt17": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+      "alt18": "Photo de mariage au Nord de Montpellier par Jeremy Dan",
+      "alt19": "Photo de mariage au Domaine Ferme Sainte Anne par Jeremy Dan",
+      "alt20": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
+    },
+    "categories": {
+      "all": "All categories",
+      "wedding": "Wedding",
+      "lifestyle": "Lifestyle",
+      "event": "Event",
+      "company": "Corporate"
+    },
+    "no-images-message": "No photos available in this category"
   },
 
   "blog-page": {
@@ -297,6 +326,43 @@
       },
       "coverImage": {
         "alt": "Wedding photo at Domaine de la Gillardière by Jeremy Dan"
+      },
+      "images": {
+        "alt1": "Vue extérieure du Chateau de Chambord pendant le mariage",
+        "alt2": "Les mariés devant le grand escalier",
+        "alt3": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt4": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt5": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt6": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt7": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt8": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt9": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt10": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt11": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt12": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt13": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt14": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt15": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt16": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt17": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt18": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt19": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt20": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt21": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt22": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt23": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt24": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt25": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt26": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt27": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt28": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt29": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt30": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt31": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt32": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt33": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt34": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan",
+        "alt35": "Photo de mariage au Domaine de la Gillardière par Jeremy Dan"
       }
     },
 
@@ -417,62 +483,478 @@
       }
     }
   },
-  "location-page": {
-    "key-locations": "Key Locations",
-    "services": "Services Available",
-    "nearby-areas": "Nearby Areas"
-  },
-  "sitemap-page": {
-    "title": "Sitemap",
-    "description": "Find all the pages of my website organized by category.",
-    "categories": {
-      "main": "Main Pages",
-      "services": "Services",
-      "locations": "Locations",
-      "legal": "Legal"
+
+  "legal-pages": {
+    "last-update": "Last update: February 19, 2025",
+    "legal-notice": {
+      "title": "Legal Notice",
+      "sections": {
+        "editor": {
+          "title": "Website Editor",
+          "content": [
+            "MONSIEUR JEREMY L'HOMME",
+            "Activity: Photographer and videographer (APE Code: 7420Z - Photography activities)",
+            "SIREN: 822 048 575",
+            "Phone: +33650056891",
+            "Email: bonjour@jeremydan.fr"
+          ]
+        },
+        "publication": {
+          "title": "Publication Director",
+          "content": ["Publication Director: Jérémy L'homme"]
+        },
+        "hosting": {
+          "title": "Hosting",
+          "content": [
+            "This website is hosted by Hostinger International Ltd.",
+            "Dedicated VPS",
+            "61 Lordou Vironos Street",
+            "6023 Larnaca, Cyprus"
+          ]
+        },
+        "intellectual-property": {
+          "title": "Intellectual Property",
+          "content": [
+            "This entire website constitutes a work protected by intellectual property laws.",
+            "All photographs, texts, slogans, drawings, images, animated sequences whether with sound or not, as well as all other works integrated into the site are the property of Jérémy L'homme or third parties who have authorized Jérémy L'homme to use them.",
+            "Any reproduction, representation, use or modification, by any process whatsoever and on any medium whatsoever, of all or part of the site, without having obtained prior authorization from Jérémy L'homme, is strictly prohibited and constitutes an infringement."
+          ]
+        },
+        "personal-data": {
+          "title": "Personal Data Protection",
+          "content": [
+            "Personal information collected on this site is intended for internal use only.",
+            "In accordance with the provisions of French Law No. 78-17 of January 6, 1978, relating to data processing, files, and freedoms, you have the right to access, modify, rectify, and delete data concerning you.",
+            "To exercise this right, please contact us by email at: bonjour@jeremydan.fr"
+          ]
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms and Conditions",
+      "sections": {
+        "services": {
+          "title": "Services Offered",
+          "content": [
+            "Our services include photography and video coverage for:",
+            "- Weddings",
+            "- Corporate events",
+            "- Lifestyle sessions (family, couples)",
+            "- Various events"
+          ]
+        },
+        "booking": {
+          "title": "Booking and Payment",
+          "content": [
+            "A 30% deposit of the total amount is required to secure the booking.",
+            "The balance must be paid no later than the day of the service.",
+            "Prices are in euros and are not subject to VAT (article 293B of the French General Tax Code)."
+          ]
+        },
+        "cancellation": {
+          "title": "Cancellation Policy",
+          "content": [
+            "You have a 14-day cooling-off period from the date of signing the quote.",
+            "If you cancel within this period, the deposit will be fully refunded.",
+            "After this period, the deposit will be retained.",
+            "Any cancellation request must be made by registered letter with acknowledgment of receipt."
+          ]
+        },
+        "delivery": {
+          "title": "Delivery Terms",
+          "content": [
+            "Photos and videos are delivered within 4-6 weeks.",
+            "Delivery is made via a secure online gallery (Pictime).",
+            "Digital files are kept for 12 months for original files and 3 years for processed files."
+          ]
+        },
+        "intellectual-property": {
+          "title": "Copyright and Intellectual Property",
+          "content": [
+            "The photographer retains copyright ownership of all photos and videos produced.",
+            "Clients receive a right of use for their personal and family use.",
+            "Any commercial or professional use must be subject to prior written agreement."
+          ]
+        }
+      }
+    },
+    "privacy-policy": {
+      "title": "Privacy Policy",
+      "sections": {
+        "collected-data": {
+          "title": "Data Collection",
+          "content": [
+            "We only collect necessary data through our contact form:",
+            "- First and last name",
+            "- Email address",
+            "- Phone number",
+            "- Message"
+          ]
+        },
+        "analytics": {
+          "title": "Traffic Analysis",
+          "content": [
+            "We use Umami, a privacy-friendly analytics tool.",
+            "Umami does not collect any personal data and does not place any cookies on your device.",
+            "The collected data is anonymous and is only used to understand overall site usage."
+          ]
+        },
+        "data-usage": {
+          "title": "Data Usage",
+          "content": [
+            "Contact form data is used solely to respond to your inquiries.",
+            "We never share your data with third parties.",
+            "No data is used for commercial or advertising purposes."
+          ]
+        },
+        "rights": {
+          "title": "Your Rights",
+          "content": [
+            "In accordance with GDPR, you have the following rights:",
+            "- Right to access your data",
+            "- Right to rectification",
+            "- Right to erasure",
+            "- Right to restrict processing",
+            "To exercise these rights, contact us at: bonjour@jeremydan.fr"
+          ]
+        }
+      }
+    },
+    "terms-of-use": {
+      "title": "Terms of Use",
+      "sections": {
+        "website-usage": {
+          "title": "Website Usage",
+          "content": [
+            "This is a showcase website presenting Jérémy L'homme's photography and video services.",
+            "The use of the website is free and does not require any registration.",
+            "Users agree not to disrupt the proper functioning of the website."
+          ]
+        },
+        "content": {
+          "title": "Website Content",
+          "content": [
+            "All website content (texts, images, videos) is protected by copyright.",
+            "Any reproduction or use without prior authorization is prohibited.",
+            "The images presented are the exclusive property of Jérémy L'homme."
+          ]
+        },
+        "liability": {
+          "title": "Liability",
+          "content": [
+            "We strive to keep the website accessible at all times but cannot guarantee continuous availability.",
+            "We decline any responsibility in case of inability to access the website or technical difficulties.",
+            "Links to external websites are provided for information only and we are not responsible for their content."
+          ]
+        }
+      }
     }
   },
+
   "contact-page": {
-    "hero-title": "Let's Meet",
+    "hero-title": "Let's Get to Know Each Other",
     "calendar": {
-      "select-language": "Select a language"
+      "select-language": "Select Language"
     },
     "cf": {
       "title": "Contact Form",
-
       "wedding": {
-        "desc": "I look forward to discussing your project and the opportunities we can explore together. It's important that I learn more about you and your dream event. Once you've filled in the form, I'll arrange to meet you over coffee or via Google Meet for busy schedules!",
-        "desc2": "My rates are by appointment only and start from",
-        "desc3": "for weddings.",
-        "desc4": "You can also send me an email directly to",
+        "desc": "I look forward to discussing your project and the wonderful opportunities we can explore together. Whether it's for a wedding, an event, a corporate report, or a lifestyle session, it's essential for me to learn more about you and your expectations. Once the form is filled out, I will propose a meeting over coffee or via Google Meet for those with busy schedules!",
+        "desc2": "My rates are provided only by appointment. You can also email me directly at ",
         "title": "Wedding",
-        "first_name-label": "First name",
+        "first_name-label": "First Name",
         "first_name-placeholder": "Your first name",
-        "last_name-label": "Last name",
+        "last_name-label": "Last Name",
         "last_name-placeholder": "Your last name",
         "email-label": "Email",
         "email-placeholder": "Your email address",
-        "event_date-placeholder": "Your wedding date",
-        "message-label": "Tell me everything!",
-        "message-placeholder": "From your theme colors to the special moments you want to immortalize, I want to know it all! Share your ideas, dreams, and even the little details that will make your event unique. The more I know, the better I can capture the event that truly represents you.",
-        "knowing_source-label": "How did you hear about me?",
+        "event_date-placeholder": "The date of your event",
+        "message-label": "Tell Me Everything!",
+        "message-placeholder": "From the colors of your universe to the key moments you want to capture, I want to know it all! Share your ideas, desires, and even those little details that will make your project unique. The more I know, the better I can capture images that truly represent you.",
+        "knowing_source-label": "How Did You Hear About Me?",
+        "work_type-placeholder": "Type of Service",
+        "work_type-photography": "Photography",
+        "work_type-videography": "Videography",
+        "work_category-placeholder": "Choose a Category",
+        "work_category-wedding": "Wedding",
+        "work_category-event": "Event",
+        "work_category-lifestyle": "Lifestyle",
+        "work_category-company": "Corporate",
+        "terms-label": "I accept the",
+        "terms-link": "terms and conditions",
+        "terms-and": "and the",
+        "privacy-link": "privacy policy",
         "knowing_source-placeholder": "Select an option",
         "knowing_source-option2": "Google Search",
-        "knowing_source-option3": "Word of mouth",
+        "knowing_source-option3": "Word of Mouth",
         "knowing_source-option4": "Other",
-        "knowing_source-desc": "This helps me a lot with developing my business!"
+        "knowing_source-desc": "This helps a lot for the development of my business!"
       },
-
       "submit": "Send",
       "submitting": "Sending..."
     }
   },
-  "ServicePage": {
-    "photography-services": "Photography Services",
+
+  "location-page": {
+    "photography-sceaux": {
+      "parallax-scroll": {
+        "parallax-image-1": "A male model holds a cap in his hand and leans against a wall during a photoshoot for a company covered by Jeremy Dan, corporate photographer.",
+        "parallax-image-2": "The bride is on the town hall stairs, looking at her husband with a smile.",
+        "parallax-image-3": "A young woman in a bright pink suit jacket poses for a professional photoshoot for her company.",
+        "parallax-image-4": "A top-down photo of a woman in a sparkling dress dancing during a corporate evening covered by Jeremy Dan, corporate photographer.",
+        "parallax-image-5": "Decorative items from a woman's universe during a professional photoshoot. Photo taken from above.",
+        "parallax-image-6": "Photo of a farmer leaning on his high-pressure cleaner in a chicken coop.",
+        "parallax-image-7": "Photo of a farmer using his high-pressure cleaner in a chicken coop.",
+        "parallax-image-8": "A female model walks down the street during a photoshoot for a company covered by Jeremy Dan, corporate photographer.",
+        "parallax-image-9": "The groom holds an umbrella, sheltering the bride.",
+        "parallax-image-10": "The bride and groom dance during their wedding evening covered by Jeremy Dan, wedding photographer.",
+        "parallax-image-11": "A little girl brings the rings to her mother during a wedding covered by Jeremy Dan, wedding photographer.",
+        "parallax-image-12": "A man and a woman gaze lovingly at each other during a couple's photoshoot covered by Jeremy Dan, lifestyle photographer.",
+        "parallax-image-13": "A DJ looks to the side during a corporate evening covered by Jeremy Dan, corporate photographer.",
+        "parallax-image-14": "A man and a woman embrace and look at each other during a couple's photoshoot covered by Jeremy Dan, lifestyle photographer.",
+        "parallax-image-15": "Photo of a man and a woman in evening attire taken during a corporate evening covered by Jeremy Dan, corporate photographer."
+      },
+      "main-title": "Photographer in Sceaux",
+      "introduction": "I authentically capture the moments that matter to you, whether it's a wedding, an event, a corporate report, or a lifestyle session with your partner or family.",
+      "introduction2": "Based in Hauts-de-Seine, I accompany you in Sceaux and throughout France and internationally to immortalize your precious moments.",
+      "button-label": "Learn more",
+      "title2": "My Approach to Photography",
+      "content1": "Each project is a unique story, and my role is to tell it through sincere and authentic images, without artifice or staged poses. Whether it's a wedding, an event, a corporate report, or a lifestyle session, my approach is based on spontaneity and emotion.",
+      "content2": "I blend into the background to capture each moment without disrupting your day. You enjoy fully, and I capture the looks, gestures, energy, and genuine moments. Of course, we will also take the time to create portraits and more posed images, but always with naturalness and fluidity.",
+      "content3": "My approach is that of a reportage: observe, feel, and capture the essence of each moment. From laughter to complicit exchanges, my goal is to accurately and sensitively convey what makes your story unique.",
+      "alt1": "Back photo of Jeremy Dan, professional photographer in Sceaux.",
+      "title3": "My Style as a Photographer",
+      "content4": "I draw inspiration from film photography to offer images with a timeless aesthetic:",
+      "bullet1-b": "Soft and natural colors",
+      "bullet1-content": ", true to the moment as it was lived.",
+      "bullet2-b": "Subtle grain and balanced contrasts",
+      "bullet2-content": ", providing an organic and authentic texture.",
+      "bullet3-b": "Natural light favored",
+      "bullet3-content": ", for vibrant and warm images.",
+      "alt2": "A woman plays with her dog during a wedding ceremony.",
+      "content5": "My goal is not just to capture a moment, but to tell a story, seize an emotion, and create images that will stand the test of time.",
+      "title4": "Rates and Services",
+      "content6": "My services adapt to your needs and the story you wish to tell. The rates indicated below are for reference and may vary depending on your specific expectations. Travel expenses are included within a 50 km radius around Sceaux (92 - Hauts-de-Seine). Beyond that, additional travel costs will be requested (train/plane tickets or car travel). These rates do not include potential food and accommodation expenses. Feel free to ",
+      "link2": "contact me",
+      "content7": " for a personalized quote.",
+      "alt3": "A man and a woman sit against a barrier waiting for a corporate evening covered by Jeremy Dan, corporate photographer.",
+      "alt4": "A bride and groom in wedding attire happily exit the town hall during their civil wedding.",
+      "subtitle1": "Wedding Photographer",
+      "bullet4-b": "Civil Wedding",
+      "bullet4-content": " – starting at 800€",
+      "bullet5-b": "Half Day",
+      "bullet5-content": " – starting at 1600€",
+      "bullet6-b": "Full Day",
+      "bullet6-content": " – starting at 2500€",
+      "button-label2": "Learn more",
+      "alt5": "The bride and groom hug while dancing during their couple's photoshoot covered by Jeremy Dan, wedding photographer.",
+      "subtitle2": "Corporate Photographer",
+      "bullet7-b": "Team and Individual Portraits",
+      "bullet7-content": " – starting at 150€ per person (discounted rate for multiple employees)",
+      "bullet8-b": "Corporate Reportage",
+      "bullet8-content": " – starting at 600€ for a half-day / 1200€ for a full day",
+      "bullet9-b": "Event Coverage",
+      "bullet9-content": " – starting at 800€ for a half-day / 1500€ for a full day",
+      "bullet10-b": "Regular Photo Content Production",
+      "bullet10-content": " – starting at 2000€ per month",
+      "button-label3": "Learn more",
+      "alt6": "The DJ of the evening covered by Jeremy Dan, corporate photographer, adjusts the sound system.",
+      "subtitle3": "Lifestyle Photographer (family, couple, individual portraits)",
+      "bullet11-b": "Short Session (1h)",
+      "bullet11-content": " – starting at 200€",
+      "bullet12-b": "Full Session (2h and more)",
+      "bullet12-content": " – starting at 350€",
+      "subtitle4": "Event Photographer (concerts, festivals, private parties, conferences, etc.)",
+      "bullet13-b": "Half Day",
+      "bullet13-content": " – starting at 800€",
+      "bullet14-b": "Full Day",
+      "bullet14-content": " – starting at 1500€",
+      "alt7": "A man with a novelty headband looks to the side during a corporate evening covered by Jeremy Dan, corporate photographer.",
+      "alt8": "A woman carries her child during a family photoshoot covered by Jeremy Dan, lifestyle photographer.",
+      "alt9": "A family composed of a man, a woman, and a child embrace during a family photoshoot covered by Jeremy Dan, lifestyle photographer.",
+      "alt10": "A woman sings on stage with her music group in a blue-lit atmosphere.",
+      "alt11": "The singer of Jesus Piece performs on stage at Hellfest with his band. The drummer is in the background.",
+      "title5": "Frequently Asked Questions"
+    }
+  },
+  "service-page": {
+    "wedding-photography": {
+      "slider": {
+        "slider-image-1": "The bride and groom dance together in their wedding attire during the ceremony.",
+        "slider-image-2": "The bride and groom exit the town hall in their wedding attire, cheered on by the guests.",
+        "slider-image-3": "The bride and groom walk hand in hand in their wedding attire at the Parc de Sceaux during their couple's photoshoot.",
+        "slider-image-4": "Close-up of the bridesmaid closing the elegant bride's dress.",
+        "slider-image-5": "The bride laughs with a bouquet of flowers on the town hall balcony.",
+        "slider-image-6": "The bride and groom smile at each other in front of the church.",
+        "slider-image-7": "The bride attaches her earring with the sun revealing an intimate and warm atmosphere."
+      },
+      "main-title": "Wedding Photographer",
+      "introduction": "Capture your special moments with a mix of spontaneous emotions and artistic composition. From intimate ceremonies to grand celebrations, I ensure every detail is preserved.",
+      "button-label": "Let's discuss your project",
+      "title2": "My Approach to Wedding Photography",
+      "content2": "Your wedding is a unique story. My role is to tell it with authentic and genuine images, without artifice or staged poses. Just you, as you are, in the intensity of the moment.",
+      "content3": "I blend into the background to capture each moment without disrupting the flow of the day. You enjoy fully, and I capture the emotions, the glances, the spontaneous gestures. Of course, we will take the time to do couple and group photos, but without rigid staging – just real moments, captured naturally.",
+      "content4": "My approach is that of reportage: capturing spontaneity, energy, and the sensitivity of each moment. From laughter to complicit silences, I strive to faithfully convey the essence of your day without interfering.",
+      "alt1": "The bride and groom walk hand in hand through a small village, looking at each other in a warm and bohemian atmosphere.",
+      "title3": "My Photographic Style",
+      "content5": "I draw a lot of inspiration from film photography to give my images a timeless look:",
+      "bullet1-b": "Soft and natural colors",
+      "bullet1-content": ", true to the moment.",
+      "bullet2-b": "A slight grain and subtle contrasts",
+      "bullet2-content": ", for an organic texture.",
+      "bullet3-b": "Use of natural light",
+      "bullet3-content": ", for vibrant and warm images.",
+      "alt2": "A guest photographed from behind by Jeremy Dan during the reception of a civil wedding.",
+      "content6": "The goal is not just to document a day, but to create images that tell a story, capture an emotion, and stand the test of time.",
+      "title4": "Steps",
+      "subtitle1": "First Contact",
+      "content7": "You can reach me by phone, via the form on my ",
+      "link1": "contact page",
+      "content7-b": ", or directly by email at ",
+      "content7-c": ". The more details you provide about your wishes and your wedding, the better I can offer you an optimized and tailored quote.",
+      "subtitle2": "Meeting and Discussion",
+      "content8": "We schedule a video call or a coffee to discuss your wedding, your expectations, and the desired atmosphere. It's also an opportunity to get to know each other and see if we click naturally.",
+      "subtitle3": "The Quote",
+      "content9": "Following our discussion, I will send you a detailed quote tailored to your project.",
+      "subtitle4": "Validation and Contract Signing",
+      "content10": "If the quote suits you, I will send you the contract. Once signed, your date is officially reserved, and the adventure begins!",
+      "subtitle5": "(Optional) Complimentary Engagement Session",
+      "content11": "For each wedding booking (excluding civil weddings), I offer a couple's photoshoot (engagement session). A privileged moment before the big day, ideal for creating memories in a relaxed atmosphere and getting comfortable in front of the camera.",
+      "title5": "Rates and Services",
+      "content12": "My services adapt to your wishes and needs. The rates indicated below are for reference and may vary depending on your specific expectations. Travel expenses are included within a 50 km radius around Sceaux (92 - Hauts-de-Seine). Beyond that, additional travel costs will be requested (train/plane tickets or car travel). These rates do not include food and accommodation expenses. Feel free to ",
+      "link2": "contact me",
+      "content13": " for a personalized quote.",
+      "alt3": "A couple sits on a bench, looking at each other and laughing in a park.",
+      "alt4": "A couple photographed from behind by Jeremy Dan walks hand in hand, looking at the horizon in a park.",
+      "subtitle6": "Civil Wedding – starting at 800€",
+      "bullet4": "Town hall coverage",
+      "bullet5": "Group photos",
+      "bullet6": "Couple photos",
+      "bullet7": "Post-production and adjustments",
+      "bullet8": "Private online gallery",
+      "bullet9": "(Optional) Photo album",
+      "alt5": "The bride and groom gaze tenderly at each other in front of the Château de Sceaux entrance.",
+      "subtitle7": "Half Day – starting at 1600€",
+      "bullet10": "Town hall and ceremony coverage",
+      "bullet11": "Group photos",
+      "bullet12": "Couple photos",
+      "bullet13": "Post-production and adjustments",
+      "bullet14": "Private online gallery",
+      "bullet15": "(Optional) Photo album",
+      "alt6": "The bride and groom lovingly toast each other in a beautiful house with a glass door.",
+      "subtitle8": "Full Day – starting at 2500€",
+      "bullet16": "Complete wedding coverage: preparations, ceremony, cocktail, evening",
+      "bullet17": "Group photos",
+      "bullet18": "Couple photos",
+      "bullet19": "Post-production and adjustments",
+      "bullet20": "Private online gallery",
+      "bullet21": "(Optional) Photo album",
+      "alt7": "The bride and groom admire their wedding cake during the evening reception at a venue.",
+      "title6": "Why Choose Me as Your Wedding Photographer",
+      "subtitle9": "Authentic Images",
+      "content14": "No staged poses or forced smiles. My approach favors genuine moments, captured spontaneously. Each image faithfully tells the emotion of your day.",
+      "subtitle10": "Timeless and Natural Style",
+      "content15": "Inspired by film photography, I work with soft colors, natural light, and a slight grain for a warm and timeless look. Memories that retain their intensity over the years.",
+      "subtitle11": "Discretion and Spontaneity",
+      "content16": "I capture each moment without disrupting the flow of your day. Present but discreet, I seize the energy and emotion of each instant. You enjoy fully, without worrying about the camera.",
+      "subtitle12": "Smooth and Reassuring Experience",
+      "content17": "From the first exchange to the delivery of the photos, everything is designed for a serene experience. I accompany you throughout the organization from our first exchange to the delivery of the photos.",
+      "subtitle13": "Images That Reflect You",
+      "content18": "Each wedding is unique. My approach adapts to your story to create images that reflect you and that you will enjoy reliving over and over again.",
+      "alt8": "A string of lights with a pronounced background blur photographed by Jeremy Dan during a wedding ceremony.",
+      "title7": "Frequently Asked Questions"
+    },
+    "corporate-photography": {
+      "slider": {
+        "slider-image-1": "A young woman model showcases her denim overshirt on a basketball court.",
+        "slider-image-2": "A young man model showcases his denim overshirt in front of a wall decorated with a large graffiti.",
+        "slider-image-3": "An osteopath in consultation with a patient in his office.",
+        "slider-image-4": "A young woman smiles naturally during a professional photoshoot by Jeremy Dan.",
+        "slider-image-5": "A woman smiles during a professional photoshoot by Jeremy Dan at a corporate seminar.",
+        "slider-image-6": "Photo of Nike, NBA, and Jordan logos taken by Jeremy Dan during a corporate evening.",
+        "slider-image-7": "A technician sets up the sound system for a corporate evening."
+      },
+      "main-title": "Corporate Photographer",
+      "introduction": "Capture the essence of your business with the right balance of spontaneity and careful composition. Events, portraits, reports… each image reflects your identity with precision and authenticity.",
+      "button-label": "Let's discuss your project",
+      "title2": "My Approach to Corporate Photography",
+      "content2": "Your business is unique, and my role is to capture that uniqueness through authentic and natural images. I highlight you, your team, and your expertise with precision and accuracy.",
+      "content3": "I blend into your environment to document each moment without disrupting your activities. You stay focused on your work, and I capture the interactions, gestures, and energy that drive you. Of course, we will also take the time to create portraits and group photos, but always with authenticity and reality.",
+      "content4": "My approach is that of reportage: capturing the dynamics, the human element, and the essence of your business. From strategic exchanges to moments of collaboration, I strive to faithfully convey your universe with impact.",
+      "alt1": "A woman is photographed from the side by Jeremy Dan during a corporate evening, with a play of light on the top of her head.",
+      "title3": "My Photographic Style",
+      "content5": "I draw inspiration from the codes of film photography to offer timeless and authentic images:",
+      "bullet1-b": "Natural and balanced colors",
+      "bullet1-content": ", true to the real atmosphere",
+      "bullet2-b": "A slight grain and subtle contrasts",
+      "bullet2-content": ", for a more organic texture.",
+      "bullet3-b": "Mastery of natural light",
+      "bullet3-content": ", for vibrant and impactful images.",
+      "alt2": "Two farmers working on their farm. Photo taken by Jeremy Dan, professional corporate photographer.",
+      "content6": "My goal: capture the moment with authenticity, highlighting each detail with precision.",
+      "title4": "Steps",
+      "subtitle1": "First Contact",
+      "content7": "You can reach me by phone, via the form on my ",
+      "link1": "contact page",
+      "content7-b": ", or directly by email at ",
+      "content7-c": ". The more details you provide about your project, the better I can offer you a tailored service.",
+      "subtitle2": "Meeting and Discussion",
+      "content8": "We plan a video call or a coffee to discuss your expectations, the image you want to convey, and the visual universe to adopt. It's also an opportunity for us to get to know each other and ensure that my approach meets your needs.",
+      "subtitle3": "The Quote",
+      "content9": "Following our discussion, I will send you a detailed quote tailored to your requests and constraints.",
+      "subtitle4": "Validation and Contract Signing",
+      "content10": "If the quote suits you, I will send you the contract. Once signed, your project is officially launched!",
+      "title5": "Rates and Services",
+      "content12": "Each business has specific image needs. Whether for professional portraits, an immersive report, or event coverage, my services adapt to your activity. The rates below are for reference and may vary depending on your project and the use of the images. Travel expenses are included within a 50 km radius around Sceaux (92 - Hauts-de-Seine). Beyond that, additional travel costs will be requested (train/plane tickets or car travel). These rates do not include food and accommodation expenses (if your event takes place in the evening or over several days). Feel free to ",
+      "link2": "contact me",
+      "content13": " for a personalized quote.",
+      "alt3": "A young woman is photographed face-on by Jeremy Dan during a professional photoshoot for her small business.",
+      "alt4": "A young woman is photographed in a yoga pose by Jeremy Dan during a professional photoshoot for her small business.",
+      "subtitle6": "Team and Individual Portraits – starting at 150€ per person (discounted rate for multiple employees)",
+      "bullet4": "Carefully crafted and natural photos to showcase your employees on your website and professional networks.",
+      "alt5": "An osteopath is photographed from the side by Jeremy Dan while working on his computer in his office.",
+      "subtitle7": "Corporate Reportage – starting at 600€ for a half-day / 1200€ for a full day",
+      "bullet10": "An immersion in your activity to capture the work atmosphere, your premises, and your expertise.",
+      "alt6": "A young woman in a sparkling dress is photographed by Jeremy Dan during a corporate seminar.",
+      "subtitle8": "Event Coverage – starting at 800€ for a half-day / 1500€ for a full day",
+      "bullet16": "Seminars, conferences, product launches… Images that reflect the energy and highlights of your events.",
+      "subtitle9": "Regular Photo Content Production – starting at 2000€ per month",
+      "bullet17": "For businesses with recurring image needs, I offer regular photo content production tailored to your communication and visual identity.",
+      "alt7": "A man in a blue suit sitting on a chair is photographed by Jeremy Dan during a corporate seminar.",
+      "title6": "Why Choose Me as Your Corporate Photographer",
+      "subtitle10": "Authentic Images",
+      "content14": "I capture the essence of your business through authentic and natural images. No staged poses or forced smiles. My approach favors real moments, captured spontaneously, to faithfully convey the energy of your team and work environment.",
+      "subtitle11": "Timeless and Unique Style",
+      "content15": "Inspired by film photography, I work with soft colors, natural light, and a slight grain for an elegant and timeless look. Stand out from generic images with photos that truly reflect your identity.",
+      "subtitle12": "Discretion and Spontaneity",
+      "content16": "I integrate discreetly into your daily routine to capture each moment without disrupting the natural flow of your activities. Present but discreet, I seize the authenticity of each instant, allowing you to stay focused on your priorities.",
+      "subtitle13": "Smooth and Reassuring Experience",
+      "content17": "From the first exchange to the delivery of the photos, everything is designed for a simple and serene experience. I accompany you at every step, from planning to finalization, to ensure results that perfectly reflect your business identity.",
+      "subtitle14": "Adaptability",
+      "content18": "My approach adapts to your culture and needs to create images that reflect you and that you will enjoy sharing and reliving over and over again.",
+      "alt8": "Two photographers are photographed by Jeremy Dan during a corporate evening.",
+      "alt9": "A young man model showcases his denim overshirt in front of a wall decorated with a large graffiti during a professional photoshoot by Jeremy Dan.",
+      "alt10": "A man sticks out his tongue while looking up, surrounded by his colleagues during the dance party at his company's seminar.",
+      "title7": "Frequently Asked Questions"
+    },
     "videography-services": "Videography Services",
     "packages": "Our Packages",
     "faq": "Frequently Asked Questions",
-    "location-info": "Location Information",
-    "nearby-areas": "We Also Serve"
+    "location-info": "Regional Information"
+  },
+
+  "services": {
+    "groups": {
+      "wedding": "Wedding",
+      "corporate": "Corporate",
+      "event": "Event",
+      "lifestyle": "Lifestyle"
+    },
+    "wedding-photography": "Wedding Photography",
+    "wedding-videography": "Wedding Videography",
+    "event-photography": "Event Photography",
+    "lifestyle-photography": "Lifestyle Photography",
+    "corporate-photography": "Corporate Photography",
+    "corporate-videography": "Corporate Videography"
   }
 }

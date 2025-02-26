@@ -34,6 +34,17 @@
   }
 }
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -60,6 +71,7 @@
   min-width: 0;
   position: relative;
   display: flex;
+  align-items: center;
 }
 
 .embla__slide img {
