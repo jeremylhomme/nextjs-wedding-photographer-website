@@ -9,7 +9,7 @@ export function BlogFooter() {
   const t = useTranslations('blog-footer');
 
   return (
-    <div className='mt-16 border-t pt-16'>
+    <div className='mt-8 border-t pt-12'>
       <div className='flex flex-col gap-8 md:flex-row md:items-center md:gap-12'>
         <div className='relative aspect-square w-full overflow-hidden rounded-lg md:w-1/4'>
           <ClientImageWrapper

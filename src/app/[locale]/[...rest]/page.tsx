@@ -19,6 +19,8 @@ import {
 } from '@/src/config/locations';
 import { generateServiceMetadata } from '@/src/config/metadata';
 import { generateLocationMetadata } from '@/src/config/metadata';
+import Script from 'next/script';
+import { generateBreadcrumbSchema } from '@/src/lib/structured-data';
 
 type Props = {
   params: {
@@ -179,6 +181,70 @@ function parseServiceAndLocation(
   return { service: null, location: null };
 }
 
+function generateServiceSchema(service: ServiceType, category: CategoryType, locale: string, location?: LocationType) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const path = location 
+    ? `/${locale}/service/${service}/${category}/${location}`
+    : `/${locale}/service/${service}/${category}`;
+  const url = `${baseUrl}${path}`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: category === 'wedding' ? 'Wedding Photography' : 'Corporate Photography',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Jeremy Dan Photography',
+      image: `${baseUrl}/about-page/about-jeremydan-wedding-photographer-optimized-square.webp`,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Sceaux',
+        addressRegion: 'Île-de-France',
+        addressCountry: 'FR'
+      },
+      url: baseUrl
+    },
+    areaServed: {
+      '@type': 'State',
+      name: 'Île-de-France',
+      containsPlace: {
+        '@type': 'City',
+        name: location || 'Sceaux'
+      }
+    },
+    serviceType: category === 'wedding' ? 'Wedding Photography' : 'Corporate Photography',
+    url: url
+  };
+}
+
+function generateLocationSchema(location: LocationType, locale: string) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const url = `${baseUrl}/${locale}/location/${location}`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Jeremy Dan Photography',
+    image: `${baseUrl}/about-page/about-jeremydan-wedding-photographer-optimized-square.webp`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: location,
+      addressRegion: 'Île-de-France',
+      addressCountry: 'FR'
+    },
+    url: url,
+    areaServed: {
+      '@type': 'City',
+      name: location,
+      containedInPlace: {
+        '@type': 'State',
+        name: 'Île-de-France'
+      }
+    },
+    '@id': url
+  };
+}
+
 export default async function DynamicPage({ params: { locale, rest } }: Props) {
   if (rest.length > 2) {
     notFound();
@@ -203,10 +269,29 @@ export default async function DynamicPage({ params: { locale, rest } }: Props) {
         serviceWithCategory,
         category
       );
+      
+      const serviceSchema = generateServiceSchema(serviceWithCategory, category, locale);
+      const breadcrumbSchema = generateBreadcrumbSchema([
+        { name: 'Home', url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}` },
+        { name: `${category} ${serviceWithCategory}`, url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/service/${serviceWithCategory}/${category}` }
+      ]);
+
       return (
-        <div className='container mx-auto py-16'>
-          {ServiceComponent && <ServiceComponent />}
-        </div>
+        <>
+          <Script
+            id="service-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+          />
+          <Script
+            id="breadcrumb-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          />
+          <div className='container mx-auto py-16'>
+            {ServiceComponent && <ServiceComponent />}
+          </div>
+        </>
       );
     }
 
@@ -224,10 +309,29 @@ export default async function DynamicPage({ params: { locale, rest } }: Props) {
         serviceWithLocation,
         location
       );
+      
+      const locationSchema = generateLocationSchema(location, locale);
+      const breadcrumbSchema = generateBreadcrumbSchema([
+        { name: 'Home', url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}` },
+        { name: location, url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/location/${location}` }
+      ]);
+
       return (
-        <div className='container mx-auto py-16'>
-          {LocationComponent && <LocationComponent />}
-        </div>
+        <>
+          <Script
+            id="location-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }}
+          />
+          <Script
+            id="breadcrumb-structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          />
+          <div className='container mx-auto py-16'>
+            {LocationComponent && <LocationComponent />}
+          </div>
+        </>
       );
     }
 

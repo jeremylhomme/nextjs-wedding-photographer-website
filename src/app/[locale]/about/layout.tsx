@@ -1,51 +1,43 @@
 import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
-// Define locale-based metadata for the About page
-const aboutMetadata = {
-  fr: {
-    title: 'Mon Histoire | Jeremy Dan',
-    description: 'Découvrez mon parcours en tant que photographe de mariage à Sceaux dans les Hauts-de-Seine. Disponible région parisienne, France et international.',
-    keywords: [
-      'photographe histoire',
-      'parcours photographe',
-      'photographe mariage sceaux',
-      'photographe professionnel',
-      'jeremy dan photographe'
-    ]
-  },
-  en: {
-    title: 'My Story | Jeremy Dan',
-    description: 'Discover my journey as a wedding photographer in Sceaux, Hauts-de-Seine. Available in Paris region, France and internationally.',
-    keywords: [
-      'photographer story',
-      'photographer journey',
-      'wedding photographer sceaux',
-      'professional photographer',
-      'jeremy dan photographer'
-    ]
-  }
-};
+export async function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations('about-page');
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const url = `${siteUrl}/${params.locale}/about`;
 
-// Generate metadata based on locale parameter
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const locale = params.locale as 'fr' | 'en';
-  
+  // Get the raw value for keywords array
+  const rawMessages = await t.raw('metadata');
+
   return {
-    title: aboutMetadata[locale].title,
-    description: aboutMetadata[locale].description,
-    keywords: aboutMetadata[locale].keywords,
-    alternates: {
-      canonical: `/${locale}/about`,
-      languages: {
-        fr: '/fr/about',
-        en: '/en/about'
-      }
-    },
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    keywords: rawMessages.keywords,
     openGraph: {
-      title: aboutMetadata[locale].title,
-      description: aboutMetadata[locale].description,
-      url: `/${locale}/about`,
-      type: 'website'
+      title: t('metadata.openGraph.title'),
+      description: t('metadata.openGraph.description'),
+      type: 'website',
+      url: url,
+      siteName: t('metadata.openGraph.siteName'),
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: t('metadata.openGraph.alt')
+        }
+      ]
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: `${siteUrl}/fr/about`,
+        en: `${siteUrl}/en/about`
+      }
     }
   };
 }

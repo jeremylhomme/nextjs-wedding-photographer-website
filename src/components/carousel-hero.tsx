@@ -10,47 +10,48 @@ import { Skeleton } from '@/src/components/ui/skeleton';
 
 const CarouselHero: React.FC = () => {
   const t = useTranslations('carousel-hero');
+  const alt = useTranslations('alt-images');
 
   const heroImages = [
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-001-optimized.webp',
-      alt: t('alt1')
+      src: '/wedding/jeremydan-wedding-photographer-ca-036-optimized.webp',
+      alt: alt('wedding.ca.alt36')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-002-optimized.webp',
-      alt: t('alt2')
+      src: '/company/jeremydan-company-photographer-farm-011-optimized.webp',
+      alt: alt('company.farm.alt11')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-003-optimized.webp',
-      alt: t('alt3')
+      src: '/family/jeremydan-lifestyle-family-photographer-gf-010-optimized.webp',
+      alt: alt('family.gf.alt10')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-004-optimized.webp',
-      alt: t('alt4')
+      src: '/event/jeremydan-event-photographer-cc-058-optimized.webp',
+      alt: alt('event.cc.alt58')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-005-optimized.webp',
-      alt: t('alt5')
+      src: '/couple/jeremydan-couple-lifestyle-photographer-rt-025-optimized.webp',
+      alt: alt('couple.rt.alt25')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-006-optimized.webp',
-      alt: t('alt6')
+      src: '/company/jeremydan-company-photographer-df-004-optimized.webp',
+      alt: alt('company.df.alt4')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-007-optimized.webp',
-      alt: t('alt7')
+      src: '/wedding/jeremydan-wedding-photographer-mjb-004-optimized.webp',
+      alt: alt('wedding.mjb.alt4')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-008-optimized.webp',
-      alt: t('alt8')
+      src: '/couple/jeremydan-couple-lifestyle-photographer-wm-012-optimized.webp',
+      alt: alt('couple.wm.alt12')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-009-optimized.webp',
-      alt: t('alt9')
+      src: '/wedding/jeremydan-wedding-photographer-cf-007-optimized.webp',
+      alt: alt('wedding.cf.alt7')
     },
     {
-      src: '/carousel-hero/hero-jeremydan-wedding-photography-010-optimized.webp',
-      alt: t('alt10')
+      src: '/wedding/jeremydan-wedding-photographer-ce-033-optimized.webp',
+      alt: alt('wedding.ce.alt33')
     }
   ];
 
@@ -90,12 +91,6 @@ const CarouselHero: React.FC = () => {
             key={image.src}
             className='embla__slide relative flex h-full w-full items-center justify-center'
           >
-            <div className='absolute z-10 flex translate-y-[48%] justify-center'>
-              <h2 className='z-10 bg-black/20 px-4 py-2 font-serif text-5xl text-muted'>
-                {t('title')}
-              </h2>
-            </div>
-
             <div className='relative h-full w-full'>
               {!loadedImages[image.src] && (
                 <Skeleton className='absolute inset-0 h-full w-full rounded-none' />
@@ -112,6 +107,11 @@ const CarouselHero: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className='absolute top-[44%] z-10 flex w-full justify-center text-center'>
+        <h2 className='z-10 bg-black/20 px-4 py-2 font-serif text-5xl text-muted'>
+          {t('title')}
+        </h2>
       </div>
       <div className='embla__pagination'>
         <button className='embla__prev' onClick={scrollPrev}>

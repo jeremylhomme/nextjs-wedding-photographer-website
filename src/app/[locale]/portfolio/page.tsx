@@ -2,12 +2,11 @@
 import React from 'react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/src/components/ui/button';
 import ClientImageWrapper from '@/src/components/client-image-wrapper';
 import ImageModal from '@/src/components/image-modal';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/src/navigation';
-
+import Script from 'next/script';
+import { usePathname } from 'next/navigation';
 interface ImageProps {
   src: string;
   alt: string;
@@ -21,6 +20,8 @@ const PortfolioPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<ImageProps | null>(null);
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const t = useTranslations('portfolio-page');
+  const pathname = usePathname();
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
 
   const categories: Category[] = [
     'all',
@@ -134,10 +135,38 @@ const PortfolioPage: React.FC = () => {
     }
   ];
 
+
+
   const filteredImages =
     activeCategory === 'all'
       ? images
       : images.filter(image => image.category === activeCategory);
+
+  // Create image gallery schema for structured data
+  // ImageGallery schema for structured data
+  const imageGallerySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageGallery',
+    name: t('metadata.title'),
+    description: t('metadata.description'),
+    url: `${baseUrl}${pathname}`,
+    author: {
+      '@type': 'Person',
+      name: 'Jeremy Dan',
+      url: baseUrl
+    },
+    about: {
+      '@type': 'Thing',
+      name: 'Photography Portfolio',
+      description: t('metadata.description')
+    },
+    image: images.map(img => ({
+      '@type': 'ImageObject',
+      'contentUrl': `${baseUrl}${img.src}`,
+      'name': img.alt,
+      'description': img.alt
+    }))
+  };
 
   // Ensure we have enough images for the grid layout
   const displayedImages = filteredImages.slice(
@@ -146,77 +175,82 @@ const PortfolioPage: React.FC = () => {
   );
 
   return (
-    <div className='relative w-screen'>
-      <div className='relative h-[70vh] w-full'>
-        <ClientImageWrapper
-          src='/portfolio-page/portfolio-jeremydan-wedding-photography-001-optimized.webp'
-          alt='Hero image for blog'
-          className='h-[70vh] w-full object-cover object-center'
-        />
-        <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
-          <h1 className='font-serif text-4xl text-white md:text-5xl'>
-            {t('hero-title')}
-          </h1>
-        </div>
-      </div>
-      <div className='mx-auto max-w-7xl'>
-        <div className='my-16 flex flex-col justify-center px-8 text-center md:w-1/2 md:max-w-lg md:text-left'>
-          <h2 className='mb-8 font-serif text-3xl'>{t('subtitle')}</h2>
-          <p className='mb-8 text-muted-foreground'>{t('description')}</p>
-          <Link href='/contact'>
-            <Button>{t('button-label')}</Button>
-          </Link>
-        </div>
-
-        <div className='my-8 flex flex-wrap justify-center gap-2'>
-          {categories.map(category => (
-            <button
-              key={category}
-              onClick={() => {
-                setActiveCategory(category);
-              }}
-              className={`rounded-full px-4 py-2 text-sm transition-colors ${
-                activeCategory === category
-                  ? 'bg-primary text-primary-foreground'
-                  : 'border text-muted-foreground hover:bg-secondary hover:text-secondary-foreground'
-              }`}
-            >
-              {t(`categories.${category}`)}
-            </button>
-          ))}
-        </div>
-      </div>
-      {filteredImages.length === 0 ? (
-        <div className='flex items-center justify-center py-12'>
-          <p className='text-lg text-muted-foreground'>
-            {t('no-images-message')}
-          </p>
-        </div>
-      ) : (
-        <div className='mx-auto grid grid-cols-1 gap-4 px-4 pb-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-          {displayedImages.map(image => (
-            <motion.div
-              key={image.src}
-              onClick={() => setSelectedImage(image)}
-              className='group relative cursor-pointer overflow-hidden'
-            >
-              <div className='relative aspect-[3/4] w-full'>
-                <ClientImageWrapper
-                  src={image.src}
-                  alt={image.alt}
-                  className='absolute inset-0 h-full w-full object-cover object-center'
-                />
-                <div className='absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100' />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      )}
-      <ImageModal
-        selectedImage={selectedImage}
-        onClose={() => setSelectedImage(null)}
+    <>
+      <Script
+        id='image-gallery-schema'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
       />
-    </div>
+
+      <div className='relative w-screen'>
+        <div className='relative h-[70vh] w-full'>
+          <ClientImageWrapper
+            src='/portfolio-page/portfolio-jeremydan-wedding-photography-001-optimized.webp'
+            alt='Hero image for blog'
+            className='h-[70vh] w-full object-cover object-center'
+          />
+          <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
+            <h1 className='font-serif text-4xl text-white md:text-5xl'>
+              {t('hero-title')}
+            </h1>
+          </div>
+        </div>
+        <div className='mx-auto max-w-4xl'>
+          <div className='my-16 flex flex-col justify-center px-8 text-center'>
+            <h2 className='mb-8 font-serif text-3xl'>{t('subtitle')}</h2>
+            <p className='text-muted-foreground'>{t('description')}</p>
+          </div>
+
+          <div className='mb-16 flex flex-wrap justify-center gap-2'>
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => {
+                  setActiveCategory(category);
+                }}
+                className={`rounded-full px-4 py-2 text-sm transition-colors ${
+                  activeCategory === category
+                    ? 'bg-primary text-primary-foreground'
+                    : 'border text-muted-foreground hover:bg-secondary hover:text-secondary-foreground'
+                }`}
+              >
+                {t(`categories.${category}`)}
+              </button>
+            ))}
+          </div>
+        </div>
+        {filteredImages.length === 0 ? (
+          <div className='flex items-center justify-center py-12'>
+            <p className='text-lg text-muted-foreground'>
+              {t('no-images-message')}
+            </p>
+          </div>
+        ) : (
+          <div className='mx-auto grid grid-cols-1 gap-4 px-4 pb-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            {displayedImages.map(image => (
+              <motion.div
+                key={image.src}
+                onClick={() => setSelectedImage(image)}
+                className='group relative cursor-pointer overflow-hidden'
+              >
+                <div className='relative aspect-[3/4] w-full'>
+                  <ClientImageWrapper
+                    src={image.src}
+                    alt={image.alt}
+                    className='absolute inset-0 h-full w-full object-cover object-center'
+                  />
+                  <div className='absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100' />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
+        <ImageModal
+          selectedImage={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      </div>
+    </>
   );
 };
 

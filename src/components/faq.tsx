@@ -71,11 +71,7 @@ export default function FAQ({ categories }: FAQProps = {}) {
       answer: t('cp.behavior-answer'),
       category: 'company'
     },
-    {
-      question: t('cp.itw'),
-      answer: t('cp.itw-answer'),
-      category: 'company'
-    },
+
     {
       question: t('cp.size'),
       answer: t('cp.size-answer'),
@@ -94,11 +90,6 @@ export default function FAQ({ categories }: FAQProps = {}) {
     {
       question: t('gn.book'),
       answer: t('gn.book-answer'),
-      category: 'general'
-    },
-    {
-      question: t('gn.steps'),
-      answer: t('gn.steps-answer'),
       category: 'general'
     },
     {

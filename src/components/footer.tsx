@@ -49,6 +49,11 @@ export default function Footer() {
         name: 'TikTok',
         href: 'https://www.tiktok.com/@jeremydanphoto',
         icon: 'tiktok'
+      },
+      {
+        name: 'Whatsapp',
+        href: 'https://wa.me/33650056891',
+        icon: 'whatsapp'
       }
     ],
     labels: [

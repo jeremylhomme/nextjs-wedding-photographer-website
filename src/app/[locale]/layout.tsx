@@ -8,7 +8,6 @@ import { Toaster } from 'sonner';
 import { notFound } from 'next/navigation';
 import { routing } from '@/src/i18n/routing';
 import { LoadingProvider } from '@/src/components/providers/loading-provider';
-import StructuredData from '@/src/components/structured-data';
 
 if (!process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY) {
   throw new Error('NEXT_PUBLIC_CAPTCHA_SITE_KEY is not configured');
@@ -24,8 +23,7 @@ export const viewport: Viewport = {
 // Define locale-based metadata for the home page
 const localeMetadata = {
   fr: {
-    title:
-      'Jeremy Dan | Photographe et Vidéaste à Sceaux (92) - Hauts-de-Seine',
+    title: 'Jeremy Dan | Photographe à Sceaux (92) - Hauts-de-Seine',
     description:
       'Photographe de Mariage basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
     keywords: [
@@ -35,7 +33,14 @@ const localeMetadata = {
       'photographe lifestyle sceaux',
       'photographe événementiel sceaux',
       'photographe 92',
-      'photographe hauts-de-seine'
+      'photographe hauts-de-seine',
+      'vidéaste sceaux',
+      'vidéaste mariage sceaux',
+      'vidéaste entreprise sceaux',
+      'vidéaste lifestyle sceaux',
+      'vidéaste événementiel sceaux',
+      'vidéaste 92',
+      'vidéaste hauts-de-seine'
     ]
   },
   en: {
@@ -50,7 +55,14 @@ const localeMetadata = {
       'lifestyle photographer sceaux',
       'event photographer sceaux',
       'photographer 92',
-      'photographer hauts-de-seine'
+      'photographer hauts-de-seine',
+      'videographer sceaux',
+      'wedding videographer sceaux',
+      'corporate videographer sceaux',
+      'lifestyle videographer sceaux',
+      'event videographer sceaux',
+      'videographer 92',
+      'videographer hauts-de-seine'
     ]
   }
 };
@@ -65,7 +77,7 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(
-      process.env.NEXT_PUBLIC_NEXT_PUBLIC_SITE_URL ||
+      process.env.NEXT_PUBLIC_SITE_URL ||
         'https://jeremydan.fr' ||
         'https://localhost:3000'
     ),
@@ -131,7 +143,6 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   return (
     <>
-      <StructuredData />
       <LoadingProvider>
         <NextIntlClientProvider messages={messages}>
           <Header />

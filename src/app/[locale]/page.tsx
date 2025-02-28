@@ -16,6 +16,12 @@ import { getLocalizedService } from '@/src/config/services';
 import { serviceGroups } from '@/src/config/service-groups';
 import { categories, getLocalizedCategory } from '@/src/config/categories';
 import { ServicePopupMenu } from '@/src/components/ui/service-popup-menu';
+import { Metadata } from 'next';
+import Script from 'next/script';
+import {
+  generateWebsiteSchema,
+  generateLocalBusinessSchema
+} from '@/src/lib/structured-data';
 
 interface PhotoTileProps {
   src: string;
@@ -29,7 +35,45 @@ interface HomePageProps {
   };
 }
 
+export async function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations('home-page');
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const url = `${siteUrl}/${params.locale}`;
+
+  return {
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    openGraph: {
+      title: t('metadata.openGraph.title'),
+      description: t('metadata.openGraph.description'),
+      type: 'website',
+      url: url,
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: t('metadata.openGraph.alt')
+        }
+      ]
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: `${siteUrl}/fr`,
+        en: `${siteUrl}/en`
+      }
+    }
+  };
+}
+
 const HomePage = async ({ params }: HomePageProps) => {
+  const alt = await getTranslations('alt-images');
   const t = await getTranslations('home-page');
   const pt = await getTranslations('photo-tiles');
   const fs = await getTranslations('faq-section');
@@ -38,6 +82,32 @@ const HomePage = async ({ params }: HomePageProps) => {
 
   // Get the latest 3 blog posts
   const latestPosts = posts.slice(0, 3);
+
+  // Generate structured data using the metadata from generateMetadata
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const url = `${siteUrl}/${params.locale}`;
+  const metadata = {
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    openGraph: {
+      title: t('metadata.openGraph.title'),
+      description: t('metadata.openGraph.description'),
+      type: 'website',
+      url: url,
+      siteName: t('metadata.openGraph.siteName'),
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: t('metadata.openGraph.alt')
+        }
+      ]
+    }
+  };
+
+  const websiteSchema = generateWebsiteSchema(metadata);
+  const localBusinessSchema = generateLocalBusinessSchema(metadata);
 
   const images: PhotoTileProps[] = [
     {
@@ -123,8 +193,8 @@ const HomePage = async ({ params }: HomePageProps) => {
       <div className='mx-auto flex max-w-5xl flex-col-reverse border-b md:flex-row md:gap-16 md:border-0 md:py-16'>
         <div className='relative h-[50vh] pb-8 sm:h-[60vh] md:mx-0 md:w-[80%] md:pb-0'>
           <ClientImageWrapper
-            src='/home-page/subhero-jeremydan-wedding-photography-001-optimized.webp'
-            alt='Two people hanging upside down'
+            src='/profil/jeremydan-photographer-sceaux-002-optimized.webp'
+            alt={alt(`profil.alt2`)}
             className='h-full w-full object-cover md:border md:p-4'
           />
         </div>
@@ -133,9 +203,7 @@ const HomePage = async ({ params }: HomePageProps) => {
             {t('subtitle')}
           </h2>
           <p className='text-muted-foreground md:mt-0'>{t('description1')}</p>
-          <p className='mt-4 text-muted-foreground'>{t('description2')}</p>
-          <p className='mt-4 pb-8 text-muted-foreground'>{t('description3')}</p>
-
+          <p className='mb-8 mt-4 text-muted-foreground'>{t('description2')}</p>
           <Button variant='default' size='default' className='w-fit md:mx-0'>
             <Link href='/about'>{t('button-label')}</Link>
           </Button>
@@ -167,9 +235,9 @@ const HomePage = async ({ params }: HomePageProps) => {
             className='h-full w-full object-cover'
           />
         </div>
+        <p className='mt-4 text-muted-foreground'>{t('description3')}</p>
+        <p className='mt-4 text-muted-foreground'>{t('description4')}</p>
         <p className='mt-4 text-muted-foreground'>{t('description5')}</p>
-        <p className='mt-4 text-muted-foreground'>{t('description6')}</p>
-        <p className='mt-4 text-muted-foreground'>{t('description7')}</p>
         <Button variant='default' size='default' className='mt-8 w-fit md:mx-0'>
           <Link href='/contact'>{t('button-label2')}</Link>
         </Button>
@@ -208,6 +276,18 @@ const HomePage = async ({ params }: HomePageProps) => {
         </div>
         <FAQ />
       </div>
+      <Script
+        id='website-schema'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <Script
+        id='local-business-schema'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema)
+        }}
+      />
     </div>
   );
 };

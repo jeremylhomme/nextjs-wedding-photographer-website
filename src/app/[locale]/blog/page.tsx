@@ -5,6 +5,48 @@ import { Link } from '@/src/navigation';
 import GridBlog from '@/src/components/grid-blog';
 import { getTranslations } from 'next-intl/server';
 import { translateCategory, normalizeCategory } from '@/src/lib/categories';
+import { Metadata } from 'next';
+import Script from 'next/script';
+import {
+  generateWebsiteSchema,
+  generateBreadcrumbSchema
+} from '@/src/lib/structured-data';
+
+export async function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations('blog-page');
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const url = `${siteUrl}/${params.locale}/blog`;
+
+  return {
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    openGraph: {
+      title: t('metadata.openGraph.title'),
+      description: t('metadata.openGraph.description'),
+      type: 'website',
+      url: url,
+      images: [
+        {
+          url: '/blog-page/blog-jeremydan-wedding-photography-001-optimized.webp',
+          width: 1200,
+          height: 630,
+          alt: t('metadata.openGraph.alt')
+        }
+      ]
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: `${siteUrl}/fr/blog`,
+        en: `${siteUrl}/en/blog`
+      }
+    }
+  };
+}
 
 export default async function BlogPage({
   params,
@@ -15,6 +57,7 @@ export default async function BlogPage({
 }) {
   const posts = await getBlogPosts(params.locale);
   const t = await getTranslations('blog-page');
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
 
   // Get the category from the URL query parameter
   const selectedCategory = searchParams.category?.toLowerCase();
@@ -37,8 +80,79 @@ export default async function BlogPage({
     post => normalizeCategory(post.category) === 'article'
   );
 
+  // Create metadata object to pass to structured data
+  const pageMetadata = {
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    openGraph: {
+      title: t('metadata.title'),
+      description: t('metadata.description'),
+      type: 'website',
+      url: `${siteUrl}/${params.locale}/blog`,
+      siteName: t('metadata.openGraph.siteName'),
+      images: [
+        {
+          url: '/blog-page/blog-jeremydan-wedding-photography-001-optimized.webp',
+          width: 1200,
+          height: 630,
+          alt: t('metadata.openGraph.alt')
+        }
+      ]
+    }
+  };
+
+  // Generate structured data
+  const websiteSchema = generateWebsiteSchema(pageMetadata);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: t('home'), url: `${siteUrl}/${params.locale}` },
+    { name: t('blog-title'), url: `${siteUrl}/${params.locale}/blog` }
+  ]);
+
+  // Generate blog listing schema
+  const blogListingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: filteredPosts.map((post, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'BlogPosting',
+        '@id': `${siteUrl}/${params.locale}/blog/${post.slug}`,
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.date,
+        dateModified: post.lastModified || post.date,
+        author: {
+          '@type': 'Person',
+          name: 'Jeremy Dan',
+          url: `${siteUrl}/${params.locale}`
+        },
+        image: post.coverImage,
+        url: `${siteUrl}/${params.locale}/blog/${post.slug}`,
+        articleSection: post.category,
+        inLanguage: params.locale
+      }
+    }))
+  };
+
   return (
     <div className='relative w-screen'>
+      <Script
+        id='website-structured-data'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <Script
+        id='breadcrumb-structured-data'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id='blog-listing-structured-data'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListingSchema) }}
+      />
+
       <div className='relative h-[70vh] w-full'>
         <ClientImageWrapper
           src='/blog-page/blog-jeremydan-wedding-photography-001-optimized.webp'

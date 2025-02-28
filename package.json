@@ -25,6 +25,7 @@
     "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@sendgrid/mail": "^8.1.4",
+    "@sentry/core": "^9.2.0",
     "@sentry/nextjs": "^8",
     "@types/mdx": "^2.0.13",
     "class-variance-authority": "^0.7.0",

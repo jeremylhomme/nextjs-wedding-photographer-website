@@ -35,12 +35,11 @@ export default async function handler(
     last_name,
     email,
     event_date,
-    event_location,
-    fixed_date,
-    guests_number,
+    work_type,
+    work_category,
     knowing_source,
     message,
-    project_type,
+    terms_accepted,
     recaptchaToken
   } = req.body;
 
@@ -50,10 +49,11 @@ export default async function handler(
     !last_name ||
     !email ||
     !event_date ||
-    !event_location ||
-    !fixed_date ||
+    !work_type ||
+    !work_category ||
+    !knowing_source ||
     !message ||
-    !project_type
+    !terms_accepted
   ) {
     return res.status(400).json({ error: 'All fields are required' });
   }
@@ -113,12 +113,11 @@ export default async function handler(
         last_name: escapeHandlebars(last_name),
         email: escapeHandlebars(email),
         event_date: event_date ? new Date(event_date).toLocaleDateString() : '',
-        event_location: escapeHandlebars(event_location),
-        fixed_date: escapeHandlebars(fixed_date),
-        guests_number: guests_number?.toString() || '',
+        work_type: escapeHandlebars(work_type),
+        work_category: escapeHandlebars(work_category),
         knowing_source: escapeHandlebars(knowing_source),
         message: escapeHandlebars(message),
-        project_type: escapeHandlebars(project_type)
+        terms_accepted: escapeHandlebars(terms_accepted)
       }
     };
     console.log('Email data prepared:', emailData);

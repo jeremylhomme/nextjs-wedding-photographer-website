@@ -38,7 +38,7 @@ const Header: React.FC = () => {
       <div className='container mx-auto flex w-[90%] items-center justify-between px-4'>
         <div className='flex'>
           <Link href='/'>
-            <h1 className='text-lg font-semibold uppercase'>Jeremy Dan</h1>
+            <h2 className='text-lg font-semibold uppercase'>Jeremy Dan</h2>
           </Link>
         </div>
         <div className='flex items-center'>

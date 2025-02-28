@@ -1,51 +1,43 @@
 import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
-// Define locale-based metadata for the Portfolio page
-const portfolioMetadata = {
-  fr: {
-    title: 'Portfolio | Jeremy Dan',
-    description: 'Découvrez mon portfolio de photographie. Mariage, corporate, événementiel et lifestyle à Sceaux et en région parisienne.',
-    keywords: [
-      'portfolio photographe',
-      'photos mariage',
-      'photos corporate',
-      'photos événementiel',
-      'portfolio jeremy dan'
-    ]
-  },
-  en: {
-    title: 'Portfolio | Jeremy Dan',
-    description: 'Discover my photography portfolio. Wedding, corporate, event and lifestyle photography in Sceaux and Paris region.',
-    keywords: [
-      'photographer portfolio',
-      'wedding photos',
-      'corporate photos',
-      'event photos',
-      'jeremy dan portfolio'
-    ]
-  }
-};
+export async function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations('portfolio-page');
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const url = `${siteUrl}/${params.locale}/portfolio`;
 
-// Generate metadata based on locale parameter
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const locale = params.locale as 'fr' | 'en';
-  
+  // Get the raw value for keywords array
+  const rawMessages = await t.raw('metadata');
+
   return {
-    title: portfolioMetadata[locale].title,
-    description: portfolioMetadata[locale].description,
-    keywords: portfolioMetadata[locale].keywords,
-    alternates: {
-      canonical: `/${locale}/portfolio`,
-      languages: {
-        fr: '/fr/portfolio',
-        en: '/en/portfolio'
-      }
-    },
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    keywords: rawMessages.keywords,
     openGraph: {
-      title: portfolioMetadata[locale].title,
-      description: portfolioMetadata[locale].description,
-      url: `/${locale}/portfolio`,
-      type: 'website'
+      title: t('metadata.openGraph.title'),
+      description: t('metadata.openGraph.description'),
+      type: 'website',
+      url: url,
+      siteName: t('metadata.openGraph.siteName'),
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: t('metadata.openGraph.alt')
+        }
+      ]
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: `${siteUrl}/fr/portfolio`,
+        en: `${siteUrl}/en/portfolio`
+      }
     }
   };
 }

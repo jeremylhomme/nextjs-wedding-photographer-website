@@ -8,6 +8,11 @@ import { translateCategory, normalizeCategory } from '@/src/lib/categories';
 import { Locale } from '@/src/i18n/routing';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import {
+  generateBlogPostSchema,
+  generateBreadcrumbSchema
+} from '@/src/lib/structured-data';
+import Script from 'next/script';
 
 interface PageProps {
   params: { locale: Locale; slug: string };
@@ -19,6 +24,8 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const cleanSlug = params.slug.split('/').pop() || params.slug;
   const { meta } = await getBlogPost(params.locale, cleanSlug);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const url = `${siteUrl}/${params.locale}/blog/${cleanSlug}`;
 
   return {
     title: meta.title,
@@ -37,7 +44,15 @@ export async function generateMetadata({
           height: 630,
           alt: meta.title
         }
-      ]
+      ],
+      url: url
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: `${siteUrl}/fr/blog/${cleanSlug}`,
+        en: `${siteUrl}/en/blog/${cleanSlug}`
+      }
     }
   };
 }
@@ -48,47 +63,66 @@ const BlogPost = async ({ params }: PageProps) => {
 
   try {
     const { meta, content } = await getBlogPost(params.locale, cleanSlug);
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+    const url = `${siteUrl}/${params.locale}/blog/${cleanSlug}`;
 
-    const jsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      headline: meta.title,
-      image: meta.coverImage,
-      datePublished: meta.date,
-      dateModified: meta.lastModified || meta.date,
-      ...(meta.weddingDate && {
-        about: {
-          '@type': 'Event',
-          '@context': 'https://schema.org',
-          eventType: 'Wedding',
-          startDate: meta.weddingDate
-        }
-      }),
-      author: {
-        '@type': 'Person',
-        name: 'Jeremy Dan',
-        url: 'https://jeremydan.fr'
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Jeremy Dan Photography',
-        url: 'https://jeremydan.fr'
+    // Create metadata object that can be passed to structured data
+    const pageMetadata = {
+      title: meta.title,
+      description: meta.excerpt,
+      openGraph: {
+        title: meta.title,
+        description: meta.excerpt,
+        type: 'article',
+        url: url,
+        images: [
+          {
+            url: meta.coverImage,
+            width: 1200,
+            height: 630,
+            alt: meta.title
+          }
+        ]
       }
     };
 
+    // Generate structured data for the blog post
+    const blogPostSchema = generateBlogPostSchema(
+      meta.title,
+      meta.excerpt,
+      url,
+      meta.date,
+      meta.lastModified || null,
+      'Jeremy Dan',
+      `${siteUrl}/${params.locale}`,
+      meta.coverImage,
+      meta.category
+    );
+
+    // Generate breadcrumb structured data
+    const breadcrumbSchema = generateBreadcrumbSchema([
+      { name: t('bc-home'), url: `${siteUrl}/${params.locale}` },
+      { name: t('bc-blogPage'), url: `${siteUrl}/${params.locale}/blog` },
+      { name: meta.title, url: url }
+    ]);
+
     return (
-      <article className='container mx-auto px-6 py-16'>
-        <script
+      <div className='mx-auto max-w-7xl px-4 py-8 md:px-6 lg:px-8'>
+        <Script
+          id='blog-post-structured-data'
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
         />
+        <Script
+          id='breadcrumb-structured-data'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
         <Breadcrumbs
           items={[
-            { label: 'Blog', href: `/blog` },
-            {
-              label: translateCategory(meta.category, params.locale),
-              href: `/blog?category=${normalizeCategory(meta.category)}`
-            },
+            { label: t('bc-home'), href: '/' },
+            { label: t('bc-blogPage'), href: '/blog' },
             { label: meta.title, href: `/blog/${cleanSlug}` }
           ]}
         />
@@ -126,11 +160,14 @@ const BlogPost = async ({ params }: PageProps) => {
                 <>
                   {' | '}
                   {t('last-modified')}{' '}
-                  {new Date(meta.lastModified).toLocaleDateString(params.locale, {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}
+                  {new Date(meta.lastModified).toLocaleDateString(
+                    params.locale,
+                    {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    }
+                  )}
                 </>
               )}
             </span>
@@ -143,7 +180,9 @@ const BlogPost = async ({ params }: PageProps) => {
           </Link>
           {meta.category.toLowerCase() === 'wedding' && meta.weddingDate && (
             <span className='rounded-full bg-secondary px-3 py-1 text-xs text-secondary-foreground'>
-              <span className='text-secondary-foreground'>{t('wedding-date')} </span>
+              <span className='text-secondary-foreground'>
+                {t('wedding-date')}{' '}
+              </span>
               <time dateTime={meta.weddingDate}>
                 {new Date(meta.weddingDate).toLocaleDateString(params.locale, {
                   year: 'numeric',
@@ -160,7 +199,7 @@ const BlogPost = async ({ params }: PageProps) => {
         </div>
 
         <BlogFooter />
-      </article>
+      </div>
     );
   } catch (error) {
     console.error('Blog post error:', error);

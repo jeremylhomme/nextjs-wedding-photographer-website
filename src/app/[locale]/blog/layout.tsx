@@ -1,51 +1,41 @@
 import { Metadata } from 'next';
-
-// Define locale-based metadata for the Blog page
-const blogMetadata = {
-  fr: {
-    title: 'Blog | Jeremy Dan',
-    description: 'Découvrez mon blog de photographie. Conseils, astuces et récits de séances photo à Sceaux et en région parisienne.',
-    keywords: [
-      'blog photographe',
-      'conseils photo mariage',
-      'astuces photographie',
-      'blog jeremy dan',
-      'photographe blog'
-    ]
-  },
-  en: {
-    title: 'Blog | Jeremy Dan',
-    description: 'Discover my photography blog. Tips, tricks and stories from photo sessions in Sceaux and Paris region.',
-    keywords: [
-      'photographer blog',
-      'wedding photo tips',
-      'photography advice',
-      'jeremy dan blog',
-      'photography blog'
-    ]
-  }
-};
+import { getTranslations } from 'next-intl/server';
 
 // Generate metadata based on locale parameter
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const locale = params.locale as 'fr' | 'en';
-  
+export async function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations('blog-page');
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+  const url = `${siteUrl}/${params.locale}/blog`;
+
   return {
-    title: blogMetadata[locale].title,
-    description: blogMetadata[locale].description,
-    keywords: blogMetadata[locale].keywords,
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+    keywords: t.raw('metadata.keywords'),
     alternates: {
-      canonical: `/${locale}/blog`,
+      canonical: url,
       languages: {
-        fr: '/fr/blog',
-        en: '/en/blog'
+        fr: `${siteUrl}/fr/blog`,
+        en: `${siteUrl}/en/blog`
       }
     },
     openGraph: {
-      title: blogMetadata[locale].title,
-      description: blogMetadata[locale].description,
-      url: `/${locale}/blog`,
-      type: 'website'
+      title: t('metadata.openGraph.title'),
+      description: t('metadata.openGraph.description'),
+      url: url,
+      type: 'website',
+      siteName: t('metadata.openGraph.siteName'),
+      images: [
+        {
+          url: '/blog-page/blog-jeremydan-wedding-photography-001-optimized.webp',
+          width: 1200,
+          height: 630,
+          alt: t('metadata.openGraph.alt')
+        }
+      ]
     }
   };
 }
