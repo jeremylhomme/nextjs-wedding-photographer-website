@@ -1,13 +1,13 @@
 import { MetadataRoute } from 'next';
 import { locales } from '@/src/i18n/routing';
+import { getBlogPosts, type BlogPost } from '@/src/lib/mdx';
 
 // Mock data - Replace with your actual data
 const services = ['wedding', 'corporate', 'family'];
 const locations = ['sceaux', 'hauts-de-seine', 'paris'];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
   const currentDate = new Date().toISOString();
 
   const routes: MetadataRoute.Sitemap = [];
@@ -33,6 +33,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
           priority: 0.9
         });
       }
+    }
+
+    // Add blog posts routes
+    const blogPosts = await getBlogPosts(locale);
+    for (const post of blogPosts) {
+      routes.push({
+        url: `${baseUrl}/${locale}/blog/${post.slug}`,
+        lastModified: post.date || currentDate,
+        changeFrequency: 'weekly',
+        priority: 0.8
+      });
     }
   }
 

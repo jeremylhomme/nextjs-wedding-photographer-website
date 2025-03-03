@@ -53,12 +53,7 @@ export default function RootLayout({
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}`}
           strategy='beforeInteractive'
         />
-        <Script
-          defer
-          src='https://cloud.umami.is/script.js'
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-          strategy='afterInteractive'
-        />
+
       </head>
       <body
         suppressHydrationWarning
