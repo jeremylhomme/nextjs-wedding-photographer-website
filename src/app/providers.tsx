@@ -10,11 +10,16 @@ import { PostHogProvider as PHProvider } from 'posthog-js/react';
 
 export function PostHogProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // Only initialize PostHog in production and on the actual domain
-    if (typeof window !== 'undefined' && window.location.hostname === 'jeremydan.fr') {
+    // Only initialize PostHog in production environment
+    if (process.env.NODE_ENV === 'production' && 
+        !window.location.host.includes('localhost') && 
+        !window.location.host.includes('127.0.0.1')
+    ) {
       posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
-        api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
-        person_profiles: 'identified_only',
+        api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com',
+        loaded: (posthog) => {
+          if (process.env.NODE_ENV === 'development') posthog.debug();
+        },
         capture_pageview: false, // Disable automatic pageview capture, as we capture manually
       });
     }
@@ -35,13 +40,22 @@ function PostHogPageView() {
 
   // Track pageviews
   useEffect(() => {
-    if (pathname && posthog) {
-      let url = window.origin + pathname;
-      if (searchParams?.toString()) {
-        url = url + '?' + searchParams.toString();
-      }
+    if (pathname) {
+      // Check if PostHog is loaded
+      if (posthog && posthog.capture) {
+        let url = window.origin + pathname;
+        if (searchParams?.toString()) {
+          url = url + '?' + searchParams.toString();
+        }
 
-      posthog.capture('$pageview', { $current_url: url });
+        // Add more properties for better analytics
+        posthog.capture('$pageview', {
+          $current_url: url,
+          $pathname: pathname,
+          $search_params: searchParams?.toString() || '',
+          locale: pathname.split('/')[1] || 'fr' // Extract locale from URL
+        });
+      }
     }
   }, [pathname, searchParams, posthog]);
 
