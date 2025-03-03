@@ -26,13 +26,122 @@ const getLocalizedCategory = (category, locale) =>
 const getLocalizedLocation = (location, locale) =>
   locationTranslations[location][locale];
 
+const fs = require('fs');
+const path = require('path');
+
+const matter = require('gray-matter');
+
+const getBlogPosts = () => {
+  const blogDir = path.join(process.cwd(), 'src/content/blog');
+  const locales = ['fr', 'en'];
+  const posts = [];
+
+  locales.forEach(locale => {
+    const localePath = path.join(blogDir, locale);
+    if (fs.existsSync(localePath)) {
+      const files = fs.readdirSync(localePath);
+      files.forEach(file => {
+        if (file.endsWith('.mdx')) {
+          const fullPath = path.join(localePath, file);
+          const fileContents = fs.readFileSync(fullPath, 'utf8');
+          const { data } = matter(fileContents);
+          const slug = file.replace('.mdx', '');
+          
+          // Convert date from MM/DD/YYYY to ISO format
+          const formatDate = (dateStr) => {
+            const [month, day, year] = dateStr.split('/');
+            return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+          };
+
+          posts.push({
+            url: `/${locale}/blog/${slug}`,
+            lastmod: formatDate(data.lastModified || data.date),
+            category: data.category,
+          });
+        }
+      });
+    }
+  });
+
+  return posts;
+};
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr',
   generateRobotsTxt: true,
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/*', '/_next/*', '/static/*', '/public/*']
+      }
+    ],
+    additionalSitemaps: [
+      `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}/sitemap.xml`,
+    ],
+  },
   changefreq: 'weekly',
   priority: 0.7,
   exclude: ['/api/*', '/fr/api/*', '/en/api/*'],
+  transform: async (config, url) => {
+    // Get all blog posts with their metadata
+    const blogPosts = getBlogPosts();
+    const matchingPost = blogPosts.find(post => url.endsWith(post.url));
+    
+    if (matchingPost) {
+      // Wedding posts get highest priority, articles slightly lower
+      const priority = matchingPost.category === 'wedding' ? 0.9 : 0.8;
+      // Wedding posts are updated less frequently than articles
+      const changefreq = matchingPost.category === 'wedding' ? 'monthly' : 'weekly';
+      
+      return {
+        loc: url,
+        changefreq,
+        priority,
+        lastmod: matchingPost.lastmod,
+      };
+    }
+
+    // Homepage and main sections get high priority
+    if (url === config.siteUrl || url.match(/\/(fr|en)$/)) {
+      return {
+        loc: url,
+        changefreq: 'daily',
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      };
+    }
+
+    // Portfolio and main service pages
+    if (url.includes('/portfolio') || url.match(/\/(photographe|photographer)\/(?!(sceaux|hauts-de-seine|paris))/)) {
+      return {
+        loc: url,
+        changefreq: 'weekly',
+        priority: 0.9,
+        lastmod: new Date().toISOString(),
+      };
+    }
+
+    // Location-specific service pages
+    if (url.match(/\/(photographe|photographer)\/(sceaux|hauts-de-seine|paris)/)) {
+      return {
+        loc: url,
+        changefreq: 'weekly',
+        priority: 0.75,
+        lastmod: new Date().toISOString(),
+      };
+    }
+
+    // Default transformation
+    return {
+      loc: url,
+      changefreq: config.changefreq,
+      priority: config.priority,
+      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+    };
+  },
   alternateRefs: [
     {
       href: process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr',
@@ -90,16 +199,12 @@ module.exports = {
         }
       }
 
-      // Add blog post pages - hardcoded for now
-      const blogSlugs = [
-        'article-engagement-session-why-and-how-to-plan-before-your-wedding',
-        'wedding-domaine-gillardiere',
-        'wedding-levallois-perret'
-      ];
-
-      for (const slug of blogSlugs) {
+      // Add blog post pages dynamically
+      const blogPosts = getBlogPosts();
+      const localeBlogPosts = blogPosts.filter(post => post.url.startsWith(`/${locale}`));
+      for (const post of localeBlogPosts) {
         paths.push({
-          loc: `/${locale}/blog/${slug}`
+          loc: post.url
         });
       }
     }

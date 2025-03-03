@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 import {
   getLocalizedService,
@@ -181,9 +180,14 @@ function parseServiceAndLocation(
   return { service: null, location: null };
 }
 
-function generateServiceSchema(service: ServiceType, category: CategoryType, locale: string, location?: LocationType) {
+function generateServiceSchema(
+  service: ServiceType,
+  category: CategoryType,
+  locale: string,
+  location?: LocationType
+) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-  const path = location 
+  const path = location
     ? `/${locale}/service/${service}/${category}/${location}`
     : `/${locale}/service/${service}/${category}`;
   const url = `${baseUrl}${path}`;
@@ -191,7 +195,8 @@ function generateServiceSchema(service: ServiceType, category: CategoryType, loc
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: category === 'wedding' ? 'Wedding Photography' : 'Corporate Photography',
+    name:
+      category === 'wedding' ? 'Wedding Photography' : 'Corporate Photography',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Jeremy Dan Photography',
@@ -212,7 +217,8 @@ function generateServiceSchema(service: ServiceType, category: CategoryType, loc
         name: location || 'Sceaux'
       }
     },
-    serviceType: category === 'wedding' ? 'Wedding Photography' : 'Corporate Photography',
+    serviceType:
+      category === 'wedding' ? 'Wedding Photography' : 'Corporate Photography',
     url: url
   };
 }
@@ -269,24 +275,33 @@ export default async function DynamicPage({ params: { locale, rest } }: Props) {
         serviceWithCategory,
         category
       );
-      
-      const serviceSchema = generateServiceSchema(serviceWithCategory, category, locale);
+
+      const serviceSchema = generateServiceSchema(
+        serviceWithCategory,
+        category,
+        locale
+      );
       const breadcrumbSchema = generateBreadcrumbSchema([
         { name: 'Home', url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}` },
-        { name: `${category} ${serviceWithCategory}`, url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/service/${serviceWithCategory}/${category}` }
+        {
+          name: `${category} ${serviceWithCategory}`,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/service/${serviceWithCategory}/${category}`
+        }
       ]);
 
       return (
         <>
           <Script
-            id="service-structured-data"
-            type="application/ld+json"
+            id='service-structured-data'
+            type='application/ld+json'
             dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
           />
           <Script
-            id="breadcrumb-structured-data"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            id='breadcrumb-structured-data'
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(breadcrumbSchema)
+            }}
           />
           <div className='container mx-auto py-16'>
             {ServiceComponent && <ServiceComponent />}
@@ -309,24 +324,29 @@ export default async function DynamicPage({ params: { locale, rest } }: Props) {
         serviceWithLocation,
         location
       );
-      
+
       const locationSchema = generateLocationSchema(location, locale);
       const breadcrumbSchema = generateBreadcrumbSchema([
         { name: 'Home', url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}` },
-        { name: location, url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/location/${location}` }
+        {
+          name: location,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/location/${location}`
+        }
       ]);
 
       return (
         <>
           <Script
-            id="location-structured-data"
-            type="application/ld+json"
+            id='location-structured-data'
+            type='application/ld+json'
             dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }}
           />
           <Script
-            id="breadcrumb-structured-data"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            id='breadcrumb-structured-data'
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(breadcrumbSchema)
+            }}
           />
           <div className='container mx-auto py-16'>
             {LocationComponent && <LocationComponent />}
