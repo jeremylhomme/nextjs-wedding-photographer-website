@@ -19,9 +19,12 @@ const locationTranslations = {
   paris: { fr: 'paris', en: 'paris' }
 };
 
-const getLocalizedService = (service, locale) => serviceTranslations[service][locale];
-const getLocalizedCategory = (category, locale) => categoryTranslations[category][locale];
-const getLocalizedLocation = (location, locale) => locationTranslations[location][locale];
+const getLocalizedService = (service, locale) =>
+  serviceTranslations[service][locale];
+const getLocalizedCategory = (category, locale) =>
+  categoryTranslations[category][locale];
+const getLocalizedLocation = (location, locale) =>
+  locationTranslations[location][locale];
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
@@ -93,7 +96,7 @@ module.exports = {
         'wedding-domaine-gillardiere',
         'wedding-levallois-perret'
       ];
-      
+
       for (const slug of blogSlugs) {
         paths.push({
           loc: `/${locale}/blog/${slug}`
@@ -124,9 +127,9 @@ module.exports = {
         dynamicPriority = 0.8;
       } else if (path.loc.match(/\/(photographe|photographer)\//)) {
         if (path.loc.match(/\/(mariage|wedding)\//)) {
-          dynamicPriority = 0.9; // Wedding pages get highest priority
+          dynamicPriority = 0.9;
         } else {
-          dynamicPriority = 0.8; // Other service pages
+          dynamicPriority = 0.8;
         }
       }
 
