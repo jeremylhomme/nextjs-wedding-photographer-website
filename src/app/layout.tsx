@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Inter, Crimson_Text, Quattrocento } from 'next/font/google';
 import cn from 'classnames';
+import { PostHogProvider } from './providers';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -53,7 +54,6 @@ export default function RootLayout({
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}`}
           strategy='beforeInteractive'
         />
-
       </head>
       <body
         suppressHydrationWarning
@@ -65,7 +65,7 @@ export default function RootLayout({
         )}
         style={{ minWidth: '320px' }}
       >
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
   );
