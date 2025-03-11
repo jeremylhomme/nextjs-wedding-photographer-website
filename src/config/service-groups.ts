@@ -5,7 +5,6 @@ export const serviceGroups: Record<CategoryType, ServiceType[]> = {
   wedding: ['photography' /* , 'videography' */],
   corporate: ['photography' /* , 'videography' */],
   event: ['photography' /* , 'videography' */],
-  lifestyle: ['photography'],
   couple: ['photography'],
   family: ['photography']
 } as const;
