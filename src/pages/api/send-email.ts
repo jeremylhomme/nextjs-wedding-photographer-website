@@ -1,26 +1,9 @@
-'use server';
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import sendgrid from '@sendgrid/mail';
+import { verifySolution } from 'altcha-lib';
 
 // Set the SendGrid API key
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '');
-
-async function verifyRecaptcha(token: string) {
-  const response = await fetch(
-    'https://www.google.com/recaptcha/api/siteverify',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: `secret=${process.env.CAPTCHA_SECRET_KEY}&response=${token}`
-    }
-  );
-
-  const data = await response.json();
-  return data;
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -40,7 +23,7 @@ export default async function handler(
     knowing_source,
     message,
     terms_accepted,
-    recaptchaToken
+    altcha: token
   } = req.body;
 
   // Validate the request body
@@ -53,27 +36,27 @@ export default async function handler(
     !work_category ||
     !knowing_source ||
     !message ||
-    !terms_accepted
+    !terms_accepted ||
+    !token
   ) {
     return res.status(400).json({ error: 'All fields are required' });
   }
 
-  // Verify reCAPTCHA token
-  if (!recaptchaToken) {
-    return res.status(400).json({ error: 'reCAPTCHA verification failed' });
+  // Verify the Altcha token
+  try {
+    if (!process.env.ALTCHA_HMAC_KEY) {
+      throw new Error('ALTCHA_HMAC_KEY environment variable is not set');
+    }
+    const isValid = await verifySolution(token, process.env.ALTCHA_HMAC_KEY);
+    if (!isValid) {
+      return res.status(400).json({ error: 'Invalid captcha' });
+    }
+  } catch (error) {
+    console.error('Altcha verification error:', error);
+    return res.status(400).json({ error: 'Failed to verify captcha' });
   }
 
   try {
-    // Verify the reCAPTCHA token
-    console.log('Verifying reCAPTCHA...');
-    const recaptchaVerification = await verifyRecaptcha(recaptchaToken);
-
-    if (!recaptchaVerification.success || recaptchaVerification.score < 0.5) {
-      console.error('reCAPTCHA verification failed:', recaptchaVerification);
-      return res.status(400).json({ error: 'reCAPTCHA verification failed' });
-    }
-    console.log('reCAPTCHA verified successfully');
-
     const templateId = process.env.SENDGRID_TEMPLATE_ID;
     if (!templateId) {
       throw new Error('SendGrid template ID is not configured');

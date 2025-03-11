@@ -26,6 +26,8 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@sendgrid/mail": "^8.1.4",
     "@types/mdx": "^2.0.13",
+    "altcha": "^1.2.0",
+    "altcha-lib": "^1.2.0",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",

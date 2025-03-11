@@ -1,11 +1,12 @@
 'use client';
-import Script from 'next/script';
+import { AltchaWidget } from '@/src/components/ui/altcha-widget';
 import { usePathname } from 'next/navigation';
 import { FloatingLabelInput } from '@/src/components/ui/floating-label-input';
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import FadeInImage from '@/src/components/fade-in-image';
 import { toast } from 'sonner';
+import Script from 'next/script';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -53,7 +54,8 @@ const formSchema = z.object({
   message: z.string().min(30),
   terms_accepted: z.boolean().refine(val => val === true, {
     message: 'You must accept the terms and conditions'
-  })
+  }),
+  altcha: z.string().min(1, 'Please complete the captcha')
 });
 
 export default function ContactForm() {
@@ -109,27 +111,9 @@ export default function ContactForm() {
     [key: string]: boolean;
   }>({});
 
-  const generateRecaptchaToken = async () => {
-    if (!(window as any).grecaptcha) {
-      throw new Error('reCAPTCHA not loaded');
-    }
-
-    return await new Promise<string>((resolve, reject) => {
-      (window as any).grecaptcha.ready(() => {
-        (window as any).grecaptcha
-          .execute(process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY, {
-            action: 'submit'
-          })
-          .then(resolve)
-          .catch(reject);
-      });
-    });
-  };
-
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const recaptchaToken = await generateRecaptchaToken();
       console.log('Form values:', values);
 
       const response = await fetch('/api/send-email', {
@@ -137,7 +121,7 @@ export default function ContactForm() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ ...values, recaptchaToken })
+        body: JSON.stringify({ ...values })
       });
 
       const data = await response.json();
@@ -173,10 +157,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <Script
-        id="contact-schema"
-        type="application/ld+json"
-      >
+      <Script id='contact-schema' type='application/ld+json'>
         {JSON.stringify(contactPageSchema)}
       </Script>
       <div className='relative w-screen'>
@@ -199,16 +180,16 @@ export default function ContactForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className='mx-4 my-16 max-w-3xl space-y-8 rounded-lg border bg-transparent px-4 py-10 shadow-sm lg:mx-auto'
+            className='mx-4 my-8 max-w-3xl rounded-lg border bg-transparent px-4 py-8 shadow-sm md:mx-auto md:my-16'
           >
             <div className='gap-4'>
               <div className='flex flex-col justify-center text-left'>
                 <h2 className='mb-4 text-2xl'>{t('cf.title')}</h2>
                 <p className='text-sm leading-loose text-muted-foreground'>
-                  {t('cf.wedding.desc')}
+                  {t('cf.desc')}
                 </p>
                 <p className='mb-8 mt-2 text-sm leading-loose text-muted-foreground'>
-                  {t('cf.wedding.desc2')}{' '}
+                  {t('cf.desc2')}{' '}
                   <a
                     className='font-bold underline'
                     href='mailto:bonjour@jeremydan.fr'
@@ -224,14 +205,12 @@ export default function ContactForm() {
                     name='first_name'
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>
-                          {t('cf.wedding.first_name-label')}
-                        </FormLabel>
+                        <FormLabel>{t('cf.first_name-label')}</FormLabel>
                         <FormControl>
                           <FloatingLabelInput
                             id='first_name'
                             type='text'
-                            label={t('cf.wedding.first_name-placeholder')}
+                            label={t('cf.first_name-placeholder')}
                             {...field}
                           />
                         </FormControl>
@@ -247,12 +226,12 @@ export default function ContactForm() {
                     name='last_name'
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t('cf.wedding.last_name-label')}</FormLabel>
+                        <FormLabel>{t('cf.last_name-label')}</FormLabel>
                         <FormControl>
                           <FloatingLabelInput
                             id='last_name'
                             type='text'
-                            label={t('cf.wedding.last_name-placeholder')}
+                            label={t('cf.last_name-placeholder')}
                             {...field}
                           />
                         </FormControl>
@@ -270,12 +249,12 @@ export default function ContactForm() {
                     name='email'
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t('cf.wedding.email-label')}</FormLabel>
+                        <FormLabel>{t('cf.email-label')}</FormLabel>
                         <FormControl>
                           <FloatingLabelInput
                             id='email'
                             type='email'
-                            label={t('cf.wedding.email-placeholder')}
+                            label={t('cf.email-placeholder')}
                             {...field}
                           />
                         </FormControl>
@@ -307,9 +286,7 @@ export default function ContactForm() {
                                     locale: locale === 'fr' ? fr : enUS
                                   })
                                 ) : (
-                                  <span>
-                                    {t('cf.wedding.event_date-placeholder')}
-                                  </span>
+                                  <span>{t('cf.event_date-placeholder')}</span>
                                 )}
                                 <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
                               </Button>
@@ -339,7 +316,7 @@ export default function ContactForm() {
                     name='work_type'
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Type de prestation</FormLabel>
+                        <FormLabel>{t('cf.work_type-label')}</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
@@ -347,18 +324,16 @@ export default function ContactForm() {
                           <FormControl>
                             <SelectTrigger>
                               <SelectValue
-                                placeholder={t(
-                                  'cf.wedding.work_type-placeholder'
-                                )}
+                                placeholder={t('cf.work_type-placeholder')}
                               />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
                             <SelectItem value='photography'>
-                              {t('cf.wedding.work_type-photography')}
+                              {t('cf.work_type-photography')}
                             </SelectItem>
                             <SelectItem value='videography'>
-                              {t('cf.wedding.work_type-videography')}
+                              {t('cf.work_type-videography')}
                             </SelectItem>
                           </SelectContent>
                         </Select>
@@ -374,7 +349,7 @@ export default function ContactForm() {
                     name='work_category'
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Catégorie</FormLabel>
+                        <FormLabel>{t('cf.work_category-label')}</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
@@ -382,24 +357,25 @@ export default function ContactForm() {
                           <FormControl>
                             <SelectTrigger>
                               <SelectValue
-                                placeholder={t(
-                                  'cf.wedding.work_category-placeholder'
-                                )}
+                                placeholder={t('cf.work_category-placeholder')}
                               />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
                             <SelectItem value='wedding'>
-                              {t('cf.wedding.work_category-wedding')}
+                              {t('cf.work_category-wedding')}
                             </SelectItem>
                             <SelectItem value='event'>
-                              {t('cf.wedding.work_category-event')}
+                              {t('cf.work_category-event')}
                             </SelectItem>
-                            <SelectItem value='lifestyle'>
-                              {t('cf.wedding.work_category-lifestyle')}
+                            <SelectItem value='couple'>
+                              {t('cf.work_category-couple')}
+                            </SelectItem>
+                            <SelectItem value='family'>
+                              {t('cf.work_category-family')}
                             </SelectItem>
                             <SelectItem value='company'>
-                              {t('cf.wedding.work_category-company')}
+                              {t('cf.work_category-company')}
                             </SelectItem>
                           </SelectContent>
                         </Select>
@@ -416,10 +392,10 @@ export default function ContactForm() {
                   name='message'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{t('cf.wedding.message-label')}</FormLabel>
+                      <FormLabel>{t('cf.message-label')}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder={t('cf.wedding.message-placeholder')}
+                          placeholder={t('cf.message-placeholder')}
                           className='min-h-40 resize leading-loose'
                           {...field}
                         />
@@ -437,9 +413,7 @@ export default function ContactForm() {
                   name='knowing_source'
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>
-                        {t('cf.wedding.knowing_source-label')}
-                      </FormLabel>
+                      <FormLabel>{t('cf.knowing_source-label')}</FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value}
@@ -447,31 +421,25 @@ export default function ContactForm() {
                         <FormControl>
                           <SelectTrigger>
                             <SelectValue
-                              placeholder={t(
-                                'cf.wedding.knowing_source-placeholder'
-                              )}
+                              placeholder={t('cf.knowing_source-placeholder')}
                             />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
                           <SelectItem value='instagram'>Instagram</SelectItem>
                           <SelectItem value='google-search'>
-                            {t('cf.wedding.knowing_source-option2')}
+                            {t('cf.knowing_source-option2')}
                           </SelectItem>
-                          <SelectItem
-                            value={t('cf.wedding.knowing_source-option3')}
-                          >
-                            {t('cf.wedding.knowing_source-option3')}
+                          <SelectItem value={t('cf.knowing_source-option3')}>
+                            {t('cf.knowing_source-option3')}
                           </SelectItem>
-                          <SelectItem
-                            value={t('cf.wedding.knowing_source-option4')}
-                          >
-                            {t('cf.wedding.knowing_source-option4')}
+                          <SelectItem value={t('cf.knowing_source-option4')}>
+                            {t('cf.knowing_source-option4')}
                           </SelectItem>
                         </SelectContent>
                       </Select>
                       <FormDescription>
-                        {t('cf.wedding.knowing_source-desc')}
+                        {t('cf.knowing_source-desc')}
                       </FormDescription>
                       <FormMessage />
                     </FormItem>
@@ -483,7 +451,7 @@ export default function ContactForm() {
               control={form.control}
               name='terms_accepted'
               render={({ field }) => (
-                <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
+                <FormItem className='mb-8 mt-2 flex flex-row items-start space-x-3 space-y-0'>
                   <FormControl>
                     <input
                       type='checkbox'
@@ -494,23 +462,35 @@ export default function ContactForm() {
                   </FormControl>
                   <div className='space-y-1 leading-none'>
                     <FormLabel className='text-sm text-muted-foreground'>
-                      {t('cf.wedding.terms-label')}{' '}
+                      {t('cf.terms-label')}{' '}
                       <Link
                         href='/legal/terms'
                         className='text-primary-foreground hover:underline'
                       >
-                        {t('cf.wedding.terms-link')}
+                        {t('cf.terms-link')}
                       </Link>{' '}
-                      {t('cf.wedding.terms-and')}{' '}
+                      {t('cf.terms-and')}{' '}
                       <Link
                         href='/legal/privacy'
                         className='text-primary-foreground hover:underline'
                       >
-                        {t('cf.wedding.privacy-link')}
+                        {t('cf.privacy-link')}
                       </Link>
                     </FormLabel>
                     <FormMessage />
                   </div>
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='altcha'
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <AltchaWidget locale={locale} onToken={field.onChange} />
+                  </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />

@@ -11,7 +11,7 @@ interface ImageProps {
   src: string;
   alt: string;
   priority?: boolean;
-  category: 'wedding' | 'lifestyle' | 'event' | 'company';
+  category: 'wedding' | 'lifestyle' | 'event' | 'company' | 'couple' | 'family';
 }
 
 type Category = 'all' | ImageProps['category'];
@@ -28,7 +28,9 @@ const PortfolioPage: React.FC = () => {
     'wedding',
     'lifestyle',
     'event',
-    'company'
+    'company',
+    'couple',
+    'family'
   ];
 
   const images: ImageProps[] = [
@@ -135,8 +137,6 @@ const PortfolioPage: React.FC = () => {
     }
   ];
 
-
-
   const filteredImages =
     activeCategory === 'all'
       ? images
@@ -162,9 +162,9 @@ const PortfolioPage: React.FC = () => {
     },
     image: images.map(img => ({
       '@type': 'ImageObject',
-      'contentUrl': `${baseUrl}${img.src}`,
-      'name': img.alt,
-      'description': img.alt
+      contentUrl: `${baseUrl}${img.src}`,
+      name: img.alt,
+      description: img.alt
     }))
   };
 

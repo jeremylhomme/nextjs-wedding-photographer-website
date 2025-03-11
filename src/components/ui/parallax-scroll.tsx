@@ -9,7 +9,6 @@ import {
 import { useRef } from 'react';
 import FadeInImage from '@/src/components/fade-in-image';
 import { cn } from '@/src/lib/utils';
-import { useTranslations } from 'next-intl';
 
 // Helper component for scroll-based fade in
 const ScrollFadeImage = ({
@@ -63,11 +62,10 @@ export const ParallaxScrollSecond = ({
   className,
   translationPrefix = 'location-page.photography-sceaux.parallax-scroll'
 }: {
-  images: string[];
+  images: Array<{ src: string; alt: string }>;
   className?: string;
   translationPrefix?: string;
 }) => {
-  const t = useTranslations();
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -91,8 +89,14 @@ export const ParallaxScrollSecond = ({
   );
 
   // Function to distribute images based on number of columns
-  const distributeImages = (images: string[], numColumns: number) => {
-    const columns: string[][] = Array.from({ length: numColumns }, () => []);
+  const distributeImages = (
+    images: Array<{ src: string; alt: string }>,
+    numColumns: number
+  ) => {
+    const columns: Array<Array<{ src: string; alt: string }>> = Array.from(
+      { length: numColumns },
+      () => []
+    );
     images.forEach((image, index) => {
       columns[index % numColumns].push(image);
     });
@@ -112,10 +116,8 @@ export const ParallaxScrollSecond = ({
               {columnImages.map(el => (
                 <ScrollFadeImage
                   key={`grid-lg-${idx}-${columnImages.indexOf(el)}`}
-                  src={el}
-                  alt={t(
-                    `${translationPrefix}.parallax-image-${columnImages.indexOf(el) * 3 + idx + 1}`
-                  )}
+                  src={el.src}
+                  alt={el.alt}
                   yOffset={
                     idx === 0
                       ? columnOneTransform
@@ -137,10 +139,8 @@ export const ParallaxScrollSecond = ({
               {columnImages.map(el => (
                 <ScrollFadeImage
                   key={`grid-md-${idx}-${columnImages.indexOf(el)}`}
-                  src={el}
-                  alt={t(
-                    `${translationPrefix}.parallax-image-${columnImages.indexOf(el) * 2 + idx + 1}`
-                  )}
+                  src={el.src}
+                  alt={el.alt}
                   yOffset={idx === 0 ? columnOneTransform : columnTwoTransform}
                   isFirstThree={columnImages.indexOf(el) === 0}
                 />

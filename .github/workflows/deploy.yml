@@ -8,8 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_CAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_CAPTCHA_SITE_KEY }}
-      CAPTCHA_SECRET_KEY: ${{ secrets.CAPTCHA_SECRET_KEY }}
+      ALTCHA_HMAC_KEY: ${{ secrets.ALTCHA_HMAC_KEY }}
       SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
       SENDGRID_TEMPLATE_ID: ${{ secrets.SENDGRID_TEMPLATE_ID }}
       NEXT_PUBLIC_SITE_URL: 'https://jeremydan.fr'
@@ -48,6 +47,9 @@ jobs:
             git reset --hard origin/main
             git clean -fd
             # Set environment variables
+            echo "ALTCHA_HMAC_KEY=${{ secrets.ALTCHA_HMAC_KEY }}" >> .env.local
+            echo "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}" >> .env.local
+            echo "SENDGRID_TEMPLATE_ID=${{ secrets.SENDGRID_TEMPLATE_ID }}" >> .env.local
             echo "NEXT_PUBLIC_POSTHOG_KEY=${{ secrets.NEXT_PUBLIC_POSTHOG_KEY }}" >> .env.local
             echo "NEXT_PUBLIC_POSTHOG_HOST=${{ secrets.NEXT_PUBLIC_POSTHOG_HOST }}" >> .env.local
             # Ensure network connectivity to Google services

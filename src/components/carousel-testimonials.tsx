@@ -59,6 +59,13 @@ const CarouselTestimonials: React.FC = () => {
       image:
         '/testimonials/testimony-jeremydan-wedding-photography-006-optimized.webp',
       alt: t('alt6')
+    },
+    {
+      name: t('name7'),
+      description: t('description7'),
+      location: t('location7'),
+      image: '/company/jeremydan-company-photographer-df-100-optimized.webp',
+      alt: t('alt7')
     }
   ];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Fade()]);
@@ -77,11 +84,11 @@ const CarouselTestimonials: React.FC = () => {
   return (
     <div className='relative w-full max-w-[1080px]'>
       <div className='py-8 md:py-16'>
-        <div className='flex justify-center pb-8'>
+        <div className='mb-4 flex justify-center md:mb-8'>
           <VerticalLine />
         </div>
         <h2 className='text-center font-serif text-4xl'>{t('title')}</h2>
-        <div className='flex justify-center pt-8'>
+        <div className='mt-8 flex justify-center md:mt-8'>
           <VerticalLine />
         </div>
       </div>
@@ -133,7 +140,11 @@ const CarouselTestimonials: React.FC = () => {
           ))}
         </div>
         <div className='align-center flex flex-col items-center'>
-          <Button variant='default' size='default' className='mt-16 w-fit'>
+          <Button
+            variant='default'
+            size='default'
+            className='mt-8 w-fit md:mt-16'
+          >
             <a href='https://g.page/r/CSwUMLY4jFaNEAE/review' target='_blank'>
               {t('button-label')}
             </a>

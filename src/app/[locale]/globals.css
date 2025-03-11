@@ -31,6 +31,15 @@
     --destructive-foreground: 0 0% 100%;
     --ring: 0 0% 94.9%;
     --radius: 0.5rem;
+    --altcha-border-width: 1px;
+    --altcha-border-radius: 3px;
+    --altcha-color-base: #090909;
+    --altcha-color-border: #a0a0a0;
+    --altcha-color-text: currentColor;
+    --altcha-color-border-focus: currentColor;
+    --altcha-color-error-text: #f23939;
+    --altcha-color-footer-bg: #090909;
+    --altcha-max-width: 260px;
   }
 }
 

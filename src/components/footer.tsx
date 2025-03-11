@@ -67,8 +67,8 @@ export default function Footer() {
 
   return (
     <footer className='bottom-0 w-full border-t'>
-      <div className='mx-auto max-w-7xl px-6 py-20 sm:py-16 lg:px-8'>
-        <h1 className='mb-4 text-left text-lg font-semibold'>JEREMY DAN</h1>
+      <div className='mx-auto max-w-7xl px-6 py-8 md:py-16 lg:px-8'>
+        <p className='mb-4 text-left text-lg font-semibold'>JEREMY DAN</p>
         <p className='mb-10 text-left text-sm text-muted-foreground'>
           {t('description')}
         </p>

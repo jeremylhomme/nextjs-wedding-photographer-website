@@ -17,6 +17,7 @@ import { serviceGroups } from '@/src/config/service-groups';
 import { categories, getLocalizedCategory } from '@/src/config/categories';
 import { ServicePopupMenu } from '@/src/components/ui/service-popup-menu';
 import { Metadata } from 'next';
+import { ParallaxScrollSecond } from '@/src/components/ui/parallax-scroll';
 import Script from 'next/script';
 import {
   generateWebsiteSchema,
@@ -108,23 +109,60 @@ const HomePage = async ({ params }: HomePageProps) => {
 
   const websiteSchema = generateWebsiteSchema(metadata);
   const localBusinessSchema = generateLocalBusinessSchema(metadata);
-
+  const parallaxImages = [
+    {
+      src: '/wedding/jeremydan-wedding-photographer-ca-032-optimized.webp',
+      alt: alt('parallax.wedding1')
+    },
+    {
+      src: '/event/jeremydan-event-photographer-cc-037-optimized.webp',
+      alt: alt('parallax.event1')
+    },
+    {
+      src: '/company/jeremydan-company-photographer-df-037-optimized.webp',
+      alt: alt('parallax.company1')
+    },
+    {
+      src: '/event/jeremydan-event-photographer-cc-056-optimized.webp',
+      alt: alt('parallax.event2')
+    },
+    {
+      src: '/family/jeremydan-lifestyle-family-photographer-gf-004-optimized.webp',
+      alt: alt('parallax.family1')
+    },
+    {
+      src: '/wedding/jeremydan-wedding-photographer-rth-047-optimized.webp',
+      alt: alt('parallax.wedding2')
+    },
+    {
+      src: '/wedding/jeremydan-wedding-photographer-rth-044-optimized.webp',
+      alt: alt('parallax.wedding3')
+    },
+    {
+      src: '/wedding/jeremydan-wedding-photography-001-optimized.webp',
+      alt: alt('parallax.wedding4')
+    },
+    {
+      src: '/wedding/jeremydan-wedding-photographer-rta-030-optimized.webp',
+      alt: alt('parallax.wedding5')
+    }
+  ];
   const images: PhotoTileProps[] = [
     {
-      src: '/home-page/home-tiles-jeremydan-wedding-photography-001-optimized.webp',
+      src: '/event/jeremydan-event-photographer-cc-039-optimized.webp',
       alt: pt('alt1'),
       priority: true
     },
     {
-      src: '/home-page/home-tiles-jeremydan-wedding-photography-002-optimized.webp',
+      src: '/wedding/jeremydan-wedding-photographer-ce-038-optimized.webp',
       alt: pt('alt2')
     },
     {
-      src: '/home-page/home-tiles-jeremydan-wedding-photography-003-optimized.webp',
+      src: '/company/jeremydan-company-photographer-df-019-optimized.webp',
       alt: pt('alt3')
     },
     {
-      src: '/home-page/home-tiles-jeremydan-wedding-photography-004-optimized.webp',
+      src: '/family/jeremydan-lifestyle-family-photographer-gf-002-optimized.webp',
       alt: pt('alt4')
     }
   ];
@@ -134,14 +172,12 @@ const HomePage = async ({ params }: HomePageProps) => {
       <div className='relative'>
         <CarouselHero />
       </div>
-      <div className='border-b py-8 md:py-16'>
-        <div className='mx-auto flex max-w-screen-lg flex-col gap-4'>
+      <div className='pt-10 md:pt-16'>
+        <div className='mx-auto flex max-w-7xl flex-col gap-4'>
           <h1 className='font-serif text-4xl font-semibold lg:text-5xl'>
             {t('hero-title')}
           </h1>
-          <p className='text-balance text-muted-foreground'>
-            {t('hero-description1')}
-          </p>
+          <p className='text-muted-foreground'>{t('hero-description1')}</p>
           <ul className='text-muted-foreground'>
             <li>
               <span className='text-primary-foreground'>
@@ -168,13 +204,8 @@ const HomePage = async ({ params }: HomePageProps) => {
               {t('hero-bullet4')}
             </li>
           </ul>
-          <p className='text-balance text-muted-foreground'>
-            {t('hero-description2')}
-          </p>
-          <p className='text-balance text-muted-foreground'>
-            {t('hero-description3')}
-          </p>
-          <div className='flex flex-wrap justify-start gap-2 py-4'>
+          <p className='text-muted-foreground'>{t('hero-description2')}</p>
+          <div className='flex flex-wrap justify-start gap-2'>
             {categories.map(category => (
               <ServicePopupMenu
                 key={category}
@@ -190,20 +221,20 @@ const HomePage = async ({ params }: HomePageProps) => {
           </div>
         </div>
       </div>
-      <div className='mx-auto flex max-w-5xl flex-col-reverse border-b md:flex-row md:gap-16 md:border-0 md:py-16'>
-        <div className='relative h-[50vh] pb-8 sm:h-[60vh] md:mx-0 md:w-[80%] md:pb-0'>
+      <div className='mx-auto flex max-w-5xl flex-col gap-4 md:flex-row md:gap-16 md:border-0 md:py-16'>
+        <div className='relative h-[50vh] pb-6 pt-10 sm:h-[50vh] md:mx-0 md:w-[80%] md:pb-0 md:pt-0'>
           <ClientImageWrapper
             src='/profil/jeremydan-photographer-sceaux-002-optimized.webp'
             alt={alt(`profil.alt2`)}
             className='h-full w-full object-cover md:border md:p-4'
           />
         </div>
-        <div className='flex flex-col py-8 text-left md:mx-auto md:w-2/3 md:py-0'>
-          <h2 className='mb-8 font-serif text-3xl md:mx-0 md:text-left lg:text-4xl'>
+        <div className='flex flex-col gap-4 text-left md:mx-auto md:w-2/3 md:py-0'>
+          <h2 className='font-serif text-3xl md:mx-0 lg:text-4xl'>
             {t('subtitle')}
           </h2>
-          <p className='text-muted-foreground md:mt-0'>{t('description1')}</p>
-          <p className='mb-8 mt-4 text-muted-foreground'>{t('description2')}</p>
+          <p className='text-muted-foreground'>{t('description1')}</p>
+          <p className='text-muted-foreground'>{t('description2')}</p>
           <Button variant='default' size='default' className='w-fit md:mx-0'>
             <Link href='/about'>{t('button-label')}</Link>
           </Button>
@@ -211,47 +242,66 @@ const HomePage = async ({ params }: HomePageProps) => {
       </div>
 
       <PhotoTiles images={images} />
-      <div className='mx-auto flex max-w-4xl flex-col'>
-        <h2 className='mb-4 mt-12 font-serif text-4xl'>{t('photo-title2')}</h2>
-        <p className='mt-4 text-muted-foreground'>{t('photo-bullets-title')}</p>
-        <ul className='list-disc pl-8 text-muted-foreground'>
-          <li className='mt-4'>{t('photo-bullet1')}</li>
-          <li>{t('photo-bullet2')}</li>
-          <li>{t('photo-bullet3')}</li>
-        </ul>
-        <p className='mt-4 text-muted-foreground'>{t('photo-description4')}</p>
-        <h2 className='mb-4 mt-12 font-serif text-4xl'>{t('video-title2')}</h2>
-        <p className='mt-4 text-muted-foreground'>{t('video-bullets-title')}</p>
-        <ul className='list-disc pl-8 text-muted-foreground'>
-          <li className='mt-4'>{t('video-bullet1')}</li>
-          <li>{t('video-bullet2')}</li>
-        </ul>
-        <p className='mt-4 text-muted-foreground'>{t('video-description4')}</p>
-        <h2 className='mb-4 pt-8 font-serif text-4xl'>{t('title3')}</h2>
-        <div className='relative my-8 h-[40vh]'>
-          <ClientImageWrapper
-            src='/home-page/subhero-jeremydan-wedding-photography-002-optimized.webp'
-            alt='Two people hanging upside down'
-            className='h-full w-full object-cover'
-          />
+      <div className='mx-auto flex max-w-7xl flex-col pt-10 lg:pt-4'>
+        <div className='flex flex-col gap-4'>
+          <h2 className='font-serif text-3xl lg:text-4xl'>
+            {t('photo-title2')}
+          </h2>
+          <p className='text-muted-foreground'>{t('photo-bullets-title')}</p>
+          <ul className='list-disc pl-4 text-muted-foreground md:pl-8'>
+            <li>{t('photo-bullet1')}</li>
+            <li>{t('photo-bullet2')}</li>
+            <li>{t('photo-bullet3')}</li>
+          </ul>
+          <p className='text-muted-foreground'>{t('photo-description4')}</p>
         </div>
-        <p className='mt-4 text-muted-foreground'>{t('description3')}</p>
-        <p className='mt-4 text-muted-foreground'>{t('description4')}</p>
-        <p className='mt-4 text-muted-foreground'>{t('description5')}</p>
-        <Button variant='default' size='default' className='mt-8 w-fit md:mx-0'>
-          <Link href='/contact'>{t('button-label2')}</Link>
-        </Button>
+      </div>
+      <div className='prose dark:prose-invert mx-auto max-w-7xl pt-10 md:pt-12'>
+        <ParallaxScrollSecond images={parallaxImages} />
+      </div>
+      <div className='mx-auto flex max-w-7xl flex-col pt-10'>
+        <div className='flex flex-col gap-4'>
+          <h2 className='font-serif text-3xl lg:text-4xl'>
+            {t('video-title2')}
+          </h2>
+          <p className='text-muted-foreground'>{t('video-bullets-title')}</p>
+          <ul className='list-disc pl-4 text-muted-foreground md:pl-8'>
+            <li>{t('video-bullet1')}</li>
+            <li>{t('video-bullet2')}</li>
+          </ul>
+          <p className='text-muted-foreground'>{t('video-description4')}</p>
+          <h2 className='pt-4 font-serif text-3xl lg:text-4xl'>
+            {t('title3')}
+          </h2>
+          <div className='relative h-[40vh]'>
+            <ClientImageWrapper
+              src='/home-page/subhero-jeremydan-wedding-photography-002-optimized.webp'
+              alt='Two people hanging upside down'
+              className='h-full w-full object-cover'
+            />
+          </div>
+          <p className='text-muted-foreground'>{t('description3')}</p>
+          <p className='text-muted-foreground'>{t('description4')}</p>
+          <p className='text-muted-foreground'>{t('description5')}</p>
+          <Button
+            variant='default'
+            size='default'
+            className='w-fit md:mx-0 md:mt-12'
+          >
+            <Link href='/contact'>{t('button-label2')}</Link>
+          </Button>
+        </div>
       </div>
 
       <div className='mx-auto max-w-7xl'>
         <div className='py-8 md:py-16'>
-          <div className='mb-8 flex justify-center'>
+          <div className='mb-4 flex justify-center md:mb-8'>
             <VerticalLine />
           </div>
-          <h2 className='text-center font-serif text-4xl'>
+          <h2 className='text-center font-serif text-3xl lg:text-4xl'>
             {t('grid-blog-section.title')}
           </h2>
-          <div className='mt-8 flex justify-center'>
+          <div className='mt-4 flex justify-center md:mt-8'>
             <VerticalLine />
           </div>
         </div>
@@ -261,18 +311,20 @@ const HomePage = async ({ params }: HomePageProps) => {
         <Button
           variant='default'
           size='default'
-          className='mx-auto mt-16 flex w-fit'
+          className='mx-auto mt-8 flex w-fit md:mt-16'
         >
           <Link href='/blog'>{t('grid-blog-section.button-label3')}</Link>
         </Button>
       </div>
 
-      <div className='align-center mb-16 flex flex-col items-center'>
+      <div className='align-center flex flex-col items-center pb-16'>
         <CarouselTestimonials />
       </div>
-      <div className='mx-auto max-w-7xl'>
-        <div className='mb-12'>
-          <h2 className='text-center font-serif text-4xl'>{fs('title')}</h2>
+      <div className='mx-auto max-w-7xl pb-4 md:pb-16'>
+        <div className=''>
+          <h2 className='text-center font-serif text-3xl lg:text-4xl'>
+            {fs('title')}
+          </h2>
         </div>
         <FAQ />
       </div>

@@ -40,37 +40,67 @@ const pageMetadata = {
   wedding: {
     fr: {
       title: 'Jeremy Dan | Photographe de Mariage',
-      description: 'Photographe de Mariage basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
-      keywords: ['photographe mariage sceaux', 'photographe mariage 92', 'photographe mariage hauts-de-seine']
+      description:
+        'Photographe de Mariage basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
+      keywords: [
+        'photographe mariage sceaux',
+        'photographe mariage 92',
+        'photographe mariage hauts-de-seine'
+      ]
     },
     en: {
       title: 'Jeremy Dan | Wedding Photographer',
-      description: 'Wedding Photographer based in Sceaux, Hauts-de-Seine (92). For timeless photos in Paris region, France, and internationally.',
-      keywords: ['wedding photographer sceaux', 'wedding photographer 92', 'wedding photographer hauts-de-seine']
+      description:
+        'Wedding Photographer based in Sceaux, Hauts-de-Seine (92). For timeless photos in Paris region, France, and internationally.',
+      keywords: [
+        'wedding photographer sceaux',
+        'wedding photographer 92',
+        'wedding photographer hauts-de-seine'
+      ]
     }
   },
   corporate: {
     fr: {
-      title: 'Jeremy Dan | Photographe d\'entreprise',
-      description: 'Photographe d\'entreprise et corporate basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
-      keywords: ['photographe entreprise sceaux', 'photographe entreprise 92', 'photographe entreprise hauts-de-seine']
+      title: "Jeremy Dan | Photographe d'entreprise",
+      description:
+        "Photographe d'entreprise et corporate basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.",
+      keywords: [
+        'photographe entreprise sceaux',
+        'photographe entreprise 92',
+        'photographe entreprise hauts-de-seine'
+      ]
     },
     en: {
       title: 'Jeremy Dan | Corporate Photographer',
-      description: 'Corporate Photographer based in Sceaux, Hauts-de-Seine (92). For timeless photos in Paris region, France, and internationally.',
-      keywords: ['corporate photographer sceaux', 'corporate photographer 92', 'corporate photographer hauts-de-seine']
+      description:
+        'Corporate Photographer based in Sceaux, Hauts-de-Seine (92). For timeless photos in Paris region, France, and internationally.',
+      keywords: [
+        'corporate photographer sceaux',
+        'corporate photographer 92',
+        'corporate photographer hauts-de-seine'
+      ]
     }
   },
   sceaux: {
     fr: {
       title: 'Jeremy Dan | Photographe à Sceaux',
-      description: 'Photographe professionnel basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
-      keywords: ['photographe sceaux', 'photographe 92', 'photographe hauts-de-seine']
+      description:
+        'Photographe professionnel basé à Sceaux dans les Hauts-de-Seine (92). Pour des photos intemporelles en région parisienne, France et international.',
+      keywords: [
+        'photographe sceaux',
+        'photographe 92',
+        'photographe hauts-de-seine'
+      ]
     },
     en: {
       title: 'Jeremy Dan | Photographer in Sceaux',
-      description: 'Professional Photographer based in Sceaux, Hauts-de-Seine (92). For timeless photos in Paris region, France, and internationally.',
-      keywords: ['photographer sceaux', 'photographer 92', 'photographer hauts-de-seine']
+      description:
+        'Professional Photographer based in Sceaux, Hauts-de-Seine (92). For timeless photos in Paris region, France, and internationally.',
+      keywords: [
+        'photographer sceaux',
+        'photographer 92',
+        'photographer hauts-de-seine'
+      ]
     }
   }
 };
@@ -128,7 +158,9 @@ export function generateServiceMetadata(
     wedding: locale === 'fr' ? 'de Mariage' : 'Wedding',
     corporate: locale === 'fr' ? 'Corporate' : 'Corporate',
     event: locale === 'fr' ? 'Événementiel' : 'Event',
-    lifestyle: locale === 'fr' ? 'Lifestyle' : 'Lifestyle'
+    lifestyle: locale === 'fr' ? 'Lifestyle' : 'Lifestyle',
+    couple: locale === 'fr' ? 'du Couple' : 'Couple',
+    family: locale === 'fr' ? 'de la Famille' : 'Family'
   }[category];
 
   // Handle location safely by using optional chaining and nullish coalescing

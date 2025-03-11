@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 interface FAQItem {
   question: string;
   answer: string;
-  category: 'general' | 'wedding' | 'event' | 'company' | 'lifestyle';
+  category: 'general' | 'wedding' | 'event' | 'company' | 'couple' | 'family';
 }
 
 type Category = 'all' | FAQItem['category'];
@@ -98,24 +98,44 @@ export default function FAQ({ categories }: FAQProps = {}) {
       category: 'general'
     },
     {
-      question: t('ls.types'),
-      answer: t('ls.types-answer'),
-      category: 'lifestyle'
+      question: t('ls-c.types'),
+      answer: t('ls-c.types-answer'),
+      category: 'couple'
     },
     {
-      question: t('ls.where'),
-      answer: t('ls.where-answer'),
-      category: 'lifestyle'
+      question: t('ls-c.where'),
+      answer: t('ls-c.where-answer'),
+      category: 'couple'
     },
     {
-      question: t('ls.how'),
-      answer: t('ls.how-answer'),
-      category: 'lifestyle'
+      question: t('ls-c.how'),
+      answer: t('ls-c.how-answer'),
+      category: 'couple'
     },
     {
-      question: t('ls.clothes'),
-      answer: t('ls.clothes-answer'),
-      category: 'lifestyle'
+      question: t('ls-c.clothes'),
+      answer: t('ls-c.clothes-answer'),
+      category: 'couple'
+    },
+    {
+      question: t('ls-f.where'),
+      answer: t('ls-f.where-answer'),
+      category: 'family'
+    },
+    {
+      question: t('ls-f.types'),
+      answer: t('ls-f.types-answer'),
+      category: 'family'
+    },
+    {
+      question: t('ls-f.clothes'),
+      answer: t('ls-f.clothes-answer'),
+      category: 'family'
+    },
+    {
+      question: t('ls-f.how'),
+      answer: t('ls-f.how-answer'),
+      category: 'family'
     },
     {
       question: t('ev.types'),
@@ -144,7 +164,8 @@ export default function FAQ({ categories }: FAQProps = {}) {
     'general',
     'wedding',
     'company',
-    'lifestyle',
+    'couple',
+    'family',
     'event'
   ];
   const availableCategories =
@@ -180,7 +201,7 @@ export default function FAQ({ categories }: FAQProps = {}) {
   return (
     <section className='w-full'>
       <div className='container mx-auto'>
-        <div className='mb-8 flex flex-wrap justify-center gap-2'>
+        <div className='flex flex-wrap justify-center gap-2 py-8'>
           {categoryOptions.map(category => (
             <button
               key={category}
@@ -201,7 +222,7 @@ export default function FAQ({ categories }: FAQProps = {}) {
 
         <div className='mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-8'>
           {displayedFaqs.map((faq, index) => (
-            <div key={index} className='rounded-lg p-6'>
+            <div key={index} className=''>
               <h3 className='mb-3 text-base font-semibold'>{faq.question}</h3>
               <p className='text-base text-muted-foreground'>{faq.answer}</p>
             </div>

@@ -28,9 +28,11 @@ export function PhotoTiles({ images }: PhotoTilesProps) {
         'relative mx-auto grid max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3'
       )}
     >
-      <div className='col-start-1 row-start-1 py-8 md:col-start-2 md:row-start-2 lg:col-start-2 lg:row-start-2 lg:block'>
-        <h2 className='mb-4 font-serif text-4xl md:text-right'>{t('title')}</h2>
-        <p className='text-muted-foreground md:text-right'>
+      <div className='col-start-1 row-start-1 gap-4 pt-10 md:col-start-2 md:row-start-2 md:gap-0 md:pt-0 lg:col-start-2 lg:row-start-2 lg:block'>
+        <h2 className='mb-4 font-serif text-3xl md:text-right lg:text-4xl'>
+          {t('title')}
+        </h2>
+        <p className='pb-6 text-muted-foreground md:pb-0 md:text-right'>
           {t('description')}
         </p>
       </div>
@@ -38,7 +40,7 @@ export function PhotoTiles({ images }: PhotoTilesProps) {
         <div
           key={photo.src}
           className={cn('group relative aspect-[2/3] overflow-hidden', {
-            'aspect-[2/1] md:col-span-2': index === 0,
+            'aspect-[3/2] md:col-span-2': index === 0,
             'lg:row-span-2': index === 3
           })}
         >

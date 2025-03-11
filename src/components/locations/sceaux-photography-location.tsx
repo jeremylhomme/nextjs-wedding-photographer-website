@@ -10,21 +10,66 @@ import { Button } from '@/src/components/ui/button';
 export function SceauxPhotographyLocation() {
   const t = useTranslations('location-page.photography-sceaux');
   const images = [
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-001-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-002-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-003-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-004-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-005-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-006-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-007-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-008-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-009-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-010-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-011-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-012-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-013-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-014-optimized.webp',
-    '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-015-optimized.webp'
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-001-optimized.webp',
+      alt: t('parallax-scroll.image1')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-002-optimized.webp',
+      alt: t('parallax-scroll.image2')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-003-optimized.webp',
+      alt: t('parallax-scroll.image3')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-004-optimized.webp',
+      alt: t('parallax-scroll.image4')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-005-optimized.webp',
+      alt: t('parallax-scroll.image5')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-006-optimized.webp',
+      alt: t('parallax-scroll.image6')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-007-optimized.webp',
+      alt: t('parallax-scroll.image7')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-008-optimized.webp',
+      alt: t('parallax-scroll.image8')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-009-optimized.webp',
+      alt: t('parallax-scroll.image9')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-010-optimized.webp',
+      alt: t('parallax-scroll.image10')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-011-optimized.webp',
+      alt: t('parallax-scroll.image11')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-012-optimized.webp',
+      alt: t('parallax-scroll.image12')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-013-optimized.webp',
+      alt: t('parallax-scroll.image13')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-014-optimized.webp',
+      alt: t('parallax-scroll.image14')
+    },
+    {
+      src: '/parallax-scroll/photography-sceaux/jeremydan-photography-sceaux-015-optimized.webp',
+      alt: t('parallax-scroll.image15')
+    }
   ];
 
   return (

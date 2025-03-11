@@ -1,4 +1,9 @@
-export type CategoryType = 'wedding' | 'corporate' | 'event' | 'lifestyle';
+export type CategoryType =
+  | 'wedding'
+  | 'corporate'
+  | 'event'
+  | 'couple'
+  | 'family';
 
 const categoryUrls = {
   wedding: {
@@ -13,9 +18,13 @@ const categoryUrls = {
     en: 'event',
     fr: 'evenementiel'
   },
-  lifestyle: {
-    en: 'lifestyle',
-    fr: 'lifestyle'
+  couple: {
+    en: 'couple',
+    fr: 'couple'
+  },
+  family: {
+    en: 'family',
+    fr: 'famille'
   }
 } as const;
 
@@ -23,7 +32,8 @@ export const categories: CategoryType[] = [
   'wedding',
   'corporate',
   'event',
-  'lifestyle'
+  'couple',
+  'family'
 ];
 
 export const getLocalizedCategory = (

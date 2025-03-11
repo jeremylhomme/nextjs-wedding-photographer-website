@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { Inter, Crimson_Text, Quattrocento } from 'next/font/google';
 import cn from 'classnames';
 import { PostHogProvider } from './providers';
+import { useLocale } from 'next-intl';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -44,17 +45,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const locale = useLocale();
+
   return (
     <html
+      lang={locale}
       suppressHydrationWarning
       className={`${inter.variable} ${quattrocento.variable} ${crimsonText.variable}`}
     >
-      <head>
-        <Script
-          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}`}
-          strategy='beforeInteractive'
-        />
-      </head>
+      <head></head>
       <body
         suppressHydrationWarning
         className={cn(

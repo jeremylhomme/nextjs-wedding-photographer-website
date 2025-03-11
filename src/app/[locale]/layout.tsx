@@ -9,9 +9,6 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/src/i18n/routing';
 import { LoadingProvider } from '@/src/components/providers/loading-provider';
 
-if (!process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY) {
-  throw new Error('NEXT_PUBLIC_CAPTCHA_SITE_KEY is not configured');
-}
 
 export const viewport: Viewport = {
   width: 'device-width',

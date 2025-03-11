@@ -498,7 +498,11 @@
     "name6": "Emilie & Gaël",
     "description6": "I had stumbled upon his work for another wedding and it was obvious: I had found the photographer for my event. Photos full of spontaneity, moments of happiness and joy immortalized.",
     "location6": "Tarascon, Bouches-du-Rhône",
-    "alt6": "Capturé par Jeremy Dan, photographe de mariage basé à Sceaux, dans les Hauts-de-Seine, un couple de mariés en tenue de soirée se promène à l'intérieur parmi les invités assis. La mariée tient un bouquet et porte une étole de fourrure blanche et un voile, tandis que le père de la mariée porte un costume sombre."
+    "alt6": "Capturé par Jeremy Dan, photographe de mariage basé à Sceaux, dans les Hauts-de-Seine, un couple de mariés en tenue de soirée se promène à l'intérieur parmi les invités assis. La mariée tient un bouquet et porte une étole de fourrure blanche et un voile, tandis que le père de la mariée porte un costume sombre.",
+    "name7": "Mathilde - DLL France",
+    "description7": "Thank you Jeremy for your professionalism and your quality work during our corporate evening ☺️ the rendering both photo and video is magnificent. I recommend Jeremy for your events without a doubt 💪",
+    "location7": "Domaine de la Butte Ronde (78)",
+    "alt7": ""
   },
 
   "photo-tiles": {
@@ -517,7 +521,8 @@
       "wedding": "Wedding",
       "event": "Event",
       "company": "Company & Corporate",
-      "lifestyle": "Lifestyle",
+      "couple": "Couple",
+      "family": "Family",
       "general": "General"
     },
     "see-more": "See more",
@@ -558,15 +563,25 @@
       "size": "Do you offer packages tailored to startups or small businesses?",
       "size-answer": "Yes, I can tailor my services based on your budget and specific needs."
     },
-    "ls": {
-      "types": "What types of lifestyle services do you offer?",
-      "types-answer": "I offer natural and authentic photo reportages. Whether it’s a family session, a couple shoot, or just a portrait, I create beautiful, spontaneous images full of emotion, far from stiff poses.",
-      "where": "Where do lifestyle photo sessions take place?",
-      "where-answer": "I conduct sessions outdoors, at your home, or at a location of your choice, depending on the desired ambiance.",
-      "how": "How does a lifestyle photo session unfold?",
-      "how-answer": "I guide you while allowing spontaneity to capture natural and sincere moments.",
-      "clothes": "What clothes do you recommend for a lifestyle photo session?",
-      "clothes-answer": "Simple outfits in neutral or pastel tones usually work very well for a harmonious look."
+    "ls-c": {
+      "types": "What types of couples photoshoots do you offer?",
+      "types-answer": "I offer natural and authentic photoshoots for couples, capturing your complicity and emotions in a spontaneous way, far from fixed poses.",
+      "where": "Where do the photoshoots for couples take place?",
+      "where-answer": "I do the sessions outdoors, at home or in a place that has a special meaning for you.",
+      "how": "How does a couple photoshoot take place?",
+      "how-answer": "I guide you while leaving room for spontaneity to capture moments of sincere complicity.",
+      "clothes": "What clothes do you recommend for a couple photoshoot?",
+      "clothes-answer": "Simple outfits, coordinated in neutral or pastel tones, generally work very well for a harmonious result."
+    },
+    "ls-f": {
+      "types": "What types of family photoshoots do you offer?",
+      "types-answer": "I offer natural and authentic family photoshoots, capturing moments of joy and tenderness as a family.",
+      "where": "Where do family photoshoots take place?",
+      "where-answer": "I do the sessions outdoors, at home or in a familiar place so that everyone feels comfortable.",
+      "how": "How does a family photoshoot take place?",
+      "how-answer": "I guide you while leaving room for spontaneity to capture natural and lively moments.",
+      "clothes": "What clothes do you recommend for a family photoshoot?",
+      "clothes-answer": "Simple outfits, coordinated in neutral or pastel tones, are ideal for a beautiful visual harmony."
     },
     "gn": {
       "payments": "What payment methods do you accept?",
@@ -643,8 +658,28 @@
   },
 
   "about-page": {
+    "metadata": {
+      "title": "About | Jeremy Dan Photographer and Videographer in Sceaux (92)",
+      "description": "Discover my story. Professional photographer since 2021, specializing in weddings, corporate events and lifestyle in Sceaux, Hauts-de-Seine.",
+      "keywords": [
+        "about jeremy dan",
+        "about jeremy dan photographer",
+        "about jeremy dan videographer",
+        "photographer sceaux",
+        "videographer sceaux",
+        "jeremy dan photographer",
+        "jeremy dan videographer"
+      ],
+      "jobTitle": "Photographer",
+      "openGraph": {
+        "title": "About | Jeremy Dan Photographer and Videographer in Sceaux (92)",
+        "description": "Discover my story. Professional photographer since 2021, specializing in weddings, corporate events and lifestyle in Sceaux, Hauts-de-Seine.",
+        "siteName": "Jeremy Dan Photographer and Videographer in Sceaux, Hauts-de-Seine",
+        "alt": "Photo of Jeremy Dan, photographer and videographer specializing in weddings, corporate events and lifestyle based in Sceaux, Hauts-de-Seine"
+      }
+    },
     "hero-title": "I capture your story, the one which represents you.",
-    "alt": "Photo of Jeremy Dan, wedding photographer based in Sceaux.",
+    "alt": "Photo of Jeremy Dan, wedding photographer based in Sceaux, Hauts-de-Seine.",
     "title1": "In a Few Words",
     "description1": "Introducing oneself can be a delicate exercise, but it is so important when entrusting such an important moment to a photographer. Here is my little story!",
     "description2": "My name is Jeremy, I am 28 years old and I live in Sceaux in the Hauts-de-Seine (south of 92). As a professional photographer for 5 years, I am fortunate to share my daily life with the one who gives rhythm and meaning to my life. I have three passions: photography, music, and skateboarding. Each of them nourishes my creativity and my vision of the world. When I'm not behind the lens capturing moments of life, I'm in front of my screen coding",
@@ -674,6 +709,34 @@
   },
 
   "portfolio-page": {
+    "metadata": {
+      "title": "Portfolio | Jeremy Dan Photographer & Videographer in Sceaux",
+      "description": "Discover my wedding, corporate, lifestyle and event photography and videos. Jeremy Dan, photographer and videographer in Sceaux, Hauts-de-Seine.",
+      "keywords": [
+        "portfolio photographe",
+        "portfolio videaste",
+        "jeremy dan photographe sceaux",
+        "jeremy dan videaste sceaux",
+        "wedding videos",
+        "corporate videos",
+        "wedding photos",
+        "corporate photos",
+        "event photography",
+        "couple photos",
+        "family photos",
+        "lifestyle photos",
+        "jeremy dan portfolio",
+        "jeremy dan galleries",
+        "jeremy dan realizations"
+      ],
+      "openGraph": {
+        "title": "Portfolio | Jeremy Dan Photographer & Videographer in Sceaux",
+        "description": "Discover my wedding, corporate, lifestyle and event photography and videos. Jeremy Dan, photographer and videographer in Sceaux, Hauts-de-Seine.",
+        "siteName": "Jeremy Dan Photographer and Videographer in Sceaux, Hauts-de-Seine",
+        "alt": "Photo by Jeremy Dan, wedding photographer, event and lifestyle company in Sceaux, Hauts-de-Seine"
+      }
+    },
+
     "hero-title": "Portfolio",
     "subtitle": "Suspended Moments",
     "description": "Some of my favorite photos from different projects I've covered. You'll find wedding photos, corporate photos, event photos (concerts, festivals) and lifestyle photos (couple photos, family photos, portraits...). Enjoy!",
@@ -705,12 +768,37 @@
       "wedding": "Wedding",
       "lifestyle": "Lifestyle",
       "event": "Event",
-      "company": "Corporate"
+      "company": "Company/Corporate",
+      "couple": "Couple",
+      "family": "Family"
     },
     "no-images-message": "No photos available in this category"
   },
 
   "blog-page": {
+    "metadata": {
+      "title": "Blog | Jeremy Dan Photographer and Videographer in Sceaux (92)",
+      "description": "Discover my blog articles and my wedding, business and lifestyle reports. Jeremy Dan, photographer and videographer in Sceaux in Hauts-de-Seine.",
+      "keywords": [
+        "blog jeremy dan",
+        "blog photographer",
+        "blog articles jeremy dan",
+        "blog photographer articles",
+        "blog galleries jeremy dan",
+        "blog wedding articles",
+        "blog business articles",
+        "event blog articles",
+        "blog couple articles",
+        "blog family articles",
+        "blog lifestyle articles"
+      ],
+      "openGraph": {
+        "title": "Blog | Jeremy Dan Photographer and Videographer in Sceaux (92)",
+        "description": "Discover my blog articles and my wedding, business and lifestyle reports. Jeremy Dan, photographer and videographer in Sceaux in Hauts-de-Seine.",
+        "siteName": "Jeremy Dan Photographer and Videographer in Sceaux, Hauts-de-Seine",
+        "alt": "Photo of Jeremy Dan, wedding photographer, event and lifestyle company in Sceaux, Hauts-de-Seine"
+      }
+    },
     "hero-title": "Your Most Beautiful Story",
     "alt": "A couple stands beside a tall, multi-layered cake adorned with sparklers, captured in stunning detail by Sceaux-based wedding photographer Jeremy Dan. The man wears a vest and bow tie, while the woman dazzles in a lace-detailed dress.",
     "title1": "Blog",
@@ -722,8 +810,10 @@
 
   "blog-posts": {
     "wedding-date": "Wedding date: ",
-    "last-modified": "Last modified: ",
+    "last-modified": "Last updated: ",
     "creation-date": "Creation date: ",
+    "bc-blogPage": "Blog",
+    "bc-home": "Home",
 
     "wedding-domaine-gillardiere": {
       "title": "Wedding at Domaine de la Gillardière",
@@ -1062,43 +1152,67 @@
   },
 
   "contact-page": {
+    "metadata": {
+      "title": "Contact me | Jeremy Dan Photographer and Videographer in Sceaux (92)",
+      "description": "Contact Jeremy Dan, wedding, corporate, event and family photographer and videographer in Sceaux, Hauts-de-Seine.",
+      "keywords": [
+        "contact jeremy dan",
+        "pricing photographer sceaux",
+        "pricing videographer sceaux",
+        "rates photographer sceaux",
+        "rates videographer sceaux",
+        "contact photographer sceaux",
+        "contact videographer sceaux",
+        "jeremy dan photographer sceaux",
+        "jeremy dan videographer sceaux"
+      ],
+      "openGraph": {
+        "title": "Contact me | Jeremy Dan Photographer and Videographer in Sceaux (92)",
+        "description": "Contact Jeremy Dan, wedding, corporate, event and family photographer and videographer in Sceaux, Hauts-de-Seine.",
+        "siteName": "Jeremy Dan Photographer and Videographer in Sceaux, Hauts-de-Seine",
+        "alt": "Photo of Jeremy Dan, wedding, corporate, event and lifestyle photographer in Sceaux, Hauts-de-Seine"
+      }
+    },
     "hero-title": "Let's Get to Know Each Other",
     "calendar": {
       "select-language": "Select Language"
     },
     "cf": {
       "title": "Contact Form",
-      "wedding": {
-        "desc": "I look forward to discussing your project and the wonderful opportunities we can explore together. Whether it's for a wedding, an event, a corporate report, or a lifestyle session, it's essential for me to learn more about you and your expectations. Once the form is filled out, I will propose a meeting over coffee or via Google Meet for those with busy schedules!",
-        "desc2": "My rates are provided only by appointment. You can also email me directly at ",
-        "title": "Wedding",
-        "first_name-label": "First Name",
-        "first_name-placeholder": "Your first name",
-        "last_name-label": "Last Name",
-        "last_name-placeholder": "Your last name",
-        "email-label": "Email",
-        "email-placeholder": "Your email address",
-        "event_date-placeholder": "The date of your event",
-        "message-label": "Tell Me Everything!",
-        "message-placeholder": "From the colors of your universe to the key moments you want to capture, I want to know it all! Share your ideas, desires, and even those little details that will make your project unique. The more I know, the better I can capture images that truly represent you.",
-        "knowing_source-label": "How Did You Hear About Me?",
-        "work_type-placeholder": "Type of Service",
-        "work_type-photography": "Photography",
-        "work_category-placeholder": "Choose a Category",
-        "work_category-wedding": "Wedding",
-        "work_category-event": "Event",
-        "work_category-lifestyle": "Lifestyle",
-        "work_category-company": "Corporate",
-        "terms-label": "I accept the",
-        "terms-link": "terms and conditions",
-        "terms-and": "and the",
-        "privacy-link": "privacy policy",
-        "knowing_source-placeholder": "Select an option",
-        "knowing_source-option2": "Google Search",
-        "knowing_source-option3": "Word of Mouth",
-        "knowing_source-option4": "Other",
-        "knowing_source-desc": "This helps a lot for the development of my business!"
-      },
+
+      "desc": "I look forward to discussing your project and the wonderful opportunities we can explore together. Whether it's for a wedding, an event, a corporate report, or a lifestyle session, it's essential for me to learn more about you and your expectations. Once the form is filled out, I will propose a meeting over coffee or via Google Meet for those with busy schedules!",
+      "desc2": "My rates are provided only by appointment. You can also email me directly at ",
+      "first_name-label": "First Name",
+      "first_name-placeholder": "Your first name",
+      "last_name-label": "Last Name",
+      "last_name-placeholder": "Your last name",
+      "email-label": "Email",
+      "email-placeholder": "Your email address",
+      "event_date-placeholder": "The date of your event",
+      "message-label": "Tell Me Everything!",
+      "message-placeholder": "From the colors of your universe to the key moments you want to capture, I want to know it all! Share your ideas, desires, and even those little details that will make your project unique. The more I know, the better I can capture images that truly represent you.",
+      "knowing_source-label": "How Did You Hear About Me?",
+      "work_type-label": "Type of Service",
+      "work_type-placeholder": "Type of Service",
+      "work_type-photography": "Photography",
+      "work_type-videography": "Videography",
+      "work_category-label": "Category",
+      "work_category-placeholder": "Choose a Category",
+      "work_category-wedding": "Wedding",
+      "work_category-event": "Event",
+      "work_category-couple": "Couple",
+      "work_category-family": "Family",
+      "work_category-company": "Corporate",
+      "terms-label": "I accept the",
+      "terms-link": "terms and conditions",
+      "terms-and": "and the",
+      "privacy-link": "privacy policy",
+      "knowing_source-placeholder": "Select an option",
+      "knowing_source-option2": "Google Search",
+      "knowing_source-option3": "Word of Mouth",
+      "knowing_source-option4": "Other",
+      "knowing_source-desc": "This helps a lot for the development of my business!",
+
       "submit": "Send",
       "submitting": "Sending..."
     }
@@ -1353,13 +1467,17 @@
       "wedding": "Wedding",
       "corporate": "Corporate",
       "event": "Event",
-      "lifestyle": "Lifestyle"
+      "lifestyle": "Lifestyle",
+      "family": "Family",
+      "couple": "Couple"
     },
     "wedding-photography": "Wedding Photography",
     "wedding-videography": "Wedding Videography",
     "event-photography": "Event Photography",
     "lifestyle-photography": "Lifestyle Photography",
     "corporate-photography": "Corporate Photography",
-    "corporate-videography": "Corporate Videography"
+    "corporate-videography": "Corporate Videography",
+    "family-photography": "Family Photography",
+    "couple-photography": "Couple Photography"
   }
 }

@@ -470,33 +470,37 @@
     "button-label": "Partagez votre expérience",
     "name1": "Lucile & Antoine",
     "description1": "Jérémy a su capter tous les moments importants de cette journée. Merci mille fois pour ton accompagnement, tes conseils et ta patience sur cette journée.",
-    "location1": "Sceaux, Hauts-de-Seine",
+    "location1": "Sceaux (92)",
     "alt1": "Un couple en tenue de mariage se tient la main dans une chapelle, face à un autel sous des vitraux, magnifiquement capturé par Jeremy Dan, photographe de mariage basé à Sceaux, dans les Hauts-de-Seine.",
     "name2": "Florian & Iky",
     "description2": "Ses idées créatives et le grain de l'édition des photos ont ajouté une touche magique. Nous recommandons vivement les services de Jeremy à tous les futurs mariés à la recherche d'un photographe talentueux et flexible !",
-    "location2": "Paris",
+    "location2": "Paris (75)",
     "alt2": "Au cours d'une charmante cérémonie à Paris, les mariés échangent leurs anneaux. La mariée tient un bouquet de tulipes blanches, chaque moment étant capturé de manière experte par Jeremy Dan, un photographe de mariage renommé basé à Sceaux.",
     "name3": "Roxane & Thomas",
     "description3": "Agréable, disponible à l’écoute des mariées comme des invités. Tous très content du travail fourni et du déroulement pendant la journée. À tous les futures mariés, je vous recommande chaleureusement Jeremy, pour son dynamisme, son travail sérieux, mais aussi pour sa gentillesse et sa bonne humeur.",
-    "location3": "Levallois-Perret, Hauts-de-Seine",
+    "location3": "Levallois-Perret (92)",
     "alt3": "Bride and groom stand before seated guests in an town hall room with chandeliers and patterned walls. Captured by Jeremy Dan, a talented wedding photographer based in Sceaux, Hauts-de-Seine, this moment beautifully encapsulates the elegance of the day.",
     "name4": "Cyndie & Emile",
     "description4": "Je ne peux que vous recommander Jeremy pour sa discrétion, sa ponctualité, son efficacité, son talent mais surtout pour son côté humain.",
-    "location4": "Montgreleix, Cantal",
+    "location4": "Montgreleix (15)",
     "alt4": "Lors d'une cérémonie de mariage traditionnelle, les mariés en tenue traditionnelle s'inclinent gracieusement sur le sol en bois. Au premier plan, une troisième personne tient une tasse. Ce cliché a été réalisé par Jeremy Dan, photographe de mariage basé à Sceaux.",
     "name5": "Charlotte & Adrian",
     "description5": "Nous avons sollicité Jérémy pour notre mariage suite à sa recommandation par l'une de nos amies et nous n'avons pas été déçus : professionnel et impliqué le jour J, il a aussi été apprécié de tous les convives.",
-    "location5": "Montpellier",
+    "location5": "Montpellier (34)",
     "alt5": "A wedding couple strolls down a path, the bride in a white dress and the groom in a red suit, embraced by trees and stone walls. Captured artfully by Jeremy Dan, a wedding photographer based in Sceaux.",
     "name6": "Emilie & Gaël",
     "description6": "J'étais tombée par hasard sur son travail pour un autre mariage et ce fut une évidence : j'avais trouvé le photographe de mon évènement. Des clichés plein de spontanéité, des moments de bonheur et de joie immortalisés.",
-    "location6": "Tarascon, Bouches-du-Rhône",
-    "alt6": "Captured by Jeremy Dan, a wedding photographer based in Sceaux, Hauts-de-Seine, a bride and groom in formal attire walk indoors among seated guests. The bride holds a bouquet and wears a white fur stole and veil, while the bride's father dons a dark suit."
+    "location6": "Tarascon (13)",
+    "alt6": "Captured by Jeremy Dan, a wedding photographer based in Sceaux, Hauts-de-Seine, a bride and groom in formal attire walk indoors among seated guests. The bride holds a bouquet and wears a white fur stole and veil, while the bride's father dons a dark suit.",
+    "name7": "Mathilde - DLL France",
+    "description7": "Merci Jeremy pour ton professionnalisme et ton travail de qualité pendant notre soirée d’entreprise ☺️ le rendu aussi bien photo que vidéo est magnifique. Je vous recommande Jeremy pour vos événements sans aucun doute 💪",
+    "location7": "Domaine de la Butte Ronde (78)",
+    "alt7": ""
   },
 
   "photo-tiles": {
     "title": "Capturer l’Instant",
-    "description": "Chaque moment que vous vivez est une page d’une histoire plus grande – votre histoire. Et chaque histoire mérite d’être racontée avec sincérité. Mon rôle, en tant que photographe et vidéaste et vidéaste, est de capturer l’essence de ces instants éphémères pour qu’ils restent gravés à jamais. Un moment de joie partagée, une émotion furtive ou un regard complice, chaque image témoigne de ce qui compte vraiment. Mon approche est simple : authenticité, sensibilité et naturel.",
+    "description": "Chaque moment que vous vivez est une page d’une histoire plus grande – votre histoire. Et chaque histoire mérite d’être racontée avec sincérité. Mon rôle, en tant que photographe et vidéaste, est de capturer l’essence de ces instants éphémères pour qu’ils restent gravés à jamais. Un moment de joie partagée, une émotion furtive ou un regard complice, chaque image témoigne de ce qui compte vraiment. Mon approche est simple : authenticité, sensibilité et naturel.",
     "alt1": "Les mariés s'embrassent à l'extérieur de l'église tandis que les invités les entourent, font des bulles et prennent des photos. Capturé par Jeremy Dan, photographe de mariage basé à Sceaux, dans les Hauts-de-Seine, ce moment de joie est préservé à jamais.",
     "alt2": "A wedding couple dancing, with the groom lifting the bride in a white dress, is beautifully captured by Jeremy Dan, a wedding photographer based in Sceaux, against a dimly lit background.",
     "alt3": "Un couple de mariés, en tenue de mariage, se sourit en plein air. La mariée porte une robe en dentelle et le marié un costume rouge. Ils se tiennent la main, entourés de verdure et d'un mur de pierre, comme l'a capturé Jeremy Dan, le photographe de mariage basé à Sceaux.",
@@ -510,7 +514,8 @@
       "wedding": "Mariage",
       "event": "Événement",
       "company": "Entreprise & Corporate",
-      "lifestyle": "Lifestyle",
+      "couple": "Couple",
+      "family": "Famille",
       "general": "Général"
     },
     "see-more": "Voir plus",
@@ -551,15 +556,25 @@
       "size": "Proposez-vous des formules adaptées aux startups ou petites entreprises ?",
       "size-answer": "Oui, je peux adapter mes prestations en fonction de votre budget et de vos besoins spécifiques."
     },
-    "ls": {
-      "types": "Quels sont les types de services Lifestyle que vous proposez ?",
-      "types-answer": "Je propose des reportages photo naturels et authentiques. Que ce soit pour une séance en famille, en couple, ou simplement un portrait, je crée des images belles, spontanées et pleines d’émotion, loin des poses figées.",
-      "where": "Où se déroulent les séances lifestyle ?",
-      "where-answer": "Je réalise les séances en extérieur, à domicile ou dans un lieu de votre choix, selon l’ambiance souhaitée.",
-      "how": "Comment se déroule une séance photo lifestyle ?",
-      "how-answer": "Je vous guide tout en laissant place à la spontanéité pour capturer des moments naturels et sincères.",
-      "clothes": "Quels vêtements recommandez-vous pour une séance photo ?",
-      "clothes-answer": "Des tenues simples, dans des tons neutres ou pastel, fonctionnent généralement très bien pour un rendu harmonieux."
+    "ls-c": {
+      "types": "Quels sont les types de séances photo pour les couples que vous proposez ?",
+      "types-answer": "Je propose des séances photo naturelles et authentiques pour les couples, capturant votre complicité et vos émotions de manière spontanée, loin des poses figées.",
+      "where": "Où se déroulent les séances photo pour les couples ?",
+      "where-answer": "Je réalise les séances en extérieur, à domicile ou dans un lieu qui a une signification particulière pour vous.",
+      "how": "Comment se déroule une séance photo de couple ?",
+      "how-answer": "Je vous guide tout en laissant place à la spontanéité pour capturer des moments de complicité sincère.",
+      "clothes": "Quels vêtements recommandez-vous pour une séance photo de couple ?",
+      "clothes-answer": "Des tenues simples, coordonnées dans des tons neutres ou pastel, fonctionnent généralement très bien pour un rendu harmonieux."
+    },
+    "ls-f": {
+      "types": "Quels sont les types de séances photo pour les familles que vous proposez ?",
+      "types-answer": "Je propose des reportages photo familiaux naturels et authentiques, capturant les moments de joie et de tendresse en famille.",
+      "where": "Où se déroulent les séances photo de famille ?",
+      "where-answer": "Je réalise les séances en extérieur, à domicile ou dans un lieu familier pour que chacun se sente à l’aise.",
+      "how": "Comment se déroule une séance photo de famille ?",
+      "how-answer": "Je vous guide tout en laissant place à la spontanéité pour capturer des moments naturels et pleins de vie.",
+      "clothes": "Quels vêtements recommandez-vous pour une séance photo en famille ?",
+      "clothes-answer": "Des tenues simples, coordonnées dans des tons neutres ou pastel, sont idéales pour une belle harmonie visuelle."
     },
     "gn": {
       "payments": "Quels moyens de paiement acceptez-vous ?",
@@ -605,8 +620,7 @@
     "hero-bullet3-title": "Lifestyle & famille",
     "hero-bullet3": " – Photos naturelles pour les couples, les familles et les portraits individuels.",
     "hero-bullet4-title": "Événementiel",
-    "hero-bullet4": " – Concerts, festivals, séminaires… Capturez l’émotion et l’energie de vos événements.",
-    "hero-description3": "Basé en région parisienne, je me déplace partout en France et à l’international.",
+    "hero-bullet4": " – Concerts, festivals, séminaires… Capturez l’émotion et l’energie de vos événements. Basé en région parisienne, je me déplace partout en France et à l’international.",
     "subtitle": "Photos et Vidéos Authentiques pour Vrais Humains.",
     "description1": "En tant que photographe et vidéaste, je mets mon regard au service de vos histoires, qu’il s’agisse d’un mariage rempli d’émotions, d’un portrait professionnel qui reflète votre image, d’une séance lifestyle en toute simplicité, ou encore d’un événement vibrant dont vous souhaitez garder une trace inoubliable. Peu importe le lieu – un décor spectaculaire ou l’intimité de votre quotidien – mon objectif est de révéler votre authenticité, vos émotions brutes et tout ce qui fait de vous, vous.",
     "description2": "Ne vous retenez pas. Votre histoire est unique. Créons des photos qui vous ressemblent vraiment.",
@@ -687,7 +701,7 @@
   "portfolio-page": {
     "metadata": {
       "title": "Portfolio | Jeremy Dan Photographe et Vidéaste à Sceaux (92)",
-      "description": "Découvrez mes photographies et vidéos de mariage, d'entreprise, lifestyle et événementiel. Jeremy Dan, photographe et vidéo à Sceaux.",
+      "description": "Découvrez mes photographies et vidéos de mariage, d'entreprise, lifestyle et événementiel. Jeremy Dan, photographe et vidéo à Sceaux, Hauts-de-Seine.",
       "keywords": [
         "portfolio photographe",
         "portfolio vidéaste",
@@ -707,7 +721,7 @@
       ],
       "openGraph": {
         "title": "Portfolio | Jeremy Dan Photographe et Vidéaste à Sceaux (92)",
-        "description": "Découvrez mes photographies et vidéos de mariage, d'entreprise, lifestyle et événementiel. Jeremy Dan, photographe et vidéo à Sceaux.",
+        "description": "Découvrez mes photographies et vidéos de mariage, d'entreprise, lifestyle et événementiel. Jeremy Dan, photographe et vidéo à Sceaux, Hauts-de-Seine.",
         "siteName": "Jeremy Dan Photographe et Vidéaste à Sceaux, Hauts-de-Seine",
         "alt": "Photo de Jeremy Dan, photographe de mariage, entreprise événementiel et lifestyle à Sceaux, Hauts-de-Seine"
       }
@@ -743,7 +757,9 @@
       "wedding": "Mariage",
       "lifestyle": "Lifestyle",
       "event": "Évènement",
-      "company": "Entreprise / Corporate"
+      "company": "Entreprise/Corporate",
+      "couple": "Couple",
+      "family": "Famille"
     },
     "no-images-message": "Aucune photo disponible dans cette catégorie"
   },
@@ -1124,6 +1140,25 @@
   },
 
   "contact-page": {
+    "metadata": {
+      "title": "Contactez-moi | Jeremy Dan Photographe et Vidéaste à Sceaux (92)",
+      "description": "Contactez Jeremy Dan, photographe et vidéaste de mariage, d'entreprise, événementiel et famille à Sceaux, Hauts-de-Seine.",
+      "keywords": [
+        "contact jeremy dan",
+        "tarifs photographe sceaux",
+        "tarifs vidéaste sceaux",
+        "contact photographe sceaux",
+        "contact vidéaste sceaux",
+        "jeremy dan photographe sceaux",
+        "jeremy dan vidéaste sceaux"
+      ],
+      "openGraph": {
+        "title": "Contactez-moi | Jeremy Dan Photographe et Vidéaste à Sceaux (92)",
+        "description": "DContactez Jeremy Dan, photographe et vidéaste de mariage, d'entreprise, événementiel et famille à Sceaux, Hauts-de-Seine.",
+        "siteName": "Jeremy Dan Photographe et Vidéaste à Sceaux, Hauts-de-Seine",
+        "alt": "Photo de Jeremy Dan, photographe de mariage, entreprise événementiel et lifestyle à Sceaux, Hauts-de-Seine"
+      }
+    },
     "hero-title": "Découvrons-Nous",
     "calendar": {
       "select-language": "Sélectionnez la langue"
@@ -1131,38 +1166,38 @@
     "cf": {
       "title": "Formulaire de Contact",
 
-      "wedding": {
-        "desc": "J'ai hâte de discuter de votre projet et des belles opportunités que nous pouvons explorer ensemble. Que ce soit pour un mariage, un événement, un reportage en entreprise ou une séance lifestyle, il est essentiel pour moi d’en apprendre davantage sur vous et vos attentes.Une fois le formulaire rempli, je vous proposerai une rencontre autour d'un café ou via Google Meet pour les emplois du temps chargés !",
-        "desc2": "Mes tarifs sont donnés uniquement sur rendez-vous. Vous pouvez également m'envoyer un mail directement à ",
-        "title": "Mariage",
-        "first_name-label": "Prénom",
-        "first_name-placeholder": "Votre prénom",
-        "last_name-label": "Nom",
-        "last_name-placeholder": "Votre nom de famille",
-        "email-label": "Email",
-        "email-placeholder": "Votre adresse email",
-        "event_date-placeholder": "La date de votre événement",
-        "message-label": "Dites-moi tout !",
-        "message-placeholder": "Des couleurs de votre univers aux instants clés que vous souhaitez immortaliser, je veux tout savoir ! Partagez-moi vos idées, vos envies et même ces petits détails qui rendront votre projet unique. Plus j’en saurai, mieux je pourrai capturer des images qui vous ressemblent vraiment.",
-        "knowing_source-label": "Comment m'avez-vous connu ?",
-        "work_type-placeholder": "Type de prestation",
-        "work_type-photography": "Photographie",
-        "work_type-videography": "Videographie",
-        "work_category-placeholder": "Choisissez une catégorie",
-        "work_category-wedding": "Mariage",
-        "work_category-event": "Événement",
-        "work_category-lifestyle": "Lifestyle",
-        "work_category-company": "Entreprise",
-        "terms-label": "J'accepte les",
-        "terms-link": "conditions générales de vente",
-        "terms-and": "et la",
-        "privacy-link": "politique de confidentialité",
-        "knowing_source-placeholder": "Sélectionnez une option",
-        "knowing_source-option2": "Google Search",
-        "knowing_source-option3": "Bouche à oreille",
-        "knowing_source-option4": "Autre",
-        "knowing_source-desc": "Cela m'aide beaucoup pour le développement mon activité !"
-      },
+      "desc": "J'ai hâte de discuter de votre projet et des belles opportunités que nous pouvons explorer ensemble. Que ce soit pour un mariage, un événement, un reportage en entreprise ou une séance lifestyle, il est essentiel pour moi d’en apprendre davantage sur vous et vos attentes.Une fois le formulaire rempli, je vous proposerai une rencontre autour d'un café ou via Google Meet pour les emplois du temps chargés !",
+      "desc2": "Mes tarifs sont donnés uniquement sur rendez-vous. Vous pouvez également m'envoyer un mail directement à ",
+      "first_name-label": "Prénom",
+      "first_name-placeholder": "Votre prénom",
+      "last_name-label": "Nom",
+      "last_name-placeholder": "Votre nom de famille",
+      "email-label": "Email",
+      "email-placeholder": "Votre adresse email",
+      "event_date-placeholder": "La date de votre événement",
+      "message-label": "Dites-moi tout !",
+      "message-placeholder": "Des couleurs de votre univers aux instants clés que vous souhaitez immortaliser, je veux tout savoir ! Partagez-moi vos idées, vos envies et même ces petits détails qui rendront votre projet unique. Plus j’en saurai, mieux je pourrai capturer des images qui vous ressemblent vraiment.",
+      "knowing_source-label": "Comment m'avez-vous connu ?",
+      "work_type-label": "Type de prestation",
+      "work_type-placeholder": "Type de prestation",
+      "work_type-photography": "Photographie",
+      "work_type-videography": "Videographie",
+      "work_category-label": "Catégorie",
+      "work_category-placeholder": "Choisissez une catégorie",
+      "work_category-wedding": "Mariage",
+      "work_category-event": "Événement",
+      "work_category-couple": "Couple",
+      "work_category-family": "Famille",
+      "work_category-company": "Entreprise",
+      "terms-label": "J'accepte les",
+      "terms-link": "conditions générales de vente",
+      "terms-and": "et la",
+      "privacy-link": "politique de confidentialité",
+      "knowing_source-placeholder": "Sélectionnez une option",
+      "knowing_source-option2": "Google Search",
+      "knowing_source-option3": "Bouche à oreille",
+      "knowing_source-option4": "Autre",
+      "knowing_source-desc": "Cela m'aide beaucoup pour le développement mon activité !",
 
       "submit": "Envoyer",
       "submitting": "Envoi en cours..."
@@ -1197,7 +1232,7 @@
       "content2": "Je me fonds dans le décor pour capturer chaque moment sans perturber le déroulement de votre journée. Vous profitez pleinement, et moi, je saisis les regards, les gestes, l'énergie et les instants vrais. Bien sûr, nous prendrons aussi le temps de réaliser des portraits et des images plus posées, mais toujours avec naturel et fluidité.",
       "content3": "Mon approche est celle du reportage : observer, ressentir et capter l’essence de chaque moment. Des éclats de rire aux échanges complices, mon objectif est de retranscrire avec justesse et sensibilité ce qui rend votre histoire unique.",
       "alt1": "Photo de dos de Jeremy Dan, photographe professionnel à Sceaux.",
-      "title3": "Mon style En tant que photographe et vidéaste",
+      "title3": "Mon style en tant que photographe",
       "content4": "Je puise mon inspiration dans la photographie argentique pour offrir des images à l’esthétique intemporelle :",
       "bullet1-b": "Des couleurs douces et naturelles",
       "bullet1-content": ", fidèles à l’instant tel qu’il a été vécu.",
@@ -1419,13 +1454,17 @@
       "wedding": "Mariage",
       "corporate": "Entreprise / Corporate",
       "event": "Événement",
-      "lifestyle": "Lifestyle"
+      "lifestyle": "Lifestyle",
+      "family": "Famille",
+      "couple": "Couple"
     },
     "wedding-photography": "Photos de Mariage",
     "wedding-videography": "Vidéo de Mariage",
     "event-photography": "Photos d'Événement",
     "lifestyle-photography": "Photos Lifestyle",
     "corporate-photography": "Photos d'Entreprise",
-    "corporate-videography": "Vidéo d'Entreprise"
+    "corporate-videography": "Vidéo d'Entreprise",
+    "family-photography": "Photos de Famille",
+    "couple-photography": "Photos de Couple"
   }
 }

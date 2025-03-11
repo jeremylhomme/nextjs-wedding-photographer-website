@@ -12,7 +12,6 @@ practices and features.
 - **Internationalization**: Multi-language support using next-intl
 - **Contact Form**:
   - Secure form handling with react-hook-form and zod validation
-  - Google reCAPTCHA integration for spam protection
   - Email notifications via SendGrid
 - **Image Gallery**:
   - Responsive image gallery with lazy loading
@@ -41,7 +40,6 @@ practices and features.
   - Zod validation
 - **APIs & Services**:
   - SendGrid for email
-  - Google reCAPTCHA
 - **UI Components**:
   - Radix UI primitives
   - Embla Carousel
