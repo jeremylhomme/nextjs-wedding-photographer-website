@@ -54,8 +54,7 @@ const formSchema = z.object({
   message: z.string().min(30),
   terms_accepted: z.boolean().refine(val => val === true, {
     message: 'You must accept the terms and conditions'
-  }),
-  altcha: z.string().min(1, 'Please complete the captcha')
+  })
 });
 
 export default function ContactForm() {
@@ -482,18 +481,7 @@ export default function ContactForm() {
                 </FormItem>
               )}
             />
-            <FormField
-              control={form.control}
-              name='altcha'
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <AltchaWidget locale={locale} onToken={field.onChange} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            <AltchaWidget locale={locale} />
 
             <Button type='submit' disabled={isSubmitting}>
               {isSubmitting ? (

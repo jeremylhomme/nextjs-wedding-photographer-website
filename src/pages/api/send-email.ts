@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import sendgrid from '@sendgrid/mail';
-import { verifySolution } from 'altcha-lib';
 
 // Set the SendGrid API key
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '');
@@ -22,8 +21,7 @@ export default async function handler(
     work_category,
     knowing_source,
     message,
-    terms_accepted,
-    altcha: token
+    terms_accepted
   } = req.body;
 
   // Validate the request body
@@ -36,25 +34,12 @@ export default async function handler(
     !work_category ||
     !knowing_source ||
     !message ||
-    !terms_accepted ||
-    !token
+    !terms_accepted
   ) {
     return res.status(400).json({ error: 'All fields are required' });
   }
 
-  // Verify the Altcha token
-  try {
-    if (!process.env.ALTCHA_HMAC_KEY) {
-      throw new Error('ALTCHA_HMAC_KEY environment variable is not set');
-    }
-    const isValid = await verifySolution(token, process.env.ALTCHA_HMAC_KEY);
-    if (!isValid) {
-      return res.status(400).json({ error: 'Invalid captcha' });
-    }
-  } catch (error) {
-    console.error('Altcha verification error:', error);
-    return res.status(400).json({ error: 'Failed to verify captcha' });
-  }
+  // ALTCHA validation is handled by the floating UI middleware
 
   try {
     const templateId = process.env.SENDGRID_TEMPLATE_ID;
@@ -63,8 +48,9 @@ export default async function handler(
     }
 
     // Helper function to escape special characters for Handlebars
-    const escapeHandlebars = (str: string | undefined | null) => {
-      if (!str) return '';
+    const escapeHandlebars = (value: any): string => {
+      if (value === null || value === undefined) return '';
+      const str = String(value);
       return str.replace(/[&"']/g, char => {
         switch (char) {
           case '&':
@@ -95,7 +81,7 @@ export default async function handler(
         first_name: escapeHandlebars(first_name),
         last_name: escapeHandlebars(last_name),
         email: escapeHandlebars(email),
-        event_date: event_date ? new Date(event_date).toLocaleDateString() : '',
+        event_date: event_date instanceof Date ? event_date.toLocaleDateString() : typeof event_date === 'string' ? new Date(event_date).toLocaleDateString() : '',
         work_type: escapeHandlebars(work_type),
         work_category: escapeHandlebars(work_category),
         knowing_source: escapeHandlebars(knowing_source),
