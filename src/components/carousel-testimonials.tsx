@@ -11,61 +11,56 @@ import VerticalLine from '@/src/components/vertical-line';
 
 const CarouselTestimonials: React.FC = () => {
   const t = useTranslations('carousel-testimonials');
+  const alt = useTranslations('alt-images');
   const testimonials = [
     {
       name: t('name1'),
       description: t('description1'),
       location: t('location1'),
-      image:
-        '/testimonials/testimony-jeremydan-wedding-photography-001-optimized.webp',
-      alt: t('alt1')
+      image: '/wedding/jeremydan-wedding-photographer-la-002-optimized.webp',
+      alt: alt('wedding.la.alt2')
     },
     {
       name: t('name2'),
       description: t('description2'),
       location: t('location2'),
-      image:
-        '/testimonials/testimony-jeremydan-wedding-photography-002-optimized.webp',
-      alt: t('alt2')
+      image: '/wedding/jeremydan-wedding-photographer-if-014-optimized.webp',
+      alt: alt('wedding.if.alt14')
     },
     {
       name: t('name3'),
       description: t('description3'),
       location: t('location3'),
-      image:
-        '/testimonials/testimony-jeremydan-wedding-photography-003-optimized.webp',
-      alt: t('alt3')
+      image: '/wedding/jeremydan-wedding-photographer-rth-019-optimized.webp',
+      alt: alt('wedding.rth.alt19')
     },
     {
       name: t('name4'),
       description: t('description4'),
       location: t('location4'),
-      image:
-        '/testimonials/testimony-jeremydan-wedding-photography-004-optimized.webp',
-      alt: t('alt4')
+      image: '/wedding/jeremydan-wedding-photographer-ce-032-optimized.webp',
+      alt: alt('wedding.ce.alt32')
     },
     {
       name: t('name5'),
       description: t('description5'),
       location: t('location5'),
-      image:
-        '/testimonials/testimony-jeremydan-wedding-photography-005-optimized.webp',
-      alt: t('alt5')
+      image: '/wedding/jeremydan-wedding-photographer-ca-014-optimized.webp',
+      alt: alt('wedding.ca.alt14')
     },
     {
       name: t('name6'),
       description: t('description6'),
       location: t('location6'),
-      image:
-        '/testimonials/testimony-jeremydan-wedding-photography-006-optimized.webp',
-      alt: t('alt6')
+      image: '/wedding/jeremydan-wedding-photographer-eg-019-optimized.webp',
+      alt: alt('wedding.eg.alt19')
     },
     {
       name: t('name7'),
       description: t('description7'),
       location: t('location7'),
       image: '/company/jeremydan-company-photographer-df-100-optimized.webp',
-      alt: t('alt7')
+      alt: alt('company.df.alt1')
     }
   ];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Fade()]);

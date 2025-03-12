@@ -76,7 +76,6 @@ export async function generateMetadata({
 const HomePage = async ({ params }: HomePageProps) => {
   const alt = await getTranslations('alt-images');
   const t = await getTranslations('home-page');
-  const pt = await getTranslations('photo-tiles');
   const fs = await getTranslations('faq-section');
   const s = await getTranslations('services');
   const posts = await getBlogPosts(params.locale);
@@ -112,58 +111,58 @@ const HomePage = async ({ params }: HomePageProps) => {
   const parallaxImages = [
     {
       src: '/wedding/jeremydan-wedding-photographer-ca-032-optimized.webp',
-      alt: alt('parallax.wedding1')
+      alt: alt('wedding.ca.alt32')
     },
     {
       src: '/event/jeremydan-event-photographer-cc-037-optimized.webp',
-      alt: alt('parallax.event1')
+      alt: alt('event.cc.alt37')
     },
     {
       src: '/company/jeremydan-company-photographer-df-037-optimized.webp',
-      alt: alt('parallax.company1')
+      alt: alt('company.df.alt37')
     },
     {
       src: '/event/jeremydan-event-photographer-cc-056-optimized.webp',
-      alt: alt('parallax.event2')
+      alt: alt('event.cc.alt56')
     },
     {
       src: '/family/jeremydan-lifestyle-family-photographer-gf-004-optimized.webp',
-      alt: alt('parallax.family1')
+      alt: alt('family.gf.alt4')
     },
     {
       src: '/wedding/jeremydan-wedding-photographer-rth-047-optimized.webp',
-      alt: alt('parallax.wedding2')
+      alt: alt('wedding.rth.alt47')
     },
     {
       src: '/wedding/jeremydan-wedding-photographer-rth-044-optimized.webp',
-      alt: alt('parallax.wedding3')
+      alt: alt('wedding.rth.alt44')
     },
     {
-      src: '/wedding/jeremydan-wedding-photography-001-optimized.webp',
-      alt: alt('parallax.wedding4')
+      src: '/wedding/jeremydan-wedding-photographer-la-003-optimized.webp',
+      alt: alt('wedding.la.alt3')
     },
     {
       src: '/wedding/jeremydan-wedding-photographer-rta-030-optimized.webp',
-      alt: alt('parallax.wedding5')
+      alt: alt('wedding.rta.alt30')
     }
   ];
   const images: PhotoTileProps[] = [
     {
       src: '/event/jeremydan-event-photographer-cc-039-optimized.webp',
-      alt: pt('alt1'),
+      alt: alt('event.cc.alt39'),
       priority: true
     },
     {
       src: '/wedding/jeremydan-wedding-photographer-ce-038-optimized.webp',
-      alt: pt('alt2')
+      alt: alt('wedding.ce.alt38')
     },
     {
       src: '/company/jeremydan-company-photographer-df-019-optimized.webp',
-      alt: pt('alt3')
+      alt: alt('company.df.alt19')
     },
     {
       src: '/family/jeremydan-lifestyle-family-photographer-gf-002-optimized.webp',
-      alt: pt('alt4')
+      alt: alt('family.gf.alt2')
     }
   ];
 
@@ -275,8 +274,8 @@ const HomePage = async ({ params }: HomePageProps) => {
           </h2>
           <div className='relative h-[40vh]'>
             <ClientImageWrapper
-              src='/home-page/subhero-jeremydan-wedding-photography-002-optimized.webp'
-              alt='Two people hanging upside down'
+              src='/wedding/jeremydan-wedding-photographer-ca-020-optimized.webp'
+              alt={alt('wedding.ca.alt20')}
               className='h-full w-full object-cover'
             />
           </div>
