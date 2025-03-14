@@ -264,6 +264,12 @@ export function SceauxPhotographyLocation() {
             <ul className='mb-8 text-muted-foreground'>
               <li>
                 <span className='text-primary-foreground'>
+                  {t('bullet11bis-b')}
+                </span>
+                {t('bullet11bis-content')}
+              </li>
+              <li>
+                <span className='text-primary-foreground'>
                   {t('bullet11-b')}
                 </span>
                 {t('bullet11-content')}
@@ -304,6 +310,12 @@ export function SceauxPhotographyLocation() {
                   {t('bullet14-b')}
                 </span>
                 {t('bullet14-content')}
+              </li>
+              <li>
+                <span className='text-primary-foreground'>
+                  {t('bullet15-b')}
+                </span>
+                {t('bullet15-content')}
               </li>
             </ul>
             <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-2'>
