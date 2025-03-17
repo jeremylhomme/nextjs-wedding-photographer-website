@@ -7,6 +7,7 @@ import { getMessages } from 'next-intl/server';
 import { Toaster } from 'sonner';
 import { notFound } from 'next/navigation';
 import { routing } from '@/src/i18n/routing';
+import { generateCanonicalUrl } from '@/src/lib/url';
 import { LoadingProvider } from '@/src/components/providers/loading-provider';
 
 
@@ -90,16 +91,16 @@ export async function generateMetadata({
       telephone: false
     },
     alternates: {
-      canonical: '/',
+      canonical: generateCanonicalUrl(''),
       languages: {
-        fr: '/fr',
-        en: '/en'
+        fr: generateCanonicalUrl('', 'fr'),
+        en: generateCanonicalUrl('', 'en')
       }
     },
     openGraph: {
       type: 'website',
       locale: locale,
-      url: '/',
+      url: generateCanonicalUrl(''),
       siteName: 'Jeremy Dan Photography',
       images: [
         {

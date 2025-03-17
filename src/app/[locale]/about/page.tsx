@@ -7,6 +7,7 @@ import { Button } from '@/src/components/ui/button';
 import { Link } from '@/src/i18n/routing';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
+import { generateCanonicalUrl } from '@/src/lib/url';
 
 interface NavigationItem {
   name: string;
@@ -57,9 +58,8 @@ const AboutPage: React.FC = () => {
     setLoadedImages(prev => ({ ...prev, [id]: true }));
   };
 
-  const pathname = usePathname();
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-  const url = `${baseUrl}${pathname}`;
+  const pathname = usePathname() || '';
+  const url = generateCanonicalUrl(pathname.replace(/^\/[^/]+\//, ''));
 
   // Person schema for structured data
   const personSchema = {
@@ -70,7 +70,7 @@ const AboutPage: React.FC = () => {
     familyName: 'Dan',
     jobTitle: t('metadata.jobTitle'),
     description: t('metadata.description'),
-    image: `${baseUrl}/about-page/about-jeremydan-wedding-photographer-optimized-square.webp`,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}/about-page/about-jeremydan-wedding-photographer-optimized-square.webp`,
     url: url,
     sameAs: navigation.social.map(social => social.href),
     address: {
@@ -82,7 +82,7 @@ const AboutPage: React.FC = () => {
     worksFor: {
       '@type': 'Organization',
       name: 'Jeremy Dan Photography',
-      url: baseUrl
+      url: process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'
     },
     knowsLanguage: ['fr', 'en'],
     hasOccupation: {

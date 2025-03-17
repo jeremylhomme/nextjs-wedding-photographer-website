@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { generateCanonicalUrl } from '@/src/lib/url';
 
 export async function generateMetadata({
   params
@@ -7,8 +8,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const t = await getTranslations('contact-page');
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-  const url = `${siteUrl}/${params.locale}/contact`;
+  const url = generateCanonicalUrl('contact', params.locale);
 
   // Get the raw value for keywords array
   const rawMessages = await t.raw('metadata');
@@ -35,8 +35,8 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: {
-        fr: `${siteUrl}/fr/contact`,
-        en: `${siteUrl}/en/contact`
+        fr: generateCanonicalUrl('contact', 'fr'),
+        en: generateCanonicalUrl('contact', 'en')
       }
     }
   };

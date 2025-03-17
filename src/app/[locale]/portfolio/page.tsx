@@ -7,6 +7,7 @@ import ImageModal from '@/src/components/image-modal';
 import { useTranslations } from 'next-intl';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
+import { generateCanonicalUrl } from '@/src/lib/url';
 interface ImageProps {
   src: string;
   alt: string;
@@ -20,7 +21,7 @@ const PortfolioPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<ImageProps | null>(null);
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const t = useTranslations('portfolio-page');
-  const pathname = usePathname();
+  const pathname = usePathname() || '';
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
 
   const categories: Category[] = [
@@ -149,7 +150,7 @@ const PortfolioPage: React.FC = () => {
     '@type': 'ImageGallery',
     name: t('metadata.title'),
     description: t('metadata.description'),
-    url: `${baseUrl}${pathname}`,
+    url: generateCanonicalUrl(pathname.replace(/^\/[^/]+\//, '')),
     author: {
       '@type': 'Person',
       name: 'Jeremy Dan',

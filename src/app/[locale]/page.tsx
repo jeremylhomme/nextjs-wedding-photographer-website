@@ -43,32 +43,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations('home-page');
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-  const url = `${siteUrl}/${params.locale}`;
-
   return {
     title: t('metadata.title'),
     description: t('metadata.description'),
     openGraph: {
       title: t('metadata.openGraph.title'),
-      description: t('metadata.openGraph.description'),
-      type: 'website',
-      url: url,
-      images: [
-        {
-          url: '/og-image.jpg',
-          width: 1200,
-          height: 630,
-          alt: t('metadata.openGraph.alt')
-        }
-      ]
-    },
-    alternates: {
-      canonical: url,
-      languages: {
-        fr: `${siteUrl}/fr`,
-        en: `${siteUrl}/en`
-      }
+      description: t('metadata.openGraph.description')
     }
   };
 }

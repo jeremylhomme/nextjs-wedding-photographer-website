@@ -20,6 +20,7 @@ import { generateServiceMetadata } from '@/src/config/metadata';
 import { generateLocationMetadata } from '@/src/config/metadata';
 import Script from 'next/script';
 import { generateBreadcrumbSchema } from '@/src/lib/structured-data';
+import { generateCanonicalUrl } from '@/src/lib/url';
 
 type Props = {
   params: {
@@ -186,11 +187,10 @@ function generateServiceSchema(
   locale: string,
   location?: LocationType
 ) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
   const path = location
-    ? `/${locale}/service/${service}/${category}/${location}`
-    : `/${locale}/service/${service}/${category}`;
-  const url = `${baseUrl}${path}`;
+    ? `service/${service}/${category}/${location}`
+    : `service/${service}/${category}`;
+  const url = generateCanonicalUrl(path, locale);
 
   return {
     '@context': 'https://schema.org',
@@ -200,14 +200,14 @@ function generateServiceSchema(
     provider: {
       '@type': 'LocalBusiness',
       name: 'Jeremy Dan Photography',
-      image: `${baseUrl}/about-page/about-jeremydan-wedding-photographer-optimized-square.webp`,
+      image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}/about-page/about-jeremydan-wedding-photographer-optimized-square.webp`,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Sceaux',
         addressRegion: 'Île-de-France',
         addressCountry: 'FR'
       },
-      url: baseUrl
+      url: process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'
     },
     areaServed: {
       '@type': 'State',
@@ -224,14 +224,14 @@ function generateServiceSchema(
 }
 
 function generateLocationSchema(location: LocationType, locale: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-  const url = `${baseUrl}/${locale}/location/${location}`;
+  const path = `location/${location}`;
+  const url = generateCanonicalUrl(path, locale);
 
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Jeremy Dan Photography',
-    image: `${baseUrl}/about-page/about-jeremydan-wedding-photographer-optimized-square.webp`,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr'}/about-page/about-jeremydan-wedding-photographer-optimized-square.webp`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: location,

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { generateCanonicalUrl } from '@/src/lib/url';
 
 // Generate metadata based on locale parameter
 export async function generateMetadata({
@@ -8,8 +9,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const t = await getTranslations('blog-page');
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-  const url = `${siteUrl}/${params.locale}/blog`;
+  const url = generateCanonicalUrl('blog', params.locale);
 
   return {
     title: t('metadata.title'),
@@ -18,8 +18,8 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: {
-        fr: `${siteUrl}/fr/blog`,
-        en: `${siteUrl}/en/blog`
+        fr: generateCanonicalUrl('blog', 'fr'),
+        en: generateCanonicalUrl('blog', 'en')
       }
     },
     openGraph: {

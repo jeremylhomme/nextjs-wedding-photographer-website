@@ -23,10 +23,10 @@ export const defaultMetadata = {
     ]
   },
   alternates: {
-    canonical: '/',
+    canonical: generateCanonicalUrl(''),
     languages: {
-      fr: `${siteUrl}/fr`,
-      en: `${siteUrl}/en`
+      fr: generateCanonicalUrl('', 'fr'),
+      en: generateCanonicalUrl('', 'en')
     }
   }
 } satisfies Metadata;
@@ -34,6 +34,7 @@ export const defaultMetadata = {
 import { ServiceType } from './services';
 import { CategoryType } from './categories';
 import { LocationType } from './locations';
+import { generateCanonicalUrl } from '@/src/lib/url';
 
 // Specific metadata configurations for different page types
 const pageMetadata = {
@@ -124,7 +125,7 @@ export function generateServiceMetadata(
         type: 'website'
       },
       alternates: {
-        canonical: `/${locale}/service/${service}/${category}${location ? `/${location}` : ''}`
+        canonical: generateCanonicalUrl(`service/${service}/${category}${location ? `/${location}` : ''}`, locale)
       }
     };
   } else if (category === 'corporate' && service === 'photography') {
@@ -139,7 +140,7 @@ export function generateServiceMetadata(
         type: 'website'
       },
       alternates: {
-        canonical: `/${locale}/service/${service}/${category}${location ? `/${location}` : ''}`
+        canonical: generateCanonicalUrl(`service/${service}/${category}${location ? `/${location}` : ''}`, locale)
       }
     };
   }
@@ -214,7 +215,7 @@ export function generateLocationMetadata(
         type: 'website'
       },
       alternates: {
-        canonical: `/${locale}/location/${location}`
+        canonical: generateCanonicalUrl(`location/${location}`, locale)
       }
     };
   }

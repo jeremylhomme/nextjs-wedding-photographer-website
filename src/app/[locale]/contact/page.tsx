@@ -1,6 +1,7 @@
 'use client';
 import { AltchaWidget } from '@/src/components/ui/altcha-widget';
 import { usePathname } from 'next/navigation';
+import { generateCanonicalUrl } from '@/src/lib/url';
 import { FloatingLabelInput } from '@/src/components/ui/floating-label-input';
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
@@ -61,9 +62,9 @@ export default function ContactForm() {
   const t = useTranslations('contact-page');
   const params = useParams();
   const locale = params?.locale as string;
-  const pathname = usePathname();
+  const pathname = usePathname() || '';
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-  const url = `${baseUrl}${pathname}`;
+  const url = generateCanonicalUrl(pathname.replace(/^\/[^/]+\//, ''));
 
   // Contact page schema for structured data
   const contactPageSchema = {

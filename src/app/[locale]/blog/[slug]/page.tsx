@@ -13,6 +13,7 @@ import {
   generateBreadcrumbSchema
 } from '@/src/lib/structured-data';
 import Script from 'next/script';
+import { generateCanonicalUrl } from '@/src/lib/url';
 
 interface PageProps {
   params: { locale: Locale; slug: string };
@@ -24,8 +25,7 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const cleanSlug = params.slug.split('/').pop() || params.slug;
   const { meta } = await getBlogPost(params.locale, cleanSlug);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-  const url = `${siteUrl}/${params.locale}/blog/${cleanSlug}`;
+  const url = generateCanonicalUrl(`blog/${cleanSlug}`, params.locale);
 
   return {
     title: meta.title,
@@ -50,8 +50,8 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: {
-        fr: `${siteUrl}/fr/blog/${cleanSlug}`,
-        en: `${siteUrl}/en/blog/${cleanSlug}`
+        fr: generateCanonicalUrl(`blog/${cleanSlug}`, 'fr'),
+        en: generateCanonicalUrl(`blog/${cleanSlug}`, 'en')
       }
     }
   };
@@ -63,8 +63,7 @@ const BlogPost = async ({ params }: PageProps) => {
 
   try {
     const { meta, content } = await getBlogPost(params.locale, cleanSlug);
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeremydan.fr';
-    const url = `${siteUrl}/${params.locale}/blog/${cleanSlug}`;
+    const url = generateCanonicalUrl(`blog/${cleanSlug}`, params.locale);
 
     // Create metadata object that can be passed to structured data
     const pageMetadata = {
@@ -94,15 +93,15 @@ const BlogPost = async ({ params }: PageProps) => {
       meta.date,
       meta.lastModified || null,
       'Jeremy Dan',
-      `${siteUrl}/${params.locale}`,
+      generateCanonicalUrl('', params.locale),
       meta.coverImage,
       meta.category
     );
 
     // Generate breadcrumb structured data
     const breadcrumbSchema = generateBreadcrumbSchema([
-      { name: t('bc-home'), url: `${siteUrl}/${params.locale}` },
-      { name: t('bc-blogPage'), url: `${siteUrl}/${params.locale}/blog` },
+      { name: t('bc-home'), url: generateCanonicalUrl('', params.locale) },
+      { name: t('bc-blogPage'), url: generateCanonicalUrl('blog', params.locale) },
       { name: meta.title, url: url }
     ]);
 
