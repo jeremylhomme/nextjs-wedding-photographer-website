@@ -1,0 +1,48 @@
+# Version control
+.git
+.gitignore
+.github
+
+# Next.js
+.next
+out
+
+# Dependencies
+node_modules
+
+# Environment and secrets
+.env*
+*.env
+/secrets/
+**/secrets/
+
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentation
+README.md
+DOCUMENTATION.md
+CHANGELOG.md
+
+# Testing
+__tests__
+*.test.*
+*.spec.*
+coverage/
+
+# Logs and debugging
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini

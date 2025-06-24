@@ -1,0 +1,34 @@
+services:
+  nextjs:
+    build:
+      context: .
+      target: runner
+    container_name: jeremydan
+    restart: always
+    env_file:
+      - .env.local
+    environment:
+      - NODE_ENV=production
+    networks:
+      - proxy
+      - shared
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jeremydan.rule=Host(`jeremydan.fr`) || Host(`www.jeremydan.fr`)"
+      - "traefik.http.routers.jeremydan.entrypoints=websecure"
+      - "traefik.http.routers.jeremydan.tls=true"
+      - "traefik.http.routers.jeremydan.tls.certresolver=letsencrypt"
+      - "traefik.http.services.jeremydan.loadbalancer.server.port=3000"
+      # HTTP to HTTPS redirect
+      - "traefik.http.routers.jeremydan-http.rule=Host(`jeremydan.fr`) || Host(`www.jeremydan.fr`)"
+      - "traefik.http.routers.jeremydan-http.entrypoints=web"
+      - "traefik.http.routers.jeremydan-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+
+networks:
+  proxy:
+    name: proxy
+    external: true
+  shared:
+    name: workspace_shared
+    external: true

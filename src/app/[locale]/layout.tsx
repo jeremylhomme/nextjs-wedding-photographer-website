@@ -114,7 +114,7 @@ export async function generateMetadata({
     robots: {
       index: true,
       follow: true,
-      nocache: true,
+
       googleBot: {
         index: true,
         follow: true,

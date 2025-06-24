@@ -1,4 +1,5 @@
 import { cn } from '@/src/lib/utils';
+import { createElement } from 'react';
 
 interface BlogTitleProps {
   level?: 1 | 2 | 3;
@@ -18,11 +19,9 @@ export default function BlogTitle({
     3: 'text-2xl md:text-2xl mt-8 mb-4'
   };
 
-  const Component = `h${level}` as keyof JSX.IntrinsicElements;
-
-  return (
-    <Component className={cn(baseStyles, styles[level], className)}>
-      {children}
-    </Component>
+  return createElement(
+    `h${level}`,
+    { className: cn(baseStyles, styles[level], className) },
+    children
   );
 }
